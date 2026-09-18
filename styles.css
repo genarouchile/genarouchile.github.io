@@ -129,7 +129,7 @@ main.content {
 .profile h1 {
   color: var(--navy);
 
-  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-size: clamp(2.2rem, 5vw, 3rem);
 
   line-height: 1.05;
 
