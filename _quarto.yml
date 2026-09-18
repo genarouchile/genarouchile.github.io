@@ -50,7 +50,5 @@ website:
 
 format:
   html:
-    theme:
-      light: default
-      dark: darkly
+    theme: default
     css: styles.css
