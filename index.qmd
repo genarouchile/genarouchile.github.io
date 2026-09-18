@@ -3,19 +3,20 @@ title: ""
 ---
 
 ::: {.profile}
-<div class="profile-photo">Foto</div>
 
-# Genaro César Marileo Millán
+# Genaro C. Marileo Millán
 
-**Sociólogo de la Universidad de Chile**
+**Sociólogo de la Universidad de Chile**  
+**Magíster en Sociología — Pontificia Universidad Católica de Chile**  
+**Doctor en Sociología — Universidad Alberto Hurtado**
 
 Investigación social · análisis de datos · políticas públicas · análisis territorial
 
 [Email](mailto:genarouchile@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/) ·
 [GitHub](https://github.com/genarouchile)
-:::
 
+:::
 ---
 
 **Investigación social** · **Análisis cuantitativo** · **Datos territoriales** ·
