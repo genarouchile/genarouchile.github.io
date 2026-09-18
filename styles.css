@@ -125,3 +125,102 @@
 .home-content ul {
   line-height: 1.8;
 }
+
+
+/* ============================================================
+   HOME — TABLA CON IMAGEN A LA IZQUIERDA
+   ============================================================ */
+
+.home-table {
+  width: 100%;
+  margin-top: 0;
+}
+
+.home-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.home-table table td {
+  vertical-align: top;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E1E7EA;
+}
+
+.home-table table td:first-child {
+  width: 90px;
+  min-width: 90px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+.home-table table td:last-child {
+  width: auto;
+  padding-left: 10px;
+}
+
+.home-table table img {
+  display: block;
+  width: 65px !important;
+  height: 65px !important;
+  object-fit: contain;
+  margin: 0;
+}
+
+.home-table table td:last-child {
+  line-height: 1.7;
+}
+
+.home-table table td:last-child strong:first-child {
+  color: #173F5F;
+  font-size: 1.15rem;
+}
+
+.home-table table td:last-child br + strong {
+  color: #173F5F;
+}
+
+.home-table table tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .home-table table td:first-child {
+    width: 75px;
+    min-width: 75px;
+    padding-right: 10px;
+  }
+
+  .home-table table img {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .home-table table td:last-child {
+    padding-left: 5px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .home-table table td:first-child {
+    width: 65px;
+    min-width: 65px;
+  }
+
+  .home-table table img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+}
