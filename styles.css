@@ -1091,3 +1091,20 @@ body:not(:has(.home-layout)) #quarto-document-content h3,
 body:not(:has(.home-layout)) #quarto-document-content h4 {
   text-align: left;
 }
+
+
+/* ============================================================
+   PORTADA — RECUPERAR ANCHO ORIGINAL
+   ============================================================ */
+
+body:has(.home-layout) #quarto-content {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+body:has(.home-layout) .page-columns .content {
+  max-width: 1180px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
