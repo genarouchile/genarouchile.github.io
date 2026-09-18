@@ -1112,3 +1112,13 @@ body:has(.home-layout) #quarto-document-content {
   max-width: 1180px !important;
   width: 100% !important;
 }
+
+
+/* ============================================================
+   MENÚ SUPERIOR — SEPARACIÓN SUTIL
+   ============================================================ */
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #E5E9EB;
+}
