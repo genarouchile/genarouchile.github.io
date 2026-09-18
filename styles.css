@@ -975,3 +975,47 @@
 .home-content p {
   text-align: justify;
 }
+
+
+/* ============================================================
+   TIPOGRAFÍA GENERAL — TEXTO JUSTIFICADO
+   ============================================================ */
+
+/* Párrafos de todo el sitio */
+#quarto-content p {
+  text-align: justify;
+}
+
+/* Listas */
+#quarto-content li {
+  text-align: justify;
+}
+
+/* Texto de las páginas */
+#quarto-content {
+  line-height: 1.65;
+}
+
+/* Mantener títulos alineados correctamente */
+#quarto-content h1,
+#quarto-content h2,
+#quarto-content h3,
+#quarto-content h4,
+#quarto-content h5,
+#quarto-content h6 {
+  text-align: left;
+}
+
+/* Mantener enlaces y elementos de navegación sin justificar */
+.navbar,
+.navbar *,
+.profile-links,
+.profile-links * {
+  text-align: left;
+}
+
+/* En la portada, el texto de la columna principal también queda justificado */
+.home-content p,
+.home-content li {
+  text-align: justify;
+}
