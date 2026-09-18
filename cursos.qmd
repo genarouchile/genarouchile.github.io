@@ -2,13 +2,12 @@
 title: "Cursos"
 ---
 
-# Cursos
-
 Mi experiencia docente se ha concentrado principalmente en la enseñanza de estadística, análisis de datos y métodos de investigación en ciencias sociales.
 
 ::: {.course-grid}
 
 ::: {.course-card}
+
 ![](images/cursos/estadistica1_sociologia.png){.course-image}
 
 ### Estadística I
@@ -16,9 +15,11 @@ Mi experiencia docente se ha concentrado principalmente en la enseñanza de esta
 **Departamento de Sociología**  
 Universidad Alberto Hurtado  
 2013–2018
+
 :::
 
 ::: {.course-card}
+
 ![](images/cursos/estadistica2_sociologia.png){.course-image}
 
 ### Estadística II
@@ -26,9 +27,11 @@ Universidad Alberto Hurtado
 **Departamento de Sociología**  
 Universidad Alberto Hurtado  
 2013–2018
+
 :::
 
 ::: {.course-card}
+
 ![](images/cursos/multivariados1.png){.course-image}
 
 ### Análisis de Datos Multivariados I
@@ -36,9 +39,11 @@ Universidad Alberto Hurtado
 **Departamento de Sociología**  
 Universidad Alberto Hurtado  
 2013–2016
+
 :::
 
 ::: {.course-card}
+
 ![](images/cursos/multivariados2.png){.course-image}
 
 ### Análisis de Datos Multivariados II
@@ -46,9 +51,11 @@ Universidad Alberto Hurtado
 **Departamento de Sociología**  
 Universidad Alberto Hurtado  
 2012–2016
+
 :::
 
 ::: {.course-card}
+
 ![](images/cursos/metodos_mixtos.png){.course-image}
 
 ### Métodos Mixtos Cuantitativo y Cualitativo
@@ -56,9 +63,11 @@ Universidad Alberto Hurtado
 **Departamento de Sociología**  
 Universidad Alberto Hurtado  
 2017
+
 :::
 
 ::: {.course-card}
+
 ![](images/cursos/estadistica1_ciencia_politica.png){.course-image}
 
 ### Estadística I
@@ -66,9 +75,11 @@ Universidad Alberto Hurtado
 **Departamento de Ciencia Política y Relaciones Internacionales**  
 Universidad Alberto Hurtado  
 2012–2015
+
 :::
 
 ::: {.course-card}
+
 ![](images/cursos/estadistica2_ciencia_politica.png){.course-image}
 
 ### Estadística II
@@ -76,6 +87,7 @@ Universidad Alberto Hurtado
 **Departamento de Ciencia Política y Relaciones Internacionales**  
 Universidad Alberto Hurtado  
 2011–2015
+
 :::
 
 :::
