@@ -74,11 +74,11 @@
 /* ============================================================
    HOME — SECCIONES CON IMAGEN A LA IZQUIERDA
    ============================================================ */
-
 .home-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  display: grid !important;
+  grid-template-columns: 75px 1fr !important;
+  gap: 1.5rem !important;
+  align-items: start !important;
   margin: 3rem 0;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #E1E7EA;
@@ -89,25 +89,26 @@
 }
 
 .home-icon {
-  flex: 0 0 75px;
-  width: 75px;
+  width: 75px !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .home-icon img {
-  display: block;
-  width: 70px;
-  height: 70px;
+  display: block !important;
+  width: 70px !important;
+  height: 70px !important;
   object-fit: contain;
+  margin: 0 !important;
 }
 
 .home-content {
-  flex: 1;
   min-width: 0;
+  margin: 0 !important;
 }
 
 .home-content h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 0 !important;
   color: #173F5F;
   font-size: 1.65rem;
 }
@@ -115,8 +116,6 @@
 .home-content h3 {
   color: #173F5F;
   font-size: 1.15rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.4rem;
 }
 
 .home-content p {
@@ -125,40 +124,4 @@
 
 .home-content ul {
   line-height: 1.8;
-}
-
-
-/* Pantallas pequeñas */
-
-@media (max-width: 700px) {
-
-  .home-section {
-    gap: 1rem;
-  }
-
-  .home-icon {
-    flex: 0 0 60px;
-    width: 60px;
-  }
-
-  .home-icon img {
-    width: 55px;
-    height: 55px;
-  }
-
-}
-
-
-/* Móviles */
-
-@media (max-width: 500px) {
-
-  .home-section {
-    display: block;
-  }
-
-  .home-icon {
-    margin-bottom: 1rem;
-  }
-
 }
