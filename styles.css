@@ -1019,3 +1019,35 @@
 .home-content li {
   text-align: justify;
 }
+
+
+/* ============================================================
+   PÁGINAS INTERIORES — COLUMNA ESTRECHA Y CENTRADA
+   ============================================================ */
+
+body:not(:has(.home-layout)) #quarto-content {
+  max-width: 900px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Mantener el texto cómodo para lectura */
+body:not(:has(.home-layout)) .content {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Párrafos justificados */
+body:not(:has(.home-layout)) .content p {
+  text-align: justify;
+}
+
+/* Títulos alineados a la izquierda */
+body:not(:has(.home-layout)) .content h1,
+body:not(:has(.home-layout)) .content h2,
+body:not(:has(.home-layout)) .content h3,
+body:not(:has(.home-layout)) .content h4 {
+  text-align: left;
+}
