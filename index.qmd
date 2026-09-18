@@ -1,0 +1,62 @@
+---
+title: ""
+---
+
+::: {.profile}
+<div class="profile-photo">Foto</div>
+
+# Genaro César Marileo Millán
+
+**Sociólogo de la Universidad de Chile**
+
+Investigación social · análisis de datos · políticas públicas · análisis territorial
+
+[Email](mailto:genarouchile@gmail.com) ·
+[LinkedIn](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/) ·
+[GitHub](https://github.com/genarouchile)
+:::
+
+---
+
+**Investigación social** · **Análisis cuantitativo** · **Datos territoriales** ·
+**Políticas públicas** · **Indicadores sociales** · **Análisis espacial**
+
+## About me
+
+Soy sociólogo de la Universidad de Chile y desarrollo investigación social aplicada
+orientada al análisis de problemas públicos mediante datos sociales, administrativos
+y territoriales.
+
+Mi trabajo combina métodos cuantitativos, construcción de indicadores, análisis
+estadístico, visualización de datos y herramientas de análisis territorial para
+estudiar fenómenos sociales y apoyar la toma de decisiones en políticas públicas.
+
+Entre mis áreas de interés se encuentran la vulnerabilidad social, las políticas
+dirigidas a personas mayores, los cuidados, la desigualdad territorial y el
+análisis espacial.
+
+## Research interests
+
+- Investigación social aplicada
+- Análisis cuantitativo y estadístico
+- Análisis territorial y espacial
+- Indicadores sociales
+- Políticas públicas
+- Vulnerabilidad social
+- Cuidados y personas mayores
+
+## Selected projects
+
+**Índice de Priorización Territorial para CVT**  
+Desarrollo de un índice compuesto para la priorización territorial de comunas para
+la construcción de Condominios de Viviendas Tuteladas.
+
+**Análisis espacial de fenómenos sociales**  
+Aplicación de estadística espacial y econometría espacial para estudiar la
+distribución territorial y la dependencia espacial de fenómenos sociales.
+
+**Indicadores sociales y territoriales**  
+Construcción, normalización y análisis de indicadores para la caracterización
+territorial y la evaluación de políticas públicas.
+
+[Explore my research →](research.qmd) · [View my projects →](projects.qmd)

@@ -1,0 +1,37 @@
+---
+title: "Publications"
+---
+
+Esta sección reunirá artículos, documentos técnicos, informes, presentaciones y
+otros productos de investigación.
+
+## Artículos
+
+**Próximamente**
+
+Aquí incorporaremos tus publicaciones académicas, indicando autores, año,
+revista, volumen, páginas y DOI cuando corresponda.
+
+## Informes técnicos
+
+**Próximamente**
+
+Informes, documentos de trabajo y productos técnicos asociados a investigación
+social y políticas públicas.
+
+## Presentaciones
+
+**Próximamente**
+
+Congresos, seminarios, jornadas y presentaciones profesionales.
+
+## Otros productos
+
+Aquí podremos incorporar:
+
+- informes institucionales;
+- documentos metodológicos;
+- visualizaciones;
+- bases de indicadores;
+- mapas;
+- repositorios de código.

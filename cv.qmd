@@ -1,0 +1,41 @@
+---
+title: "CV"
+---
+
+# Genaro César Marileo Millán
+
+**Sociólogo — Universidad de Chile**
+
+[Descargar CV en PDF](cv/Genaro_Cesar_Marileo_Millan_CV.pdf)
+
+## Formación
+
+**Sociología — Universidad de Chile**
+
+## Perfil profesional
+
+Sociólogo orientado a la investigación social aplicada, análisis de datos,
+construcción de indicadores, análisis territorial y políticas públicas.
+
+## Competencias
+
+- Investigación social
+- Métodos cuantitativos
+- Análisis estadístico
+- R y RStudio
+- Visualización de datos
+- Análisis espacial
+- Construcción de indicadores
+- Políticas públicas
+- Análisis de datos territoriales
+
+## Experiencia
+
+Esta sección se completará con tus cargos, instituciones, períodos y principales
+responsabilidades.
+
+## Contacto
+
+**Email:** [genarouchile@gmail.com](mailto:genarouchile@gmail.com)
+
+**LinkedIn:** [Genaro César Marileo Millán](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/)

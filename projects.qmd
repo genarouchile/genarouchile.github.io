@@ -1,0 +1,47 @@
+---
+title: "Projects"
+---
+
+## Índice de Priorización Territorial para CVT
+
+**IPT-CVT — Índice de Priorización Territorial para la Construcción de Condominios
+de Viviendas Tuteladas.**
+
+Desarrollo de un índice compuesto para identificar y priorizar comunas considerando
+diferentes dimensiones territoriales.
+
+### Dimensiones
+
+- Beneficiarios
+- Calidad territorial
+- Condiciones locales e institucionales
+- Factibilidad de implementación
+- Riesgo territorial
+
+El proyecto incorpora normalización, ponderaciones, construcción de índices
+agregados y análisis de sensibilidad para evaluar la robustez de la priorización.
+
+---
+
+## Análisis espacial de la ausencia de cuidados
+
+Estudio de la distribución territorial de la ausencia de cuidados y su relación
+con vulnerabilidad social y características de los hogares.
+
+### Métodos
+
+- Matrices de pesos espaciales
+- Autocorrelación espacial global
+- Indicadores locales de asociación espacial (LISA)
+- Regresión y diagnóstico espacial
+- Econometría espacial
+
+---
+
+## Indicadores sociales y territoriales
+
+Construcción de indicadores para caracterizar territorios y apoyar el diseño,
+priorización y evaluación de políticas públicas.
+
+El trabajo incluye definición conceptual del constructo, selección de variables,
+normalización, ponderación, agregación y análisis de sensibilidad.

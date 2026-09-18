@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Genaro César Marileo Millán"
+  description: "Sociólogo de la Universidad de Chile. Investigación social, análisis de datos, políticas públicas y análisis territorial."
+  site-url: "https://genarouchile.github.io"
+
+  navbar:
+    background: white
+    foreground: "#222222"
+    collapse: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: projects.qmd
+        text: Projects
+      - href: publications.qmd
+        text: Publications
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: envelope
+        href: mailto:genarouchile@gmail.com
+        aria-label: Email
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/"
+        aria-label: LinkedIn
+      - icon: github
+        href: "https://github.com/genarouchile"
+        aria-label: GitHub
+
+  page-footer:
+    left: "© 2026 Genaro César Marileo Millán"
+    right: "Built with Quarto"
+
+format:
+  html:
+    theme: default
+    css: styles.css
+    toc: false
+    page-layout: article
+    smooth-scroll: true

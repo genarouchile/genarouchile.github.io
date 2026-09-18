@@ -1,0 +1,48 @@
+---
+title: "Research"
+---
+
+**Research agenda:** investigación social aplicada, análisis territorial,
+indicadores sociales y políticas públicas.
+
+Mi trabajo de investigación utiliza datos sociales, administrativos y territoriales
+para estudiar problemas públicos y sus diferencias entre territorios.
+
+## Análisis territorial y espacial
+
+Una línea de trabajo se centra en la distribución espacial de fenómenos sociales,
+la identificación de patrones territoriales y el uso de herramientas de estadística
+espacial y econometría espacial.
+
+### Temas
+
+- Dependencia espacial y autocorrelación
+- Indicadores territoriales
+- Análisis comunal
+- Vulnerabilidad social
+- Desigualdad territorial
+- Modelos espaciales
+
+## Cuidados y personas mayores
+
+Investigación sobre cuidados, dependencia funcional, vulnerabilidad social y
+condiciones territoriales asociadas a las personas mayores.
+
+Un área de interés es el estudio de la distribución territorial de la ausencia de
+cuidados y su relación con vulnerabilidad social y características de los hogares.
+
+## Políticas públicas e indicadores
+
+Desarrollo de indicadores compuestos y herramientas de priorización territorial
+para apoyar decisiones de política pública.
+
+Esto incluye construcción conceptual de indicadores, normalización, ponderación,
+análisis de sensibilidad y representación cartográfica.
+
+## Métodos y datos
+
+**Herramientas:** R · RStudio · `tidyverse` · `ggplot2` · `sf` · `spdep` ·
+`COINr` · GIS · visualización de datos.
+
+**Fuentes:** encuestas sociales, registros administrativos, datos censales y
+bases territoriales.
