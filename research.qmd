@@ -1,5 +1,9 @@
 ---
 title: "Investigación"
+toc: true
+toc-title: "En esta página"
+toc-location: right
+toc-depth: 2
 ---
 
 ## Líneas de investigación
