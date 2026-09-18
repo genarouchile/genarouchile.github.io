@@ -12,24 +12,24 @@ website:
     foreground: "#222222"
     collapse: true
 
-    left:
-      - href: index.qmd
-        text: Inicio
+left:
+  - href: index.qmd
+    text: Inicio
 
-      - href: research.qmd
-        text: Investigación
+  - href: research.qmd
+    text: Investigación
 
-      - href: projects.qmd
-        text: Proyectos
+  - href: projects.qmd
+    text: Proyectos
 
-      - href: publications.qmd
-        text: Publicaciones
+  - href: publications.qmd
+    text: Publicaciones
 
-      - href: cursos.qmd
-        text: Cursos
+  - href: cursos.qmd
+    text: Cursos
 
-      - href: cv.qmd
-        text: CV
+  - href: cv.qmd
+    text: CV
 
     right:
       - icon: envelope
