@@ -1,6 +1,11 @@
 ---
 title: "Cursos"
+toc: true
+toc-title: "En esta página"
+toc-location: right
+toc-depth: 2
 ---
+
 
 Mi experiencia docente se ha concentrado principalmente en la enseñanza de estadística, análisis de datos y métodos de investigación en ciencias sociales.
 
