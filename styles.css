@@ -72,148 +72,120 @@
 }
 }
 /* ============================================================
-   HOME — SECCIONES CON IMAGEN A LA IZQUIERDA
+   HOME — SECCIONES
    ============================================================ */
+
 .home-section {
-  display: grid !important;
-  grid-template-columns: 75px 1fr !important;
-  gap: 1.5rem !important;
-  align-items: start !important;
-  margin: 3rem 0;
-  padding-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  column-gap: 1.5rem;
+  align-items: start;
+  margin: 2.5rem 0;
+  padding: 1.5rem 0 2.5rem 0;
   border-bottom: 1px solid #E1E7EA;
+}
+
+.home-section:first-of-type {
+  padding-top: 1rem;
 }
 
 .home-section:last-child {
   border-bottom: none;
 }
 
-.home-icon {
-  width: 75px !important;
-  margin: 0 !important;
-  padding: 0 !important;
+
+/* Imagen */
+
+.home-image {
+  width: 80px;
+  padding: 0;
+  margin: 0;
 }
 
-.home-icon img {
-  display: block !important;
-  width: 70px !important;
-  height: 70px !important;
-  object-fit: contain;
-  margin: 0 !important;
-}
-
-.home-content {
-  min-width: 0;
-  margin: 0 !important;
-}
-
-.home-content h2 {
-  margin-top: 0 !important;
-  color: #173F5F;
-  font-size: 1.65rem;
-}
-
-.home-content h3 {
-  color: #173F5F;
-  font-size: 1.15rem;
-}
-
-.home-content p {
-  line-height: 1.7;
-}
-
-.home-content ul {
-  line-height: 1.8;
-}
-
-
-/* ============================================================
-   HOME — TABLA CON IMAGEN A LA IZQUIERDA
-   ============================================================ */
-
-.home-table {
-  width: 100%;
-  margin-top: 0;
-}
-
-.home-table table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.home-table table td {
-  vertical-align: top;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #E1E7EA;
-}
-
-.home-table table td:first-child {
-  width: 90px !important;
-  min-width: 90px !important;
-  max-width: 90px !important;
-  padding-right: 15px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.home-table table td:last-child {
-  width: auto !important;
-  padding-left: 10px;
-  vertical-align: top;
-  line-height: 1.7;
-}
-
-.home-table table img {
+.home-image img {
   display: block;
-  width: 65px !important;
-  height: 65px !important;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
   margin: 0;
 }
 
-.home-table table td:last-child strong:first-child {
-  color: #173F5F;
-  font-size: 1.15rem;
+
+/* Texto */
+
+.home-text {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.home-table table tr:last-child td {
-  border-bottom: none;
+.home-text > strong:first-child {
+  display: block;
+  color: #173F5F;
+  font-size: 1.35rem;
+  margin: 0 0 1.2rem 0;
+}
+
+.home-text p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.home-text ul {
+  line-height: 1.8;
+  margin-top: 0.5rem;
+}
+
+
+/* Proyectos */
+
+.home-text strong {
+  color: #173F5F;
+}
+
+.home-text strong:not(:first-child) {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
 
 /* ============================================================
-   RESPONSIVE
+   HOME — PANTALLAS PEQUEÑAS
    ============================================================ */
 
 @media (max-width: 700px) {
 
-  .home-table table td:first-child {
-    width: 75px !important;
-    min-width: 75px !important;
-    max-width: 75px !important;
+  .home-section {
+    grid-template-columns: 65px minmax(0, 1fr);
+    column-gap: 1rem;
   }
 
-  .home-table table img {
-    width: 55px !important;
-    height: 55px !important;
+  .home-image {
+    width: 65px;
+  }
+
+  .home-image img {
+    width: 55px;
+    height: 55px;
   }
 
 }
 
+
+/* ============================================================
+   HOME — MÓVILES
+   ============================================================ */
+
 @media (max-width: 500px) {
 
-  .home-table table td:first-child {
-    width: 65px !important;
-    min-width: 65px !important;
-    max-width: 65px !important;
+  .home-section {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
   }
 
-  .home-table table img {
-    width: 50px !important;
-    height: 50px !important;
+  .home-image {
+    width: 65px;
   }
 
 }
