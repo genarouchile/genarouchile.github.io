@@ -11,24 +11,35 @@ website:
     background: white
     foreground: "#222222"
     collapse: true
+
     left:
       - href: index.qmd
-        text: Home
+        text: Inicio
+
       - href: research.qmd
-        text: Research
+        text: Investigación
+
       - href: projects.qmd
-        text: Projects
+        text: Proyectos
+
       - href: publications.qmd
-        text: Publications
+        text: Publicaciones
+
+      - href: cursos.qmd
+        text: Cursos
+
       - href: cv.qmd
         text: CV
+
     right:
       - icon: envelope
         href: mailto:genarouchile@gmail.com
         aria-label: Email
+
       - icon: linkedin
         href: "https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/"
         aria-label: LinkedIn
+
       - icon: github
         href: "https://github.com/genarouchile"
         aria-label: GitHub
