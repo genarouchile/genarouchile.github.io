@@ -71,3 +71,105 @@
   }
 }
 }
+
+/* ============================================================
+   HOME — IMAGEN A LA IZQUIERDA DE CADA SECCIÓN
+   ============================================================ */
+
+.home-section {
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr);
+  column-gap: 1.8rem;
+  align-items: start;
+  margin: 3.2rem 0;
+  padding-bottom: 2.8rem;
+  border-bottom: 1px solid #E1E7EA;
+}
+
+.home-section:last-child {
+  border-bottom: none;
+}
+
+.home-icon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-icon img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.home-content {
+  min-width: 0;
+}
+
+.home-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #173F5F;
+  font-size: 1.65rem;
+}
+
+.home-content h3 {
+  color: #173F5F;
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.home-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.home-content ul {
+  line-height: 1.8;
+  margin-top: 0.5rem;
+}
+
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 700px) {
+
+  .home-section {
+    grid-template-columns: 65px minmax(0, 1fr);
+    column-gap: 1.2rem;
+    margin: 2.5rem 0;
+    padding-bottom: 2.3rem;
+  }
+
+  .home-icon img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .home-content h2 {
+    font-size: 1.4rem;
+  }
+
+}
+
+
+/* Móviles */
+
+@media (max-width: 500px) {
+
+  .home-section {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
+  .home-icon {
+    justify-content: flex-start;
+  }
+
+  .home-icon img {
+    width: 65px;
+    height: 65px;
+  }
+
+}
