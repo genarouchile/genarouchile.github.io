@@ -1122,3 +1122,31 @@ body:has(.home-layout) #quarto-document-content {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid #E5E9EB;
 }
+
+/* ============================================================
+   MENÚ SUPERIOR — ESTILO
+   ============================================================ */
+
+/* Nombre */
+.navbar-brand {
+  font-weight: 700 !important;
+}
+
+/* Pestaña activa */
+.navbar .nav-link.active {
+  font-weight: 700 !important;
+  color: #176B78 !important;
+  border-bottom: 2px solid #176B78;
+}
+
+/* Pestañas normales */
+.navbar .nav-link {
+  transition: color 0.2s ease;
+}
+
+/* Separación inferior del menú */
+.navbar {
+  border-bottom: 1px solid #E5E9EB;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
