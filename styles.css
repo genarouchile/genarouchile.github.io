@@ -624,9 +624,6 @@
   max-width: none;
 }
 
-.page-columns {
-  display: block !important;
-}
 
 .page-columns .content {
   max-width: 1180px !important;
