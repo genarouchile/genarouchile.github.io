@@ -2,40 +2,33 @@
 title: "Publicaciones"
 ---
 
-## Artículos científicos
+## Libros
 
-### Próximamente
+### Calidad del Acceso a la Información Pública en Chile
 
-En esta sección se incorporarán artículos científicos, indicando autores, año de publicación, título, revista, volumen, número, páginas y DOI cuando corresponda.
+Libro publicado por **Chile Transparente, Capítulo Chileno de Transparencia Internacional**.
 
----
-
-## Libros y capítulos
-
-### Próximamente
-
-Libros, capítulos de libros y otras publicaciones académicas.
+Registro de Propiedad Intelectual N.º 215.424.
 
 ---
 
-## Informes técnicos
+## Artículos
 
-### Informes de investigación y documentos técnicos
+### Autores en el campo de la Sociología Chilena
 
-En esta sección se incorporarán informes, estudios y documentos técnicos desarrollados en el marco de investigaciones y proyectos profesionales.
-
----
-
-## Ponencias y congresos
-
-### Presentaciones en congresos y seminarios
-
-Participación en congresos, seminarios, encuentros académicos y otras instancias de difusión de investigación.
+Revista Central de Sociología, N.º 2.  
+Editorial Universidad Central, Santiago, 2008.
 
 ---
 
-## Otros productos académicos
+## Informes y documentos técnicos
 
-### Indicadores y productos de investigación aplicada
+Mi experiencia profesional incluye el desarrollo y participación en estudios, evaluaciones e investigaciones aplicadas en ámbitos de educación, políticas públicas, transparencia y gestión institucional.
 
-Desarrollo de indicadores sociales y territoriales, herramientas de análisis, bases de datos y otros productos derivados de investigación aplicada.
+Esta sección se irá complementando con los documentos técnicos y productos de investigación que puedan ser publicados o compartidos.
+
+---
+
+## Investigación aplicada
+
+Además de las publicaciones académicas, mi trabajo profesional incluye la construcción de indicadores, análisis estadístico, evaluación de políticas públicas y desarrollo de herramientas para el análisis social y territorial.
