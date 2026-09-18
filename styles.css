@@ -620,17 +620,7 @@
    Esta regla permite que la portada utilice todo el ancho.
 */
 
-#quarto-content {
-  max-width: none;
-}
 
-
-.page-columns .content {
-  max-width: 1180px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
 
 
 /* ============================================================
@@ -1022,19 +1012,6 @@
    PÁGINAS INTERIORES — COLUMNA ESTRECHA Y CENTRADA
    ============================================================ */
 
-body:not(:has(.home-layout)) #quarto-content {
-  max-width: 900px !important;
-  width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Mantener el texto cómodo para lectura */
-body:not(:has(.home-layout)) .content {
-  max-width: 900px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
 
 /* Párrafos justificados */
 body:not(:has(.home-layout)) .content p {
@@ -1081,4 +1058,36 @@ body:not(:has(.home-layout)) .content h4 {
 
 #TOC .active {
   color: #176B78;
+}
+
+
+/* ============================================================
+   PÁGINAS INTERIORES — CONTENIDO + TOC LATERAL
+   ============================================================ */
+
+/* La cuadrícula completa queda bajo control de Quarto */
+body:not(:has(.home-layout)) #quarto-content {
+  width: 100%;
+}
+
+/* Columna principal de lectura */
+body:not(:has(.home-layout)) #quarto-document-content {
+  max-width: 900px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Texto justificado */
+body:not(:has(.home-layout)) #quarto-document-content p,
+body:not(:has(.home-layout)) #quarto-document-content li {
+  text-align: justify;
+}
+
+/* Títulos alineados a la izquierda */
+body:not(:has(.home-layout)) #quarto-document-content h1,
+body:not(:has(.home-layout)) #quarto-document-content h2,
+body:not(:has(.home-layout)) #quarto-document-content h3,
+body:not(:has(.home-layout)) #quarto-document-content h4 {
+  text-align: left;
 }
