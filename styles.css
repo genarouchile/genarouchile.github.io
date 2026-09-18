@@ -314,3 +314,17 @@
   }
 
 }
+
+
+/* ============================================================
+   HOME — TÍTULOS DE SECCIÓN
+   ============================================================ */
+
+.home-content h2 {
+  color: #173F5F;
+  font-size: 1.65rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
