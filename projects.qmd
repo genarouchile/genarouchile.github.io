@@ -1,47 +1,51 @@
 ---
-title: "Projects"
+title: "Proyectos"
 ---
 
-## Índice de Priorización Territorial para CVT
+## Proyectos de investigación
 
-**IPT-CVT — Índice de Priorización Territorial para la Construcción de Condominios
-de Viviendas Tuteladas.**
+### Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas
 
-Desarrollo de un índice compuesto para identificar y priorizar comunas considerando
-diferentes dimensiones territoriales.
+**Indicadores sociales · Análisis territorial · Políticas públicas**
 
-### Dimensiones
+Desarrollo de un índice territorial multidimensional orientado a identificar y priorizar comunas para la construcción de Condominios de Viviendas Tuteladas (CVT).
 
-- Beneficiarios
-- Calidad territorial
-- Condiciones locales e institucionales
-- Factibilidad de implementación
-- Riesgo territorial
+El índice integra dimensiones relacionadas con la población beneficiaria, condiciones territoriales, capacidad institucional, factibilidad de implementación y riesgos territoriales.
 
-El proyecto incorpora normalización, ponderaciones, construcción de índices
-agregados y análisis de sensibilidad para evaluar la robustez de la priorización.
+**Métodos:** construcción de indicadores · normalización · ponderación · análisis de sensibilidad · análisis territorial
 
 ---
 
-## Análisis espacial de la ausencia de cuidados
+### Análisis espacial de la ausencia de cuidados
 
-Estudio de la distribución territorial de la ausencia de cuidados y su relación
-con vulnerabilidad social y características de los hogares.
+**Cuidados · Dependencia · Vulnerabilidad social · Econometría espacial**
 
-### Métodos
+Investigación orientada a analizar la distribución territorial de la ausencia de cuidados y su relación con condiciones de vulnerabilidad social y características de los hogares.
 
-- Matrices de pesos espaciales
-- Autocorrelación espacial global
-- Indicadores locales de asociación espacial (LISA)
-- Regresión y diagnóstico espacial
-- Econometría espacial
+El estudio incorpora indicadores de dependencia espacial y modelos de econometría espacial para analizar los patrones territoriales observados.
+
+**Métodos:** R · `sf` · `spdep` · Moran Global · LISA · econometría espacial
 
 ---
 
-## Indicadores sociales y territoriales
+### Indicadores sociales y territoriales
 
-Construcción de indicadores para caracterizar territorios y apoyar el diseño,
-priorización y evaluación de políticas públicas.
+**Indicadores · Datos administrativos · Análisis territorial**
 
-El trabajo incluye definición conceptual del constructo, selección de variables,
-normalización, ponderación, agregación y análisis de sensibilidad.
+Diseño y construcción de indicadores destinados a caracterizar condiciones sociales y territoriales y apoyar procesos de diagnóstico y priorización para políticas públicas.
+
+El trabajo integra información sociodemográfica, socioeconómica, institucional, ambiental y territorial.
+
+**Métodos:** indicadores compuestos · normalización · ponderación · análisis estadístico · visualización de datos
+
+---
+
+## Proyectos en desarrollo
+
+### Análisis de vulnerabilidad territorial
+
+Construcción de herramientas para caracterizar diferencias territoriales mediante la integración de indicadores sociales, demográficos, económicos, institucionales y ambientales.
+
+### Sistemas de información para políticas públicas
+
+Desarrollo de metodologías para transformar información estadística y administrativa en indicadores útiles para el diagnóstico territorial y la toma de decisiones.
