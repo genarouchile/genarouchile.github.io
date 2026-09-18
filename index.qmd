@@ -20,15 +20,15 @@ Investigación social · análisis de datos · políticas públicas · análisis
 
 ---
 
-::: {.home-section}
+<div class="home-section">
 
-::: {.home-icon}
+<div class="home-icon">
 
-![](images/home/about-me.png)
+<img src="images/home/about-me.png">
 
-:::
+</div>
 
-::: {.home-content}
+<div class="home-content">
 
 ## About me
 
@@ -38,20 +38,20 @@ Mi trabajo combina métodos cuantitativos, construcción de indicadores, anális
 
 Entre mis áreas de interés se encuentran la vulnerabilidad social, las políticas dirigidas a personas mayores, los cuidados, la desigualdad territorial y el análisis espacial.
 
-:::
+</div>
 
-:::
+</div>
 
 
-::: {.home-section}
+<div class="home-section">
 
-::: {.home-icon}
+<div class="home-icon">
 
-![](images/home/research-interests.png)
+<img src="images/home/research-interests.png">
 
-:::
+</div>
 
-::: {.home-content}
+<div class="home-content">
 
 ## Research interests
 
@@ -63,20 +63,20 @@ Entre mis áreas de interés se encuentran la vulnerabilidad social, las políti
 - Vulnerabilidad social
 - Cuidados y personas mayores
 
-:::
+</div>
 
-:::
+</div>
 
 
-::: {.home-section}
+<div class="home-section">
 
-::: {.home-icon}
+<div class="home-icon">
 
-![](images/home/selected-projects.png)
+<img src="images/home/selected-projects.png">
 
-:::
+</div>
 
-::: {.home-content}
+<div class="home-content">
 
 ## Selected projects
 
@@ -92,6 +92,6 @@ Aplicación de estadística espacial y econometría espacial para estudiar la di
 
 Construcción, normalización y análisis de indicadores para la caracterización territorial y la evaluación de políticas públicas.
 
-:::
+</div>
 
-:::
+</div>
