@@ -28,7 +28,7 @@ Investigación social · análisis de datos · políticas públicas · análisis
 
 ::: {.home-content}
 
-**About me**
+## Sobre mí
 
 Soy sociólogo de la Universidad de Chile y desarrollo investigación social aplicada orientada al análisis de problemas públicos mediante datos sociales, administrativos y territoriales.
 
