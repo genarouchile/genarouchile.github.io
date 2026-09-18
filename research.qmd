@@ -1,48 +1,74 @@
 ---
-title: "Research"
+title: "Investigación"
 ---
 
-**Research agenda:** investigación social aplicada, análisis territorial,
-indicadores sociales y políticas públicas.
+## Líneas de investigación
 
-Mi trabajo de investigación utiliza datos sociales, administrativos y territoriales
-para estudiar problemas públicos y sus diferencias entre territorios.
+Mi trabajo se centra en el estudio de las desigualdades sociales, los procesos territoriales y las políticas públicas, con especial interés en la dimensión espacial de los fenómenos sociales.
 
-## Análisis territorial y espacial
+Actualmente, mi investigación combina métodos cuantitativos, análisis espacial e indicadores sociales para comprender cómo se distribuyen territorialmente la vulnerabilidad social y las necesidades de cuidado.
 
-Una línea de trabajo se centra en la distribución espacial de fenómenos sociales,
-la identificación de patrones territoriales y el uso de herramientas de estadística
-espacial y econometría espacial.
+---
 
-### Temas
+## Investigación actual
 
-- Dependencia espacial y autocorrelación
-- Indicadores territoriales
-- Análisis comunal
-- Vulnerabilidad social
-- Desigualdad territorial
-- Modelos espaciales
+### Cuidados, dependencia y vulnerabilidad territorial
 
-## Cuidados y personas mayores
+Mi investigación actual analiza la distribución territorial de la ausencia de cuidados y su relación con la vulnerabilidad social y las características de los hogares.
 
-Investigación sobre cuidados, dependencia funcional, vulnerabilidad social y
-condiciones territoriales asociadas a las personas mayores.
+El estudio combina información de encuestas, registros administrativos e indicadores territoriales para identificar patrones espaciales y analizar su relación con condiciones socioeconómicas y demográficas.
 
-Un área de interés es el estudio de la distribución territorial de la ausencia de
-cuidados y su relación con vulnerabilidad social y características de los hogares.
+El análisis incorpora **estadística espacial y econometría espacial**, permitiendo estudiar la dependencia geográfica y la concentración territorial de los fenómenos sociales.
 
-## Políticas públicas e indicadores
-
-Desarrollo de indicadores compuestos y herramientas de priorización territorial
-para apoyar decisiones de política pública.
-
-Esto incluye construcción conceptual de indicadores, normalización, ponderación,
-análisis de sensibilidad y representación cartográfica.
+---
 
 ## Métodos y datos
 
-**Herramientas:** R · RStudio · `tidyverse` · `ggplot2` · `sf` · `spdep` ·
-`COINr` · GIS · visualización de datos.
+Mi trabajo metodológico incluye:
 
-**Fuentes:** encuestas sociales, registros administrativos, datos censales y
-bases territoriales.
+- Investigación social cuantitativa
+- Estadística espacial
+- Econometría espacial
+- Sistemas de Información Geográfica (SIG)
+- Construcción de indicadores sociales y territoriales
+- Índices multidimensionales
+- Modelamiento estadístico
+- Visualización de datos
+- R y análisis reproducible
+
+Trabajo con información proveniente de encuestas, censos, registros administrativos y datos geoespaciales para la construcción de indicadores y el análisis de desigualdades territoriales.
+
+---
+
+## Temas de investigación
+
+**Desigualdades sociales**  
+Vulnerabilidad social, pobreza, desigualdad y diferenciación territorial.
+
+**Cuidados y dependencia**  
+Necesidades de cuidado, dependencia funcional, redes de apoyo y acceso a cuidados.
+
+**Análisis territorial**  
+Distribución espacial, dependencia espacial, patrones territoriales y desigualdades geográficas.
+
+**Políticas públicas**  
+Indicadores, priorización territorial y diseño de políticas públicas basadas en evidencia.
+
+**Envejecimiento y política social**  
+Dimensiones sociales y territoriales asociadas al envejecimiento, la dependencia y los cuidados.
+
+---
+
+## Investigaciones seleccionadas
+
+### Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas
+
+Desarrollo de un índice territorial multidimensional orientado a identificar y priorizar comunas de acuerdo con condiciones demográficas, sociales, territoriales, institucionales y ambientales relevantes para la construcción de Condominios de Viviendas Tuteladas (CVT).
+
+### Análisis espacial de la ausencia de cuidados
+
+Análisis de la distribución espacial de las necesidades de cuidado no satisfechas y su relación con la vulnerabilidad social y las características de los hogares.
+
+### Indicadores sociales y territoriales
+
+Diseño y construcción de indicadores compuestos para el análisis territorial, integrando información socioeconómica, demográfica, institucional y ambiental.
