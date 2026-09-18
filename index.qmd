@@ -23,12 +23,10 @@ Investigación social · análisis de datos · políticas públicas · análisis
 ::: {.home-section}
 
 ::: {.home-image}
-
 ![](images/home/about-me.png)
-
 :::
 
-::: {.home-text}
+::: {.home-content}
 
 **About me**
 
@@ -46,12 +44,10 @@ Entre mis áreas de interés se encuentran la vulnerabilidad social, las políti
 ::: {.home-section}
 
 ::: {.home-image}
-
 ![](images/home/research-interests.png)
-
 :::
 
-::: {.home-text}
+::: {.home-content}
 
 **Research interests**
 
@@ -71,12 +67,10 @@ Entre mis áreas de interés se encuentran la vulnerabilidad social, las políti
 ::: {.home-section}
 
 ::: {.home-image}
-
 ![](images/home/selected-projects.png)
-
 :::
 
-::: {.home-text}
+::: {.home-content}
 
 **Selected projects**
 
