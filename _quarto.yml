@@ -52,7 +52,6 @@ format:
   html:
     theme: default
     css: styles.css
-    favicon: favicon.png
     toc: false
     page-layout: article
     smooth-scroll: true
