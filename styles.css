@@ -1,598 +1,73 @@
-/* =========================================================
-   GENARO CÉSAR MARILEO MILLÁN
-   Academic personal website
-   ========================================================= */
-
-
-/* =========================================================
-   PALETA
-   ========================================================= */
-
-:root {
-  --navy: #173F5F;
-  --blue: #20639B;
-  --teal: #3CAEA3;
-
-  --text: #263238;
-  --muted: #607D8B;
-
-  --border: #E1E7EA;
-  --soft: #F5F8F9;
-  --white: #FFFFFF;
-
-  --max-width: 880px;
-}
-
-
-/* =========================================================
-   GENERAL
-   ========================================================= */
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--white);
-  color: var(--text);
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-
-  font-size: 16px;
-  line-height: 1.72;
-}
-
-
-/* =========================================================
-   CONTENIDO
-   ========================================================= */
-
-#quarto-content {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-main.content {
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-}
-
-
-/* =========================================================
-   NAVBAR
-   ========================================================= */
-
-.navbar {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.navbar-brand {
-  color: var(--navy) !important;
-
-  font-weight: 650;
-  letter-spacing: -0.015em;
-}
-
-.navbar-nav .nav-link {
-  color: var(--text) !important;
-
-  font-size: 0.94rem;
-
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: var(--blue) !important;
-}
-
-.navbar-nav .nav-link.active {
-  color: var(--blue) !important;
-  font-weight: 600;
-}
-
-
-/* =========================================================
-   PERFIL PRINCIPAL
-   ========================================================= */
-
-.profile {
-  margin-bottom: 2.8rem;
-
-  padding-bottom: 1.8rem;
-
-  border-bottom: 3px solid var(--teal);
-}
-
-
-/* Eliminamos el marcador "Foto" mientras no haya fotografía */
-
-.profile-photo {
-  display: none;
-}
-
-
-/* Nombre */
-
-.profile h1 {
-  color: var(--navy);
-
-  font-size: clamp(2.2rem, 5vw, 3rem);
-
-  line-height: 1.05;
-
-  font-weight: 650;
-
-  letter-spacing: -0.04em;
-
-  margin-top: 0;
-
-  margin-bottom: 0.75rem;
-}
-
-
-/* Descripción profesional */
-
-.profile p {
-  margin-bottom: 0.65rem;
-}
-
-.profile strong {
-  color: var(--navy);
-}
-
-
-/* =========================================================
-   ENLACES DE CONTACTO
-   ========================================================= */
-
-.profile a {
-  color: var(--blue);
-
-  font-weight: 500;
-
-  text-decoration: none;
-}
-
-.profile a:hover {
-  color: var(--teal);
-
-  text-decoration: underline;
-}
-
-
-/* =========================================================
-   TÍTULOS
-   ========================================================= */
-
-h1.title {
-  color: var(--navy);
-
-  font-size: 2.55rem;
-
-  line-height: 1.15;
-
-  font-weight: 650;
-
-  letter-spacing: -0.025em;
-
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: var(--navy);
-
-  font-size: 1.55rem;
-
-  line-height: 1.3;
-
-  font-weight: 600;
-
-  margin-top: 3.1rem;
-
-  margin-bottom: 1rem;
-}
-
-h3 {
-  color: var(--blue);
-
-  font-size: 1.15rem;
-
-  line-height: 1.4;
-
-  font-weight: 650;
-
-  margin-top: 2rem;
-
-  margin-bottom: 0.55rem;
-}
-
-
-/* =========================================================
-   TEXTO
-   ========================================================= */
-
-p {
-  margin-bottom: 1rem;
-}
-
-strong {
-  color: var(--navy);
-}
-
-
-/* =========================================================
-   ENLACES GENERALES
-   ========================================================= */
-
-a {
-  color: var(--blue);
-
-  text-decoration-thickness: 1px;
-
-  text-underline-offset: 3px;
-
-  transition:
-    color 0.2s ease;
-}
-
-a:hover {
-  color: var(--teal);
-}
-
-
-/* =========================================================
-   RESEARCH INTERESTS
-   ========================================================= */
-
-h2 + ul {
-  margin-top: 0.5rem;
-}
-
-ul li {
-  margin-bottom: 0.35rem;
-}
-
-
-/* =========================================================
-   PROYECTOS
-   ========================================================= */
-
-/* Cada título de proyecto adquiere una pequeña línea lateral */
-
-h3 {
-  border-left: 3px solid var(--teal);
-
-  padding-left: 0.8rem;
-}
-
-
-/* =========================================================
-   SEPARADORES
-   ========================================================= */
-
-hr {
-  border: 0;
-
-  border-top: 1px solid var(--border);
-
-  margin: 2.4rem 0;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.page-footer {
-  background: var(--white);
-
-  border-top: 1px solid var(--border);
-
-  color: var(--muted);
-
-  padding-top: 1rem;
-
-  padding-bottom: 1rem;
-}
-
-
-/* =========================================================
-   SIDEBAR
-   ========================================================= */
-
-#quarto-margin-sidebar {
-  display: none;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  #quarto-content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  main.content {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-  }
-
-  .profile {
-    padding-bottom: 1.4rem;
-  }
-
-  .profile h1 {
-    font-size: 2.35rem;
-  }
-
-  h1.title {
-    font-size: 2.05rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 1.08rem;
-  }
-}
-
-
-/* =========================================================
-   MENÚ SUPERIOR — DISEÑO ACADÉMICO
-   ========================================================= */
-
-.navbar {
-  min-height: 64px;
-
-  background: #FFFFFF !important;
-
-  border-bottom: 1px solid #E2E8EC;
-
-  box-shadow: none;
-}
-
-
-/* Nombre en el menú */
-
-.navbar-brand {
-  color: #173F5F !important;
-
-  font-size: 1.02rem;
-
-  font-weight: 650;
-
-  letter-spacing: -0.015em;
-}
-
-
-/* Elementos del menú */
-
-.navbar-nav .nav-link {
-  color: #37474F !important;
-
-  font-size: 0.94rem;
-
-  font-weight: 450;
-
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
-
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
-}
-
-
-/* Al pasar el mouse */
-
-.navbar-nav .nav-link:hover {
-  color: #20639B !important;
-}
-
-
-/* Página actualmente seleccionada */
-
-.navbar-nav .nav-link.active {
-  color: #20639B !important;
-
-  font-weight: 600;
-}
-
-
-/* Íconos de contacto */
-
-.navbar .bi {
-  color: #607D8B;
-
-  font-size: 1rem;
-
-  transition: color 0.2s ease;
-}
-
-.navbar .bi:hover {
-  color: #3CAEA3;
-}
-
-
-/* Menú móvil */
-
-.navbar-toggler {
-  border-color: #E2E8EC;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-
-
-/* =========================================================
-   TARJETAS DE PROYECTOS
-   ========================================================= */
-
-.project-card {
-  background: #FFFFFF;
-
-  border: 1px solid #E1E7EA;
-
-  border-left: 4px solid #3CAEA3;
-
-  border-radius: 6px;
-
-  padding: 1.6rem 1.8rem;
-
-  margin: 1.5rem 0;
-
-  box-shadow: 0 3px 12px rgba(23, 63, 95, 0.06);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-}
-
-
-/* Efecto al pasar el mouse */
-
-.project-card:hover {
-  transform: translateY(-2px);
-
-  box-shadow: 0 6px 18px rgba(23, 63, 95, 0.10);
-
-  border-left-color: #20639B;
-}
-
-
-/* Título del proyecto */
-
-.project-card h3 {
-  border-left: none;
-
-  padding-left: 0;
-
-  margin-top: 0;
-
-  margin-bottom: 0.8rem;
-
-  color: #173F5F;
-
-  font-size: 1.25rem;
-}
-
-
-/* Etiquetas */
-
-.project-tags {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 0.45rem;
-
-  margin: 0.8rem 0 1.1rem 0;
-}
-
-.project-tags span {
-  display: inline-block;
-
-  background: #F5F8F9;
-
-  color: #20639B;
-
-  border: 1px solid #DCE6EA;
-
-  border-radius: 4px;
-
-  padding: 0.2rem 0.55rem;
-
-  font-size: 0.78rem;
-
-  font-weight: 500;
-}
-
-
-/* Métodos */
-
-.project-methods {
-  margin-top: 1.1rem;
-
-  padding-top: 0.9rem;
-
-  border-top: 1px solid #E8EDF0;
-
-  color: #607D8B;
-
-  font-size: 0.88rem;
-}
-
-
-/* Tarjetas secundarias */
-
-.project-card-light {
-  background: #F8FAFB;
-
-  border-left-color: #20639B;
-
-  box-shadow: none;
-}
-
-
-/* Responsive */
-
-@media (max-width: 700px) {
-
-  .project-card {
-    padding: 1.3rem 1.2rem;
-  }
-
-  .project-card h3 {
-    font-size: 1.15rem;
-  }
-
-  .project-tags span {
-    font-size: 0.75rem;
-  }
-}
-
 /* ============================================================
    CURSOS
    ============================================================ */
 
+.course-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #E1E7EA;
+}
+
+.course-entry:first-of-type {
+  padding-top: 1.5rem;
+}
+
 .course-image {
-  display: block;
-  width: 95px;
-  height: 95px;
+  flex: 0 0 105px;
+  width: 105px;
+  height: 105px;
   object-fit: contain;
-  margin: 1rem 0 1rem 0;
+  margin: 0;
 }
 
-.quarto-container h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
+.course-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
   color: #173F5F;
+  font-size: 1.35rem;
 }
 
-.quarto-container hr {
-  margin: 2.5rem 0;
-  border: 0;
-  border-top: 1px solid #E1E7EA;
+.course-content p {
+  margin: 0.3rem 0;
+  line-height: 1.55;
+}
+
+.course-content strong {
+  color: #263238;
+}
+
+@media (max-width: 700px) {
+
+  .course-entry {
+    gap: 1.25rem;
+  }
+
+  .course-image {
+    flex: 0 0 80px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .course-content h2 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .course-entry {
+    display: block;
+  }
+
+  .course-image {
+    margin: 0 0 1rem 0;
+  }
+}
 }
