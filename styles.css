@@ -347,3 +347,265 @@
   padding-bottom: 0.2rem;
   line-height: 1.2;
 }
+
+
+/* ============================================================
+   PORTADA — ESTILO DOS COLUMNAS
+   ============================================================ */
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  column-gap: 3rem;
+  align-items: start;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0 3rem 0;
+}
+
+
+/* ============================================================
+   COLUMNA IZQUIERDA
+   ============================================================ */
+
+.home-sidebar {
+  text-align: center;
+  padding-right: 2rem;
+  border-right: 1px solid #D9E0E3;
+}
+
+.profile-photo {
+  display: block;
+
+  width: 250px;
+  height: 285px;
+
+  object-fit: cover;
+
+  margin: 0 auto 1.5rem auto;
+
+  border-radius: 3px;
+}
+
+
+/* Nombre */
+
+.home-sidebar h1 {
+  margin: 0 0 0.35rem 0;
+
+  color: #173F5F;
+
+  font-size: 2.15rem;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+
+/* Profesión */
+
+.home-sidebar strong {
+  display: block;
+
+  color: #263238;
+
+  font-size: 1rem;
+  line-height: 1.5;
+
+  margin-bottom: 1rem;
+}
+
+
+/* Descripción */
+
+.home-sidebar > p {
+  color: #263238;
+
+  font-size: 0.98rem;
+  line-height: 1.6;
+
+  margin: 0 auto 1.5rem auto;
+}
+
+
+/* ============================================================
+   ENLACES
+   ============================================================ */
+
+.profile-links {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 0.7rem;
+
+  margin-top: 1.5rem;
+}
+
+.profile-links a {
+  display: inline-block;
+
+  padding: 0.55rem 0.75rem;
+
+  border: 1px solid #197A8A;
+  border-radius: 4px;
+
+  color: #176B78;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+}
+
+.profile-links a:hover {
+  background: #EEF5F6;
+  color: #173F5F;
+}
+
+
+/* ============================================================
+   COLUMNA DERECHA
+   ============================================================ */
+
+.home-main {
+  min-width: 0;
+
+  padding-top: 0.2rem;
+}
+
+
+/* Línea principal */
+
+.research-line {
+  color: #173F5F;
+
+  font-size: 1.12rem;
+  line-height: 1.65;
+
+  margin: 0 0 1.4rem 0;
+}
+
+
+/* Información académica */
+
+.academic-line {
+  background: #EEF3F5;
+
+  border-left: 3px solid #197A8A;
+
+  padding: 0.75rem 1rem;
+
+  margin: 0 0 2rem 0;
+
+  color: #263238;
+
+  font-size: 0.98rem;
+}
+
+
+/* ============================================================
+   TÍTULOS DE LA PORTADA
+   ============================================================ */
+
+.home-main h2 {
+  color: #176B78;
+
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+
+  line-height: 1.2;
+}
+
+.home-main h2:first-of-type {
+  margin-top: 0;
+}
+
+
+/* Texto */
+
+.home-main p {
+  font-size: 1.02rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 1rem;
+}
+
+
+/* Listas */
+
+.home-main ul {
+  line-height: 1.8;
+
+  margin-bottom: 1.5rem;
+}
+
+
+/* Proyectos */
+
+.home-main strong {
+  color: #173F5F;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .home-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+
+    column-gap: 2rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .profile-photo {
+    width: 190px;
+    height: 220px;
+  }
+
+  .home-sidebar h1 {
+    font-size: 1.8rem;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .home-layout {
+    display: block;
+
+    padding: 1rem 1.2rem 2rem 1.2rem;
+  }
+
+  .home-sidebar {
+    border-right: none;
+
+    border-bottom: 1px solid #D9E0E3;
+
+    padding-right: 0;
+
+    padding-bottom: 2rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 240px;
+  }
+
+  .home-main {
+    padding-top: 0;
+  }
+
+}
