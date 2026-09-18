@@ -4,63 +4,114 @@ title: "Cursos"
 
 Mi experiencia docente se ha concentrado principalmente en la enseñanza de estadística, análisis de datos y métodos de investigación en ciencias sociales.
 
-## Estadística I
+::: {.course-entry}
 
 ![](images/cursos/estadistica1_sociologia.png){.course-image}
 
+::: {.course-content}
+
+## Estadística I
+
 **Departamento de Sociología — Universidad Alberto Hurtado**  
 2013–2018
 
----
+Curso introductorio a la estadística aplicada a las ciencias sociales. Se abordan los fundamentos de la inferencia estadística, la descripción de datos y el uso de software para el análisis de información social.
 
-## Estadística II
+:::
+:::
+
+::: {.course-entry}
 
 ![](images/cursos/estadistica2_sociologia.png){.course-image}
 
+::: {.course-content}
+
+## Estadística II
+
 **Departamento de Sociología — Universidad Alberto Hurtado**  
 2013–2018
 
----
+Curso orientado al estudio de relaciones entre variables y modelos de regresión aplicados a problemas de investigación social. Se trabajan procedimientos de estimación, interpretación de resultados y aplicaciones con datos empíricos.
 
-## Análisis de Datos Multivariados I
+:::
+:::
+
+::: {.course-entry}
 
 ![](images/cursos/multivariados1.png){.course-image}
+
+::: {.course-content}
+
+## Análisis de Datos Multivariados I
 
 **Departamento de Sociología — Universidad Alberto Hurtado**  
 2013–2016
 
----
+Curso dedicado al análisis simultáneo de múltiples variables. Se introducen técnicas de reducción de dimensiones y exploración de estructuras presentes en bases de datos de investigación social.
 
-## Análisis de Datos Multivariados II
+:::
+:::
+
+::: {.course-entry}
 
 ![](images/cursos/multivariados2.png){.course-image}
+
+::: {.course-content}
+
+## Análisis de Datos Multivariados II
 
 **Departamento de Sociología — Universidad Alberto Hurtado**  
 2012–2016
 
----
+Curso avanzado de análisis multivariado. Se abordan distintas estrategias para estudiar relaciones complejas entre variables y desarrollar modelos aplicados a fenómenos sociales.
 
-## Métodos Mixtos Cuantitativo y Cualitativo
+:::
+:::
+
+::: {.course-entry}
 
 ![](images/cursos/metodos_mixtos.png){.course-image}
+
+::: {.course-content}
+
+## Métodos Mixtos Cuantitativo y Cualitativo
 
 **Departamento de Sociología — Universidad Alberto Hurtado**  
 2017
 
----
+Curso orientado a la integración de estrategias cuantitativas y cualitativas en investigación social. Se revisan diseños de investigación mixta, estrategias de análisis y formas de integración de distintos tipos de evidencia.
 
-## Estadística I
+:::
+:::
+
+::: {.course-entry}
 
 ![](images/cursos/estadistica1_ciencia_politica.png){.course-image}
+
+::: {.course-content}
+
+## Estadística I
 
 **Departamento de Ciencia Política y Relaciones Internacionales — Universidad Alberto Hurtado**  
 2012–2015
 
----
+Curso introductorio a los fundamentos estadísticos aplicados al análisis político. Se desarrollan herramientas para la descripción de datos, probabilidad e inferencia, utilizando ejemplos vinculados al estudio de fenómenos políticos y sociales.
 
-## Estadística II
+:::
+:::
+
+::: {.course-entry}
 
 ![](images/cursos/estadistica2_ciencia_politica.png){.course-image}
 
+::: {.course-content}
+
+## Estadística II
+
 **Departamento de Ciencia Política y Relaciones Internacionales — Universidad Alberto Hurtado**  
 2011–2015
+
+Curso centrado en el análisis de relaciones entre variables y modelos estadísticos aplicados a la ciencia política. Se utilizan datos empíricos para desarrollar procedimientos de análisis e interpretación de resultados.
+
+:::
+:::
