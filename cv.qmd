@@ -1,41 +1,162 @@
 ---
-title: "CV"
+title: "Currículum"
 ---
-
-# Genaro César Marileo Millán
-
-**Sociólogo — Universidad de Chile**
-
-[Descargar CV en PDF](cv/Genaro_Cesar_Marileo_Millan_CV.pdf)
-
-## Formación
-
-**Sociología — Universidad de Chile**
 
 ## Perfil profesional
 
-Sociólogo orientado a la investigación social aplicada, análisis de datos,
-construcción de indicadores, análisis territorial y políticas públicas.
+Sociólogo de la Universidad de Chile, Magíster en Sociología por la Pontificia Universidad Católica de Chile y Doctor en Sociología por la Universidad Alberto Hurtado.
 
-## Competencias
+Mi especialidad profesional y docente son los **métodos cuantitativos avanzados**. Mis áreas de experiencia e investigación incluyen educación, innovación curricular, evaluación de calidad docente, métodos estadísticos aplicados, transparencia y evaluación de políticas públicas.
 
-- Investigación social
-- Métodos cuantitativos
-- Análisis estadístico
-- R y RStudio
-- Visualización de datos
-- Análisis espacial
-- Construcción de indicadores
-- Políticas públicas
-- Análisis de datos territoriales
+Actualmente me desempeño como **Profesional de Estudios en la Subdivisión de Estudios y Transferencias Técnicas de SENAMA**.
 
-## Experiencia
+---
 
-Esta sección se completará con tus cargos, instituciones, períodos y principales
-responsabilidades.
+## Formación académica
 
-## Contacto
+**Doctor en Sociología**  
+Universidad Jesuita Alberto Hurtado · 2023
 
-**Email:** [genarouchile@gmail.com](mailto:genarouchile@gmail.com)
+**Magíster en Sociología**  
+Pontificia Universidad Católica de Chile · 2017
 
-**LinkedIn:** [Genaro César Marileo Millán](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/)
+**Diplomado en Evaluación de Impacto de Políticas Públicas**  
+Pontificia Universidad Católica de Chile · 2022
+
+**Sociólogo**  
+Universidad de Chile · 2006
+
+---
+
+## Experiencia profesional
+
+### SENAMA
+
+**Profesional de Estudios**  
+Subdivisión de Estudios y Transferencias Técnicas  
+2024 – presente
+
+### Universidad de Chile
+
+**Analista de Datos**  
+Proyecto de investigación *Attitudes Towards Immigration and Immigrants' Social Rights in Latin America*  
+Facultad de Gobierno y Ciencia Política · 2023
+
+### Koppelman y Asociados Consultores
+
+**Jefe de Proyecto — Evaluación Educacional PDA**  
+Ministerio del Medio Ambiente  
+2019 – 2021
+
+**Jefe de Proyecto — Evaluación Modelo de Gestión SERNAM**  
+2017 – 2019
+
+### Proyecto Fondecyt N.º 11090119
+
+**Analista Estadístico**  
+*Identidades regionales, discriminación intergrupal y potencial de movilización colectiva: una aproximación desde la teoría de la identidad social*  
+2011 – 2012
+
+### Chile Transparente
+
+**Investigador — Índice de Acceso a la Información Pública**  
+Capítulo Chileno de Transparencia Internacional  
+2009 – 2012
+
+### Universidad de Chile — Facultad de Ciencias Sociales
+
+**Analista Cuantitativo — Evaluación de Contenidos Formativos en Psicología**  
+Departamento de Psicología · 2011
+
+**Consultor Cuantitativo y Cualitativo — Evaluación de Movilidad Internacional de Estudiantes**  
+Departamento de Relaciones Internacionales · 2008 – 2009
+
+**Analista Cuantitativo y Cualitativo — Evaluación Docente**  
+Facultad de Ciencias Sociales · 2008 – 2012
+
+**Analista Cuantitativo — Diagnóstico de Innovación Curricular y Calidad Docente**  
+Dirección de Pregrado, Facultad de Ciencias Sociales · Proyecto MECESUP 2 · 2008 – 2011
+
+### Codelco — Universidad de Chile
+
+**Analista Estadístico**  
+Diseño de muestreo estadístico para estudio de salud y educación, Ciudad del Salvador  
+Proyecto de Modelamiento Matemático · 2009
+
+### Time-Research
+
+**Analista Cuantitativo**  
+2006 – 2007
+
+---
+
+## Experiencia académica
+
+**Docente — Estadística II**  
+Departamento de Sociología, Universidad Alberto Hurtado  
+2013 – 2018
+
+**Docente — Estadística I**  
+Departamento de Sociología, Universidad Alberto Hurtado  
+2013 – 2018
+
+**Docente — Diplomado en Métodos Mixtos Cuantitativo y Cualitativo**  
+Departamento de Sociología, Universidad Alberto Hurtado · 2017
+
+**Docente — Análisis de Datos Multivariados II**  
+Departamento de Sociología, Universidad Alberto Hurtado  
+2012 – 2016
+
+**Docente — Análisis de Datos Multivariados I**  
+Departamento de Sociología, Universidad Alberto Hurtado  
+2013 – 2016
+
+**Docente — Estadística I**  
+Departamento de Ciencia Política y Relaciones Internacionales, Universidad Alberto Hurtado  
+2012 – 2015
+
+**Docente — Estadística II**  
+Departamento de Ciencia Política y Relaciones Internacionales, Universidad Alberto Hurtado  
+2011 – 2015
+
+---
+
+## Publicaciones
+
+**Libro**  
+*Calidad del Acceso a la Información Pública en Chile*.  
+Registro de Propiedad Intelectual N.º 215.424. Edición impresa para Chile Transparente, Capítulo Chileno de Transparencia Internacional.
+
+**Artículo**  
+*Autores en el campo de la Sociología Chilena*.  
+Revista Central de Sociología N.º 2, Editorial Universidad Central, Santiago, 2008.
+
+---
+
+## Software
+
+| Herramienta | Nivel |
+|---|---|
+| R | Avanzado |
+| Stata | Avanzado |
+| SPSS | Avanzado |
+| Atlas.ti | Avanzado |
+| Microsoft Office | Avanzado |
+
+---
+
+## Distinciones
+
+**Beca CONICYT**  
+Beca para estudios de Doctorado · 2016
+
+**Beca COES**  
+Beca para estudios de Doctorado · 2020
+
+---
+
+## CV completo
+
+Para consultar el currículum completo, puedes descargar el documento en formato PDF.
+
+**[Descargar CV completo](#)**
