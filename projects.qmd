@@ -4,48 +4,91 @@ title: "Proyectos"
 
 ## Proyectos de investigación
 
+::: {.project-card}
+
 ### Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas
 
-**Indicadores sociales · Análisis territorial · Políticas públicas**
+<div class="project-tags">
+<span>Indicadores sociales</span>
+<span>Análisis territorial</span>
+<span>Políticas públicas</span>
+</div>
 
 Desarrollo de un índice territorial multidimensional orientado a identificar y priorizar comunas para la construcción de Condominios de Viviendas Tuteladas (CVT).
 
 El índice integra dimensiones relacionadas con la población beneficiaria, condiciones territoriales, capacidad institucional, factibilidad de implementación y riesgos territoriales.
 
+<div class="project-methods">
+
 **Métodos:** construcción de indicadores · normalización · ponderación · análisis de sensibilidad · análisis territorial
 
----
+</div>
+
+:::
+
+
+::: {.project-card}
 
 ### Análisis espacial de la ausencia de cuidados
 
-**Cuidados · Dependencia · Vulnerabilidad social · Econometría espacial**
+<div class="project-tags">
+<span>Cuidados</span>
+<span>Dependencia</span>
+<span>Vulnerabilidad social</span>
+<span>Econometría espacial</span>
+</div>
 
 Investigación orientada a analizar la distribución territorial de la ausencia de cuidados y su relación con condiciones de vulnerabilidad social y características de los hogares.
 
 El estudio incorpora indicadores de dependencia espacial y modelos de econometría espacial para analizar los patrones territoriales observados.
 
-**Métodos:** R · `sf` · `spdep` · Moran Global · LISA · econometría espacial
+<div class="project-methods">
 
----
+**Métodos:** R · sf · spdep · Moran Global · LISA · econometría espacial
+
+</div>
+
+:::
+
+
+::: {.project-card}
 
 ### Indicadores sociales y territoriales
 
-**Indicadores · Datos administrativos · Análisis territorial**
+<div class="project-tags">
+<span>Indicadores</span>
+<span>Datos administrativos</span>
+<span>Análisis territorial</span>
+</div>
 
 Diseño y construcción de indicadores destinados a caracterizar condiciones sociales y territoriales y apoyar procesos de diagnóstico y priorización para políticas públicas.
 
 El trabajo integra información sociodemográfica, socioeconómica, institucional, ambiental y territorial.
 
+<div class="project-methods">
+
 **Métodos:** indicadores compuestos · normalización · ponderación · análisis estadístico · visualización de datos
 
----
+</div>
+
+:::
+
 
 ## Proyectos en desarrollo
+
+::: {.project-card .project-card-light}
 
 ### Análisis de vulnerabilidad territorial
 
 Construcción de herramientas para caracterizar diferencias territoriales mediante la integración de indicadores sociales, demográficos, económicos, institucionales y ambientales.
 
+:::
+
+
+::: {.project-card .project-card-light}
+
 ### Sistemas de información para políticas públicas
 
 Desarrollo de metodologías para transformar información estadística y administrativa en indicadores útiles para el diagnóstico territorial y la toma de decisiones.
+
+:::
