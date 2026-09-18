@@ -1072,7 +1072,7 @@ body:not(:has(.home-layout)) #quarto-content {
 
 /* Columna principal de lectura */
 body:not(:has(.home-layout)) #quarto-document-content {
-  max-width: 900px !important;
+  max-width: 1050px !important;
   width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
