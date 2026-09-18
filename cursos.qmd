@@ -4,90 +4,63 @@ title: "Cursos"
 
 Mi experiencia docente se ha concentrado principalmente en la enseñanza de estadística, análisis de datos y métodos de investigación en ciencias sociales.
 
-::: {.course-grid}
-
-::: {.course-card}
+## Estadística I
 
 ![](images/cursos/estadistica1_sociologia.png){.course-image}
 
-### Estadística I
-
-**Departamento de Sociología**  
-Universidad Alberto Hurtado  
+**Departamento de Sociología — Universidad Alberto Hurtado**  
 2013–2018
 
-:::
+---
 
-::: {.course-card}
+## Estadística II
 
 ![](images/cursos/estadistica2_sociologia.png){.course-image}
 
-### Estadística II
-
-**Departamento de Sociología**  
-Universidad Alberto Hurtado  
+**Departamento de Sociología — Universidad Alberto Hurtado**  
 2013–2018
 
-:::
+---
 
-::: {.course-card}
+## Análisis de Datos Multivariados I
 
 ![](images/cursos/multivariados1.png){.course-image}
 
-### Análisis de Datos Multivariados I
-
-**Departamento de Sociología**  
-Universidad Alberto Hurtado  
+**Departamento de Sociología — Universidad Alberto Hurtado**  
 2013–2016
 
-:::
+---
 
-::: {.course-card}
+## Análisis de Datos Multivariados II
 
 ![](images/cursos/multivariados2.png){.course-image}
 
-### Análisis de Datos Multivariados II
-
-**Departamento de Sociología**  
-Universidad Alberto Hurtado  
+**Departamento de Sociología — Universidad Alberto Hurtado**  
 2012–2016
 
-:::
+---
 
-::: {.course-card}
+## Métodos Mixtos Cuantitativo y Cualitativo
 
 ![](images/cursos/metodos_mixtos.png){.course-image}
 
-### Métodos Mixtos Cuantitativo y Cualitativo
-
-**Departamento de Sociología**  
-Universidad Alberto Hurtado  
+**Departamento de Sociología — Universidad Alberto Hurtado**  
 2017
 
-:::
+---
 
-::: {.course-card}
+## Estadística I
 
 ![](images/cursos/estadistica1_ciencia_politica.png){.course-image}
 
-### Estadística I
-
-**Departamento de Ciencia Política y Relaciones Internacionales**  
-Universidad Alberto Hurtado  
+**Departamento de Ciencia Política y Relaciones Internacionales — Universidad Alberto Hurtado**  
 2012–2015
 
-:::
+---
 
-::: {.course-card}
+## Estadística II
 
 ![](images/cursos/estadistica2_ciencia_politica.png){.course-image}
 
-### Estadística II
-
-**Departamento de Ciencia Política y Relaciones Internacionales**  
-Universidad Alberto Hurtado  
+**Departamento de Ciencia Política y Relaciones Internacionales — Universidad Alberto Hurtado**  
 2011–2015
-
-:::
-
-:::
