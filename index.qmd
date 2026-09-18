@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Genaro Marileo"
 ---
 
 ::: {.profile}
 
-# Genaro C. Marileo Millán
+# Genaro Marileo
 
 **Sociólogo de la Universidad de Chile**  
 **Magíster en Sociología — Pontificia Universidad Católica de Chile**  
@@ -17,24 +17,41 @@ Investigación social · análisis de datos · políticas públicas · análisis
 [GitHub](https://github.com/genarouchile)
 
 :::
+
 ---
 
-**Investigación social** · **Análisis cuantitativo** · **Datos territoriales** ·
-**Políticas públicas** · **Indicadores sociales** · **Análisis espacial**
+::: {.home-section}
+
+::: {.home-icon}
+
+![](images/home/about-me.png)
+
+:::
+
+::: {.home-content}
 
 ## About me
 
-Soy sociólogo de la Universidad de Chile y desarrollo investigación social aplicada
-orientada al análisis de problemas públicos mediante datos sociales, administrativos
-y territoriales.
+Soy sociólogo de la Universidad de Chile y desarrollo investigación social aplicada orientada al análisis de problemas públicos mediante datos sociales, administrativos y territoriales.
 
-Mi trabajo combina métodos cuantitativos, construcción de indicadores, análisis
-estadístico, visualización de datos y herramientas de análisis territorial para
-estudiar fenómenos sociales y apoyar la toma de decisiones en políticas públicas.
+Mi trabajo combina métodos cuantitativos, construcción de indicadores, análisis estadístico, visualización de datos y herramientas de análisis territorial para estudiar fenómenos sociales y apoyar la toma de decisiones en políticas públicas.
 
-Entre mis áreas de interés se encuentran la vulnerabilidad social, las políticas
-dirigidas a personas mayores, los cuidados, la desigualdad territorial y el
-análisis espacial.
+Entre mis áreas de interés se encuentran la vulnerabilidad social, las políticas dirigidas a personas mayores, los cuidados, la desigualdad territorial y el análisis espacial.
+
+:::
+
+:::
+
+
+::: {.home-section}
+
+::: {.home-icon}
+
+![](images/home/research-interests.png)
+
+:::
+
+::: {.home-content}
 
 ## Research interests
 
@@ -46,18 +63,35 @@ análisis espacial.
 - Vulnerabilidad social
 - Cuidados y personas mayores
 
+:::
+
+:::
+
+
+::: {.home-section}
+
+::: {.home-icon}
+
+![](images/home/selected-projects.png)
+
+:::
+
+::: {.home-content}
+
 ## Selected projects
 
-**Índice de Priorización Territorial para CVT**  
-Desarrollo de un índice compuesto para la priorización territorial de comunas para
-la construcción de Condominios de Viviendas Tuteladas.
+### Índice de Priorización Territorial para CVT
 
-**Análisis espacial de fenómenos sociales**  
-Aplicación de estadística espacial y econometría espacial para estudiar la
-distribución territorial y la dependencia espacial de fenómenos sociales.
+Desarrollo de un índice compuesto para la priorización territorial de comunas para la construcción de Condominios de Viviendas Tuteladas.
 
-**Indicadores sociales y territoriales**  
-Construcción, normalización y análisis de indicadores para la caracterización
-territorial y la evaluación de políticas públicas.
+### Análisis espacial de fenómenos sociales
 
-[Explore my research →](research.qmd) · [View my projects →](projects.qmd)
+Aplicación de estadística espacial y econometría espacial para estudiar la distribución territorial y la dependencia espacial de fenómenos sociales.
+
+### Indicadores sociales y territoriales
+
+Construcción, normalización y análisis de indicadores para la caracterización territorial y la evaluación de políticas públicas.
+
+:::
+
+:::
