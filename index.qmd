@@ -2,52 +2,51 @@
 title: ""
 ---
 
-::: {.profile}
+<div class="home-layout">
+
+<div class="home-sidebar">
+
+![](genaro.jpg){.profile-photo}
 
 # Genaro Marileo
 
-**Sociólogo de la Universidad de Chile**  
-**Magíster en Sociología — Pontificia Universidad Católica de Chile**  
-**Doctor en Sociología — Universidad Alberto Hurtado**
+**Sociólogo de la Universidad de Chile**
 
-Investigación social · análisis de datos · políticas públicas · análisis territorial
+Investigación social aplicada · análisis de datos · políticas públicas · análisis territorial
 
-[Email](mailto:genarouchile@gmail.com) ·
-[LinkedIn](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/) ·
+<div class="profile-links">
+
+[✉ Correo electrónico](mailto:genarouchile@gmail.com)
+
+[CV](cv.html)
+
+[LinkedIn](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/)
+
 [GitHub](https://github.com/genarouchile)
 
-:::
+</div>
 
----
+</div>
 
-::: {.home-section}
 
-::: {.home-image}
-![](images/home/about-me.png)
-:::
+<div class="home-main">
 
-::: {.home-content}
+<p class="research-line">
+Investigación social aplicada · análisis cuantitativo · políticas públicas · análisis territorial
+</p>
+
+<p class="academic-line">
+Sociólogo · Magíster en Sociología · Doctor en Sociología
+</p>
 
 ## Sobre mí
 
-Soy sociólogo de la Universidad de Chile y desarrollo investigación social aplicada orientada al análisis de problemas públicos mediante datos sociales, administrativos y territoriales.
+Soy sociólogo de la Universidad de Chile y Doctor en Sociología. Mi trabajo se orienta a la investigación social aplicada, el análisis de datos y el estudio de problemas públicos mediante herramientas cuantitativas y territoriales.
 
-Mi trabajo combina métodos cuantitativos, construcción de indicadores, análisis estadístico, visualización de datos y herramientas de análisis territorial para estudiar fenómenos sociales y apoyar la toma de decisiones en políticas públicas.
+Mi experiencia combina investigación social, construcción de indicadores, análisis estadístico, evaluación de políticas públicas y análisis espacial. He desarrollado proyectos utilizando datos sociales, administrativos y territoriales, con especial interés en vulnerabilidad social, cuidados, personas mayores y desigualdad territorial.
 
-Entre mis áreas de interés se encuentran la vulnerabilidad social, las políticas dirigidas a personas mayores, los cuidados, la desigualdad territorial y el análisis espacial.
+Actualmente desarrollo investigación aplicada vinculada al análisis territorial y a la generación de evidencia para apoyar la toma de decisiones en políticas públicas.
 
-:::
-
-:::
-
-
-::: {.home-section}
-
-::: {.home-image}
-![](images/home/research-interests.png)
-:::
-
-::: {.home-content}
 
 ## Líneas de investigación
 
@@ -59,22 +58,10 @@ Entre mis áreas de interés se encuentran la vulnerabilidad social, las políti
 - Vulnerabilidad social
 - Cuidados y personas mayores
 
-:::
-
-:::
-
-
-::: {.home-section}
-
-::: {.home-image}
-![](images/home/selected-projects.png)
-:::
-
-::: {.home-content}
 
 ## Proyectos seleccionados
 
-**Índice de Priorización Territorial para CVT**
+**Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas**
 
 Desarrollo de un índice compuesto para la priorización territorial de comunas para la construcción de Condominios de Viviendas Tuteladas.
 
@@ -86,6 +73,6 @@ Aplicación de estadística espacial y econometría espacial para estudiar la di
 
 Construcción, normalización y análisis de indicadores para la caracterización territorial y la evaluación de políticas públicas.
 
-:::
+</div>
 
-:::
+</div>
