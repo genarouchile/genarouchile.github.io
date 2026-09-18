@@ -609,3 +609,362 @@
   }
 
 }
+
+
+/* ============================================================
+   PORTADA — ESTRUCTURA GABRIEL
+   ============================================================ */
+
+/* IMPORTANTE:
+   Quarto limita el ancho del contenido en page-layout: article.
+   Esta regla permite que la portada utilice todo el ancho.
+*/
+
+#quarto-content {
+  max-width: none;
+}
+
+.page-columns {
+  display: block !important;
+}
+
+.page-columns .content {
+  max-width: 1180px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* ============================================================
+   ESTRUCTURA PRINCIPAL
+   ============================================================ */
+
+.home-layout {
+
+  display: grid;
+
+  grid-template-columns: 280px minmax(0, 1fr);
+
+  column-gap: 3rem;
+
+  align-items: start;
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+
+/* ============================================================
+   COLUMNA IZQUIERDA
+   ============================================================ */
+
+.home-sidebar {
+
+  text-align: center;
+
+  padding-right: 2rem;
+
+  border-right: 1px solid #D9E0E3;
+
+}
+
+
+/* FOTO */
+
+.profile-photo {
+
+  display: block;
+
+  width: 250px;
+  height: 285px;
+
+  object-fit: cover;
+
+  margin: 0 auto 1.4rem auto;
+
+  border-radius: 3px;
+}
+
+
+/* NOMBRE */
+
+.home-sidebar h1 {
+
+  margin: 0 0 0.5rem 0;
+
+  color: #173F5F;
+
+  font-size: 2rem;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+
+/* PROFESIÓN */
+
+.home-sidebar strong {
+
+  display: block;
+
+  color: #263238;
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+
+  margin-bottom: 0.8rem;
+}
+
+
+/* DESCRIPCIÓN */
+
+.home-sidebar > p {
+
+  color: #263238;
+
+  font-size: 0.92rem;
+
+  line-height: 1.55;
+
+  margin: 0 auto 1.2rem auto;
+}
+
+
+/* ============================================================
+   ENLACES
+   ============================================================ */
+
+.profile-links {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  margin-top: 1.2rem;
+}
+
+.profile-links a {
+
+  display: inline-block;
+
+  padding: 0.45rem 0.65rem;
+
+  border: 1px solid #197A8A;
+
+  border-radius: 4px;
+
+  color: #176B78;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+}
+
+.profile-links a:hover {
+
+  background: #EEF5F6;
+
+  color: #173F5F;
+}
+
+
+/* ============================================================
+   COLUMNA DERECHA
+   ============================================================ */
+
+.home-main {
+
+  min-width: 0;
+
+  padding-top: 0.2rem;
+}
+
+
+/* ============================================================
+   LÍNEAS SUPERIORES
+   ============================================================ */
+
+.research-line {
+
+  color: #173F5F;
+
+  font-size: 1.05rem;
+
+  line-height: 1.6;
+
+  margin: 0 0 1.2rem 0;
+}
+
+.academic-line {
+
+  background: #EEF3F5;
+
+  border-left: 3px solid #197A8A;
+
+  padding: 0.7rem 1rem;
+
+  margin: 0 0 2rem 0;
+
+  color: #263238;
+
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   SECCIONES CON IMAGEN
+   ============================================================ */
+
+.home-section {
+
+  display: grid;
+
+  grid-template-columns: 75px minmax(0, 1fr);
+
+  column-gap: 1.5rem;
+
+  align-items: start;
+
+  margin: 2rem 0;
+
+  padding: 0 0 2rem 0;
+
+  border-bottom: 1px solid #E1E7EA;
+}
+
+.home-section:last-child {
+
+  border-bottom: none;
+}
+
+
+/* ============================================================
+   IMÁGENES PREVIAS
+   ============================================================ */
+
+.home-image {
+
+  width: 75px;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.home-image img {
+
+  display: block;
+
+  width: 65px;
+
+  height: 65px;
+
+  object-fit: contain;
+
+  margin: 0;
+}
+
+
+/* ============================================================
+   TEXTO DE LAS SECCIONES
+   ============================================================ */
+
+.home-content {
+
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.home-content h2 {
+
+  color: #176B78;
+
+  font-size: 1.7rem;
+
+  font-weight: 700;
+
+  margin: 0 0 0.8rem 0;
+
+  padding: 0;
+
+  line-height: 1.2;
+}
+
+.home-content p {
+
+  font-size: 1rem;
+
+  line-height: 1.65;
+
+  margin-bottom: 1rem;
+}
+
+.home-content ul {
+
+  line-height: 1.8;
+
+  margin-top: 0.3rem;
+}
+
+.home-content strong {
+
+  color: #173F5F;
+}
+
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 750px) {
+
+  .home-layout {
+
+    display: block;
+
+    padding: 1rem;
+  }
+
+  .home-sidebar {
+
+    border-right: none;
+
+    border-bottom: 1px solid #D9E0E3;
+
+    padding-right: 0;
+
+    padding-bottom: 2rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .profile-photo {
+
+    width: 230px;
+
+    height: 250px;
+  }
+
+  .home-section {
+
+    grid-template-columns: 65px minmax(0, 1fr);
+
+    column-gap: 1rem;
+  }
+
+}
