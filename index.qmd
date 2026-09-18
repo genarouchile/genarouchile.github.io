@@ -49,7 +49,7 @@ Entre mis áreas de interés se encuentran la vulnerabilidad social, las políti
 
 ::: {.home-content}
 
-**Research interests**
+## Líneas de investigación
 
 - Investigación social aplicada
 - Análisis cuantitativo y estadístico
@@ -72,7 +72,7 @@ Entre mis áreas de interés se encuentran la vulnerabilidad social, las políti
 
 ::: {.home-content}
 
-**Selected projects**
+## Proyectos seleccionados
 
 **Índice de Priorización Territorial para CVT**
 
