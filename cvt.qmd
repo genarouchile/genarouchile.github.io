@@ -264,3 +264,23 @@ value of each indicator.
 ![Distribution of normalized territorial indicators in the 52 communes of the Metropolitan Region.](images/cvt-indicadores-normalizados.png)
 
 </div>
+
+
+## Sensitivity analysis
+
+The robustness of the IPT-CVT was assessed by examining how changes in
+the weighting of the main dimensions affect the resulting territorial
+prioritization.
+
+The analysis compares the alternative scenarios using rank correlation,
+the coincidence among the 10% highest-priority communes, the Jaccard
+index for the top 10%, and the average change in commune rankings.
+
+The results provide an assessment of the stability of the territorial
+prioritization under alternative weighting specifications.
+
+<div class="cvt-sensitivity-figure">
+
+![Sensitivity analysis of the IPT-CVT under alternative weighting scenarios.](images/cvt-sensitivity-analysis.png)
+
+</div>
