@@ -1436,3 +1436,35 @@ body:has(.home-layout) #quarto-document-content {
   }
 
 }
+
+
+
+/* ============================================================
+   ANÁLISIS DE SENSIBILIDAD — IPT-CVT
+   ============================================================ */
+
+.cvt-sensitivity-figure {
+  width: 115%;
+  margin-left: -7.5%;
+  margin-right: -7.5%;
+  margin-top: 28px;
+  margin-bottom: 40px;
+}
+
+.cvt-sensitivity-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+  .cvt-sensitivity-figure {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
