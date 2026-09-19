@@ -259,5 +259,5 @@ of observations, while the individual points represent the normalized
 values observed across communes. The white points indicate the median
 value of each indicator.
 
-![Distribution of normalized territorial indicators in the 52 communes of the Metropolitan Region.](images/cvt-indicadores-normalizados.png){fig-align="center" width="100%"}
+![Distribution of normalized territorial indicators in the 52 communes of the Metropolitan Region.](images/cvt-indicadores-normalizados.png){fig-align="center" width="115%"}
 
