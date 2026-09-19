@@ -1,6 +1,10 @@
 ---
 title: "Territorial Prioritization Index for the Construction of Condominios de Viviendas Tuteladas"
 author: "Genaro César Marileo Millán"
+
+resources:
+  - cvt_data_rm.csv
+
 format:
   html:
     toc: true
@@ -8,7 +12,6 @@ format:
     number-sections: false
     page-layout: article
 ---
-
 ## Motivation
 
 The development of Condominios de Viviendas Tuteladas (CVT) requires identifying territories where different demographic, social, territorial and institutional conditions create greater priority for intervention.
