@@ -1150,3 +1150,151 @@ body:has(.home-layout) #quarto-document-content {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+
+
+/* ============================================================
+   AJUSTES RESPONSIVE PARA CELULARES
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* ----------------------------------------------------------
+     1. CONTENEDOR PRINCIPAL
+     ---------------------------------------------------------- */
+
+  .home-layout {
+    display: block;
+    width: 100%;
+  }
+
+  .home-sidebar,
+  .home-main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* ----------------------------------------------------------
+     2. PERFIL / FOTO / NOMBRE
+     ---------------------------------------------------------- */
+
+  .home-sidebar {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .profile-photo {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 460px;
+    width: 82%;
+    height: auto;
+  }
+
+  .home-sidebar h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-sidebar p {
+    text-align: center;
+  }
+
+
+  /* ----------------------------------------------------------
+     3. ENLACES: CORREO / CV / LINKEDIN / GITHUB
+     ---------------------------------------------------------- */
+
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .profile-links a {
+    margin: 0;
+  }
+
+
+  /* ----------------------------------------------------------
+     4. LÍNEA ACADÉMICA
+     ---------------------------------------------------------- */
+
+  .research-line,
+  .academic-line {
+    text-align: center;
+  }
+
+
+  /* ----------------------------------------------------------
+     5. SECCIONES CON IMAGEN + TEXTO
+     
+     En computador permanecen en dos columnas.
+     En celular pasan a una sola columna.
+     ---------------------------------------------------------- */
+
+  .home-section {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-image {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+
+  .home-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 130px;
+    width: auto;
+    height: auto;
+  }
+
+  .home-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* ----------------------------------------------------------
+     6. TEXTO DE LAS SECCIONES
+     ---------------------------------------------------------- */
+
+  .home-content p {
+    text-align: left;
+    line-height: 1.65;
+  }
+
+  .home-content li {
+    line-height: 1.6;
+  }
+
+
+  /* ----------------------------------------------------------
+     7. TÍTULOS DE LAS SECCIONES
+     ---------------------------------------------------------- */
+
+  .home-content h2 {
+    text-align: left;
+  }
+
+
+  /* ----------------------------------------------------------
+     8. EVITAR QUE EL CONTENIDO QUEDE PEGADO A LOS BORDES
+     ---------------------------------------------------------- */
+
+  .home-main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
