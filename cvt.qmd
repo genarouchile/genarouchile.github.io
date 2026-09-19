@@ -284,3 +284,71 @@ prioritization under alternative weighting specifications.
 ![Sensitivity analysis of the IPT-CVT under alternative weighting scenarios.](images/cvt-sensitivity-analysis.png)
 
 </div>
+
+
+## Explore the IPT-CVT
+
+The IPT-CVT can be examined from different analytical perspectives.
+Select an option below to explore the results.
+
+<div class="cvt-explorer">
+
+<div class="cvt-explorer-options">
+
+<label>
+<input type="radio" name="cvt-analysis" value="distribution" checked>
+Distribution
+</label>
+
+<label>
+<input type="radio" name="cvt-analysis" value="sensitivity">
+Sensitivity analysis
+</label>
+
+</div>
+
+
+<div id="cvt-distribution" class="cvt-analysis-panel">
+
+<h4>Distribution of normalized indicators</h4>
+
+<img src="images/cvt-indicadores-normalizados.png"
+     alt="Distribution of normalized indicators">
+
+</div>
+
+
+<div id="cvt-sensitivity" class="cvt-analysis-panel" style="display:none;">
+
+<h4>Sensitivity analysis</h4>
+
+<img src="images/cvt-sensitivity-analysis.png"
+     alt="Sensitivity analysis of the IPT-CVT">
+
+</div>
+
+</div>
+
+
+<script>
+
+document.querySelectorAll(
+  'input[name="cvt-analysis"]'
+).forEach(function(radio) {
+
+  radio.addEventListener("change", function() {
+
+    document.getElementById("cvt-distribution").style.display =
+      this.value === "distribution" ? "block" : "none";
+
+    document.getElementById("cvt-sensitivity").style.display =
+      this.value === "sensitivity" ? "block" : "none";
+
+  });
+
+});
+
+</script>
+
+
+
