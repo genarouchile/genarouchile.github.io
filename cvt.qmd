@@ -47,7 +47,12 @@ The resulting analytical matrix contains one row for each commune and one column
 >
 </div>
 
-<div id="cvt-table-container" style="overflow-x: auto; width: 100%;"></div>
+<div id="cvt-table-container" style="
+  overflow: auto;
+  max-height: 500px;
+  width: 100%;
+  border: none;
+"></div>
 
 <script>
 
