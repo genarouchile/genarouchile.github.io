@@ -2,54 +2,217 @@
 title: "CVT"
 ---
 
-# Motivation
+<div class="cvt-project">
 
-## Where should Condominios de Viviendas Tuteladas be prioritized?
+<div class="cvt-section">
 
-The IPT-CVT was developed to identify territorial differences in the conditions that shape the priority for the construction of Condominios de Viviendas Tuteladas.
+<div class="cvt-label">MOTIVATION</div>
 
-The index brings together demographic, social, territorial, institutional and environmental information into a single territorial prioritization framework.
+<h1>Where should Condominios de Viviendas Tuteladas be prioritized?</h1>
 
-# Data
+<p class="cvt-lead">
+The IPT-CVT was developed to identify territorial differences
+in the conditions that shape the priority for the construction
+of Condominios de Viviendas Tuteladas.
+</p>
 
-## 52
+<p>
+The index brings together demographic, social, territorial,
+institutional and environmental information into a single
+territorial prioritization framework.
+</p>
 
-**communes**
+</div>
 
-## 21
 
-**indicators**
+<div class="cvt-section cvt-data">
 
-## 5
+<div class="cvt-label">DATA</div>
 
-**dimensions**
+<div class="cvt-numbers">
 
-The index integrates information from:
+<div>
+<span>52</span>
+<small>COMMUNES</small>
+</div>
 
-**CASEN · RSH / ADIS · INE · SENAMA · SII · Territorial Data**
+<div>
+<span>21</span>
+<small>INDICATORS</small>
+</div>
 
-# Method
+<div>
+<span>5</span>
+<small>DIMENSIONS</small>
+</div>
 
-## From indicators to territorial prioritization
+</div>
 
-**Indicators**
+<p class="cvt-sources">
+CASEN &nbsp;·&nbsp; RSH / ADIS &nbsp;·&nbsp; INE &nbsp;·&nbsp; SENAMA &nbsp;·&nbsp; SII
+</p>
 
-↓
+</div>
 
-**Normalization**
 
-↓
+<div class="cvt-section">
 
-**Direction**
+<div class="cvt-label">METHOD</div>
 
-↓
+<h2>From indicators to territorial prioritization</h2>
 
-**Weighting**
+<div class="cvt-method">
 
-↓
+<div>INDICATORS</div>
+<div class="arrow">↓</div>
 
-**Aggregation**
+<div>NORMALIZATION</div>
+<div class="arrow">↓</div>
 
-↓
+<div>DIRECTION</div>
+<div class="arrow">↓</div>
 
-**IPT-CVT**
+<div>WEIGHTING</div>
+<div class="arrow">↓</div>
+
+<div>AGGREGATION</div>
+<div class="arrow">↓</div>
+
+<div class="cvt-final">IPT-CVT</div>
+
+</div>
+
+</div>
+
+</div>
+
+<style>
+
+.cvt-project {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cvt-section {
+  margin-bottom: 150px;
+}
+
+.cvt-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.cvt-section h1 {
+  font-size: 46px;
+  line-height: 1.12;
+  font-weight: 500;
+  max-width: 850px;
+  margin-bottom: 35px;
+}
+
+.cvt-section h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.cvt-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+.cvt-lead {
+  font-size: 21px !important;
+  line-height: 1.55 !important;
+  max-width: 820px !important;
+}
+
+.cvt-numbers {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 70px;
+  margin-bottom: 55px;
+}
+
+.cvt-numbers > div {
+  flex: 1;
+}
+
+.cvt-numbers span {
+  display: block;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.cvt-numbers small {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.cvt-sources {
+  font-size: 13px !important;
+  letter-spacing: 1px;
+  margin-top: 45px;
+}
+
+.cvt-method {
+  max-width: 500px;
+  margin-top: 20px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.cvt-method > div:not(.arrow):not(.cvt-final) {
+  padding: 18px 0;
+}
+
+.arrow {
+  font-size: 22px;
+  opacity: 0.5;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.cvt-final {
+  margin-top: 15px;
+  padding: 25px 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 700px) {
+
+  .cvt-section {
+    margin-bottom: 100px;
+  }
+
+  .cvt-section h1 {
+    font-size: 34px;
+  }
+
+  .cvt-section h2 {
+    font-size: 25px;
+  }
+
+  .cvt-numbers {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .cvt-numbers span {
+    font-size: 60px;
+  }
+
+}
+
+</style>
