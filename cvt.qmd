@@ -1,218 +1,65 @@
 ---
-title: "CVT"
+title: "Territorial Prioritization Index for the Construction of Condominios de Viviendas Tuteladas"
+author: "Genaro César Marileo Millán"
+format:
+  html:
+    toc: true
+    toc-location: body
+    number-sections: false
+    page-layout: article
 ---
 
-<div class="cvt-project">
+## Motivation
 
-<div class="cvt-section">
+The development of Condominios de Viviendas Tuteladas (CVT) requires identifying territories where different social, demographic, territorial and institutional conditions create greater priority for intervention.
 
-<div class="cvt-label">MOTIVATION</div>
+However, territorial priority cannot be explained by a single indicator. Demographic characteristics, social vulnerability, housing conditions, territorial accessibility, institutional capacity and environmental risks vary considerably between communes.
 
-<h1>Where should Condominios de Viviendas Tuteladas be prioritized?</h1>
+The **Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas (IPT-CVT)** was developed to integrate these different dimensions into a single territorial prioritization measure.
 
-<p class="cvt-lead">
-The IPT-CVT was developed to identify territorial differences
-in the conditions that shape the priority for the construction
-of Condominios de Viviendas Tuteladas.
-</p>
+The objective is to provide a quantitative framework that can support territorial decision-making and the identification of communes where the construction of CVT may have greater relative priority.
 
-<p>
-The index brings together demographic, social, territorial,
-institutional and environmental information into a single
-territorial prioritization framework.
-</p>
+## Data
 
-</div>
+The analysis covers **52 communes** of Chile and integrates information from different administrative and territorial sources.
 
+The IPT-CVT incorporates **21 indicators organized into five dimensions**.
 
-<div class="cvt-section cvt-data">
+The main data sources include:
 
-<div class="cvt-label">DATA</div>
+- **CASEN**
+- **Registro Social de Hogares (RSH) / ADIS**
+- **Instituto Nacional de Estadísticas (INE)**
+- **SENAMA**
+- **Servicio de Impuestos Internos (SII)**
+- **Municipal and territorial information**
 
-<div class="cvt-numbers">
+The indicators capture different aspects of territorial conditions, including demographic characteristics, social vulnerability, housing conditions, territorial quality, institutional capacity and territorial risks.
 
-<div>
-<span>52</span>
-<small>COMMUNES</small>
-</div>
+## Method
 
-<div>
-<span>21</span>
-<small>INDICATORS</small>
-</div>
+The IPT-CVT was constructed as a composite territorial index.
 
-<div>
-<span>5</span>
-<small>DIMENSIONS</small>
-</div>
+The methodological process consists of several stages:
 
-</div>
+1. **Indicator construction**
 
-<p class="cvt-sources">
-CASEN &nbsp;·&nbsp; RSH / ADIS &nbsp;·&nbsp; INE &nbsp;·&nbsp; SENAMA &nbsp;·&nbsp; SII
-</p>
+   Territorial indicators were constructed from demographic, social, institutional, environmental and territorial information.
 
-</div>
+2. **Normalization**
 
+   Indicators measured on different scales and units were transformed to a common scale to make them comparable.
 
-<div class="cvt-section">
+3. **Direction**
 
-<div class="cvt-label">METHOD</div>
+   Indicators were oriented so that their values consistently represented their contribution to territorial priority.
 
-<h2>From indicators to territorial prioritization</h2>
+4. **Weighting**
 
-<div class="cvt-method">
+   Weights were assigned to indicators and dimensions according to the methodological framework of the index.
 
-<div>INDICATORS</div>
-<div class="arrow">↓</div>
+5. **Aggregation**
 
-<div>NORMALIZATION</div>
-<div class="arrow">↓</div>
+   The normalized and weighted indicators were aggregated to produce a composite territorial prioritization score for each commune.
 
-<div>DIRECTION</div>
-<div class="arrow">↓</div>
-
-<div>WEIGHTING</div>
-<div class="arrow">↓</div>
-
-<div>AGGREGATION</div>
-<div class="arrow">↓</div>
-
-<div class="cvt-final">IPT-CVT</div>
-
-</div>
-
-</div>
-
-</div>
-
-<style>
-
-.cvt-project {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.cvt-section {
-  margin-bottom: 150px;
-}
-
-.cvt-label {
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 600;
-  margin-bottom: 35px;
-}
-
-.cvt-section h1 {
-  font-size: 46px;
-  line-height: 1.12;
-  font-weight: 500;
-  max-width: 850px;
-  margin-bottom: 35px;
-}
-
-.cvt-section h2 {
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: 500;
-  margin-bottom: 60px;
-}
-
-.cvt-section p {
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 760px;
-}
-
-.cvt-lead {
-  font-size: 21px !important;
-  line-height: 1.55 !important;
-  max-width: 820px !important;
-}
-
-.cvt-numbers {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  margin-top: 70px;
-  margin-bottom: 55px;
-}
-
-.cvt-numbers > div {
-  flex: 1;
-}
-
-.cvt-numbers span {
-  display: block;
-  font-size: 72px;
-  line-height: 1;
-  font-weight: 400;
-  margin-bottom: 15px;
-}
-
-.cvt-numbers small {
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-.cvt-sources {
-  font-size: 13px !important;
-  letter-spacing: 1px;
-  margin-top: 45px;
-}
-
-.cvt-method {
-  max-width: 500px;
-  margin-top: 20px;
-  font-size: 19px;
-  letter-spacing: 1px;
-  font-weight: 500;
-}
-
-.cvt-method > div:not(.arrow):not(.cvt-final) {
-  padding: 18px 0;
-}
-
-.arrow {
-  font-size: 22px;
-  opacity: 0.5;
-  text-align: center;
-  padding: 3px 0;
-}
-
-.cvt-final {
-  margin-top: 15px;
-  padding: 25px 0;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-@media (max-width: 700px) {
-
-  .cvt-section {
-    margin-bottom: 100px;
-  }
-
-  .cvt-section h1 {
-    font-size: 34px;
-  }
-
-  .cvt-section h2 {
-    font-size: 25px;
-  }
-
-  .cvt-numbers {
-    flex-direction: column;
-    gap: 45px;
-  }
-
-  .cvt-numbers span {
-    font-size: 60px;
-  }
-
-}
-
-</style>
+The resulting index allows communes to be compared according to their relative territorial priority for the construction of Condominios de Viviendas Tuteladas.
