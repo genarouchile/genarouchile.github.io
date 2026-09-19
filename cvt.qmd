@@ -204,3 +204,21 @@ Weights were assigned to indicators and dimensions according to the methodologic
 The normalized and weighted indicators were aggregated to produce a composite territorial prioritization score for each commune.
 
 The resulting index allows communes to be compared according to their relative territorial priority for the construction of Condominios de Viviendas Tuteladas.
+
+
+## Resultados
+
+### Análisis descriptivo
+
+Antes de presentar los resultados de la priorización territorial, se examina
+la distribución espacial de la población de 60 años o más entre las comunas
+de la Región Metropolitana de Santiago.
+
+#### Distribución de la población de 60 años o más
+
+El mapa muestra la distribución de las personas de 60 años o más en las
+52 comunas de la Región Metropolitana. La intensidad del color representa
+el número de personas de 60 años o más residentes en cada comuna, permitiendo
+observar diferencias en su concentración territorial.
+
+![Distribución de la población de 60 años o más en las comunas de la Región Metropolitana de Santiago.](images/cvt-totalpm60.jpeg){fig-align="center" width="95%"}
