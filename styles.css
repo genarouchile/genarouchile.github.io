@@ -1298,3 +1298,106 @@ body:has(.home-layout) #quarto-document-content {
   }
 
 }
+
+
+/* ============================================================
+   ENCABEZADO TIPO PERFIL ACADÉMICO
+   ============================================================ */
+
+/* Bloque superior */
+.home-sidebar {
+  text-align: center;
+}
+
+/* Nombre */
+.home-sidebar h1 {
+  text-align: center !important;
+  width: 100% !important;
+  margin: 20px auto 10px auto !important;
+}
+
+/* Descripción bajo el nombre */
+.home-sidebar > p {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 700px !important;
+  margin: 0 auto 22px auto !important;
+}
+
+/* Foto */
+.home-sidebar .profile-photo {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ============================================================
+   BOTONES DE CONTACTO
+   ============================================================ */
+
+.profile-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 9px !important;
+  margin: 18px auto 30px auto !important;
+}
+
+.profile-links a {
+  display: inline-block !important;
+  padding: 7px 12px !important;
+  border: 1px solid #287c87 !important;
+  border-radius: 5px !important;
+  background: white !important;
+  color: #246d78 !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease;
+}
+
+.profile-links a:hover {
+  background: #edf6f7 !important;
+  color: #174f59 !important;
+}
+
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .home-sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    text-align: center !important;
+  }
+
+  .home-sidebar h1 {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .home-sidebar > p {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 650px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .profile-links {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
