@@ -11,55 +11,186 @@ format:
 
 ## Motivation
 
-The development of Condominios de Viviendas Tuteladas (CVT) requires identifying territories where different social, demographic, territorial and institutional conditions create greater priority for intervention.
+The development of Condominios de Viviendas Tuteladas (CVT) requires identifying territories where different demographic, social, territorial and institutional conditions create greater priority for intervention.
 
-However, territorial priority cannot be explained by a single indicator. Demographic characteristics, social vulnerability, housing conditions, territorial accessibility, institutional capacity and environmental risks vary considerably between communes.
+Territorial priority cannot be explained by a single indicator. Population characteristics, social vulnerability, housing conditions, territorial quality, institutional capacity and environmental risks vary considerably between communes.
 
-The **Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas (IPT-CVT)** was developed to integrate these different dimensions into a single territorial prioritization measure.
+The **Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas (IPT-CVT)** integrates these different dimensions into a single territorial prioritization framework.
 
-The objective is to provide a quantitative framework that can support territorial decision-making and the identification of communes where the construction of CVT may have greater relative priority.
+The objective is to provide a quantitative framework to support territorial decision-making and the identification of communes where the construction of CVT may have greater relative priority.
 
 ## Data
 
-The analysis covers **52 communes** of Chile and integrates information from different administrative and territorial sources.
+The analysis covers **52 communes of the Metropolitan Region of Chile**.
 
-The IPT-CVT incorporates **21 indicators organized into five dimensions**.
+The IPT-CVT integrates **22 territorial indicators** covering demographic, social, territorial, institutional and environmental conditions.
 
-The main data sources include:
+The data come from different administrative and territorial sources, including:
 
-- **CASEN**
-- **Registro Social de Hogares (RSH) / ADIS**
-- **Instituto Nacional de Estadísticas (INE)**
-- **SENAMA**
-- **Servicio de Impuestos Internos (SII)**
-- **Municipal and territorial information**
+**CASEN · RSH / ADIS · INE · SENAMA · SII · Municipal and Territorial Data**
 
-The indicators capture different aspects of territorial conditions, including demographic characteristics, social vulnerability, housing conditions, territorial quality, institutional capacity and territorial risks.
+The resulting analytical matrix contains one row for each commune and one column for each territorial indicator.
+
+### Territorial data matrix
+
+<div id="cvt-table-info"></div>
+
+<div style="margin: 20px 0;">
+<input 
+  type="text" 
+  id="cvt-search" 
+  placeholder="Search communes..."
+  style="width: 280px; padding: 8px 10px; border: 1px solid #999; font-size: 14px;"
+>
+</div>
+
+<div id="cvt-table-container" style="overflow-x: auto; width: 100%;"></div>
+
+<script>
+
+fetch("cvt_data_rm.csv")
+  .then(response => response.text())
+  .then(csv => {
+
+    const rows = csv.trim().split(/\r?\n/).map(row => {
+      const result = [];
+      let current = "";
+      let insideQuotes = false;
+
+      for (let i = 0; i < row.length; i++) {
+        const char = row[i];
+
+        if (char === '"') {
+          insideQuotes = !insideQuotes;
+        } else if (char === ',' && !insideQuotes) {
+          result.push(current);
+          current = "";
+        } else {
+          current += char;
+        }
+      }
+
+      result.push(current);
+      return result;
+    });
+
+    const headers = rows[0];
+    const data = rows.slice(1);
+
+    const info = document.getElementById("cvt-table-info");
+
+    info.innerHTML =
+      "<strong>" + data.length + " communes</strong> · " +
+      "<strong>" + (headers.length - 2) + " indicators</strong>";
+
+    function renderTable(filter = "") {
+
+      const filtered = data.filter(row =>
+        row[1].toLowerCase().includes(filter.toLowerCase())
+      );
+
+      let html = `
+        <table id="cvt-table"
+          style="
+            border-collapse: collapse;
+            width: max-content;
+            min-width: 100%;
+            font-size: 13px;
+            white-space: nowrap;
+          ">
+
+          <thead>
+            <tr>
+      `;
+
+      headers.forEach(header => {
+        html += `
+          <th style="
+            text-align: left;
+            padding: 9px 12px;
+            border-bottom: 1px solid #999;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            background: white;
+          ">
+            ${header}
+          </th>
+        `;
+      });
+
+      html += "</tr></thead><tbody>";
+
+      filtered.forEach(row => {
+
+        html += "<tr>";
+
+        row.forEach(value => {
+
+          html += `
+            <td style="
+              padding: 7px 12px;
+              border-bottom: 1px solid #ddd;
+            ">
+              ${value}
+            </td>
+          `;
+
+        });
+
+        html += "</tr>";
+
+      });
+
+      html += "</tbody></table>";
+
+      document.getElementById("cvt-table-container").innerHTML = html;
+    }
+
+    renderTable();
+
+    document
+      .getElementById("cvt-search")
+      .addEventListener("input", function() {
+        renderTable(this.value);
+      });
+
+  })
+  .catch(error => {
+
+    document.getElementById("cvt-table-container").innerHTML =
+      "<p>Unable to load the territorial data matrix.</p>";
+
+    console.error(error);
+
+  });
+
+</script>
 
 ## Method
 
 The IPT-CVT was constructed as a composite territorial index.
 
-The methodological process consists of several stages:
+The methodological process consists of several stages.
 
-1. **Indicator construction**
+**1. Indicator construction**
 
-   Territorial indicators were constructed from demographic, social, institutional, environmental and territorial information.
+Territorial indicators were constructed from demographic, social, institutional, environmental and territorial information.
 
-2. **Normalization**
+**2. Normalization**
 
-   Indicators measured on different scales and units were transformed to a common scale to make them comparable.
+Indicators measured on different scales and units were transformed to a common scale to make them comparable.
 
-3. **Direction**
+**3. Direction**
 
-   Indicators were oriented so that their values consistently represented their contribution to territorial priority.
+Indicators were oriented so that their values consistently represented their contribution to territorial priority.
 
-4. **Weighting**
+**4. Weighting**
 
-   Weights were assigned to indicators and dimensions according to the methodological framework of the index.
+Weights were assigned to indicators and dimensions according to the methodological framework of the index.
 
-5. **Aggregation**
+**5. Aggregation**
 
-   The normalized and weighted indicators were aggregated to produce a composite territorial prioritization score for each commune.
+The normalized and weighted indicators were aggregated to produce a composite territorial prioritization score for each commune.
 
 The resulting index allows communes to be compared according to their relative territorial priority for the construction of Condominios de Viviendas Tuteladas.
