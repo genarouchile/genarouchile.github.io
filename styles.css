@@ -1401,3 +1401,38 @@ body:has(.home-layout) #quarto-document-content {
   }
 
 }
+
+
+
+/* ============================================================
+   GRÁFICO DE VIOLINES — IPT-CVT
+   ============================================================ */
+
+.cvt-violin-figure {
+  width: 115%;
+  margin-left: -7.5%;
+  margin-right: -7.5%;
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+.cvt-violin-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+   VISTA EN CELULARES
+   ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+
+  .cvt-violin-figure {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
