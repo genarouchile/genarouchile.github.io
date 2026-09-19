@@ -22,6 +22,8 @@ The **Índice de Priorización Territorial para la Construcción de Condominios 
 
 The objective is to provide a quantitative framework to support territorial decision-making and the identification of communes where the construction of CVT may have greater relative priority.
 
+![Condominios de Viviendas Tuteladas (CVT)](images/cvt-motivation.png)
+
 ## Data
 
 The analysis covers **52 communes of the Metropolitan Region of Chile**.
