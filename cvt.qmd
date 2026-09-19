@@ -222,3 +222,24 @@ el número de personas de 60 años o más residentes en cada comuna, permitiendo
 observar diferencias en su concentración territorial.
 
 ![Distribución de la población de 60 años o más en las comunas de la Región Metropolitana de Santiago.](images/cvt-totalpm60.jpeg){fig-align="center" width="95%"}
+
+
+
+#### Proporción de personas mayores sin redes de apoyo
+
+La distribución territorial de las personas mayores sin redes de apoyo constituye
+un antecedente relevante para caracterizar las condiciones sociales asociadas a
+la necesidad potencial de apoyo y cuidados.
+
+El siguiente mapa interactivo permite explorar la distribución de este indicador
+entre las 52 comunas de la Región Metropolitana. La intensidad del color representa
+la proporción de personas mayores sin redes de apoyo en cada comuna. Al seleccionar
+una comuna es posible consultar su valor específico.
+
+
+<iframe
+  src="images/mapa_pmsinredes.html"
+  width="100%"
+  height="700"
+  style="border: none;">
+</iframe>
