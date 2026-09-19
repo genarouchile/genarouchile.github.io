@@ -1468,3 +1468,61 @@ body:has(.home-layout) #quarto-document-content {
 
 }
 
+
+
+
+/* ============================================================
+   EXPLORADOR IPT-CVT
+   ============================================================ */
+
+.cvt-explorer {
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
+.cvt-explorer-options {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e1e6ea;
+}
+
+.cvt-explorer-options label {
+  font-size: 0.95rem;
+  color: #234f6d;
+  cursor: pointer;
+}
+
+.cvt-explorer-options input {
+  margin-right: 6px;
+  accent-color: #234f6d;
+}
+
+.cvt-analysis-panel h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #234f6d;
+  margin-bottom: 20px;
+}
+
+.cvt-analysis-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------
+   CELULARES
+   ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+
+  .cvt-explorer-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
