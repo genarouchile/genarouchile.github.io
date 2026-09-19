@@ -243,3 +243,21 @@ una comuna es posible consultar su valor específico.
   height="700"
   style="border: none;">
 </iframe>
+
+
+
+#### Distribution of normalized indicators
+
+The distribution of the normalized indicators provides an overview of
+the variation and concentration of territorial conditions across the
+52 communes of the Metropolitan Region.
+
+All indicators have been transformed to a common scale ranging from
+0 to 100, allowing their relative territorial distributions to be
+examined using a consistent metric. The violin plots show the density
+of observations, while the individual points represent the normalized
+values observed across communes. The white points indicate the median
+value of each indicator.
+
+![Distribution of normalized territorial indicators in the 52 communes of the Metropolitan Region.](images/cvt-indicadores-normalizados.jpeg){fig-align="center" width="100%"}
+
