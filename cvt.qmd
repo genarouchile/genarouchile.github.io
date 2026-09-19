@@ -1,1 +1,55 @@
+---
+title: "CVT"
+---
 
+# Motivation
+
+## Where should Condominios de Viviendas Tuteladas be prioritized?
+
+The IPT-CVT was developed to identify territorial differences in the conditions that shape the priority for the construction of Condominios de Viviendas Tuteladas.
+
+The index brings together demographic, social, territorial, institutional and environmental information into a single territorial prioritization framework.
+
+# Data
+
+## 52
+
+**communes**
+
+## 21
+
+**indicators**
+
+## 5
+
+**dimensions**
+
+The index integrates information from:
+
+**CASEN · RSH / ADIS · INE · SENAMA · SII · Territorial Data**
+
+# Method
+
+## From indicators to territorial prioritization
+
+**Indicators**
+
+↓
+
+**Normalization**
+
+↓
+
+**Direction**
+
+↓
+
+**Weighting**
+
+↓
+
+**Aggregation**
+
+↓
+
+**IPT-CVT**
