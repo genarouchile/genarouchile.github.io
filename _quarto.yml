@@ -23,6 +23,10 @@ website:
       - href: projects.qmd
         text: Proyectos
 
+      # NUEVA PESTAÑA
+      - href: cvt.qmd
+        text: CVT
+
       - href: publications.qmd
         text: Publicaciones
 
