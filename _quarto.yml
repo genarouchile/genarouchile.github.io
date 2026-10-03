@@ -23,6 +23,9 @@ website:
       - href: projects.qmd
         text: Proyectos
 
+      - href: portafolio.qmd
+        text: Portafolio
+
       # NUEVA PESTAÑA
       - href: cvt.qmd
         text: CVT
