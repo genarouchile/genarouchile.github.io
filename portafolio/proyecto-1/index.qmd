@@ -1,6 +1,6 @@
 ---
-title: "Título del proyecto"
-description: "Una o dos líneas que resuman qué hiciste y qué resultado obtuviste."
+title: "Ecuaciones Estructurales: Dependencia Funcional en Personas Mayores en Chile"
+description: "Modelo de ecuaciones estructurales para analizar los factores asociados a la dependencia funcional en personas mayores."
 image: portada.png
 ---
 
