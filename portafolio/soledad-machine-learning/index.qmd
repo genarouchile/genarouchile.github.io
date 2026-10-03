@@ -1,0 +1,25 @@
+---
+title: "Machine Learning: Soledad No Deseada en Personas Mayores"
+description: "Aplicación de modelos de machine learning para identificar factores asociados a la soledad no deseada en personas mayores."
+image: portada.png
+---
+
+## Contexto
+
+¿Qué problema o pregunta abordaba el proyecto?
+
+## Datos
+
+Fuentes utilizadas.
+
+## Método
+
+Modelos aplicados y cómo se evaluaron.
+
+## Resultados
+
+Hallazgos principales, con gráficos.
+
+## Herramientas
+
+R, Python, etc.
