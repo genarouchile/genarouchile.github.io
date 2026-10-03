@@ -2,6 +2,9 @@
 title: "Territorial Prioritization Index for the Construction of Condominios de Viviendas Tuteladas"
 author: "Genaro César Marileo Millán"
 
+description: "Índice compuesto para priorizar comunas de la Región Metropolitana en la construcción de viviendas tuteladas."
+image: images/cvt-totalpm60.jpeg
+
 resources:
   - cvt_data_rm.csv
 
