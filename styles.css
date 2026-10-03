@@ -1607,3 +1607,55 @@ body:has(.home-layout) #quarto-document-content {
     text-align: center !important;
   }
 }
+
+
+/* ============================================================
+   PORTAFOLIO — ESTILO GALERÍA
+   ============================================================ */
+
+/* Tarjetas sin borde ni fondo */
+.quarto-grid-item.card {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.quarto-grid-item .card-body {
+  padding: 1rem 0 0 0 !important;
+}
+
+/* Imágenes cuadradas */
+.quarto-grid-item .card-img-top {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.quarto-grid-item img.thumbnail-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Efecto suave al pasar el mouse */
+.quarto-grid-item:hover img.thumbnail-image {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* Títulos grandes en serif liviana */
+.quarto-grid-item .card-title {
+  font-family: "Newsreader", Georgia, serif !important;
+  font-weight: 300 !important;
+  font-size: 1.75rem !important;
+  line-height: 1.2 !important;
+  color: var(--azul) !important;
+  text-align: left !important;
+}
+
+/* Espacio entre filas */
+.quarto-listing-container-grid .list.grid {
+  row-gap: 3.5rem !important;
+  column-gap: 1.8rem !important;
+}
+
