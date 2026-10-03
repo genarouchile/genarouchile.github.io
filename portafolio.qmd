@@ -1,1 +1,13 @@
 
+---
+title: "Portafolio"
+page-layout: full
+listing:
+  contents:
+    - cvt.qmd
+    - "portafolio/*/index.qmd"
+  type: grid
+  grid-columns: 4
+  sort: false
+  fields: [image, title]
+---
