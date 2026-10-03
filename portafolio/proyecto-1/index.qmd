@@ -1,0 +1,25 @@
+---
+title: "Título del proyecto"
+description: "Una o dos líneas que resuman qué hiciste y qué resultado obtuviste."
+image: portada.png
+---
+
+## Contexto
+
+¿Qué problema público o pregunta abordaba el proyecto?
+
+## Datos
+
+Fuentes utilizadas (CASEN, INE, registros administrativos, etc.).
+
+## Método
+
+Técnicas aplicadas (índices compuestos, econometría espacial, etc.).
+
+## Resultados
+
+Hallazgos principales, con gráficos o mapas.
+
+## Herramientas
+
+R, Python, QGIS, etc.
