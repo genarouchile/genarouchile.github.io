@@ -1526,3 +1526,82 @@ body:has(.home-layout) #quarto-document-content {
   }
 
 }
+
+
+/* ============================================================
+   PALETA UNIFICADA + LECTURA RÁPIDA
+   (bloque final: sobrescribe reglas anteriores)
+   ============================================================ */
+
+:root {
+  --azul: #173F5F;        /* títulos: lo que se lee */
+  --petroleo: #176B78;    /* interacción: lo que se cliquea */
+  --petroleo-hover: #EEF5F6;
+  --texto: #263238;
+}
+
+/* Títulos en marino */
+.home-sidebar h1,
+.home-main h2,
+.home-content h2,
+.course-content h2,
+.cvt-analysis-panel h4 {
+  color: var(--azul) !important;
+}
+
+/* Enlaces del contenido en petróleo */
+#quarto-content a {
+  color: var(--petroleo);
+}
+
+/* Botones de contacto */
+.profile-links a {
+  border-color: var(--petroleo) !important;
+  color: var(--petroleo) !important;
+}
+
+.profile-links a:hover {
+  background: var(--petroleo-hover) !important;
+  color: var(--azul) !important;
+}
+
+/* Detalles en petróleo */
+.academic-line {
+  border-left-color: var(--petroleo);
+}
+
+.navbar .nav-link.active {
+  color: var(--petroleo) !important;
+  border-bottom-color: var(--petroleo);
+}
+
+#TOC a:hover,
+#TOC .active {
+  color: var(--petroleo);
+}
+
+.cvt-explorer-options label {
+  color: var(--azul);
+}
+
+.cvt-explorer-options input {
+  accent-color: var(--petroleo);
+}
+
+/* Texto alineado a la izquierda (más fácil de escanear) */
+#quarto-content p,
+#quarto-content li {
+  text-align: left !important;
+}
+
+/* Excepciones que deben seguir centradas */
+#quarto-content .home-sidebar p {
+  text-align: center !important;
+}
+
+@media (max-width: 768px) {
+  #quarto-content .research-line,
+  #quarto-content .academic-line {
+    text-align: center !important;
+  }
+}
