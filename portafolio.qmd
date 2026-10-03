@@ -5,7 +5,9 @@ page-layout: full
 listing:
   contents:
     - cvt.qmd
-    - "portafolio/*/index.qmd"
+    - portafolio/proyecto-1/index.qmd
+    - portafolio/soledad-machine-learning/index.qmd
+    - portafolio/participacion-social/index.qmd
   type: grid
   grid-columns: 4
   sort: false
