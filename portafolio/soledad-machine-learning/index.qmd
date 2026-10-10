@@ -11,6 +11,14 @@ resources:
 .grafico-interactivo { margin: 1.25rem 0 0 0; }
 .grafico-interactivo iframe { width: 100%; border: 0; display: block; }
 .grafico-nota { font-size: 0.8rem; color: #5B6B73; margin: 0.35rem 0 2rem 0; line-height: 1.4; }
+.pipeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin: 1.25rem 0 2rem 0; counter-reset: paso; }
+.pipeline .paso { position: relative; background: #F3F6F8; border-top: 4px solid #0A3D91; border-radius: 6px; padding: 0.8rem 0.9rem; counter-increment: paso; }
+.pipeline .paso::before { content: counter(paso); display: inline-block; width: 1.6rem; height: 1.6rem; line-height: 1.6rem; text-align: center; border-radius: 50%; background: #0A3D91; color: #fff; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.35rem; }
+.pipeline .paso.final { border-top-color: #F76707; }
+.pipeline .paso.final::before { background: #F76707; }
+.pipeline .paso b { display: block; color: #173F5F; font-size: 0.95rem; margin-bottom: 0.15rem; }
+.pipeline .paso span { display: block; color: #455A64; font-size: 0.8rem; line-height: 1.35; }
+@media (max-width: 600px) { .pipeline { grid-template-columns: repeat(2, 1fr); } }
 </style>
 ```
 
@@ -97,6 +105,19 @@ Según la escala de Lubben, más de la mitad de las personas mayores (**55%**) n
 
 Pero **no son lo mismo**. Un **32%** vive la doble vulnerabilidad de sentirse solo y estar aislado; sin embargo, un **23%** está aislado y no se siente solo, y un **19%** se siente solo aun teniendo una red de apoyo. Contar contactos no basta para detectar la soledad: la experiencia subjetiva de los vínculos importa tanto como su número.
 
+## Modelos de machine learning
+
+Para pasar de describir asociaciones a **identificar perfiles de riesgo**, se entrenaron dos modelos de clasificación supervisada. El flujo de trabajo siguió las buenas prácticas de aprendizaje automático: separar datos para evaluar, controlar la complejidad y validar con un segundo método.
+
+<div class="pipeline">
+<div class="paso"><b>Datos</b><span>1.789 personas mayores y 26 variables predictoras</span></div>
+<div class="paso"><b>División</b><span>Entrenamiento y prueba independientes (70/30 en el árbol, 75/25 en el Random Forest)</span></div>
+<div class="paso"><b>Árbol de decisión</b><span>CART con ajuste de hiperparámetros</span></div>
+<div class="paso"><b>Poda</b><span>Validación cruzada para elegir la complejidad óptima</span></div>
+<div class="paso"><b>Random Forest</b><span>Ensamble de árboles con ajuste de hiperparámetros</span></div>
+<div class="paso final"><b>Evaluación</b><span>Exactitud, sensibilidad y AUC en datos que el modelo no vio</span></div>
+</div>
+
 ### 4. Cómo decide el árbol: seis perfiles de riesgo
 
 <div class="grafico-interactivo">
@@ -109,41 +130,70 @@ Pero **no son lo mismo**. Un **32%** vive la doble vulnerabilidad de sentirse so
 
 El árbol de decisión aprende de los datos qué preguntas separan mejor a quienes sienten soledad de quienes no, sin que se le indique de antemano la forma de esas relaciones. **La primera pregunta, y la más decisiva, es por la comunicación familiar**: cuando es insatisfactoria, **8 de cada 10** personas mayores presentan soledad (78%), y es el grupo de riesgo más numeroso (29% de la muestra).
 
-Aun con buena comunicación, **poco tiempo compartido** con la familia eleva la soledad a 68%. Con un buen vínculo familiar, la salud pasa a ser determinante: **buena salud define el perfil más protegido** (29%), mientras que ante una mala salud **tener pareja amortigua el riesgo** (38% frente a 55% sin pareja). Entre quienes no tienen pareja, la escolaridad básica vuelve a elevar la soledad a 63%.
+Aun con buena comunicación, **poco tiempo compartido** con la familia eleva la soledad a 68%. Con un buen vínculo familiar, la salud pasa a ser determinante: **buena salud define el perfil más protegido** (29%), mientras que ante una mala salud **tener pareja amortigua el riesgo** (38% frente a 55% sin pareja). Entre quienes no tienen pareja, la escolaridad básica vuelve a elevar la soledad a 63%. La soledad no surge de una simple suma de desventajas, sino de **combinaciones específicas de vulnerabilidad y protección**.
 
-La soledad no surge de una simple suma de desventajas, sino de **combinaciones específicas de vulnerabilidad y protección**, y eso es lo que permite focalizar.
+### 5. Cómo se evitó el sobreajuste: poda por validación cruzada
 
-### 5. El Random Forest confirma: el vínculo familiar es lo que más predice
+<div class="grafico-interactivo">
+<iframe src="graficos/g6_poda_validacion.html" height="460" loading="lazy" title="Poda del árbol de decisión por validación cruzada"></iframe>
+</div>
+
+::: {.grafico-nota}
+Error relativo del árbol según su número de divisiones (1 = error de un modelo sin predictores). Error en entrenamiento y error estimado por validación cruzada, con su banda de ± 1 error estándar. Tabla de complejidad del árbol (parámetro CP). Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+:::
+
+Un árbol más grande siempre se ajusta mejor a los datos con que se entrena: el **error en entrenamiento** baja sin parar. Pero eso no significa que prediga mejor casos nuevos. La **validación cruzada** estima el error en datos no vistos, y muestra que este llega a su mínimo con **5 divisiones** y luego vuelve a subir: más allá de ese punto, el árbol empieza a memorizar ruido. Por eso se podó en 5 divisiones, un modelo simple, interpretable y con mejor capacidad de generalizar.
+
+### 6. Qué tan bien clasifican los modelos
+
+<div class="grafico-interactivo">
+<iframe src="graficos/g7_matrices_confusion.html" height="660" loading="lazy" title="Matrices de confusión del árbol de decisión y del Random Forest"></iframe>
+</div>
+
+::: {.grafico-nota}
+Matrices de confusión en la muestra de prueba. Cada celda muestra el porcentaje dentro del grupo real: en la fila de personas con soledad, la proporción detectada (sensibilidad); en la de personas sin soledad, la proporción correctamente descartada (especificidad). Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+:::
+
+Ambos modelos se evaluaron con **datos que no vieron durante el entrenamiento**. El árbol podado clasifica correctamente al **67,6%** y es más preciso cuando alerta un caso (73% de sus alertas son correctas), mientras que el Random Forest **detecta más casos reales de soledad** (64% frente a 59%), a costa de más falsas alarmas.
+
+| Modelo | Exactitud | Precisión | Sensibilidad | Especificidad | AUC |
+|---|---|---|---|---|---|
+| Árbol de decisión podado | 0,68 | 0,73 | 0,59 | 0,76 | 0,71 |
+| Random Forest optimizado | 0,66 | 0,69 | 0,64 | 0,69 | 0,70 |
+
+: Desempeño en la muestra de prueba
+
+Con un AUC cercano a 0,70, la capacidad discriminante es aceptable. El valor de los modelos no está en diagnosticar casos individuales, sino en **ordenar los factores de riesgo y describir perfiles interpretables** que orienten la focalización.
+
+### 7. Qué variables pesan más según el Random Forest
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g5_importancia_rf.html" height="600" loading="lazy" title="Random Forest: importancia de las variables para predecir la soledad"></iframe>
 </div>
 
 ::: {.grafico-nota}
-Importancia de cada variable en el Random Forest optimizado, medida como Mean Decrease Accuracy (cuánto empeora la predicción si la variable deja de aportar información) y expresada en relación con la más importante (= 100). Se muestran las 12 variables más importantes de 25. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+Importancia de cada variable en el Random Forest optimizado, medida como Mean Decrease Accuracy (cuánto empeora la predicción si la variable deja de aportar información) y expresada en relación con la más importante (= 100). Se muestran las 12 variables más importantes de 26. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-Para validar el árbol se estimó un **Random Forest**, que entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable y menos propenso al sobreajuste. El resultado confirma el hallazgo central: **las tres variables más predictivas son familiares** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, aunque con un peso cercano a la mitad.
+El **Random Forest** entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable que un árbol individual. Su ranking de importancia confirma el hallazgo central: **las tres variables más predictivas son familiares** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, con un peso cercano a la mitad.
 
-| Modelo | Exactitud | Precisión | Sensibilidad | AUC |
-|---|---|---|---|---|
-| Árbol de decisión podado | 0,68 | 0,73 | 0,59 | 0,71 |
-| Random Forest optimizado | 0,66 | 0,69 | 0,64 | 0,70 |
+### 8. Hacia dónde empuja cada variable
 
-: Desempeño en la muestra de prueba
+<div class="grafico-interactivo">
+<iframe src="graficos/g8_direccion_efecto.html" height="460" loading="lazy" title="Dirección del efecto de las variables familiares según el Random Forest"></iframe>
+</div>
 
-Ambos modelos tienen una capacidad discriminante aceptable (AUC ≈ 0,70). Su principal valor está en **ordenar los factores de riesgo y describir perfiles interpretables** para la focalización, más que en predecir casos individuales.
+::: {.grafico-nota}
+Dependencia parcial del Random Forest: probabilidad promedio de soledad predicha por el modelo según el nivel de satisfacción con cada dimensión del vínculo familiar, manteniendo constantes las demás variables. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+:::
+
+La importancia dice cuánto pesa una variable, pero no hacia dónde empuja. La **dependencia parcial** responde esa pregunta y revela un patrón de **umbral**: la probabilidad de soledad solo baja cuando la satisfacción con la familia es **constante** ("casi siempre o siempre"). Estar satisfecho "a veces" predice casi la misma soledad que "casi nunca". En el tiempo compartido, la probabilidad cae de 62% a 44% solo al alcanzar ese umbral.
+
+Para la política pública, esto significa que no basta con que exista contacto familiar ocasional: lo protector es un **vínculo sostenido en el tiempo**.
+
+## Conclusiones
 
 **Implicancias para política pública:** poner el foco en la calidad del vínculo familiar y no solo en la cantidad de contactos; focalizar en personas mayores con comunicación familiar deficiente, y no usar "vivir solo" como único criterio de riesgo.
-
-**Limitaciones:** diseño transversal (las asociaciones no implican causalidad), dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
-
-## Herramientas
-
-- **R 4.2:** procesamiento de datos, pruebas estadísticas, árbol de decisión y Random Forest.
-- **SPSS 21:** análisis descriptivo y bivariado.
-- **Plotly para R:** visualizaciones interactivas para la web.
-- **Quarto:** publicación de esta página.
 
 **Limitaciones:** diseño transversal (las asociaciones no implican causalidad), dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
 
