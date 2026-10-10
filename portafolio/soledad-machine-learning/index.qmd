@@ -71,24 +71,33 @@ Esto sugiere que la soledad en la vejez se expresa menos como rechazo o exclusi�
 
 ### 2. Cuando el vínculo familiar falla, la soledad se duplica
 
-<!-- GRÁFICO 2: g2_vinculo_familiar.html -->
+<div class="grafico-interactivo">
+<iframe src="graficos/g2_vinculo_familiar.html" height="460" loading="lazy" title="Prevalencia de soledad según satisfacción con el vínculo familiar"></iframe>
+</div>
 
-Entre quienes están satisfechos casi siempre o siempre con su vínculo familiar, la soledad ronda el **40%**. Entre quienes casi nunca lo están, sube a entre **75% y 82,5%**. La brecha más amplia aparece en el **tiempo compartido con la familia**.
+::: {.grafico-nota}
+Porcentaje de personas mayores con soledad no deseada según su satisfacción con cada dimensión del vínculo familiar. Las cinco asociaciones son estadísticamente significativas y de intensidad media (V de Cramér entre 0,29 y 0,34). Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+:::
 
-### 3. Lo relacional pesa más que lo estructural
+Las cinco dimensiones del vínculo familiar muestran el mismo patrón. Cuando la persona mayor está satisfecha casi siempre o siempre con su familia, la soledad ronda el **40%**. Cuando casi nunca lo está, sube a entre **75% y 82,5%**: prácticamente se duplica.
 
-<!-- GRÁFICO 3: g3_fuerza_asociacion.html -->
+La brecha más amplia aparece en el **tiempo compartido con la familia** (+42,1 puntos), seguida del apoyo para realizar nuevas actividades y del afecto. No basta con tener familia: lo que protege es **la calidad del vínculo**, es decir, sentirse escuchado, acompañado y apoyado.
 
-Las variables del vínculo familiar tienen la asociación más fuerte con la soledad (V de Cramér entre 0,29 y 0,34). Les siguen tener pareja (0,20) y el riesgo de aislamiento social (0,16). Vivir solo, los ingresos y la salud autopercibida tienen asociaciones significativas pero débiles.
+### 3. Soledad y aislamiento social no son lo mismo
+
+<!-- GRÁFICO 3: g3_soledad_aislamiento.html -->
+
+Según la escala de Lubben, el **55%** de las personas mayores no cuenta con una red de apoyo suficiente y está en riesgo de aislamiento social. Ambos fenómenos se asocian (entre quienes sienten soledad, un 63% está aislado, frente a un 48% entre quienes no la sienten), pero no coinciden: hay personas aisladas que no se sienten solas y personas que se sienten solas teniendo una red de apoyo. Por eso, medir solo la cantidad de contactos no basta para detectar la soledad.
 
 ### 4. Seis perfiles de riesgo
 
 <!-- GRÁFICO 4: g4_perfiles_riesgo.html -->
-<!-- GRÁFICO 5: g5_arbol_interactivo.html -->
 
 El árbol de decisión identifica seis perfiles. La sola insatisfacción con la comunicación familiar basta para que **8 de cada 10** personas presenten soledad (78%). En el otro extremo, quienes tienen buen vínculo familiar y buena salud forman el perfil más protegido (29%). Ante una mala salud, **tener pareja amortigua el riesgo**: la soledad baja de 55% a 38%.
 
 ### 5. El Random Forest confirma el resultado
+
+<!-- GRÁFICO 5: g5_importancia_rf.html -->
 
 El Random Forest confirma que **las variables familiares son las más importantes** para predecir la soledad: comunicación familiar, poder acudir a la familia y tiempo compartido encabezan el ranking.
 
