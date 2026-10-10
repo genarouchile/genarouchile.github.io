@@ -2,40 +2,18 @@
 title: "Machine Learning: Soledad No Deseada en Personas Mayores"
 description: "Aplicación de modelos de machine learning para identificar factores asociados a la soledad no deseada en personas mayores."
 image: portada.png
-execute:
-  echo: false
-  warning: false
-  message: false
+resources:
+  - "graficos/**"
 ---
 
 ```{=html}
 <style>
+.grafico-interactivo { margin: 1.25rem 0 0 0; }
+.grafico-interactivo iframe { width: 100%; border: 0; display: block; }
 .grafico-nota { font-size: 0.8rem; color: #5B6B73; margin: 0.35rem 0 2rem 0; line-height: 1.4; }
 </style>
 ```
 
-```{r}
-#| label: setup
-#| include: false
-
-# Paquetes (instálalos una vez en RStudio: install.packages(c("plotly", "htmlwidgets")))
-library(plotly)
-
-# Paleta del proyecto: B · Océano
-pal <- list(
-  tinta       = "#263238",   # texto principal
-  tinta_2     = "#5B6B73",   # texto secundario, ejes
-  grilla      = "#E6ECEE",   # líneas de referencia
-  fondo       = "#FFFFFF",
-  marca       = "#173F5F",   # azul del sitio
-  ausencia    = "#E4E9ED",   # gris neutro ("casi nunca")
-  int_alta    = "#0A3D91",   # azul profundo ("a menudo", riesgo alto)
-  int_media   = "#4C9BFF",   # azul eléctrico ("a veces")
-  texto_media = "#FFFFFF",   # texto sobre azul eléctrico
-  acento      = "#FF7A00"    # naranja para destacar riesgo (próximos gráficos)
-)
-fuente <- "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
-```
 
 <div class="key-figures">
 <div class="key-figure"><span class="kf-number">51%</span><span class="kf-label">de las personas mayores declara algún grado de soledad no deseada</span></div>
@@ -79,77 +57,9 @@ El análisis combinó estadística clásica y aprendizaje automático en tres et
 
 ### 1. La soledad se vive sobre todo como falta de compañía
 
-```{r}
-#| label: g1-items-ucla
-
-# Datos: gráficos n° 3, 4 y 5 del informe (porcentajes por fila, cada ítem suma 100%)
-items <- data.frame(
-  corto = c("Le falta compañía", "Se siente excluido/a", "Se siente aislado/a"),
-  largo = c("Siente que le falta compañía",
-            "Se siente excluido/a o dejado/a de lado por los demás",
-            "Se siente aislado/a de los demás"),
-  a_menudo   = c(14.4,  8.2,  8.3),
-  a_veces    = c(29.6, 22.5, 20.2),
-  casi_nunca = c(56.0, 69.3, 71.5)
-)
-items$frecuente <- items$a_menudo + items$a_veces
-items <- items[order(-items$frecuente), ]
-stopifnot(all(abs(items$a_menudo + items$a_veces + items$casi_nunca - 100) < 0.2))
-orden <- rev(items$corto)
-
-segmento <- function(p, columna, nombre, color, color_texto) {
-  add_trace(
-    p, type = "bar", orientation = "h",
-    x = items[[columna]], y = items$corto, name = nombre,
-    customdata = items$largo,
-    marker = list(color = color, line = list(color = pal$fondo, width = 2)),
-    texttemplate = "%{x:.1f}%", textposition = "inside",
-    insidetextanchor = "middle", textangle = 0,
-    textfont = list(color = color_texto, size = 13),
-    hovertemplate = paste0("<b>%{customdata}</b><br>", nombre, ": <b>%{x:.1f}%</b><extra></extra>")
-  )
-}
-
-# Rótulo arriba a la izquierda y total "a veces o a menudo" arriba a la derecha
-rotulos <- do.call(c, lapply(seq_len(nrow(items)), function(i) {
-  list(
-    list(x = 0, xref = "paper", xanchor = "left",
-         y = items$corto[i], yref = "y", yanchor = "bottom", yshift = 21,
-         text = items$corto[i], showarrow = FALSE,
-         font = list(size = 14, color = pal$tinta)),
-    list(x = 1, xref = "paper", xanchor = "right",
-         y = items$corto[i], yref = "y", yanchor = "bottom", yshift = 21,
-         text = sprintf("<b>%s%%</b> a veces o a menudo",
-                        formatC(round(items$frecuente[i], 1), format = "f",
-                                digits = 1, decimal.mark = ",")),
-         showarrow = FALSE, font = list(size = 14, color = pal$tinta))
-  )
-}))
-
-plot_ly(height = 340) %>%
-  segmento("a_menudo",   "A menudo",   pal$int_alta,  "white") %>%
-  segmento("a_veces",    "A veces",    pal$int_media, pal$texto_media) %>%
-  segmento("casi_nunca", "Casi nunca", pal$ausencia,  pal$tinta) %>%
-  layout(
-    barmode = "stack", bargap = 0.48,
-    separators = ",.",
-    font = list(family = fuente, color = pal$tinta, size = 13),
-    paper_bgcolor = pal$fondo, plot_bgcolor = pal$fondo,
-    uniformtext = list(minsize = 11, mode = "hide"),
-    xaxis = list(range = c(0, 100), dtick = 25, ticksuffix = "%", title = "",
-                 showgrid = TRUE, gridcolor = pal$grilla, zeroline = FALSE,
-                 tickfont = list(color = pal$tinta_2, size = 12), fixedrange = TRUE),
-    yaxis = list(title = "", categoryorder = "array", categoryarray = orden,
-                 showticklabels = FALSE, showgrid = FALSE, ticks = "", fixedrange = TRUE),
-    legend = list(orientation = "h", x = 0, xanchor = "left", y = 1, yanchor = "bottom",
-                  traceorder = "normal", font = list(size = 13, color = pal$tinta)),
-    hoverlabel = list(bgcolor = pal$fondo, bordercolor = pal$ausencia,
-                      font = list(family = fuente, color = pal$tinta, size = 13)),
-    annotations = rotulos,
-    margin = list(t = 46, r = 22, b = 30, l = 16)
-  ) %>%
-  config(displayModeBar = FALSE, responsive = TRUE)
-```
+<div class="grafico-interactivo">
+<iframe src="graficos/g1_items_ucla.html" height="340" loading="lazy" title="Frecuencia de cada ítem de la escala UCLA de soledad"></iframe>
+</div>
 
 ::: {.grafico-nota}
 Porcentaje de personas mayores según la frecuencia con que experimentan cada ítem de la escala UCLA. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
@@ -174,6 +84,33 @@ Las variables del vínculo familiar tienen la asociación más fuerte con la sol
 ### 4. Seis perfiles de riesgo
 
 <!-- GRÁFICO 4: g4_perfiles_riesgo.html -->
+<!-- GRÁFICO 5: g5_arbol_interactivo.html -->
+
+El árbol de decisión identifica seis perfiles. La sola insatisfacción con la comunicación familiar basta para que **8 de cada 10** personas presenten soledad (78%). En el otro extremo, quienes tienen buen vínculo familiar y buena salud forman el perfil más protegido (29%). Ante una mala salud, **tener pareja amortigua el riesgo**: la soledad baja de 55% a 38%.
+
+### 5. El Random Forest confirma el resultado
+
+El Random Forest confirma que **las variables familiares son las más importantes** para predecir la soledad: comunicación familiar, poder acudir a la familia y tiempo compartido encabezan el ranking.
+
+| Modelo | Exactitud | Precisión | Sensibilidad | AUC |
+|---|---|---|---|---|
+| Árbol de decisión podado | 0,68 | 0,73 | 0,59 | 0,71 |
+| Random Forest optimizado | 0,66 | 0,69 | 0,64 | 0,70 |
+
+: Desempeño en la muestra de prueba
+
+Ambos modelos tienen una capacidad discriminante aceptable (AUC ≈ 0,70). Su principal valor está en **ordenar los factores de riesgo y describir perfiles interpretables** para la focalización, más que en predecir casos individuales.
+
+**Implicancias para política pública:** poner el foco en la calidad del vínculo familiar y no solo en la cantidad de contactos; focalizar en personas mayores con comunicación familiar deficiente, y no usar "vivir solo" como único criterio de riesgo.
+
+**Limitaciones:** diseño transversal (las asociaciones no implican causalidad), dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
+
+## Herramientas
+
+- **R 4.2:** procesamiento de datos, pruebas estadísticas, árbol de decisión y Random Forest.
+- **SPSS 21:** análisis descriptivo y bivariado.
+- **Plotly para R:** visualizaciones interactivas para la web.
+- **Quarto:** publicación de esta página.
 <!-- GRÁFICO 5: g5_arbol_interactivo.html -->
 
 El árbol de decisión identifica seis perfiles. La sola insatisfacción con la comunicación familiar basta para que **8 de cada 10** personas presenten soledad (78%). En el otro extremo, quienes tienen buen vínculo familiar y buena salud forman el perfil más protegido (29%). Ante una mala salud, **tener pareja amortigua el riesgo**: la soledad baja de 55% a 38%.
