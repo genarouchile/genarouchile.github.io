@@ -23,6 +23,8 @@ resources:
 @media (max-width: 700px) { .pipeline { grid-template-columns: repeat(2, 1fr); } }
 .grafico-interactivo iframe.sem { height: 560px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.sem { height: 640px; } }
+.grafico-interactivo iframe.corr { height: 680px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.corr { height: 900px; } }
 .leyenda-sem { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.82rem; color: #263238; margin: 0.6rem 0 0.2rem 0; }
 .leyenda-sem span { display: inline-flex; align-items: center; gap: 0.4rem; }
 .leyenda-sem i { display: inline-block; width: 26px; height: 0; border-top: 4px solid; }
@@ -84,9 +86,17 @@ Las mujeres son además una proporción creciente de las personas cuidadoras con
 
 ### 3. La movilidad es lo que más se asocia a la dependencia
 
-![](correlaciones.jpeg)
+::: {.column-page}
+<div class="grafico-interactivo">
+<iframe class="corr" src="graficos/correlaciones.html" loading="lazy" title="Correlaciones entre la dependencia funcional y las actividades cotidianas"></iframe>
+</div>
+:::
 
-Todas las actividades cotidianas se correlacionan positivamente con la dependencia, pero las más fuertes son las de **movilidad**: salir a la calle (r = 0,70), participar en actividades sociales (r = 0,69), hacer compras (r = 0,67) y asearse (r = 0,65).
+::: {.grafico-nota}
+Correlaciones de Pearson entre el grado de dificultad en cada actividad. La columna destacada muestra la correlación de cada actividad con la dependencia funcional; las actividades están agrupadas por tipo. Pasa el mouse sobre una celda para ver el par de variables. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – SENAMA).
+:::
+
+Todas las actividades cotidianas se correlacionan positivamente con la dependencia, pero las más fuertes son las de **movilidad**: salir a la calle (r = 0,70), participar en actividades sociales (r = 0,69), hacer compras (r = 0,67) y asearse (r = 0,65). Las actividades también se agrupan entre sí: quien tiene dificultad para salir a la calle suele tenerla para hacer compras (r = 0,83), y quien la tiene para asearse, para usar el baño (r = 0,83). Ver y oír son las menos asociadas a la dependencia.
 
 ## Modelo de ecuaciones estructurales
 
