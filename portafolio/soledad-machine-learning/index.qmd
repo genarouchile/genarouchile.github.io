@@ -97,17 +97,33 @@ Según la escala de Lubben, más de la mitad de las personas mayores (**55%**) n
 
 Pero **no son lo mismo**. Un **32%** vive la doble vulnerabilidad de sentirse solo y estar aislado; sin embargo, un **23%** está aislado y no se siente solo, y un **19%** se siente solo aun teniendo una red de apoyo. Contar contactos no basta para detectar la soledad: la experiencia subjetiva de los vínculos importa tanto como su número.
 
-### 4. Seis perfiles de riesgo
+### 4. Cómo decide el árbol: seis perfiles de riesgo
 
-<!-- GRÁFICO 4: g4_perfiles_riesgo.html -->
+<div class="grafico-interactivo">
+<iframe src="graficos/g4_arbol_decision.html" height="820" loading="lazy" title="Árbol de decisión: preguntas del modelo y perfiles de riesgo de soledad"></iframe>
+</div>
 
-El árbol de decisión identifica seis perfiles. La sola insatisfacción con la comunicación familiar basta para que **8 de cada 10** personas presenten soledad (78%). En el otro extremo, quienes tienen buen vínculo familiar y buena salud forman el perfil más protegido (29%). Ante una mala salud, **tener pareja amortigua el riesgo**: la soledad baja de 55% a 38%.
+::: {.grafico-nota}
+Árbol de decisión podado (CART). La barra de cada nodo muestra la mezcla de su grupo: naranja, con soledad; azul, sin soledad. Los recuadros grises son pasos intermedios; los recuadros con borde de color son los perfiles finales: naranja si su prevalencia de soledad supera el promedio (51%) y azul si está bajo él. Muestra de entrenamiento, n = 1.252. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+:::
 
-### 5. El Random Forest confirma el resultado
+El árbol de decisión aprende de los datos qué preguntas separan mejor a quienes sienten soledad de quienes no, sin que se le indique de antemano la forma de esas relaciones. **La primera pregunta, y la más decisiva, es por la comunicación familiar**: cuando es insatisfactoria, **8 de cada 10** personas mayores presentan soledad (78%), y es el grupo de riesgo más numeroso (29% de la muestra).
 
-<!-- GRÁFICO 5: g5_importancia_rf.html -->
+Aun con buena comunicación, **poco tiempo compartido** con la familia eleva la soledad a 68%. Con un buen vínculo familiar, la salud pasa a ser determinante: **buena salud define el perfil más protegido** (29%), mientras que ante una mala salud **tener pareja amortigua el riesgo** (38% frente a 55% sin pareja). Entre quienes no tienen pareja, la escolaridad básica vuelve a elevar la soledad a 63%.
 
-El Random Forest confirma que **las variables familiares son las más importantes** para predecir la soledad: comunicación familiar, poder acudir a la familia y tiempo compartido encabezan el ranking.
+La soledad no surge de una simple suma de desventajas, sino de **combinaciones específicas de vulnerabilidad y protección**, y eso es lo que permite focalizar.
+
+### 5. El Random Forest confirma: el vínculo familiar es lo que más predice
+
+<div class="grafico-interactivo">
+<iframe src="graficos/g5_importancia_rf.html" height="600" loading="lazy" title="Random Forest: importancia de las variables para predecir la soledad"></iframe>
+</div>
+
+::: {.grafico-nota}
+Importancia de cada variable en el Random Forest optimizado, medida como Mean Decrease Accuracy (cuánto empeora la predicción si la variable deja de aportar información) y expresada en relación con la más importante (= 100). Se muestran las 12 variables más importantes de 25. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+:::
+
+Para validar el árbol se estimó un **Random Forest**, que entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable y menos propenso al sobreajuste. El resultado confirma el hallazgo central: **las tres variables más predictivas son familiares** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, aunque con un peso cercano a la mitad.
 
 | Modelo | Exactitud | Precisión | Sensibilidad | AUC |
 |---|---|---|---|---|
@@ -119,6 +135,15 @@ El Random Forest confirma que **las variables familiares son las más importante
 Ambos modelos tienen una capacidad discriminante aceptable (AUC ≈ 0,70). Su principal valor está en **ordenar los factores de riesgo y describir perfiles interpretables** para la focalización, más que en predecir casos individuales.
 
 **Implicancias para política pública:** poner el foco en la calidad del vínculo familiar y no solo en la cantidad de contactos; focalizar en personas mayores con comunicación familiar deficiente, y no usar "vivir solo" como único criterio de riesgo.
+
+**Limitaciones:** diseño transversal (las asociaciones no implican causalidad), dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
+
+## Herramientas
+
+- **R 4.2:** procesamiento de datos, pruebas estadísticas, árbol de decisión y Random Forest.
+- **SPSS 21:** análisis descriptivo y bivariado.
+- **Plotly para R:** visualizaciones interactivas para la web.
+- **Quarto:** publicación de esta página.
 
 **Limitaciones:** diseño transversal (las asociaciones no implican causalidad), dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
 
