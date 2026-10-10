@@ -1,46 +1,86 @@
 ---
 title: "Ecuaciones Estructurales: Dependencia Funcional en Personas Mayores Cuidadoras en Chile"
-description: "Análisis descriptivo, bivariado y modelo de ecuaciones estructurales para identificar los factores asociados a la dependencia funcional en personas mayores que cuidan a otras."
+description: "Modelo de ecuaciones estructurales para identificar los factores de salud y de desigualdad social que explican la dependencia funcional en personas mayores que cuidan a otras."
 image: portada.png
+resources:
+  - "graficos/**"
 ---
+
+```{=html}
+<style>
+.grafico-interactivo { margin: 1.25rem 0 0 0; }
+.grafico-interactivo iframe { width: 100%; border: 0; display: block; }
+.grafico-nota { font-size: 0.8rem; color: #5B6B73; margin: 0.35rem 0 2rem 0; line-height: 1.4; }
+.pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin: 1.25rem 0 2rem 0; counter-reset: paso; }
+.pipeline .paso { background: #F3F6F8; border-top: 4px solid #0A3D91; border-radius: 6px; padding: 0.8rem 0.9rem; counter-increment: paso; }
+.pipeline .paso::before { content: counter(paso); display: inline-block; width: 1.6rem; height: 1.6rem; line-height: 1.6rem; text-align: center; border-radius: 50%; background: #0A3D91; color: #fff; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.35rem; }
+.pipeline .paso.descartado { border-top-color: #B8C4CA; }
+.pipeline .paso.descartado::before { background: #9AA9B4; }
+.pipeline .paso.final { border-top-color: #E8590C; }
+.pipeline .paso.final::before { background: #E8590C; }
+.pipeline .paso b { display: block; color: #173F5F; font-size: 0.95rem; margin-bottom: 0.15rem; }
+.pipeline .paso span { display: block; color: #455A64; font-size: 0.8rem; line-height: 1.35; }
+@media (max-width: 700px) { .pipeline { grid-template-columns: repeat(2, 1fr); } }
+.grafico-interactivo iframe.sem { height: 560px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.sem { height: 640px; } }
+.leyenda-sem { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.82rem; color: #263238; margin: 0.6rem 0 0.2rem 0; }
+.leyenda-sem span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.leyenda-sem i { display: inline-block; width: 26px; height: 0; border-top: 4px solid; }
+</style>
+```
 
 <div class="key-figures">
 <div class="key-figure"><span class="kf-number">4.954</span><span class="kf-label">personas mayores cuidadoras analizadas en dos encuestas nacionales</span></div>
-<div class="key-figure"><span class="kf-number">35%</span><span class="kf-label">de las mujeres cuidadoras dependientes presenta dependencia severa (0% en hombres)</span></div>
-<div class="key-figure"><span class="kf-number">38%</span><span class="kf-label">de las mujeres cuidadoras dependientes pertenece al quintil de menores ingresos</span></div>
-<div class="key-figure"><span class="kf-number">49%</span><span class="kf-label">de la varianza de la dependencia explicada por el modelo SEM</span></div>
+<div class="key-figure"><span class="kf-number">7 de 10</span><span class="kf-label">personas mayores que cuidan a otras son mujeres</span></div>
+<div class="key-figure"><span class="kf-number">49%</span><span class="kf-label">de la variación de la dependencia funcional explicada por el modelo de ecuaciones estructurales</span></div>
+<div class="key-figure"><span class="kf-number">−0,52</span><span class="kf-label">efecto de la buena cognición: el principal factor protector frente a la dependencia</span></div>
 </div>
 
-## En breve
+## Contexto
 
-En Chile, muchas personas mayores cuidan a otras personas mayores. Este estudio analiza qué factores explican que estas personas cuidadoras desarrollen **dependencia funcional**, combinando salud, género, edad, educación, ingresos y redes de apoyo desde una perspectiva interseccional. El principal hallazgo: la dependencia no se explica solo por enfermedades, sino también por **desigualdades sociales**, y las **redes de apoyo** actúan como factor protector.
+En Chile, muchas personas mayores cuidan a otras personas mayores: cónyuges, padres, hermanos. Mientras sostienen ese cuidado, enfrentan su propio envejecimiento, y con él el riesgo de perder autonomía para realizar las actividades de la vida diaria, es decir, de desarrollar **dependencia funcional**.
 
-## Datos y método
+El estudio, realizado en el Servicio Nacional del Adulto Mayor (SENAMA), analiza **qué factores explican la dependencia funcional de las personas mayores cuidadoras** desde una perspectiva **interseccional**: la dependencia no se entiende solo por la presencia de enfermedades, sino por cómo estas se combinan con desigualdades de género, edad, educación, ingresos y redes de apoyo.
 
-**Fuentes:** Encuesta Nacional de Discapacidad y Dependencia ENDIDE 2022 (SENADIS–SENAMA; n = 1.093) y Encuesta Nacional de Calidad de Vida en la Vejez UC 2016, 2019 y 2022 (n = 3.861), con factores de expansión para representatividad nacional.
+Las preguntas que guiaron el análisis fueron:
 
-**Análisis:**
+1. ¿Quiénes son las personas mayores que cuidan y en qué condiciones lo hacen?
+2. ¿Cómo se distribuye la dependencia funcional entre mujeres y hombres cuidadores?
+3. ¿Qué factores de salud y de desigualdad social explican la dependencia funcional, y por qué vías?
 
-1. Estadística descriptiva y comparaciones por género.
-2. Análisis bivariado: correlaciones entre dependencia y dificultad en actividades cotidianas.
-3. Análisis factorial confirmatorio (AFC) para construir los factores latentes.
-4. Modelo de ecuaciones estructurales (SEM) con estimador de máxima verosimilitud robusto.
+## Datos
 
-**Herramientas:** R (`lavaan`, `ggplot2`, `corrplot`) y SPSS.
+**Fuentes:**
 
-## Hallazgos principales
+- **Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022**, de SENADIS y SENAMA: 1.093 personas mayores cuidadoras. Es la base del modelo de ecuaciones estructurales.
+- **Encuesta Nacional de Calidad de Vida en la Vejez** 2016, 2019 y 2022, de la Pontificia Universidad Católica de Chile: 3.861 personas mayores cuidadoras, usada para analizar la evolución en el tiempo.
 
-### 1. Las mujeres cuidadoras enfrentan una dependencia más severa
+Se aplicaron los factores de expansión de cada encuesta para asegurar la representatividad nacional.
+
+**Variables principales:** dependencia funcional (variable a explicar); enfermedades físicas, sensoriales y mentales; cognición (orientación y memoria); redes de apoyo; y variables interseccionales de control: género, edad, nivel educacional e ingresos.
+
+## Método
+
+1. **Análisis descriptivo** de las personas cuidadoras, sus actividades de cuidado y su dependencia, comparando mujeres y hombres.
+2. **Análisis bivariado:** pruebas de diferencias de medias y correlaciones entre la dependencia y la dificultad para realizar actividades cotidianas.
+3. **Análisis factorial confirmatorio (AFC)** para construir los factores latentes: buena cognición, enfermedades físicas, enfermedades sensoriales y redes de apoyo.
+4. **Modelo de ecuaciones estructurales (SEM)** para estimar los efectos directos e indirectos de cada factor sobre la dependencia, con estimador de máxima verosimilitud robusto ajustado por media y varianza.
+
+## Resultados
+
+### 1. Quién cuida: el cuidado en la vejez es femenino
+
+<!-- GRÁFICO: perfil de quien cuida -->
+
+El **69%** de las personas mayores cuidadoras son mujeres. El cuidado que realizan es distinto: el **73% de los hombres** cuida a su cónyuge, mientras que el cuidado de las mujeres se reparte entre cónyuges (36%), padres o suegros (23%) e hijos (20%). Ellas, además, cuidan con **menos apoyo**: en un índice de 9 a 18 puntos, el apoyo que reciben promedia 10,5, frente a 16,2 en los hombres.
+
+### 2. La dependencia severa recae en las mujeres
 
 ![](niveles-dependencia.png)
 
-Entre las personas cuidadoras con dependencia funcional, el 35% de las mujeres presenta **dependencia severa**, mientras que ningún hombre alcanza ese nivel; en ellos predomina la dependencia moderada (97%).
+Entre las personas cuidadoras con dependencia funcional, el **35% de las mujeres** presenta dependencia severa, mientras que ningún hombre alcanza ese nivel; en ellos predomina la dependencia moderada (97%). La diferencia en el nivel promedio de dependencia entre mujeres y hombres es estadísticamente significativa (prueba t, p = 0,02).
 
-### 2. La dependencia se concentra en los hogares de menores ingresos
-
-![](quintiles-ingreso.png)
-
-El 38% de las mujeres cuidadoras con dependencia pertenece al **primer quintil de ingresos**, y la proporción disminuye a medida que aumenta el ingreso. Además, el ingreso promedio de las personas cuidadoras, hombres y mujeres, está bajo el salario mínimo.
+Las mujeres son además una proporción creciente de las personas cuidadoras con dependencia: pasaron del **64,8% en 2016 al 73,5% en 2022**. En ambos sexos, la dependencia se concentra en los hogares de menores ingresos: el 38% de las mujeres y el 37% de los hombres cuidadores con dependencia pertenecen al primer quintil.
 
 ### 3. La movilidad es lo que más se asocia a la dependencia
 
@@ -48,24 +88,68 @@ El 38% de las mujeres cuidadoras con dependencia pertenece al **primer quintil d
 
 Todas las actividades cotidianas se correlacionan positivamente con la dependencia, pero las más fuertes son las de **movilidad**: salir a la calle (r = 0,70), participar en actividades sociales (r = 0,69), hacer compras (r = 0,67) y asearse (r = 0,65).
 
-### 4. Salud, cognición, redes y desigualdad actúan en conjunto
+## Modelo de ecuaciones estructurales
 
-![](modelo-sem.png)
+Un modelo de ecuaciones estructurales permite estimar, al mismo tiempo, cómo se miden los factores que no se observan directamente (como la cognición o las redes de apoyo) y cómo se relacionan entre sí. A diferencia de una regresión, distingue **efectos directos** de **efectos indirectos**, es decir, los que operan a través de otro factor.
 
-El modelo final presenta un buen ajuste (CFI = 0,91; TLI = 0,90; RMSEA = 0,02) y explica el **49%** de la varianza de la dependencia funcional. Coeficientes estandarizados (β):
+El modelo final se alcanzó después de probar y descartar dos especificaciones:
 
-| Factor | Efecto sobre la dependencia | β |
-|---|---|---|
-| Buena cognición | La reduce | −0,52 |
-| Enfermedades físico-sensoriales | La aumenta | 0,35 |
-| Edad | La aumenta | 0,17 |
-| Ser mujer | La aumenta | 0,07 |
+<div class="pipeline">
+<div class="paso"><b>Modelo de medición</b><span>Análisis factorial confirmatorio de cognición, enfermedades y redes de apoyo</span></div>
+<div class="paso descartado"><b>Modelo inicial</b><span>Enfermedades físicas y sensoriales no significativas y mal ajuste: descartado</span></div>
+<div class="paso descartado"><b>Factor de segundo orden</b><span>Enfermedades físico-sensoriales significativas, pero ajuste insuficiente (CFI 0,73): descartado</span></div>
+<div class="paso final"><b>Modelo final</b><span>Cognición como mediadora. Buen ajuste: CFI 0,91 · TLI 0,90 · RMSEA 0,02</span></div>
+</div>
 
-Las **redes de apoyo** tienen un efecto protector indirecto: mejoran la cognición (β = 0,19), que a su vez reduce la dependencia. Las enfermedades mentales, en cambio, afectan la cognición (β = −0,14) pero no directamente la dependencia.
+### 4. El modelo final
 
-## Implicancias para política pública
+::: {.column-page}
+<div class="grafico-interactivo">
+<iframe class="sem" src="graficos/sem_diagrama.html" loading="lazy" title="Diagrama interactivo del modelo de ecuaciones estructurales"></iframe>
+</div>
+:::
 
-- **Enfoque de género** en las políticas de cuidado: las mujeres mayores cuidan más años, con menos apoyo y con mayor dependencia severa.
-- **Fortalecer redes de apoyo** para personas cuidadoras, por su efecto protector sobre la cognición y la funcionalidad.
-- **Focalizar en los quintiles de menores ingresos**, donde se concentra la dependencia de las mujeres cuidadoras.
-- **Abordaje integral de la salud**: la dependencia resulta de la combinación de factores físicos, cognitivos y sociales.
+<div class="leyenda-sem">
+<span><i style="border-color:#0A3D91"></i>Efecto protector</span>
+<span><i style="border-color:#E8590C"></i>Efecto de riesgo</span>
+<span><i style="border-top-style:dashed;border-color:#9AA9B4"></i>No significativo</span>
+<span><i style="border-top-width:2px;border-color:#C9D3D8"></i>Carga factorial</span>
+</div>
+
+::: {.grafico-nota}
+Coeficientes estandarizados. El grosor de cada flecha es proporcional al tamaño del efecto. Pasa el mouse sobre una flecha para ver su significancia, o arrastra los nodos para explorar el modelo. Las elipses son factores latentes y las cajas, variables observadas. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – SENAMA).
+:::
+
+El modelo explica el **49% de la variación de la dependencia funcional**. Sus principales resultados:
+
+- **La buena cognición es el principal factor protector** (β = −0,52): a mejor orientación y memoria, menor dependencia.
+- **Las enfermedades físico-sensoriales son el principal factor de riesgo** (β = 0,36): problemas osteoarticulares, traumatismos y pérdidas visuales y auditivas aumentan directamente la dependencia.
+- **Las redes de apoyo protegen sobre todo por una vía indirecta:** su efecto directo sobre la dependencia es pequeño (β = −0,03), pero mejoran la cognición (β = 0,19), que a su vez la reduce.
+- **Las enfermedades mentales actúan solo a través de la cognición:** no tienen efecto directo sobre la dependencia, pero deterioran la cognición (β = −0,14).
+- **La desigualdad social también pesa:** la edad (β = 0,17), el nivel educacional (β = 0,16) y ser mujer (β = 0,07) aumentan la dependencia, aun considerando el efecto de las enfermedades. Los ingresos no tienen un efecto significativo.
+
+Los coeficientes están estandarizados: un β de −0,52 indica que un aumento de una desviación estándar en la cognición se asocia, en promedio, a una disminución de 0,52 desviaciones estándar en la dependencia, manteniendo constantes los demás factores.
+
+<!-- GRÁFICO: efectos estandarizados con intervalos de confianza -->
+
+<!-- GRÁFICO: efectos directos e indirectos -->
+
+## Conclusiones
+
+La dependencia funcional de las personas mayores cuidadoras **no es solo una consecuencia de las enfermedades del envejecimiento**: también está determinada por desigualdades sociales vinculadas al género, la edad y la educación. Las mujeres cuidan más, con menos apoyo, y concentran la dependencia severa.
+
+**Implicancias para política pública:**
+
+- **Enfoque de género** en las políticas de cuidado: las mujeres mayores cuidan con menos apoyo y concentran la dependencia severa.
+- **Fortalecer las redes de apoyo** de las personas cuidadoras, por su efecto protector sobre la cognición.
+- **Prevención y estimulación cognitiva**, dado que la cognición es el principal factor protector.
+- **Abordaje integral de la salud**, porque la dependencia resulta de la combinación de factores físicos, cognitivos y sociales.
+
+**Limitaciones:** diseño transversal (las relaciones son asociaciones, no causalidad); algunos análisis descriptivos por sexo se basan en submuestras pequeñas, por lo que sus porcentajes deben leerse con cautela.
+
+## Herramientas
+
+- **R 4.2:** `lavaan` para el análisis factorial confirmatorio y el modelo de ecuaciones estructurales; `corrplot` y `ggplot2` para el análisis descriptivo.
+- **SPSS 21:** procesamiento de datos y análisis descriptivo.
+- **visNetwork y Plotly para R:** visualizaciones interactivas para la web.
+- **Quarto:** publicación de esta página.
