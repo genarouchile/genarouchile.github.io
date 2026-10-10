@@ -24,6 +24,8 @@ resources:
 .grafico-interactivo iframe.sem { height: 560px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.sem { height: 640px; } }
 .grafico-interactivo iframe.corr { height: 680px; }
+.grafico-interactivo iframe.niv { height: 360px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.niv { height: 400px; } }
 @media (max-width: 600px) { .grafico-interactivo iframe.corr { height: 900px; } }
 .leyenda-sem { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.82rem; color: #263238; margin: 0.6rem 0 0.2rem 0; }
 .leyenda-sem span { display: inline-flex; align-items: center; gap: 0.4rem; }
@@ -78,9 +80,15 @@ El **69%** de las personas mayores cuidadoras son mujeres. El cuidado que realiz
 
 ### 2. La dependencia severa recae en las mujeres
 
-![](niveles-dependencia.png)
+<div class="grafico-interactivo">
+<iframe class="niv" src="graficos/niveles_dependencia.html" loading="lazy" title="Niveles de dependencia funcional de las personas mayores cuidadoras, según sexo"></iframe>
+</div>
 
-Entre las personas cuidadoras con dependencia funcional, el **35% de las mujeres** presenta dependencia severa, mientras que ningún hombre alcanza ese nivel; en ellos predomina la dependencia moderada (97%). La diferencia en el nivel promedio de dependencia entre mujeres y hombres es estadísticamente significativa (prueba t, p = 0,02).
+::: {.grafico-nota}
+Porcentaje dentro de las personas mayores cuidadoras que presentan dependencia funcional. Pasa el mouse sobre una barra para ver el detalle. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – SENAMA).
+:::
+
+Entre las personas cuidadoras con dependencia funcional, el **35% de las mujeres** presenta dependencia severa, mientras que la mayoría de los hombres presenta dependencia moderada (97%). La diferencia en el nivel promedio de dependencia entre mujeres y hombres es estadísticamente significativa (prueba t, p = 0,02).
 
 Las mujeres son además una proporción creciente de las personas cuidadoras con dependencia: pasaron del **64,8% en 2016 al 73,5% en 2022**. En ambos sexos, la dependencia se concentra en los hogares de menores ingresos: el 38% de las mujeres y el 37% de los hombres cuidadores con dependencia pertenecen al primer quintil.
 
@@ -93,7 +101,7 @@ Las mujeres son además una proporción creciente de las personas cuidadoras con
 :::
 
 ::: {.grafico-nota}
-Correlaciones de Pearson entre el grado de dificultad en cada actividad. La columna destacada muestra la correlación de cada actividad con la dependencia funcional; las actividades están agrupadas por tipo. Pasa el mouse sobre una celda para ver el par de variables. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – SENAMA).
+Correlaciones de Pearson entre la dependencia funcional y el grado de dificultad en cada actividad cotidiana. La columna destacada muestra la correlación de cada actividad con la dependencia funcional; las actividades están agrupadas por tipo. Pasa el mouse sobre una celda para ver el par de variables. En pantallas pequeñas se muestra solo la correlación de cada actividad con la dependencia. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – SENAMA).
 :::
 
 Todas las actividades cotidianas se correlacionan positivamente con la dependencia, pero las más fuertes son las de **movilidad**: salir a la calle (r = 0,70), participar en actividades sociales (r = 0,69), hacer compras (r = 0,67) y asearse (r = 0,65). Las actividades también se agrupan entre sí: quien tiene dificultad para salir a la calle suele tenerla para hacer compras (r = 0,83), y quien la tiene para asearse, para usar el baño (r = 0,83). Ver y oír son las menos asociadas a la dependencia.
@@ -160,6 +168,9 @@ La dependencia funcional de las personas mayores cuidadoras **no es solo una con
 ## Herramientas
 
 - **R 4.2:** `lavaan` para el análisis factorial confirmatorio y el modelo de ecuaciones estructurales; `corrplot` y `ggplot2` para el análisis descriptivo.
+- **SPSS 21:** procesamiento de datos y análisis descriptivo.
+- **visNetwork y Plotly para R:** visualizaciones interactivas para la web.
+- **Quarto:** publicación de esta página.
 - **SPSS 21:** procesamiento de datos y análisis descriptivo.
 - **visNetwork y Plotly para R:** visualizaciones interactivas para la web.
 - **Quarto:** publicación de esta página.
