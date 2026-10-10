@@ -151,7 +151,7 @@ Un árbol más grande siempre se ajusta mejor a los datos con que se entrena: el
 </div>
 
 ::: {.grafico-nota}
-Matrices de confusión en la muestra de prueba. Cada celda muestra el porcentaje dentro del grupo real: en la fila de personas con soledad, la proporción detectada (sensibilidad); en la de personas sin soledad, la proporción correctamente descartada (especificidad). Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+Matrices de confusión en la muestra de prueba. Cada celda muestra el porcentaje dentro del grupo real: en la fila de personas con soledad, la proporción detectada (sensibilidad); en la de personas sin soledad, la proporción correctamente descartada (especificidad). Azul: aciertos del modelo; naranja: errores. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
 Ambos modelos se evaluaron con **datos que no vieron durante el entrenamiento**. El árbol podado clasifica correctamente al **67,6%** y es más preciso cuando alerta un caso (73% de sus alertas son correctas), mientras que el Random Forest **detecta más casos reales de soledad** (64% frente a 59%), a costa de más falsas alarmas.
@@ -177,19 +177,19 @@ Importancia de cada variable en el Random Forest optimizado, medida como Mean De
 
 El **Random Forest** entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable que un árbol individual. Su ranking de importancia confirma el hallazgo central: **las tres variables más predictivas son familiares** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, con un peso cercano a la mitad.
 
-### 8. Hacia dónde empuja cada variable
+### 8. Reducción de soledad: el vínculo familiar debe ser constante
 
 <div class="grafico-interactivo">
-<iframe src="graficos/g8_direccion_efecto.html" height="460" loading="lazy" title="Dirección del efecto de las variables familiares según el Random Forest"></iframe>
+<iframe src="graficos/g8_direccion_efecto.html" height="460" loading="lazy" title="Reducción de soledad cuando la satisfacción con la familia es constante"></iframe>
 </div>
 
 ::: {.grafico-nota}
-Dependencia parcial del Random Forest: probabilidad promedio de soledad predicha por el modelo según el nivel de satisfacción con cada dimensión del vínculo familiar, manteniendo constantes las demás variables. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+Reducción de la probabilidad de soledad predicha por el Random Forest (dependencia parcial) al pasar de una satisfacción no constante con la familia ("a veces" o "casi nunca") a una satisfacción constante ("casi siempre o siempre"), manteniendo constantes las demás variables. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-La importancia dice cuánto pesa una variable, pero no hacia dónde empuja. La **dependencia parcial** responde esa pregunta y revela un patrón de **umbral**: la probabilidad de soledad solo baja cuando la satisfacción con la familia es **constante** ("casi siempre o siempre"). Estar satisfecho "a veces" predice casi la misma soledad que "casi nunca". En el tiempo compartido, la probabilidad cae de 62% a 44% solo al alcanzar ese umbral.
+La importancia dice cuánto pesa una variable, pero no hacia dónde empuja. La **dependencia parcial** responde esa pregunta: estima cómo cambia la probabilidad de soledad cuando cambia una variable y todo lo demás se mantiene igual. Cuando la satisfacción con el **tiempo compartido** en familia es constante, la soledad predicha **baja 17,9 puntos** (de 62% a 44%). Le siguen el apoyo para nuevas actividades (−11,6) y la comunicación familiar (−10,7).
 
-Para la política pública, esto significa que no basta con que exista contacto familiar ocasional: lo protector es un **vínculo sostenido en el tiempo**.
+El modelo revela además un patrón de **umbral**: estar satisfecho solo "a veces" predice casi la misma soledad que "casi nunca". La reducción aparece únicamente cuando la satisfacción es **sostenida**. Para la política pública, esto significa que no basta con un contacto familiar ocasional: lo protector es un **vínculo constante en el tiempo**.
 
 ## Conclusiones
 
