@@ -19,6 +19,8 @@ resources:
 @media (max-width: 600px) { .grafico-interactivo iframe.educ { height: 740px; } }
 .grafico-interactivo iframe.cuidado { height: 470px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.cuidado { height: 580px; } }
+.grafico-interactivo iframe.actividades { height: 760px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.actividades { height: 800px; } }
 .definicion { border-left: 4px solid #0A3D91; background: #F3F6F8; padding: 0.9rem 1.1rem; margin: 1.25rem 0 1.5rem 0; border-radius: 0 6px 6px 0; }
 .definicion p { margin: 0; }
 .definicion b { color: #173F5F; }
@@ -116,7 +118,6 @@ El nivel educacional marca una brecha aún mayor que el ingreso. Entre las perso
 
 A diferencia del ingreso, **la brecha educacional se mantiene en todas las edades**, incluso sobre los 80 años, donde la dependencia funcional llega al 63% entre quienes no tienen educación formal y al 34% entre quienes tienen educación superior. La educación, adquirida en la juventud, aparece así como un **condicionante de largo plazo**: se asocia a menor dependencia funcional durante toda la vejez, posiblemente a través de las trayectorias de trabajo, salud y acceso a recursos que acompañan a cada nivel educacional. Al tratarse de un estudio transversal, estas relaciones son asociaciones y no permiten establecer causalidad.
 
-<!-- GRÁFICO: dependencia funcional por región -->
 
 ### 5. Una de cada tres personas mayores con dependencia funcional no tiene quien la cuide
 
@@ -142,6 +143,33 @@ Población estimada de personas de 60 años y más con dependencia funcional. "C
 La dependencia funcional implica necesitar la ayuda de otra persona, pero esa ayuda no siempre llega. El **32%** de las personas mayores con dependencia funcional, cerca de **255 mil personas**, no tiene una persona que la cuide. La cobertura aumenta con la severidad, pero no es completa: no tiene persona cuidadora el **59%** de quienes presentan dependencia funcional leve, el **33%** de quienes presentan dependencia funcional moderada y el **12%** de quienes presentan dependencia funcional severa, unas 35 mil personas que requieren ayuda de forma intensa y permanente. Dentro de cada nivel, la cobertura es similar entre mujeres y hombres.
 
 El cuidado, además, tiene rostro de mujer y de vejez: **3 de cada 4** personas mayores con persona cuidadora son cuidadas principalmente por una mujer (8 de cada 10 en la dependencia funcional severa), y el **44%** de quienes cuidan tiene **60 años o más**. Es decir, buena parte del cuidado de las personas mayores lo realizan otras personas mayores, un fenómeno que se analiza en el proyecto sobre [personas mayores cuidadoras](../portafolio/proyecto-1/index.qmd).
+
+### 6. ¿En qué actividades necesitan ayuda las personas mayores con dependencia funcional?
+
+<div class="grafico-interactivo">
+<iframe class="actividades" src="graficos/actividades.html" loading="lazy" title="Actividades en que necesitan ayuda las personas mayores con dependencia funcional"></iframe>
+</div>
+
+<div class="como-leer">
+<span class="tit">Cómo leer este gráfico</span>
+<ol>
+<li>Cada <b>fila</b> es una actividad de la vida diaria, ordenada de la que más ayuda requiere (arriba) a la que menos (abajo).</li>
+<li>Cada <b>celda</b> muestra el porcentaje de personas mayores con dependencia funcional que necesita ayuda <b>muchas veces o siempre</b> para esa actividad. Mientras más intenso el color, mayor el porcentaje.</li>
+<li>La columna <b>Total</b> resume a todas las personas con dependencia funcional; las otras tres separan por nivel: leve, moderada y severa.</li>
+<li><b>Ejemplo:</b> el 70% necesita ayuda para hacer compras o ir al médico. En la dependencia funcional leve son 33%; en la severa, 88%.</li>
+<li>Las actividades destacadas en <b style="color:#C2410C">color</b> son de cuidado personal: casi nadie necesita ayuda para ellas en la dependencia funcional leve o moderada, pero en la severa la necesitan entre 3 y 7 de cada 10 personas.</li>
+</ol>
+</div>
+
+::: {.grafico-nota}
+Necesita ayuda: declara necesitar ayuda de otra persona "muchas veces" o "siempre" para realizar la actividad. A quienes no declararon dificultad en una actividad no se les preguntó por la ayuda y se cuentan como sin necesidad de ayuda. La columna Total es el promedio de los tres niveles ponderado por su población. Este análisis describe el contenido de la dependencia funcional y no sus causas, ya que estas actividades forman parte de su medición. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+:::
+
+La necesidad de ayuda sigue un orden claro. Las primeras actividades en requerir apoyo son las que ocurren **fuera de la casa**: hacer compras o ir al médico (**70%**), caminar o subir peldaños (**62%**) y salir a la calle (**61%**). Ya en la dependencia funcional moderada, dos de cada tres personas necesitan ayuda para salir a la calle.
+
+Las actividades de **cuidado personal** —asearse, vestirse, usar el baño, acostarse o alimentarse— casi no requieren ayuda en los niveles leve y moderado (menos del 8%), pero en la dependencia funcional severa la necesitan entre el **32% y el 67%**. Este patrón coincide con lo descrito en la literatura gerontológica: la pérdida de autonomía suele comenzar por las actividades instrumentales y de movilidad, y alcanza el cuidado personal en las etapas más severas.
+
+<!-- GRÁFICO: dependencia funcional por región -->
 
 <!-- GRÁFICO: probabilidades predichas del modelo -->
 
