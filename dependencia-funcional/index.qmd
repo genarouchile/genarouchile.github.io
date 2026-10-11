@@ -1,7 +1,7 @@
 ---
 title: "La realidad de la Dependencia Funcional en Personas Mayores en Chile"
-subtitle: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿A quiénes afecta más según su edad, género, ingresos, educación y territorio, y cuántas no cuentan con alguien que las cuide?"
-description: "Un análisis de la dependencia funcional en personas de 60 años y más con datos de la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022."
+subtitle: "Un análisis estadístico de la dependencia funcional en personas de 60 años y más con datos de la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022"
+description: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿A quiénes afecta más según su edad, género, ingresos, educación y territorio, y cuántas no cuentan con alguien que las cuide?"
 image: portada.png
 lang: es
 resources:
@@ -36,12 +36,22 @@ resources:
 .como-leer ol { margin: 0; padding-left: 1.2rem; }
 .como-leer li { margin-bottom: 0.3rem; }
 .como-leer, .grafico-nota { text-align: justify; hyphens: auto; }
+/* Tipografía editorial del sitio (Newsreader, ya importada en styles.css) para titulares y cifras */
+.intro-a .titular, .hallazgos .htit, .hallazgos .n { font-family: "Newsreader", Georgia, "Times New Roman", serif !important; }
+.intro-a .titular { font-weight: 400 !important; font-size: 2.15rem !important; line-height: 1.12 !important; letter-spacing: -0.01em; }
+.hallazgos .htit { font-weight: 400 !important; font-size: 1.9rem !important; }
+.hallazgos .n { font-weight: 400 !important; font-size: 1.6rem !important; }
+@media (max-width: 600px) { .intro-a .titular { font-size: 1.75rem !important; } .hallazgos .n { font-size: 1.5rem !important; } }
+/* Descripción del encabezado más grande */
+#title-block-header .subtitle { font-size: 1.2rem !important; font-weight: 700 !important; line-height: 1.5 !important; color: #263238 !important; margin-top: .4rem; }
+#title-block-header .description, #title-block-header .description p { font-size: 1rem !important; line-height: 1.55; color: #5B6B73; }
+@media (max-width: 600px) { #title-block-header .subtitle { font-size: 1.02rem !important; } #title-block-header .description, #title-block-header .description p { font-size: .93rem !important; } }
 /* Todo el texto del proyecto justificado. styles.css del sitio fuerza "left !important"
    en #quarto-content p/li, por eso aquí se usa mayor especificidad + !important */
 #quarto-content main.content p, #quarto-content main.content li { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
-#quarto-content main.content #title-block-header p,
 #quarto-content main.content .intro-a p, #quarto-content main.content .intro-a li,
 #quarto-content main.content .hallazgos p, #quarto-content main.content .hallazgos li { text-align: left !important; hyphens: manual; }
+#quarto-content main.content #title-block-header .subtitle, #quarto-content main.content #title-block-header .description { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
 /* Hallazgos: texto justificado en pantallas anchas; en celular, a la izquierda para evitar espacios grandes */
 #quarto-content main.content .hallazgos .fr { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
 @media (max-width: 600px) { #quarto-content main.content .hallazgos .fr { text-align: left !important; } }
@@ -101,7 +111,7 @@ resources:
 .hallazgos li{margin:0;border-bottom:1px solid #E1E7EC}
 .hallazgos li a{display:grid;grid-template-columns:9.4rem minmax(0,1fr) 1rem;gap:.9rem;align-items:baseline;padding:.55rem .15rem;text-decoration:none}
 .hallazgos li a:hover{background:#F5F8FC}
-.hallazgos li:first-child a{background:#FBF3F6}
+.hallazgos li:first-child a{background:#FFF6EF;box-shadow:inset 3px 0 0 #E8590C}
 .hallazgos .n{font-size:1.2rem;font-weight:800;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
 .hallazgos .fr{font-size:.92rem;line-height:1.45}
 .hallazgos .fl{font-weight:700}
@@ -110,7 +120,7 @@ resources:
 </style>
 <section class="hallazgos" aria-label="Hallazgos clave">
 <p class="htit">Hallazgos clave</p>
-<ol><li><a href="#modelo"><span class="n" style="color:#A61E4D">A los 60 años</span><span class="fr">las personas mayores <b>más pobres y sin educación</b> ya tienen la misma probabilidad de dependencia funcional que las <b>más acaudaladas</b> a los 85.</span><span class="fl">→</span></a></li><li><a href="#cuidado"><span class="n" style="color:#A61E4D">32%</span><span class="fr">de las personas mayores con dependencia funcional <b>no cuenta con una persona cuidadora</b> (254.701 personas).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">6 de cada 10</span><span class="fr">personas de <b>85 años y más</b> viven con dependencia funcional (13% entre los 60 y 64 años).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">1,6 veces</span><span class="fr">más dependencia funcional en <b>mujeres</b> (26%) que en hombres (17%).</span><span class="fl">→</span></a></li><li><a href="#territorio"><span class="n" style="color:#0A3D91">Casi el triple</span><span class="fr">de dependencia funcional en <b>La Araucanía</b> (31%) que en Magallanes (11%).</span><span class="fl">→</span></a></li></ol>
+<ol><li><a href="#modelo"><span class="n" style="color:#C2410C">A los 60 años</span><span class="fr">las personas mayores <b>más pobres y sin educación</b> ya tienen la misma probabilidad de dependencia funcional que las personas mayores <b>con más dinero</b> a los 85 años.</span><span class="fl">→</span></a></li><li><a href="#cuidado"><span class="n" style="color:#C2410C">32%</span><span class="fr">de las personas mayores con dependencia funcional <b>no cuenta con una persona cuidadora</b> (254.701 personas).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">6 de cada 10</span><span class="fr">personas de <b>85 años y más</b> viven con dependencia funcional (13% entre los 60 y 64 años).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">1,6 veces</span><span class="fr">más dependencia funcional en <b>mujeres</b> (26%) que en hombres (17%).</span><span class="fl">→</span></a></li><li><a href="#territorio"><span class="n" style="color:#0A3D91">Casi el triple</span><span class="fr">de personas mayores con dependencia funcional, en proporción, hay en <b>La Araucanía</b> (31%) que en Magallanes (11%).</span><span class="fl">→</span></a></li></ol>
 </section>
 ```
 
