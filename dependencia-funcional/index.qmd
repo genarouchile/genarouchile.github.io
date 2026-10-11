@@ -13,6 +13,8 @@ resources:
 .grafico-nota { font-size: 0.8rem; color: #5B6B73; margin: 0.35rem 0 2rem 0; line-height: 1.4; }
 .grafico-interactivo iframe.edad-sexo { height: 500px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.edad-sexo { height: 580px; } }
+.grafico-interactivo iframe.quintil { height: 440px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.quintil { height: 720px; } }
 .definicion { border-left: 4px solid #0A3D91; background: #F3F6F8; padding: 0.9rem 1.1rem; margin: 1.25rem 0 1.5rem 0; border-radius: 0 6px 6px 0; }
 .definicion p { margin: 0; }
 .definicion b { color: #173F5F; }
@@ -78,7 +80,23 @@ La dependencia no crece de manera pareja: hasta los 74 años aumenta lentamente 
 
 Las mujeres mayores presentan más dependencia que los hombres (**26,4% frente a 16,9%**), y su prevalencia es mayor en todos los tramos de edad. La brecha no se explica solo porque las mujeres vivan más: se observa también al comparar a mujeres y hombres de la misma edad. En la dependencia severa, la diferencia se concentra después de los 85 años (41% frente a 31%).
 
-<!-- GRÁFICO: gradiente social (quintil de ingreso y educación) -->
+### 3. La desigualdad de ingresos marca la dependencia, hasta los 80 años
+
+::: {.column-page}
+<div class="grafico-interactivo">
+<iframe class="quintil" src="graficos/dependencia_quintil_barras.html" loading="lazy" title="Dependencia funcional por quintil de ingreso, según tramo de edad"></iframe>
+</div>
+:::
+
+::: {.grafico-nota}
+Porcentaje de personas con dependencia funcional según quintil de ingreso autónomo per cápita del hogar. Las líneas sobre cada barra muestran el intervalo de confianza al 95%. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+:::
+
+La dependencia sigue un **gradiente social**: entre las personas mayores del 20% de hogares más pobres alcanza el **27%**, y en el 20% más rico, el **14%**. Las personas mayores del quintil más pobre tienen el **doble de dependencia** que las del más rico (índice relativo de desigualdad ≈ 2,0).
+
+La brecha no se explica por diferencias de edad entre quintiles: se observa dentro de cada tramo. Entre los 60 y 69 años, la dependencia es casi **tres veces mayor** en el quintil más pobre (19%) que en el más rico (7%), y entre los 70 y 79 años, de 26% frente a 16%. Sobre los 80 años, en cambio, la diferencia desaparece: la dependencia afecta a cerca de la mitad de las personas en todos los quintiles. Es un patrón conocido en los estudios de envejecimiento: en las edades más avanzadas, el deterioro asociado a la edad tiende a igualar las condiciones de salud entre grupos sociales.
+
+<!-- GRÁFICO: gradiente por nivel educacional -->
 
 <!-- GRÁFICO: dependencia por región -->
 
