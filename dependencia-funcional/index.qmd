@@ -1,0 +1,93 @@
+---
+title: "Dependencia Funcional en Personas Mayores en Chile"
+description: "Análisis de la dependencia funcional en personas de 60 años y más con la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022: magnitud, edad, género y desigualdades."
+image: portada.png
+resources:
+  - "graficos/**"
+---
+
+```{=html}
+<style>
+.grafico-interactivo { margin: 1.25rem 0 0 0; }
+.grafico-interactivo iframe { width: 100%; border: 0; display: block; }
+.grafico-nota { font-size: 0.8rem; color: #5B6B73; margin: 0.35rem 0 2rem 0; line-height: 1.4; }
+.grafico-interactivo iframe.edad-sexo { height: 500px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.edad-sexo { height: 580px; } }
+.definicion { border-left: 4px solid #0A3D91; background: #F3F6F8; padding: 0.9rem 1.1rem; margin: 1.25rem 0 1.5rem 0; border-radius: 0 6px 6px 0; }
+.definicion p { margin: 0; }
+.definicion b { color: #173F5F; }
+</style>
+```
+
+<div class="key-figures">
+<div class="key-figure"><span class="kf-number">22%</span><span class="kf-label">de las personas de 60 años y más vive con dependencia funcional</span></div>
+<div class="key-figure"><span class="kf-number">~800 mil</span><span class="kf-label">personas mayores con dependencia en Chile</span></div>
+<div class="key-figure"><span class="kf-number">6 de 10</span><span class="kf-label">personas de 85 años y más presenta dependencia</span></div>
+<div class="key-figure"><span class="kf-number">1,6 veces</span><span class="kf-label">más dependencia en mujeres mayores (26%) que en hombres (17%)</span></div>
+</div>
+
+## Contexto
+
+Chile envejece rápidamente, y con ello crece el número de personas que necesitan ayuda de otras para realizar las actividades de la vida diaria. Conocer cuántas son, quiénes son y cómo se distribuye la dependencia es la base para diseñar un sistema de cuidados.
+
+::: {.definicion}
+**Dependencia funcional:** situación en la que se presentan dos elementos de manera conjunta: (i) una **limitación** (más o menos severa) de una persona para realizar actividades, por motivos de salud, en interacción con los factores del contexto ambiental, y (ii) una **necesidad de ayuda** por parte de otra(s) persona(s).
+:::
+
+Esta definición guía todo el análisis: no basta con tener una limitación; la dependencia existe cuando esa limitación va acompañada de la necesidad de ayuda de otra persona.
+
+Preguntas que guían el análisis:
+
+1. ¿Cuántas personas mayores viven con dependencia y con qué severidad?
+2. ¿Cómo cambia la dependencia con la edad y entre mujeres y hombres?
+3. ¿Qué desigualdades sociales y territoriales la atraviesan?
+4. ¿Reciben las personas dependientes la ayuda que necesitan?
+
+## Datos
+
+- **Fuente:** Encuesta Nacional de Discapacidad y Dependencia (**ENDIDE**) **2022**, de SENADIS y el Ministerio de Desarrollo Social y Familia.
+- **Población analizada:** personas de 60 años y más (**9.171 casos**, que representan a **3,6 millones** de personas mayores).
+- **Variable central:** nivel de dependencia funcional (sin dependencia, leve, moderada y severa), construida a partir del tipo de actividad comprometida, la frecuencia con que se necesita ayuda y la cantidad de actividades comprometidas.
+
+## Método
+
+- Estimaciones con **diseño muestral complejo** (estratos, conglomerados y factor de expansión), con intervalos de confianza al 95% y coeficiente de variación.
+- **Validación:** la prevalencia estimada reproduce la cifra oficial de ENDIDE 2022 para personas de 60 años y más (22,2%).
+- **Criterio de calidad:** estimaciones con menos de 60 casos o coeficiente de variación mayor a 30% se señalan como poco fiables.
+- Análisis de asociación con pruebas para muestras complejas y **regresión logística** con diseño muestral para estimar brechas ajustadas por edad.
+
+## Resultados
+
+### 1. Una de cada cinco personas mayores vive con dependencia
+
+El **22,2%** de las personas de 60 años y más presenta dependencia funcional, es decir, unas **798 mil personas**. Según su severidad, el 5,5% tiene dependencia leve, el 8,7% moderada y el **8,0% severa**: cerca de 288 mil personas mayores necesitan ayuda de manera intensa y permanente.
+
+### 2. La dependencia se acelera con la edad, y afecta más a las mujeres
+
+::: {.column-page}
+<div class="grafico-interactivo">
+<iframe class="edad-sexo" src="graficos/dependencia_edad_sexo.html" loading="lazy" title="Dependencia funcional por tramo de edad y sexo"></iframe>
+</div>
+:::
+
+::: {.grafico-nota}
+Porcentaje de personas de 60 años y más con dependencia funcional. Las bandas muestran el intervalo de confianza al 95%; los puntos huecos, estimaciones con menos de 60 casos. Usa los botones para ver solo la dependencia severa. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+:::
+
+La dependencia no crece de manera pareja: hasta los 74 años aumenta lentamente (de 13% a 18%), pero **desde los 75 se acelera**, y sobre los 85 años **6 de cada 10 personas** viven con dependencia. Lo que más cambia es la severidad: la dependencia severa pasa de 3% entre los 60 y 64 años a **38% en las personas de 85 y más**.
+
+Las mujeres mayores presentan más dependencia que los hombres (**26,4% frente a 16,9%**), y su prevalencia es mayor en todos los tramos de edad. La brecha no se explica solo porque las mujeres vivan más: se observa también al comparar a mujeres y hombres de la misma edad. En la dependencia severa, la diferencia se concentra después de los 85 años (41% frente a 31%).
+
+<!-- GRÁFICO: gradiente social (quintil de ingreso y educación) -->
+
+<!-- GRÁFICO: dependencia por región -->
+
+<!-- GRÁFICO: brecha de cuidado (Sankey) -->
+
+<!-- GRÁFICO: probabilidades predichas del modelo -->
+
+## Herramientas
+
+- **SPSS 25 · Muestras complejas:** estimaciones con diseño muestral, intervalos de confianza y regresión logística.
+- **Plotly para R:** visualizaciones interactivas para la web.
+- **Quarto:** publicación de esta página.
