@@ -21,6 +21,8 @@ resources:
 @media (max-width: 600px) { .grafico-interactivo iframe.cuidado { height: 580px; } }
 .grafico-interactivo iframe.actividades { height: 760px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.actividades { height: 800px; } }
+.grafico-interactivo iframe.region { height: 640px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.region { height: 700px; } }
 .definicion { border-left: 4px solid #0A3D91; background: #F3F6F8; padding: 0.9rem 1.1rem; margin: 1.25rem 0 1.5rem 0; border-radius: 0 6px 6px 0; }
 .definicion p { margin: 0; }
 .definicion b { color: #173F5F; }
@@ -28,6 +30,7 @@ resources:
 .como-leer .tit { display: block; font-weight: 700; color: #B8410A; margin-bottom: 0.35rem; }
 .como-leer ol { margin: 0; padding-left: 1.2rem; }
 .como-leer li { margin-bottom: 0.3rem; }
+.como-leer, .grafico-nota { text-align: justify; hyphens: auto; }
 </style>
 ```
 
@@ -169,7 +172,30 @@ La necesidad de ayuda sigue un orden claro. Las primeras actividades en requerir
 
 Las actividades de **cuidado personal** —asearse, vestirse, usar el baño, acostarse o alimentarse— casi no requieren ayuda en los niveles leve y moderado (menos del 8%), pero en la dependencia funcional severa la necesitan entre el **32% y el 67%**. Este patrón coincide con lo descrito en la literatura gerontológica: la pérdida de autonomía suele comenzar por las actividades instrumentales y de movilidad, y alcanza el cuidado personal en las etapas más severas.
 
-<!-- GRÁFICO: dependencia funcional por región -->
+### 7. La dependencia funcional también varía según el territorio
+
+<div class="grafico-interactivo">
+<iframe class="region" src="graficos/dependencia_region.html" loading="lazy" title="Dependencia funcional por región"></iframe>
+</div>
+
+<div class="como-leer">
+<span class="tit">Cómo leer este gráfico</span>
+<ol>
+<li>Cada <b>punto</b> es una región, ordenadas de norte (arriba) a sur (abajo). El número indica el porcentaje de personas mayores de esa región que vive con dependencia funcional.</li>
+<li>La <b>línea punteada vertical</b> es el <b>promedio nacional</b>: en Chile, el <b>22,2%</b> de las personas de 60 años y más —unas 798 mil personas— vive con dependencia funcional. La <b>franja gris</b> que la rodea es su margen de error (entre 21,2% y 23,2%).</li>
+<li>La <b>línea horizontal</b> de cada región es su margen de error (intervalo de confianza al 95%): el valor real de la región se encuentra, con alta probabilidad, dentro de ese rango. Las regiones con menos personas encuestadas tienen líneas más largas.</li>
+<li>Una región está <b style="color:#A61E4D">sobre</b> o <b style="color:#0A3D91">bajo</b> el promedio nacional solo cuando su línea <b>no toca</b> la franja gris. Si la toca (en <b style="color:#8FA0AB">gris</b>), la diferencia con el promedio no es concluyente.</li>
+<li><b>Ejemplo:</b> en La Araucanía, el 31% de las personas mayores vive con dependencia funcional, casi 9 puntos más que el promedio nacional; en Magallanes, el 11%, la mitad del promedio.</li>
+</ol>
+</div>
+
+::: {.grafico-nota}
+Porcentaje de personas de 60 años y más con dependencia funcional en cada región. El criterio de comparación con el promedio nacional (intervalos que no se traslapan) es conservador: diferencias pequeñas pueden no aparecer como significativas. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+:::
+
+La dependencia funcional en las personas mayores va desde el **11%** en Magallanes hasta el **31%** en La Araucanía. Las regiones del **centro-sur** —Ñuble, Biobío, La Araucanía, Los Ríos y Los Lagos— presentan los valores más altos, y La Araucanía y Los Ríos superan claramente el promedio nacional. En el otro extremo, Magallanes y Antofagasta tienen la menor dependencia funcional del país.
+
+La diferencia no se explica simplemente por la ruralidad: la dependencia funcional es prácticamente igual en zonas **urbanas (22,1%)** y **rurales (23,1%)**. Las brechas territoriales parecen responder más bien a la composición social de cada región —edad, ingresos y nivel educacional de su población mayor—, algo que el modelo multivariado permitirá examinar.
 
 <!-- GRÁFICO: probabilidades predichas del modelo -->
 
