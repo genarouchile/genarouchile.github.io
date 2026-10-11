@@ -1,6 +1,6 @@
 ---
-title: "La realidad de la dependencia funcional en personas mayores en Chile"
-subtitle: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿Qué desigualdades existen y qué desafíos enfrenta el país en materia de cuidados?"
+title: "La realidad de la Dependencia Funcional en Personas Mayores en Chile"
+subtitle: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿A quiénes afecta más según su edad, género, ingresos, educación y territorio, y cuántas no cuentan con alguien que las cuide?"
 description: "Un análisis de la dependencia funcional en personas de 60 años y más con datos de la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022."
 image: portada.png
 lang: es
@@ -41,12 +41,12 @@ resources:
 #quarto-content main.content p, #quarto-content main.content li { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
 #quarto-content main.content #title-block-header p,
 #quarto-content main.content .intro-a p, #quarto-content main.content .intro-a li,
-#quarto-content main.content .hallazgos p { text-align: left !important; hyphens: manual; }
-#quarto-content main.content .intro-a p.bajada,
-#quarto-content main.content .intro-a p.titular,
-#quarto-content main.content .intro-a p.pie,
-#quarto-content main.content .hallazgos p.frase,
-#quarto-content main.content .hallazgos p.eje { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+#quarto-content main.content .hallazgos p, #quarto-content main.content .hallazgos li { text-align: left !important; hyphens: manual; }
+/* Hallazgos: texto justificado en pantallas anchas; en celular, a la izquierda para evitar espacios grandes */
+#quarto-content main.content .hallazgos .fr { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+@media (max-width: 600px) { #quarto-content main.content .hallazgos .fr { text-align: left !important; } }
+#quarto-content main.content .hallazgos li a, #quarto-content main.content .hallazgos li a:hover { color: #263238 !important; text-decoration: none !important; }
+#quarto-content main.content .hallazgos .fl { color: #0A3D91 !important; }
 </style>
 ```
 
@@ -95,50 +95,23 @@ resources:
 </div>
 
 <style>
-.hallazgos{margin:0 0 2.2rem}
-.hallazgos .htit{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#5B6B73;margin:0 0 .8rem;text-align:left}
-.hallazgos .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.hallazgos .hc{background:#fff;border:1px solid #E1E7EC;border-radius:12px;padding:1.1rem 1.2rem 1rem;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,40,70,.04)}
-.hallazgos .tag{font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700;color:#5B6B73;margin:0 0 .25rem;text-align:left}
-.hallazgos .num{font-size:2.3rem;font-weight:800;line-height:1;margin:0 0 .45rem;text-align:left;font-variant-numeric:tabular-nums}
-.hallazgos .frase{font-size:.95rem;line-height:1.5;color:#263238;margin:0 0 .9rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-.hallazgos .mini{margin-top:auto;margin-bottom:.7rem}
-.hallazgos .ver{font-size:.85rem;font-weight:600;color:#0A3D91;text-decoration:none;align-self:flex-start}
-.hallazgos .ver:hover{text-decoration:underline}
-.hallazgos .eje{font-size:.72rem;line-height:1.4;color:#5B6B73;margin:.2rem 0 0;text-align:justify;hyphens:auto}
-.hallazgos .edad .fila{display:grid;grid-template-columns:5.6rem 1fr auto;align-items:center;gap:.5rem;margin-bottom:.35rem}
-.hallazgos .edad .et{font-size:.75rem;color:#5B6B73} .hallazgos .edad b{font-size:.85rem;white-space:nowrap}
-.hallazgos .edad .ps{display:flex;gap:2px} .hallazgos .pm{width:100%;max-width:16px;height:auto}
-.hallazgos .apilada{display:flex;height:30px;border-radius:6px;overflow:hidden}
-.hallazgos .apilada div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:700}
-.hallazgos .ley{display:flex;flex-wrap:wrap;gap:.3rem .9rem;margin-top:.5rem;font-size:.74rem;color:#5B6B73}
-.hallazgos .ley i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:.3rem;vertical-align:-1px}
-.hallazgos .central{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;grid-template-areas:"txt mini" "ver mini";align-items:center;column-gap:1.5rem;background:linear-gradient(135deg,#FBF4F7 0%,#F1F5FC 100%);border-color:#E8DCE3}
-.hallazgos .central .txt{grid-area:txt} .hallazgos .central .mini{grid-area:mini;margin:0} .hallazgos .central .ver{grid-area:ver}
-.hallazgos .frase.grande{font-size:1.1rem;line-height:1.5;font-weight:600}
-@media (max-width:700px){.hallazgos .grid{grid-template-columns:1fr} .hallazgos .central{grid-template-columns:1fr;grid-template-areas:"txt" "mini" "ver";row-gap:.6rem}
-  .hallazgos .num{font-size:2rem}}
+.hallazgos{margin:0 0 2rem}
+.hallazgos .htit{font-size:1.5rem;font-weight:700;color:#263238;margin:0 0 .6rem;line-height:1.2}
+.hallazgos ol{list-style:none;margin:0;padding:0;border-top:2px solid #0A3D91}
+.hallazgos li{margin:0;border-bottom:1px solid #E1E7EC}
+.hallazgos li a{display:grid;grid-template-columns:9.4rem minmax(0,1fr) 1rem;gap:.9rem;align-items:baseline;padding:.55rem .15rem;text-decoration:none}
+.hallazgos li a:hover{background:#F5F8FC}
+.hallazgos li:first-child a{background:#FBF3F6}
+.hallazgos .n{font-size:1.2rem;font-weight:800;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
+.hallazgos .fr{font-size:.92rem;line-height:1.45}
+.hallazgos .fl{font-weight:700}
+@media (max-width:600px){.hallazgos li a{grid-template-columns:minmax(0,1fr) 1rem;gap:.1rem .5rem;padding:.55rem .1rem}
+  .hallazgos .n{grid-column:1} .hallazgos .fr{grid-column:1} .hallazgos .fl{grid-column:2;grid-row:1/3;align-self:center}}
 </style>
 <section class="hallazgos" aria-label="Hallazgos clave">
 <p class="htit">Hallazgos clave</p>
-<div class="grid">
-<article class="hc"><p class="tag">Edad</p><p class="num" style="color:#0A3D91">6 de cada 10</p><p class="frase">personas de <b>85 años y más</b> viven con dependencia funcional. Entre los 60 y 64 años, la proporción es de una de cada ocho (13%).</p><div class="mini edad"><div class="fila"><span class="et">60 a 64 años</span><span class="ps"><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#4C9BFF"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg></span><b style="color:#4C9BFF">13%</b></div>
-<div class="fila"><span class="et">85 años y más</span><span class="ps"><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg></span><b style="color:#0A3D91">6 de 10</b></div></div><a class="ver" href="#edad">Ver edad y sexo →</a></article><article class="hc"><p class="tag">Ingresos</p><p class="num" style="color:#A61E4D">Casi el doble</p><p class="frase">de dependencia funcional presentan las personas mayores de los <b>hogares más pobres</b> (27%) respecto de las de los hogares más acaudalados (14%).</p><div class="mini"><svg viewBox="0 0 246 100" width="100%" style="max-width:260px"><g transform="translate(12,0)"><rect y="15.7" width="30" height="62.3" rx="3" fill="#A61E4D"/><text x="15" y="10.7" text-anchor="middle" font-size="11" font-weight="700" fill="#A61E4D">27%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QI</text></g><g transform="translate(58,0)"><rect y="17.6" width="30" height="60.4" rx="3" fill="#9FB3C8"/><text x="15" y="12.6" text-anchor="middle" font-size="11" font-weight="700" fill="#5B6B73">26%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QII</text></g><g transform="translate(104,0)"><rect y="26.0" width="30" height="52.0" rx="3" fill="#9FB3C8"/><text x="15" y="21.0" text-anchor="middle" font-size="11" font-weight="700" fill="#5B6B73">22%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QIII</text></g><g transform="translate(150,0)"><rect y="28.5" width="30" height="49.5" rx="3" fill="#9FB3C8"/><text x="15" y="23.5" text-anchor="middle" font-size="11" font-weight="700" fill="#5B6B73">21%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QIV</text></g><g transform="translate(196,0)"><rect y="44.9" width="30" height="33.1" rx="3" fill="#0A3D91"/><text x="15" y="39.9" text-anchor="middle" font-size="11" font-weight="700" fill="#0A3D91">14%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QV</text></g></svg><p class="eje">Dependencia funcional según quintil de ingreso del hogar (I = más pobre; V = más acaudalado)</p></div><a class="ver" href="#ingresos">Ver ingresos →</a></article><article class="hc"><p class="tag">Cuidado</p><p class="num" style="color:#A61E4D">32%</p><p class="frase">de las personas mayores con dependencia funcional —<b>254.701 personas</b>— no cuenta con una persona cuidadora. Cuando hay cuidado, en tres de cada cuatro casos lo asume una mujer.</p><div class="mini"><div class="apilada"><div style="width:31.9%;background:#A61E4D" title="Sin persona cuidadora: 31,9%"><span>32%</span></div><div style="width:51.1%;background:#0A3D91" title="Cuidadora principal mujer: 51,1%"><span>51%</span></div><div style="width:17.0%;background:#8FA3B0" title="Cuidador principal hombre: 17,0%"><span>17%</span></div></div><div class="ley"><span><i style="background:#A61E4D"></i>Sin persona cuidadora</span><span><i style="background:#0A3D91"></i>Cuidadora principal mujer</span><span><i style="background:#8FA3B0"></i>Cuidador principal hombre</span></div></div><a class="ver" href="#cuidado">Ver brecha de cuidado →</a></article><article class="hc"><p class="tag">Territorio</p><p class="num" style="color:#0A3D91">Casi el triple</p><p class="frase">de dependencia funcional registra <b>La Araucanía</b> (31%) en comparación con <b>Magallanes</b> (11%). Las regiones del centro-sur concentran los valores más altos.</p><div class="mini"><svg viewBox="0 0 250 70" width="100%" style="max-width:270px">
-<line x1="141.9" x2="141.9" y1="12" y2="44" stroke="#263238" stroke-dasharray="3 3"/>
-<text x="141.9" y="9" text-anchor="middle" font-size="10" fill="#263238">Chile 22%</text><circle cx="56.0" cy="30" r="7" fill="#0A3D91"><title>Magallanes: 11,0%</title></circle><circle cx="81.3" cy="25" r="4.5" fill="#9FB3C8"><title>Antofagasta: 14,3%</title></circle><circle cx="89.0" cy="35" r="4.5" fill="#9FB3C8"><title>Tarapacá: 15,3%</title></circle><circle cx="107.4" cy="25" r="4.5" fill="#9FB3C8"><title>Coquimbo: 17,7%</title></circle><circle cx="112.0" cy="35" r="4.5" fill="#9FB3C8"><title>Arica y Parinacota: 18,3%</title></circle><circle cx="121.2" cy="25" r="4.5" fill="#9FB3C8"><title>Aysén: 19,5%</title></circle><circle cx="125.8" cy="35" r="4.5" fill="#9FB3C8"><title>Maule: 20,1%</title></circle><circle cx="127.3" cy="25" r="4.5" fill="#9FB3C8"><title>Valparaíso: 20,3%</title></circle><circle cx="141.1" cy="35" r="4.5" fill="#9FB3C8"><title>Metropolitana: 22,1%</title></circle><circle cx="142.6" cy="25" r="4.5" fill="#9FB3C8"><title>O'Higgins: 22,3%</title></circle><circle cx="154.9" cy="35" r="4.5" fill="#9FB3C8"><title>Biobío: 23,9%</title></circle><circle cx="171.0" cy="25" r="4.5" fill="#9FB3C8"><title>Ñuble: 26,0%</title></circle><circle cx="174.8" cy="35" r="4.5" fill="#9FB3C8"><title>Los Lagos: 26,5%</title></circle><circle cx="182.5" cy="25" r="4.5" fill="#9FB3C8"><title>Atacama: 27,5%</title></circle><circle cx="190.2" cy="35" r="4.5" fill="#9FB3C8"><title>Los Ríos: 28,5%</title></circle><circle cx="208.6" cy="30" r="7" fill="#A61E4D"><title>La Araucanía: 30,9%</title></circle>
-<text x="56.0" y="60" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A3D91">Magallanes 11%</text>
-<text x="208.6" y="60" text-anchor="middle" font-size="10.5" font-weight="700" fill="#A61E4D">Araucanía 31%</text></svg></div><a class="ver" href="#territorio">Ver regiones →</a></article>
-<article class="hc central"><div class="txt"><p class="tag">Hallazgo central · Desigualdad</p>
-<p class="frase grande">Una mujer de 60 a 64 años, de un <b style="color:#A61E4D">hogar pobre y sin educación formal</b>, tiene la misma probabilidad estimada de vivir con dependencia funcional que un hombre de 85 años y más, de un <b style="color:#0A3D91">hogar acaudalado y con educación superior</b>.</p>
-</div><div class="mini modelo"><svg viewBox="0 0 320 64" width="100%" style="max-width:340px">
-<line x1="50" x2="270" y1="30" y2="30" stroke="#5B6B73" stroke-dasharray="4 3"/>
-<circle cx="50" cy="30" r="9" fill="#A61E4D"/><circle cx="270" cy="30" r="9" fill="#0A3D91"/>
-<text x="50" y="14" text-anchor="middle" font-size="12" font-weight="800" fill="#A61E4D">34%</text>
-<text x="270" y="14" text-anchor="middle" font-size="12" font-weight="800" fill="#0A3D91">36%</text>
-<text x="50" y="56" text-anchor="middle" font-size="10.5" fill="#5B6B73">60–64 años</text>
-<text x="270" y="56" text-anchor="middle" font-size="10.5" fill="#5B6B73">85 años y más</text>
-<text x="160" y="48" text-anchor="middle" font-size="10.5" font-style="italic" fill="#5B6B73">20 años de diferencia</text></svg><p class="eje">Probabilidades estimadas con un modelo de regresión logística que considera edad, sexo, ingreso, educación y zona. Hogar pobre: quintil I; hogar acaudalado: quintil V.</p></div><a class="ver" href="#modelo">Ver el modelo →</a></article>
-</div></section>
+<ol><li><a href="#modelo"><span class="n" style="color:#A61E4D">A los 60 años</span><span class="fr">las personas mayores <b>más pobres y sin educación</b> ya tienen la misma probabilidad de dependencia funcional que las <b>más acaudaladas</b> a los 85.</span><span class="fl">→</span></a></li><li><a href="#cuidado"><span class="n" style="color:#A61E4D">32%</span><span class="fr">de las personas mayores con dependencia funcional <b>no cuenta con una persona cuidadora</b> (254.701 personas).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">6 de cada 10</span><span class="fr">personas de <b>85 años y más</b> viven con dependencia funcional (13% entre los 60 y 64 años).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">1,6 veces</span><span class="fr">más dependencia funcional en <b>mujeres</b> (26%) que en hombres (17%).</span><span class="fl">→</span></a></li><li><a href="#territorio"><span class="n" style="color:#0A3D91">Casi el triple</span><span class="fr">de dependencia funcional en <b>La Araucanía</b> (31%) que en Magallanes (11%).</span><span class="fl">→</span></a></li></ol>
+</section>
 ```
 
 ## Contexto
@@ -346,6 +319,24 @@ Esta comparación debe leerse con cautela. Como ENDIDE observa a las personas en
 
 Estos resultados describen **asociaciones**, no relaciones causales: ENDIDE es una encuesta transversal, por lo que no permite establecer el orden temporal entre las condiciones sociales y la dependencia funcional, y el modelo explica una parte acotada de la variación (R² de Nagelkerke = 0,18). Aun así, muestran que la dependencia funcional en la vejez no depende solo de la edad, sino también de las desigualdades acumuladas a lo largo de la vida.
 
+
+## Conclusiones
+
+**La dependencia funcional es una realidad extendida en la vejez.** El 22,2% de las personas de 60 años y más —798.282 personas— vive con dependencia funcional, y el 8,0% presenta dependencia funcional severa. No se trata de un fenómeno marginal, sino de una condición que alcanza a una de cada cinco personas mayores en Chile.
+
+**La edad marca el ritmo, pero no explica todo.** La dependencia funcional aumenta con la edad y se acelera desde los 75 años, hasta alcanzar a seis de cada diez personas de 85 años y más. Las mujeres mayores presentan más dependencia funcional que los hombres en todos los tramos de edad.
+
+**La desigualdad social acompaña a la dependencia funcional.** Aun considerando la edad, el sexo y la zona, el ingreso y el nivel educacional mantienen una asociación significativa con la dependencia funcional. La distancia entre los perfiles sociales extremos es equivalente a unos 20 años de edad: a los 60 años, las personas mayores más pobres y sin educación formal tienen la misma probabilidad estimada que las más acaudaladas y con educación superior a los 85.
+
+**El cuidado no alcanza a todas las personas que lo necesitan.** Un 32% de las personas mayores con dependencia funcional no cuenta con una persona cuidadora, y cuando hay cuidado, este recae mayoritariamente en mujeres —muchas de ellas también personas mayores—. La brecha es más amplia en la dependencia funcional leve y moderada, donde la necesidad de apoyo es menos visible.
+
+**El territorio también importa.** La dependencia funcional va del 11% en Magallanes al 31% en La Araucanía, con valores más altos en el centro-sur del país, mientras que no se observan diferencias entre zonas urbanas y rurales.
+
+En conjunto, estos resultados sugieren que las políticas de cuidado deberían considerar no solo la edad de las personas mayores, sino también las desigualdades sociales y territoriales que acompañan a la dependencia funcional, y el peso que hoy recae sobre las cuidadoras.
+
+::: {.grafico-nota}
+**Alcances del análisis:** ENDIDE 2022 es una encuesta transversal, por lo que los resultados describen asociaciones y no relaciones causales. La dependencia funcional se mide a partir de lo que informan las propias personas encuestadas, y las comparaciones entre regiones con pocos casos deben leerse con cautela.
+:::
 
 ## Herramientas
 
