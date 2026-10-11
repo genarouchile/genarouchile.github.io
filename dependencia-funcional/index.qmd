@@ -1,6 +1,7 @@
 ---
-title: "Dependencia Funcional en Personas Mayores en Chile"
-description: "Análisis de la dependencia funcional en personas de 60 años y más con la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022: magnitud, edad, género y desigualdades."
+title: "La realidad de la dependencia funcional en personas mayores en Chile"
+subtitle: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿Qué desigualdades existen y qué desafíos enfrenta el país en materia de cuidados?"
+description: "Un análisis de la dependencia funcional en personas de 60 años y más con datos de la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022."
 image: portada.png
 lang: es
 resources:
@@ -35,18 +36,110 @@ resources:
 .como-leer ol { margin: 0; padding-left: 1.2rem; }
 .como-leer li { margin-bottom: 0.3rem; }
 .como-leer, .grafico-nota { text-align: justify; hyphens: auto; }
-/* Todo el texto del proyecto justificado (salvo la descripción del encabezado) */
-main.content p, main.content li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-#title-block-header p { text-align: left; hyphens: manual; }
+/* Todo el texto del proyecto justificado. styles.css del sitio fuerza "left !important"
+   en #quarto-content p/li, por eso aquí se usa mayor especificidad + !important */
+#quarto-content main.content p, #quarto-content main.content li { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+#quarto-content main.content #title-block-header p,
+#quarto-content main.content .intro-a p, #quarto-content main.content .intro-a li,
+#quarto-content main.content .hallazgos p { text-align: left !important; hyphens: manual; }
+#quarto-content main.content .intro-a p.bajada,
+#quarto-content main.content .intro-a p.titular,
+#quarto-content main.content .intro-a p.pie,
+#quarto-content main.content .hallazgos p.frase,
+#quarto-content main.content .hallazgos p.eje { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
 </style>
 ```
 
-<div class="key-figures">
-<div class="key-figure"><span class="kf-number">22%</span><span class="kf-label">de las personas de 60 años y más vive con dependencia funcional</span></div>
-<div class="key-figure"><span class="kf-number">~800 mil</span><span class="kf-label">personas mayores con dependencia funcional en Chile</span></div>
-<div class="key-figure"><span class="kf-number">6 de 10</span><span class="kf-label">personas de 85 años y más presenta dependencia funcional</span></div>
-<div class="key-figure"><span class="kf-number">1,6 veces</span><span class="kf-label">más dependencia funcional en mujeres mayores (26%) que en hombres (17%)</span></div>
+```{=html}
+<style>
+.intro-a{--azul:#0A3D91;--tinta:#263238;--tinta2:#5B6B73;background:linear-gradient(135deg,#F4F8FE 0%,#E8F0FB 100%);
+  border-radius:14px;padding:2.2rem 2.2rem 1.8rem;margin:0.5rem 0 2rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem;align-items:center;
+  font-family:inherit}
+.intro-a .eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta2);font-weight:600;margin:0 0 .8rem}
+.intro-a .titular{font-size:1.6rem;line-height:1.15;color:var(--tinta);margin:0 0 1rem;font-weight:800;border:0;padding:0;text-align:left}
+.intro-a .nw{white-space:nowrap}
+.intro-a .titular em{font-style:normal;color:var(--azul)}
+.intro-a .bajada{font-size:1.02rem;line-height:1.55;color:var(--tinta2);margin:0 0 1.3rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.intro-a .bajada b{color:var(--tinta)}
+.intro-a .leytit{font-size:.78rem;font-weight:700;color:var(--tinta2);margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.05em}
+.intro-a .leyenda{max-width:360px;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0;list-style:none}
+.intro-a .leyenda li{display:flex;align-items:center;gap:.6rem;font-size:.92rem;color:var(--tinta);text-align:left}
+.intro-a .leyenda .sw{width:14px;height:14px;border-radius:3px;flex:none}
+.intro-a .leyenda .k{color:var(--tinta2);font-size:.82rem;margin-left:auto;font-variant-numeric:tabular-nums;padding-left:.6rem;white-space:nowrap}
+.intro-a .leyenda .n{font-weight:800;min-width:3.3rem;font-variant-numeric:tabular-nums}
+.intro-a .waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:6px 8px;max-width:340px;margin:0 auto}
+.intro-a .waffle .p{width:100%;height:auto;display:block}
+.intro-a .pie{font-size:.78rem;color:var(--tinta2);margin:.8rem auto 0;max-width:340px}
+@media (max-width:700px){.intro-a{grid-template-columns:minmax(0,1fr);padding:1.5rem 1.2rem 1.3rem;gap:1.3rem}
+  .intro-a .titular{font-size:1.32rem} .intro-a .leyenda .k{font-size:.74rem} .intro-a .waffle{max-width:250px;gap:4px 6px}}
+@media (max-width:380px){.intro-a .nw{white-space:normal} .intro-a .titular{font-size:1.25rem} .intro-a .leyenda .k{display:none}}
+</style>
+<svg width="0" height="0" style="position:absolute"><symbol id="persona" viewBox="0 0 20 32"><circle cx="10" cy="5.5" r="5"/><path d="M3 14.5a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4V23h-2.6v9H5.6v-9H3z"/></symbol></svg>
+<div class="intro-a">
+  <div>
+    <p class="eyebrow">ENDIDE 2022 · Personas de 60 años y más</p>
+    <p class="titular">1&nbsp;de&nbsp;cada&nbsp;5 personas mayores en Chile vive <span class="nw">con <em>dependencia funcional</em></span></p>
+    <p class="bajada">El <b>22,2%</b> de las personas de 60 años y más —<b>798.282 personas</b>— tiene dificultades para realizar actividades de la vida diaria y <b>necesita la ayuda de otra persona</b> para llevarlas a cabo.</p>
+    <p class="leytit">Nivel de dependencia funcional</p>
+    <ul class="leyenda">
+      <li><span class="sw" style="background:#0A3D91"></span><span class="n">8,0%</span>Severa<span class="k">288.346 personas</span></li>
+      <li><span class="sw" style="background:#4C9BFF"></span><span class="n">8,7%</span>Moderada<span class="k">311.303 personas</span></li>
+      <li><span class="sw" style="background:#A9CBFF"></span><span class="n">5,5%</span>Leve<span class="k">198.633 personas</span></li>
+      <li><span class="sw" style="background:#DCE3E8"></span><span class="n">77,8%</span>Sin dependencia funcional</li>
+    </ul>
+  </div>
+  <div>
+    <div class="waffle" role="img" aria-label="De cada 100 personas mayores, 22 viven con dependencia funcional: 8 severa, 9 moderada y 5 leve"><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p sev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p mod" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#4C9BFF"/></svg><svg class="p lev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#A9CBFF"/></svg><svg class="p lev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#A9CBFF"/></svg><svg class="p lev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#A9CBFF"/></svg><svg class="p lev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#A9CBFF"/></svg><svg class="p lev" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#A9CBFF"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p sin" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg></div>
+    <p class="pie">Cada figura representa al 1% de las personas mayores (unas 36 mil personas)</p>
+  </div>
 </div>
+
+<style>
+.hallazgos{margin:0 0 2.2rem}
+.hallazgos .htit{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#5B6B73;margin:0 0 .8rem;text-align:left}
+.hallazgos .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hallazgos .hc{background:#fff;border:1px solid #E1E7EC;border-radius:12px;padding:1.1rem 1.2rem 1rem;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,40,70,.04)}
+.hallazgos .tag{font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;font-weight:700;color:#5B6B73;margin:0 0 .25rem;text-align:left}
+.hallazgos .num{font-size:2.3rem;font-weight:800;line-height:1;margin:0 0 .45rem;text-align:left;font-variant-numeric:tabular-nums}
+.hallazgos .frase{font-size:.95rem;line-height:1.5;color:#263238;margin:0 0 .9rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.hallazgos .mini{margin-top:auto;margin-bottom:.7rem}
+.hallazgos .ver{font-size:.85rem;font-weight:600;color:#0A3D91;text-decoration:none;align-self:flex-start}
+.hallazgos .ver:hover{text-decoration:underline}
+.hallazgos .eje{font-size:.72rem;line-height:1.4;color:#5B6B73;margin:.2rem 0 0;text-align:justify;hyphens:auto}
+.hallazgos .edad .fila{display:grid;grid-template-columns:5.6rem 1fr auto;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.hallazgos .edad .et{font-size:.75rem;color:#5B6B73} .hallazgos .edad b{font-size:.85rem;white-space:nowrap}
+.hallazgos .edad .ps{display:flex;gap:2px} .hallazgos .pm{width:100%;max-width:16px;height:auto}
+.hallazgos .apilada{display:flex;height:30px;border-radius:6px;overflow:hidden}
+.hallazgos .apilada div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:700}
+.hallazgos .ley{display:flex;flex-wrap:wrap;gap:.3rem .9rem;margin-top:.5rem;font-size:.74rem;color:#5B6B73}
+.hallazgos .ley i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:.3rem;vertical-align:-1px}
+.hallazgos .central{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;grid-template-areas:"txt mini" "ver mini";align-items:center;column-gap:1.5rem;background:linear-gradient(135deg,#FBF4F7 0%,#F1F5FC 100%);border-color:#E8DCE3}
+.hallazgos .central .txt{grid-area:txt} .hallazgos .central .mini{grid-area:mini;margin:0} .hallazgos .central .ver{grid-area:ver}
+.hallazgos .frase.grande{font-size:1.1rem;line-height:1.5;font-weight:600}
+@media (max-width:700px){.hallazgos .grid{grid-template-columns:1fr} .hallazgos .central{grid-template-columns:1fr;grid-template-areas:"txt" "mini" "ver";row-gap:.6rem}
+  .hallazgos .num{font-size:2rem}}
+</style>
+<section class="hallazgos" aria-label="Hallazgos clave">
+<p class="htit">Hallazgos clave</p>
+<div class="grid">
+<article class="hc"><p class="tag">Edad</p><p class="num" style="color:#0A3D91">6 de cada 10</p><p class="frase">personas de <b>85 años y más</b> viven con dependencia funcional. Entre los 60 y 64 años, la proporción es de una de cada ocho (13%).</p><div class="mini edad"><div class="fila"><span class="et">60 a 64 años</span><span class="ps"><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#4C9BFF"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg></span><b style="color:#4C9BFF">13%</b></div>
+<div class="fila"><span class="et">85 años y más</span><span class="ps"><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#0A3D91"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg><svg class="pm" viewBox="0 0 20 32" width="22"><use href="#persona" fill="#DCE3E8"/></svg></span><b style="color:#0A3D91">6 de 10</b></div></div><a class="ver" href="#edad">Ver edad y sexo →</a></article><article class="hc"><p class="tag">Ingresos</p><p class="num" style="color:#A61E4D">Casi el doble</p><p class="frase">de dependencia funcional presentan las personas mayores de los <b>hogares más pobres</b> (27%) respecto de las de los hogares más acaudalados (14%).</p><div class="mini"><svg viewBox="0 0 246 100" width="100%" style="max-width:260px"><g transform="translate(12,0)"><rect y="15.7" width="30" height="62.3" rx="3" fill="#A61E4D"/><text x="15" y="10.7" text-anchor="middle" font-size="11" font-weight="700" fill="#A61E4D">27%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QI</text></g><g transform="translate(58,0)"><rect y="17.6" width="30" height="60.4" rx="3" fill="#9FB3C8"/><text x="15" y="12.6" text-anchor="middle" font-size="11" font-weight="700" fill="#5B6B73">26%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QII</text></g><g transform="translate(104,0)"><rect y="26.0" width="30" height="52.0" rx="3" fill="#9FB3C8"/><text x="15" y="21.0" text-anchor="middle" font-size="11" font-weight="700" fill="#5B6B73">22%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QIII</text></g><g transform="translate(150,0)"><rect y="28.5" width="30" height="49.5" rx="3" fill="#9FB3C8"/><text x="15" y="23.5" text-anchor="middle" font-size="11" font-weight="700" fill="#5B6B73">21%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QIV</text></g><g transform="translate(196,0)"><rect y="44.9" width="30" height="33.1" rx="3" fill="#0A3D91"/><text x="15" y="39.9" text-anchor="middle" font-size="11" font-weight="700" fill="#0A3D91">14%</text><text x="15" y="94" text-anchor="middle" font-size="10.5" fill="#5B6B73">QV</text></g></svg><p class="eje">Dependencia funcional según quintil de ingreso del hogar (I = más pobre; V = más acaudalado)</p></div><a class="ver" href="#ingresos">Ver ingresos →</a></article><article class="hc"><p class="tag">Cuidado</p><p class="num" style="color:#A61E4D">32%</p><p class="frase">de las personas mayores con dependencia funcional —<b>254.701 personas</b>— no cuenta con una persona cuidadora. Cuando hay cuidado, en tres de cada cuatro casos lo asume una mujer.</p><div class="mini"><div class="apilada"><div style="width:31.9%;background:#A61E4D" title="Sin persona cuidadora: 31,9%"><span>32%</span></div><div style="width:51.1%;background:#0A3D91" title="Cuidadora principal mujer: 51,1%"><span>51%</span></div><div style="width:17.0%;background:#8FA3B0" title="Cuidador principal hombre: 17,0%"><span>17%</span></div></div><div class="ley"><span><i style="background:#A61E4D"></i>Sin persona cuidadora</span><span><i style="background:#0A3D91"></i>Cuidadora principal mujer</span><span><i style="background:#8FA3B0"></i>Cuidador principal hombre</span></div></div><a class="ver" href="#cuidado">Ver brecha de cuidado →</a></article><article class="hc"><p class="tag">Territorio</p><p class="num" style="color:#0A3D91">Casi el triple</p><p class="frase">de dependencia funcional registra <b>La Araucanía</b> (31%) en comparación con <b>Magallanes</b> (11%). Las regiones del centro-sur concentran los valores más altos.</p><div class="mini"><svg viewBox="0 0 250 70" width="100%" style="max-width:270px">
+<line x1="141.9" x2="141.9" y1="12" y2="44" stroke="#263238" stroke-dasharray="3 3"/>
+<text x="141.9" y="9" text-anchor="middle" font-size="10" fill="#263238">Chile 22%</text><circle cx="56.0" cy="30" r="7" fill="#0A3D91"><title>Magallanes: 11,0%</title></circle><circle cx="81.3" cy="25" r="4.5" fill="#9FB3C8"><title>Antofagasta: 14,3%</title></circle><circle cx="89.0" cy="35" r="4.5" fill="#9FB3C8"><title>Tarapacá: 15,3%</title></circle><circle cx="107.4" cy="25" r="4.5" fill="#9FB3C8"><title>Coquimbo: 17,7%</title></circle><circle cx="112.0" cy="35" r="4.5" fill="#9FB3C8"><title>Arica y Parinacota: 18,3%</title></circle><circle cx="121.2" cy="25" r="4.5" fill="#9FB3C8"><title>Aysén: 19,5%</title></circle><circle cx="125.8" cy="35" r="4.5" fill="#9FB3C8"><title>Maule: 20,1%</title></circle><circle cx="127.3" cy="25" r="4.5" fill="#9FB3C8"><title>Valparaíso: 20,3%</title></circle><circle cx="141.1" cy="35" r="4.5" fill="#9FB3C8"><title>Metropolitana: 22,1%</title></circle><circle cx="142.6" cy="25" r="4.5" fill="#9FB3C8"><title>O'Higgins: 22,3%</title></circle><circle cx="154.9" cy="35" r="4.5" fill="#9FB3C8"><title>Biobío: 23,9%</title></circle><circle cx="171.0" cy="25" r="4.5" fill="#9FB3C8"><title>Ñuble: 26,0%</title></circle><circle cx="174.8" cy="35" r="4.5" fill="#9FB3C8"><title>Los Lagos: 26,5%</title></circle><circle cx="182.5" cy="25" r="4.5" fill="#9FB3C8"><title>Atacama: 27,5%</title></circle><circle cx="190.2" cy="35" r="4.5" fill="#9FB3C8"><title>Los Ríos: 28,5%</title></circle><circle cx="208.6" cy="30" r="7" fill="#A61E4D"><title>La Araucanía: 30,9%</title></circle>
+<text x="56.0" y="60" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0A3D91">Magallanes 11%</text>
+<text x="208.6" y="60" text-anchor="middle" font-size="10.5" font-weight="700" fill="#A61E4D">Araucanía 31%</text></svg></div><a class="ver" href="#territorio">Ver regiones →</a></article>
+<article class="hc central"><div class="txt"><p class="tag">Hallazgo central · Desigualdad</p>
+<p class="frase grande">Una mujer de 60 a 64 años, de un <b style="color:#A61E4D">hogar pobre y sin educación formal</b>, tiene la misma probabilidad estimada de vivir con dependencia funcional que un hombre de 85 años y más, de un <b style="color:#0A3D91">hogar acaudalado y con educación superior</b>.</p>
+</div><div class="mini modelo"><svg viewBox="0 0 320 64" width="100%" style="max-width:340px">
+<line x1="50" x2="270" y1="30" y2="30" stroke="#5B6B73" stroke-dasharray="4 3"/>
+<circle cx="50" cy="30" r="9" fill="#A61E4D"/><circle cx="270" cy="30" r="9" fill="#0A3D91"/>
+<text x="50" y="14" text-anchor="middle" font-size="12" font-weight="800" fill="#A61E4D">34%</text>
+<text x="270" y="14" text-anchor="middle" font-size="12" font-weight="800" fill="#0A3D91">36%</text>
+<text x="50" y="56" text-anchor="middle" font-size="10.5" fill="#5B6B73">60–64 años</text>
+<text x="270" y="56" text-anchor="middle" font-size="10.5" fill="#5B6B73">85 años y más</text>
+<text x="160" y="48" text-anchor="middle" font-size="10.5" font-style="italic" fill="#5B6B73">20 años de diferencia</text></svg><p class="eje">Probabilidades estimadas con un modelo de regresión logística que considera edad, sexo, ingreso, educación y zona. Hogar pobre: quintil I; hogar acaudalado: quintil V.</p></div><a class="ver" href="#modelo">Ver el modelo →</a></article>
+</div></section>
+```
 
 ## Contexto
 
@@ -80,11 +173,7 @@ Preguntas que guían el análisis:
 
 ## Resultados
 
-### 1. Una de cada cinco personas mayores vive con dependencia funcional
-
-El **22,2%** de las personas de 60 años y más presenta dependencia funcional, es decir, unas **798 mil personas**. Según su severidad, el 5,5% tiene dependencia funcional leve, el 8,7% moderada y el **8,0% severa**: cerca de 288 mil personas mayores necesitan ayuda de manera intensa y permanente.
-
-### 2. La dependencia funcional se acelera con la edad, y afecta más a las mujeres
+### 1. La dependencia funcional se acelera con la edad, y afecta más a las mujeres {#edad}
 
 ::: {.column-page}
 <div class="grafico-interactivo">
@@ -100,7 +189,7 @@ La dependencia funcional no crece de manera pareja: hasta los 74 años aumenta l
 
 Las mujeres mayores presentan más dependencia funcional que los hombres (**26,4% frente a 16,9%**), y su prevalencia es mayor en todos los tramos de edad. La brecha no se explica solo porque las mujeres vivan más: se observa también al comparar a mujeres y hombres de la misma edad. En la dependencia funcional severa, la diferencia se concentra después de los 85 años (41% frente a 31%).
 
-### 3. La desigualdad de ingresos marca la dependencia funcional, hasta los 80 años
+### 2. La desigualdad de ingresos marca la dependencia funcional, hasta los 80 años {#ingresos}
 
 <div class="grafico-interactivo">
 <iframe class="quintil" src="graficos/dependencia_quintil_barras.html" loading="lazy" title="Dependencia funcional por quintil de ingreso, según tramo de edad"></iframe>
@@ -114,7 +203,7 @@ La dependencia funcional sigue un **gradiente social**: entre las personas mayor
 
 La brecha no se explica por diferencias de edad entre quintiles: se observa dentro de cada tramo. Entre los 60 y 69 años, la dependencia funcional es casi **tres veces mayor** en el quintil más pobre (19%) que en el más rico (7%), y entre los 70 y 79 años, de 26% frente a 16%. Sobre los 80 años, en cambio, la diferencia desaparece: la dependencia funcional afecta a cerca de la mitad de las personas en todos los quintiles. Es un patrón conocido en los estudios de envejecimiento: en las edades más avanzadas, el deterioro asociado a la edad tiende a igualar las condiciones de salud entre grupos sociales.
 
-### 4. El nivel educacional condiciona la dependencia funcional, incluso después de los 80 años
+### 3. El nivel educacional condiciona la dependencia funcional, incluso después de los 80 años {#educacion}
 
 <div class="grafico-interactivo">
 <iframe class="educ" src="graficos/dependencia_educacion.html" loading="lazy" title="Dependencia funcional por nivel educacional, según tramo de edad"></iframe>
@@ -129,7 +218,7 @@ El nivel educacional marca una brecha aún mayor que el ingreso. Entre las perso
 A diferencia del ingreso, **la brecha educacional se mantiene en todas las edades**, incluso sobre los 80 años, donde la dependencia funcional llega al 63% entre quienes no tienen educación formal y al 34% entre quienes tienen educación superior. La educación, adquirida en la juventud, aparece así como un **condicionante de largo plazo**: se asocia a menor dependencia funcional durante toda la vejez, posiblemente a través de las trayectorias de trabajo, salud y acceso a recursos que acompañan a cada nivel educacional. Al tratarse de un estudio transversal, estas relaciones son asociaciones y no permiten establecer causalidad.
 
 
-### 5. Una de cada tres personas mayores con dependencia funcional no tiene quien la cuide
+### 4. Una de cada tres personas mayores con dependencia funcional no tiene quien la cuide {#cuidado}
 
 <div class="grafico-interactivo">
 <iframe class="cuidado" src="graficos/brecha_cuidado.html" loading="lazy" title="Brecha de cuidado: personas mayores con dependencia funcional según persona cuidadora principal"></iframe>
@@ -154,7 +243,7 @@ La dependencia funcional implica necesitar la ayuda de otra persona, pero esa ay
 
 El cuidado, además, tiene rostro de mujer y de vejez: **3 de cada 4** personas mayores con persona cuidadora son cuidadas principalmente por una mujer (8 de cada 10 en la dependencia funcional severa), y el **44%** de quienes cuidan tiene **60 años o más**. Es decir, buena parte del cuidado de las personas mayores lo realizan otras personas mayores, un fenómeno que se analiza en el proyecto sobre [personas mayores cuidadoras](../portafolio/proyecto-1/index.qmd).
 
-### 6. ¿En qué actividades necesitan ayuda las personas mayores con dependencia funcional?
+### 5. ¿En qué actividades necesitan ayuda las personas mayores con dependencia funcional? {#actividades}
 
 <div class="grafico-interactivo">
 <iframe class="actividades" src="graficos/actividades.html" loading="lazy" title="Actividades en que necesitan ayuda las personas mayores con dependencia funcional"></iframe>
@@ -179,7 +268,7 @@ La necesidad de ayuda sigue un orden claro. Las primeras actividades en requerir
 
 Las actividades de **cuidado personal** —asearse, vestirse, usar el baño, acostarse o alimentarse— casi no requieren ayuda en los niveles leve y moderado (menos del 8%), pero en la dependencia funcional severa la necesitan entre el **32% y el 67%**. Este patrón coincide con lo descrito en la literatura gerontológica: la pérdida de autonomía suele comenzar por las actividades instrumentales y de movilidad, y alcanza el cuidado personal en las etapas más severas.
 
-### 7. La dependencia funcional también varía según el territorio
+### 6. La dependencia funcional también varía según el territorio {#territorio}
 
 <div class="grafico-interactivo">
 <iframe class="region" src="graficos/dependencia_region.html" loading="lazy" title="Dependencia funcional por región"></iframe>
@@ -204,7 +293,7 @@ La dependencia funcional en las personas mayores va desde el **11%** en Magallan
 
 La diferencia no se explica simplemente por la ruralidad: la dependencia funcional es prácticamente igual en zonas **urbanas (22,1%)** y **rurales (23,1%)**. Las brechas territoriales parecen responder más bien a la composición social de cada región —edad, ingresos y nivel educacional de su población mayor—, algo que el modelo multivariado permitirá examinar.
 
-### 8. Todo a la vez: ¿qué factores se asocian con la dependencia funcional?
+### 7. Todo a la vez: ¿qué factores se asocian con la dependencia funcional? {#modelo}
 
 Los gráficos anteriores muestran cada factor por separado. Pero la edad, los ingresos y la educación están relacionados entre sí: las personas mayores de más edad suelen tener menos años de estudio, y quienes tienen menos educación suelen vivir en hogares más pobres. Para distinguir el peso de cada uno se estimó un **modelo de regresión logística con diseño muestral complejo**, que considera simultáneamente la edad, el sexo, el quintil de ingreso, el nivel educacional y la zona (urbana o rural).
 
