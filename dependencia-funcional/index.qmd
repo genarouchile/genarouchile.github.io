@@ -2,6 +2,7 @@
 title: "Dependencia Funcional en Personas Mayores en Chile"
 description: "Análisis de la dependencia funcional en personas de 60 años y más con la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022: magnitud, edad, género y desigualdades."
 image: portada.png
+lang: es
 resources:
   - "graficos/**"
 ---
@@ -23,6 +24,9 @@ resources:
 @media (max-width: 600px) { .grafico-interactivo iframe.actividades { height: 800px; } }
 .grafico-interactivo iframe.region { height: 640px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.region { height: 700px; } }
+.grafico-interactivo iframe.modelo { height: 560px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.modelo { height: 640px; } }
+.tabla-or table { font-size: 0.9rem; }
 .definicion { border-left: 4px solid #0A3D91; background: #F3F6F8; padding: 0.9rem 1.1rem; margin: 1.25rem 0 1.5rem 0; border-radius: 0 6px 6px 0; }
 .definicion p { margin: 0; }
 .definicion b { color: #173F5F; }
@@ -31,6 +35,9 @@ resources:
 .como-leer ol { margin: 0; padding-left: 1.2rem; }
 .como-leer li { margin-bottom: 0.3rem; }
 .como-leer, .grafico-nota { text-align: justify; hyphens: auto; }
+/* Todo el texto del proyecto justificado (salvo la descripción del encabezado) */
+main.content p, main.content li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+#title-block-header p { text-align: left; hyphens: manual; }
 </style>
 ```
 
@@ -197,10 +204,62 @@ La dependencia funcional en las personas mayores va desde el **11%** en Magallan
 
 La diferencia no se explica simplemente por la ruralidad: la dependencia funcional es prácticamente igual en zonas **urbanas (22,1%)** y **rurales (23,1%)**. Las brechas territoriales parecen responder más bien a la composición social de cada región —edad, ingresos y nivel educacional de su población mayor—, algo que el modelo multivariado permitirá examinar.
 
-<!-- GRÁFICO: probabilidades predichas del modelo -->
+### 8. Todo a la vez: ¿qué factores se asocian con la dependencia funcional?
+
+Los gráficos anteriores muestran cada factor por separado. Pero la edad, los ingresos y la educación están relacionados entre sí: las personas mayores de más edad suelen tener menos años de estudio, y quienes tienen menos educación suelen vivir en hogares más pobres. Para distinguir el peso de cada uno se estimó un **modelo de regresión logística con diseño muestral complejo**, que considera simultáneamente la edad, el sexo, el quintil de ingreso, el nivel educacional y la zona (urbana o rural).
+
+<div class="grafico-interactivo">
+<iframe class="modelo" src="graficos/probabilidades_modelo.html" loading="lazy" title="Probabilidad estimada de dependencia funcional según perfil social"></iframe>
+</div>
+
+<div class="como-leer">
+<span class="tit">Cómo leer este gráfico</span>
+<ol>
+<li>Cada <b>línea</b> es un perfil de persona mayor. El modelo estima qué <b>probabilidad</b> tiene ese perfil de vivir con dependencia funcional en cada rango de edad.</li>
+<li>La línea <b style="color:#A61E4D">granate</b> es una mujer de un hogar del quintil más pobre y sin educación formal; la <b style="color:#0A3D91">azul</b>, un hombre del quintil más acaudalado con educación superior; la <b style="color:#8FA0AB">gris punteada</b>, un perfil intermedio.</li>
+<li>La <b>línea horizontal punteada</b> parte del primer punto granate (60 a 64 años, 34%) y llega hasta el último punto azul (85 años y más, 36%): ambos perfiles tienen <b>la misma probabilidad, aunque los separan 20 años de edad</b>. No muestra lo que le ocurrirá a una misma persona con los años, sino una comparación entre personas distintas en un mismo momento.</li>
+<li>Son probabilidades <b>estimadas por el modelo</b> para perfiles tipo en zona urbana, no porcentajes observados directamente en la encuesta.</li>
+</ol>
+</div>
+
+::: {.grafico-nota}
+Probabilidades predichas a partir de una regresión logística binaria (con dependencia funcional = 1) estimada con SPSS 25, Muestras complejas (estrato, conglomerado y factor de expansión), en la subpoblación de 60 años y más (n = 9.167). R² de Nagelkerke = 0,18. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+:::
+
+Al considerar todos los factores a la vez, **la edad, el sexo, el ingreso y la educación mantienen una asociación significativa** con la dependencia funcional (p < 0,001 en todos los casos). La zona, en cambio, no muestra diferencias una vez que se consideran los demás factores, lo que es coherente con lo observado en la sección anterior.
+
+::: {.tabla-or}
+| Factor (categoría de referencia) | Categoría | Razón de odds (OR) | IC 95% |
+|:--|:--|:--:|:--:|
+| **Edad** (60–64 años) | 85 años y más | 8,4 | 6,7 – 10,5 |
+| **Sexo** (hombre) | Mujer | 1,56 | 1,36 – 1,78 |
+| **Ingreso** (quintil V, más rico) | Quintil I | 1,75 | 1,41 – 2,17 |
+| | Quintil II | 1,74 | 1,38 – 2,19 |
+| | Quintil III | 1,44 | 1,15 – 1,80 |
+| | Quintil IV | 1,36 | 1,09 – 1,70 |
+| **Educación** (superior) | Sin educación formal | 2,84 | 1,96 – 4,10 |
+| | Básica | 1,55 | 1,23 – 1,96 |
+| | Media | 0,98 (n.s.) | 0,77 – 1,24 |
+| **Zona** (rural) | Urbana | 1,13 (n.s.) | 0,94 – 1,35 |
+:::
+
+::: {.grafico-nota}
+OR mayor que 1: mayores chances de dependencia funcional que la categoría de referencia, manteniendo constantes los demás factores. n.s.: no significativo. Edad: la razón de odds crece en cada tramo respecto de 60–64 años (65–69: 1,2; 70–74: 1,4; 75–79: 2,4; 80–84: 3,7; 85 y más: 8,4).
+:::
+
+- **Sexo:** con igual edad, ingreso y educación, las mujeres mayores tienen **1,6 veces** las chances de vivir con dependencia funcional que los hombres.
+- **Ingreso:** las personas mayores de los cuatro primeros quintiles presentan mayores chances que las del quintil más rico; la brecha es mayor en los quintiles I y II (**1,7 veces**).
+- **Educación:** no haber tenido educación formal casi **triplica** las chances respecto de la educación superior. Entre educación media y superior no hay diferencias significativas.
+
+El resultado más elocuente aparece en el gráfico: **una mujer de 60 a 64 años, del hogar más pobre y sin educación formal, tiene la misma probabilidad de vivir con dependencia funcional (34%) que un hombre de 85 años y más, del quintil más acaudalado y con educación superior (36%)**. Es decir, la diferencia en sus condiciones sociales pesa tanto como una diferencia de 20 años de edad.
+
+Esta comparación debe leerse con cautela. Como ENDIDE observa a las personas en un solo momento, no permite afirmar que la desigualdad *adelante* la dependencia funcional en la trayectoria de cada persona: se comparan personas distintas, de generaciones distintas, y no a las mismas personas a lo largo del tiempo. Además, las personas de 85 años y más son quienes sobrevivieron hasta esa edad, lo que puede subestimar las diferencias en los tramos de más edad. Para hablar de un "adelanto" en sentido estricto se requerirían datos longitudinales, que sigan a las mismas personas durante su envejecimiento.
+
+Estos resultados describen **asociaciones**, no relaciones causales: ENDIDE es una encuesta transversal, por lo que no permite establecer el orden temporal entre las condiciones sociales y la dependencia funcional, y el modelo explica una parte acotada de la variación (R² de Nagelkerke = 0,18). Aun así, muestran que la dependencia funcional en la vejez no depende solo de la edad, sino también de las desigualdades acumuladas a lo largo de la vida.
+
 
 ## Herramientas
 
-- **SPSS 25 · Muestras complejas:** estimaciones con diseño muestral, intervalos de confianza y regresión logística.
+- **SPSS 25 · Muestras complejas:** estimaciones con diseño muestral (CSTABULATE, CSDESCRIPTIVES), intervalos de confianza y regresión logística binaria (CSLOGISTIC).
 - **Plotly para R:** visualizaciones interactivas para la web.
 - **Quarto:** publicación de esta página.
