@@ -1,6 +1,8 @@
 ---
 title: "Machine Learning: Soledad No Deseada en Personas Mayores"
-description: "Aplicación de modelos de machine learning para identificar factores asociados a la soledad no deseada en personas mayores."
+subtitle: "Un análisis con modelos de machine learning (árbol de decisión y Random Forest) para identificar los factores asociados a la soledad no deseada, con datos de la Encuesta Nacional de Calidad de Vida en la Vejez 2022"
+description: "¿Cuántas personas mayores se sienten solas? ¿Qué factores familiares, sociales, de salud y económicos se asocian a la soledad no deseada, y qué perfiles concentran el mayor riesgo?"
+lang: es
 image: portada.png
 resources:
   - "graficos/**"
@@ -19,16 +21,95 @@ resources:
 .pipeline .paso b { display: block; color: #173F5F; font-size: 0.95rem; margin-bottom: 0.15rem; }
 .pipeline .paso span { display: block; color: #455A64; font-size: 0.8rem; line-height: 1.35; }
 @media (max-width: 600px) { .pipeline { grid-template-columns: repeat(2, 1fr); } }
+/* Tipografía editorial del sitio (Newsreader, ya importada en styles.css) para titulares y cifras */
+.intro-a .titular, .hallazgos .htit, .hallazgos .n { font-family: "Newsreader", Georgia, "Times New Roman", serif !important; }
+.intro-a .titular { font-weight: 400 !important; font-size: 2.15rem !important; line-height: 1.12 !important; letter-spacing: -0.01em; }
+.hallazgos .htit { font-weight: 400 !important; font-size: 1.9rem !important; }
+.hallazgos .n { font-weight: 400 !important; font-size: 1.6rem !important; }
+@media (max-width: 600px) { .intro-a .titular { font-size: 1.75rem !important; } .hallazgos .n { font-size: 1.5rem !important; } }
+/* Descripción del encabezado más grande */
+#title-block-header .subtitle { font-size: 1.2rem !important; font-weight: 700 !important; line-height: 1.5 !important; color: #263238 !important; margin-top: .4rem; }
+#title-block-header .description, #title-block-header .description p { font-size: 1rem !important; line-height: 1.55; color: #5B6B73; }
+@media (max-width: 600px) { #title-block-header .subtitle { font-size: 1.02rem !important; } #title-block-header .description, #title-block-header .description p { font-size: .93rem !important; } }
+/* Todo el texto del proyecto justificado. styles.css del sitio fuerza "left !important"
+   en #quarto-content p/li, por eso aquí se usa mayor especificidad + !important */
+#quarto-content main.content p, #quarto-content main.content li { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+#quarto-content main.content .intro-a p, #quarto-content main.content .intro-a li,
+#quarto-content main.content .hallazgos p, #quarto-content main.content .hallazgos li { text-align: left !important; hyphens: manual; }
+#quarto-content main.content #title-block-header .subtitle, #quarto-content main.content #title-block-header .description { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+/* Hallazgos: texto justificado en pantallas anchas; en celular, a la izquierda para evitar espacios grandes */
+#quarto-content main.content .hallazgos .fr { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+@media (max-width: 600px) { #quarto-content main.content .hallazgos .fr { text-align: left !important; } }
+#quarto-content main.content .hallazgos li a, #quarto-content main.content .hallazgos li a:hover { color: #263238 !important; text-decoration: none !important; }
+#quarto-content main.content .hallazgos .fl { color: #0A3D91 !important; }
 </style>
 ```
 
 
-<div class="key-figures">
-<div class="key-figure"><span class="kf-number">51%</span><span class="kf-label">de las personas mayores declara algún grado de soledad no deseada</span></div>
-<div class="key-figure"><span class="kf-number">44%</span><span class="kf-label">siente a veces o a menudo que le falta compañía</span></div>
-<div class="key-figure"><span class="kf-number">8 de 10</span><span class="kf-label">presenta soledad cuando la comunicación con su familia es insatisfactoria</span></div>
-<div class="key-figure"><span class="kf-number">1.789</span><span class="kf-label">personas mayores en una encuesta nacional representativa</span></div>
+```{=html}
+<style>
+.intro-a{--azul:#C2410C;--tinta:#263238;--tinta2:#5B6B73;background:linear-gradient(135deg,#F4F8FE 0%,#E8F0FB 100%);
+  border-radius:14px;padding:2.2rem 2.2rem 1.8rem;margin:0.5rem 0 2rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem;align-items:center;
+  font-family:inherit}
+.intro-a .eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta2);font-weight:600;margin:0 0 .8rem}
+.intro-a .titular{font-size:1.6rem;line-height:1.15;color:var(--tinta);margin:0 0 1rem;font-weight:800;border:0;padding:0;text-align:left}
+.intro-a .nw{white-space:nowrap}
+.intro-a .titular em{font-style:normal;color:var(--azul)}
+.intro-a .bajada{font-size:1.02rem;line-height:1.55;color:var(--tinta2);margin:0 0 1.3rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.intro-a .bajada b{color:var(--tinta)}
+.intro-a .leytit{font-size:.78rem;font-weight:700;color:var(--tinta2);margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.05em}
+.intro-a .leyenda{max-width:360px;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0;list-style:none}
+.intro-a .leyenda li{display:flex;align-items:center;gap:.6rem;font-size:.92rem;color:var(--tinta);text-align:left}
+.intro-a .leyenda .sw{width:14px;height:14px;border-radius:3px;flex:none}
+.intro-a .leyenda .k{color:var(--tinta2);font-size:.82rem;margin-left:auto;font-variant-numeric:tabular-nums;padding-left:.6rem;white-space:nowrap}
+.intro-a .leyenda .n{font-weight:800;min-width:3.3rem;font-variant-numeric:tabular-nums}
+.intro-a .waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:6px 8px;max-width:340px;margin:0 auto}
+.intro-a .waffle .p{width:100%;height:auto;display:block}
+.intro-a .pie{font-size:.78rem;color:var(--tinta2);margin:.8rem auto 0;max-width:340px}
+@media (max-width:700px){.intro-a{grid-template-columns:minmax(0,1fr);padding:1.5rem 1.2rem 1.3rem;gap:1.3rem}
+  .intro-a .titular{font-size:1.32rem} .intro-a .leyenda .k{font-size:.74rem} .intro-a .waffle{max-width:250px;gap:4px 6px}}
+@media (max-width:380px){.intro-a .nw{white-space:normal} .intro-a .titular{font-size:1.25rem} .intro-a .leyenda .k{display:none}}
+</style>
+<svg width="0" height="0" style="position:absolute"><symbol id="persona" viewBox="0 0 20 32"><circle cx="10" cy="5.5" r="5"/><path d="M3 14.5a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4V23h-2.6v9H5.6v-9H3z"/></symbol></svg>
+<div class="intro-a">
+  <div>
+    <p class="eyebrow">Calidad de Vida en la Vejez 2022 · 1.789 personas mayores</p>
+    <p class="titular">1&nbsp;de&nbsp;cada&nbsp;2 personas mayores en Chile siente <span class="nw"><em>soledad no deseada</em></span></p>
+    <p class="bajada">El <b>51%</b> de las personas mayores declara algún grado de soledad no deseada, y un <b>12%</b> la vive con alta intensidad. La forma más extendida es <b>sentir que le falta compañía</b>.</p>
+    <p class="leytit">Soledad no deseada (escala UCLA)</p>
+    <ul class="leyenda">
+      <li><span class="sw" style="background:#C2410C"></span><span class="n">12%</span>Alta intensidad</li>
+      <li><span class="sw" style="background:#F9A66C"></span><span class="n">39%</span>Menor intensidad</li>
+      <li><span class="sw" style="background:#DCE3E8"></span><span class="n">49%</span>Sin soledad no deseada</li>
+    </ul>
+  </div>
+  <div>
+    <div class="waffle" role="img" aria-label="De cada 100 personas mayores, 51 declaran soledad no deseada: 12 con alta intensidad"><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#C2410C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#F9A66C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#DCE3E8"/></svg></div>
+    <p class="pie">Cada figura representa al 1% de las personas mayores</p>
+  </div>
 </div>
+
+<style>
+.hallazgos{margin:0 0 2rem}
+.hallazgos .htit{font-size:1.5rem;font-weight:700;color:#263238;margin:0 0 .6rem;line-height:1.2}
+.hallazgos ol{list-style:none;margin:0;padding:0;border-top:2px solid #0A3D91}
+.hallazgos li{margin:0;border-bottom:1px solid #E1E7EC}
+.hallazgos li a{display:grid;grid-template-columns:9.4rem minmax(0,1fr) 1rem;gap:.9rem;align-items:baseline;padding:.55rem .15rem;text-decoration:none}
+.hallazgos li a:hover{background:#F5F8FC}
+.hallazgos li:first-child a{background:#FFF6EF;box-shadow:inset 3px 0 0 #E8590C}
+.hallazgos li:first-child .n{padding-left:.6rem}
+@media (max-width:600px){.hallazgos li:first-child a{padding-left:.8rem} .hallazgos li:first-child .n{padding-left:0}}
+.hallazgos .n{font-size:1.2rem;font-weight:800;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
+.hallazgos .fr{font-size:.92rem;line-height:1.45}
+.hallazgos .fl{font-weight:700}
+@media (max-width:600px){.hallazgos li a{grid-template-columns:minmax(0,1fr) 1rem;gap:.1rem .5rem;padding:.55rem .1rem}
+  .hallazgos .n{grid-column:1} .hallazgos .fr{grid-column:1} .hallazgos .fl{grid-column:2;grid-row:1/3;align-self:center}}
+</style>
+<section class="hallazgos" aria-label="Hallazgos clave">
+<p class="htit">Hallazgos clave</p>
+<ol><li><a href="#arbol"><span class="n" style="color:#C2410C">8 de cada 10</span><span class="fr">personas mayores con <b>comunicación familiar insatisfactoria</b> sienten soledad: es el factor más decisivo del árbol de decisión.</span><span class="fl">→</span></a></li><li><a href="#efecto"><span class="n" style="color:#0A3D91">−18 puntos</span><span class="fr">baja la soledad predicha cuando la satisfacción con el <b>tiempo compartido en familia</b> es constante (de 62% a 44%).</span><span class="fl">→</span></a></li><li><a href="#ucla"><span class="n" style="color:#C2410C">44%</span><span class="fr">de las personas mayores siente a veces o a menudo que <b>le falta compañía</b>, la forma más extendida de soledad.</span><span class="fl">→</span></a></li><li><a href="#aislamiento"><span class="n" style="color:#0A3D91">19%</span><span class="fr">de las personas mayores se siente sola aun estando acompañada: <b>soledad y aislamiento no son equivalentes</b>. Asimismo, tener compañía o una red de apoyo no es igual a participar de una comunicación.</span><span class="fl">→</span></a></li><li><a href="#desempeno"><span class="n" style="color:#0A3D91">67,6%</span><span class="fr">de acierto del <b>árbol de decisión</b> al clasificar casos nuevos (AUC 0,71), con perfiles de riesgo interpretables.</span><span class="fl">→</span></a></li></ol>
+</section>
+```
 
 ## Contexto
 
@@ -63,7 +144,7 @@ El análisis combinó estadística clásica y aprendizaje automático en tres et
 
 ## Resultados
 
-### 1. La soledad se vive sobre todo como falta de compañía
+### 1. La soledad se vive sobre todo como falta de compañía {#ucla}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g1_items_ucla.html" height="340" loading="lazy" title="Frecuencia de cada ítem de la escala UCLA de soledad"></iframe>
@@ -91,7 +172,7 @@ Las cinco dimensiones del vínculo familiar muestran el mismo patrón. Cuando la
 
 La brecha más amplia aparece en el **tiempo compartido con la familia** (+42,1 puntos), seguida del apoyo para realizar nuevas actividades y del afecto. No basta con tener familia: lo que protege es **la calidad del vínculo**, es decir, sentirse escuchado, acompañado y apoyado.
 
-### 3. Soledad y aislamiento social no son lo mismo
+### 3. Soledad y aislamiento social no son lo mismo {#aislamiento}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g3_soledad_aislamiento.html" height="460" loading="lazy" title="Soledad no deseada y aislamiento social en personas mayores"></iframe>
@@ -118,7 +199,7 @@ Para pasar de describir asociaciones a **identificar perfiles de riesgo**, se en
 <div class="paso final"><b>Evaluación</b><span>Exactitud, sensibilidad y AUC en datos que el modelo no vio</span></div>
 </div>
 
-### 4. Cómo decide el árbol: seis perfiles de riesgo
+### 4. Cómo decide el árbol: seis perfiles de riesgo {#arbol}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g4_arbol_decision.html" height="820" loading="lazy" title="Árbol de decisión: preguntas del modelo y perfiles de riesgo de soledad"></iframe>
@@ -144,7 +225,7 @@ Error relativo del árbol según su número de divisiones (1 = error de un model
 
 Un árbol más grande siempre se ajusta mejor a los datos con que se entrena: el **error en entrenamiento** baja sin parar. Pero eso no significa que prediga mejor casos nuevos. La **validación cruzada** estima el error en datos no vistos, y muestra que este llega a su mínimo con **5 divisiones** y luego vuelve a subir: más allá de ese punto, el árbol empieza a memorizar ruido. Por eso se podó en 5 divisiones, un modelo simple, interpretable y con mejor capacidad de generalizar.
 
-### 6. Qué tan bien clasifican los modelos
+### 6. Qué tan bien clasifican los modelos {#desempeno}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g7_matrices_confusion.html" height="660" loading="lazy" title="Matrices de confusión del árbol de decisión y del Random Forest"></iframe>
@@ -177,7 +258,7 @@ Importancia de cada variable en el Random Forest optimizado, medida como Mean De
 
 El **Random Forest** entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable que un árbol individual. Su ranking de importancia confirma el hallazgo central: **las tres variables más predictivas son familiares** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, con un peso cercano a la mitad.
 
-### 8. Reducción de soledad: el vínculo familiar debe ser constante
+### 8. Reducción de soledad: el vínculo familiar debe ser constante {#efecto}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g8_direccion_efecto.html" height="460" loading="lazy" title="Reducción de soledad cuando la satisfacción con la familia es constante"></iframe>
