@@ -17,9 +17,15 @@ resources:
 @media (max-width: 600px) { .grafico-interactivo iframe.quintil { height: 720px; } }
 .grafico-interactivo iframe.educ { height: 480px; }
 @media (max-width: 600px) { .grafico-interactivo iframe.educ { height: 740px; } }
+.grafico-interactivo iframe.cuidado { height: 470px; }
+@media (max-width: 600px) { .grafico-interactivo iframe.cuidado { height: 580px; } }
 .definicion { border-left: 4px solid #0A3D91; background: #F3F6F8; padding: 0.9rem 1.1rem; margin: 1.25rem 0 1.5rem 0; border-radius: 0 6px 6px 0; }
 .definicion p { margin: 0; }
 .definicion b { color: #173F5F; }
+.como-leer { background: #FFF6EF; border-left: 4px solid #E8590C; border-radius: 0 6px 6px 0; padding: 0.9rem 1.1rem; margin: 0.4rem 0 1.5rem 0; font-size: 0.92rem; line-height: 1.5; }
+.como-leer .tit { display: block; font-weight: 700; color: #B8410A; margin-bottom: 0.35rem; }
+.como-leer ol { margin: 0; padding-left: 1.2rem; }
+.como-leer li { margin-bottom: 0.3rem; }
 </style>
 ```
 
@@ -112,7 +118,30 @@ A diferencia del ingreso, **la brecha educacional se mantiene en todas las edade
 
 <!-- GRÁFICO: dependencia funcional por región -->
 
-<!-- GRÁFICO: brecha de cuidado (Sankey) -->
+### 5. Una de cada tres personas mayores con dependencia funcional no tiene quien la cuide
+
+<div class="grafico-interactivo">
+<iframe class="cuidado" src="graficos/brecha_cuidado.html" loading="lazy" title="Brecha de cuidado: personas mayores con dependencia funcional según persona cuidadora principal"></iframe>
+</div>
+
+<div class="como-leer">
+<span class="tit">Cómo leer este gráfico</span>
+<ol>
+<li><b>A la izquierda</b> están las personas mayores con dependencia funcional, separadas según su nivel: leve, moderada y severa.</li>
+<li><b>A la derecha</b> se ve qué ocurre con ellas: si tienen o no una persona que las cuide y, cuando la tienen, si su cuidador principal es una mujer o un hombre.</li>
+<li>Cada <b>franja</b> representa un grupo de personas: mientras más gruesa, más personas. Las franjas <span style="color:#E8590C"><b>naranjas</b></span> muestran a quienes no tienen persona cuidadora.</li>
+<li><b>Ejemplo:</b> de las 199 mil personas mayores con dependencia funcional leve, <b>117 mil (59%) no tienen persona cuidadora</b>. En la dependencia funcional moderada son 102 mil de 311 mil (33%), y en la severa, 35 mil de 288 mil (12%).</li>
+<li><b>En resumen:</b> a mayor dependencia funcional, más personas reciben cuidado, pero incluso en la severa 1 de cada 8 no lo tiene. Y cuando hay cuidado, en 3 de cada 4 casos lo entrega una mujer.</li>
+</ol>
+</div>
+
+::: {.grafico-nota}
+Población estimada de personas de 60 años y más con dependencia funcional. "Con persona cuidadora": declara al menos una persona que la cuida; el sexo corresponde a su cuidador o cuidadora principal, viva o no en el mismo hogar. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+:::
+
+La dependencia funcional implica necesitar la ayuda de otra persona, pero esa ayuda no siempre llega. El **32%** de las personas mayores con dependencia funcional, cerca de **255 mil personas**, no tiene una persona que la cuide. La cobertura aumenta con la severidad, pero no es completa: no tiene persona cuidadora el **59%** de quienes presentan dependencia funcional leve, el **33%** de quienes presentan dependencia funcional moderada y el **12%** de quienes presentan dependencia funcional severa, unas 35 mil personas que requieren ayuda de forma intensa y permanente. Dentro de cada nivel, la cobertura es similar entre mujeres y hombres.
+
+El cuidado, además, tiene rostro de mujer y de vejez: **3 de cada 4** personas mayores con persona cuidadora son cuidadas principalmente por una mujer (8 de cada 10 en la dependencia funcional severa), y el **44%** de quienes cuidan tiene **60 años o más**. Es decir, buena parte del cuidado de las personas mayores lo realizan otras personas mayores, un fenómeno que se analiza en el proyecto sobre [personas mayores cuidadoras](../portafolio/proyecto-1/index.qmd).
 
 <!-- GRÁFICO: probabilidades predichas del modelo -->
 
