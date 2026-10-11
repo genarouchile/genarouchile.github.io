@@ -1,6 +1,8 @@
 ---
 title: "Ecuaciones Estructurales: Dependencia Funcional en Personas Mayores Cuidadoras en Chile"
-description: "Modelo de ecuaciones estructurales para identificar los factores de salud y de desigualdad social que explican la dependencia funcional en personas mayores que cuidan a otras."
+subtitle: "Un modelo de ecuaciones estructurales para identificar los factores de salud y de desigualdad social asociados a la dependencia funcional en personas mayores que cuidan a otras, con datos de ENDIDE 2022 y de la Encuesta Nacional de Calidad de Vida en la Vejez"
+description: "¿Quiénes son las personas mayores que cuidan y en qué condiciones lo hacen? ¿Qué factores de salud y de desigualdad social se asocian a su dependencia funcional, y por qué vías?"
+lang: es
 image: portada.png
 resources:
   - "graficos/**"
@@ -30,15 +32,93 @@ resources:
 .leyenda-sem { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.82rem; color: #263238; margin: 0.6rem 0 0.2rem 0; }
 .leyenda-sem span { display: inline-flex; align-items: center; gap: 0.4rem; }
 .leyenda-sem i { display: inline-block; width: 26px; height: 0; border-top: 4px solid; }
+/* Tipografía editorial del sitio (Newsreader, ya importada en styles.css) para titulares y cifras */
+.intro-a .titular, .hallazgos .htit, .hallazgos .n { font-family: "Newsreader", Georgia, "Times New Roman", serif !important; }
+.intro-a .titular { font-weight: 400 !important; font-size: 2.15rem !important; line-height: 1.12 !important; letter-spacing: -0.01em; }
+.hallazgos .htit { font-weight: 400 !important; font-size: 1.9rem !important; }
+.hallazgos .n { font-weight: 400 !important; font-size: 1.6rem !important; }
+@media (max-width: 600px) { .intro-a .titular { font-size: 1.75rem !important; } .hallazgos .n { font-size: 1.5rem !important; } }
+/* Descripción del encabezado más grande */
+#title-block-header .subtitle { font-size: 1.2rem !important; font-weight: 700 !important; line-height: 1.5 !important; color: #263238 !important; margin-top: .4rem; }
+#title-block-header .description, #title-block-header .description p { font-size: 1rem !important; line-height: 1.55; color: #5B6B73; }
+@media (max-width: 600px) { #title-block-header .subtitle { font-size: 1.02rem !important; } #title-block-header .description, #title-block-header .description p { font-size: .93rem !important; } }
+/* Todo el texto del proyecto justificado. styles.css del sitio fuerza "left !important"
+   en #quarto-content p/li, por eso aquí se usa mayor especificidad + !important */
+#quarto-content main.content p, #quarto-content main.content li { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+#quarto-content main.content .intro-a p, #quarto-content main.content .intro-a li,
+#quarto-content main.content .hallazgos p, #quarto-content main.content .hallazgos li { text-align: left !important; hyphens: manual; }
+#quarto-content main.content #title-block-header .subtitle, #quarto-content main.content #title-block-header .description { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+/* Hallazgos: texto justificado en pantallas anchas; en celular, a la izquierda para evitar espacios grandes */
+#quarto-content main.content .hallazgos .fr { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
+@media (max-width: 600px) { #quarto-content main.content .hallazgos .fr { text-align: left !important; } }
+#quarto-content main.content .hallazgos li a, #quarto-content main.content .hallazgos li a:hover { color: #263238 !important; text-decoration: none !important; }
+#quarto-content main.content .hallazgos .fl { color: #0A3D91 !important; }
 </style>
 ```
 
-<div class="key-figures">
-<div class="key-figure"><span class="kf-number">4.954</span><span class="kf-label">personas mayores cuidadoras analizadas en dos encuestas nacionales</span></div>
-<div class="key-figure"><span class="kf-number">7 de 10</span><span class="kf-label">personas mayores que cuidan a otras son mujeres</span></div>
-<div class="key-figure"><span class="kf-number">49%</span><span class="kf-label">de la variación de la dependencia funcional explicada por el modelo de ecuaciones estructurales</span></div>
-<div class="key-figure"><span class="kf-number">−0,52</span><span class="kf-label">efecto de la buena cognición: el principal factor protector frente a la dependencia</span></div>
+```{=html}
+<style>
+.intro-a{--azul:#C2410C;--tinta:#263238;--tinta2:#5B6B73;background:linear-gradient(135deg,#F4F8FE 0%,#E8F0FB 100%);
+  border-radius:14px;padding:2.2rem 2.2rem 1.8rem;margin:0.5rem 0 2rem;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem;align-items:center;
+  font-family:inherit}
+.intro-a .eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta2);font-weight:600;margin:0 0 .8rem}
+.intro-a .titular{font-size:1.6rem;line-height:1.15;color:var(--tinta);margin:0 0 1rem;font-weight:800;border:0;padding:0;text-align:left}
+.intro-a .nw{white-space:nowrap}
+.intro-a .titular em{font-style:normal;color:var(--azul)}
+.intro-a .bajada{font-size:1.02rem;line-height:1.55;color:var(--tinta2);margin:0 0 1.3rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.intro-a .bajada b{color:var(--tinta)}
+.intro-a .leytit{font-size:.78rem;font-weight:700;color:var(--tinta2);margin:0 0 .5rem;text-transform:uppercase;letter-spacing:.05em}
+.intro-a .leyenda{max-width:360px;display:flex;flex-direction:column;gap:.45rem;margin:0;padding:0;list-style:none}
+.intro-a .leyenda li{display:flex;align-items:center;gap:.6rem;font-size:.92rem;color:var(--tinta);text-align:left}
+.intro-a .leyenda .sw{width:14px;height:14px;border-radius:3px;flex:none}
+.intro-a .leyenda .k{color:var(--tinta2);font-size:.82rem;margin-left:auto;font-variant-numeric:tabular-nums;padding-left:.6rem;white-space:nowrap}
+.intro-a .leyenda .n{font-weight:800;min-width:3.3rem;font-variant-numeric:tabular-nums}
+.intro-a .waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:6px 8px;max-width:340px;margin:0 auto}
+.intro-a .waffle .p{width:100%;height:auto;display:block}
+.intro-a .pie{font-size:.78rem;color:var(--tinta2);margin:.8rem auto 0;max-width:340px}
+@media (max-width:700px){.intro-a{grid-template-columns:minmax(0,1fr);padding:1.5rem 1.2rem 1.3rem;gap:1.3rem}
+  .intro-a .titular{font-size:1.32rem} .intro-a .leyenda .k{font-size:.74rem} .intro-a .waffle{max-width:250px;gap:4px 6px}}
+@media (max-width:380px){.intro-a .nw{white-space:normal} .intro-a .titular{font-size:1.25rem} .intro-a .leyenda .k{display:none}}
+</style>
+<svg width="0" height="0" style="position:absolute"><symbol id="persona" viewBox="0 0 20 32"><circle cx="10" cy="5.5" r="5"/><path d="M3 14.5a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4V23h-2.6v9H5.6v-9H3z"/></symbol></svg>
+<div class="intro-a">
+  <div>
+    <p class="eyebrow">ENDIDE 2022 · Personas mayores cuidadoras</p>
+    <p class="titular">7&nbsp;de&nbsp;cada&nbsp;10 personas mayores que cuidan a otras <span class="nw">son <em>mujeres</em></span></p>
+    <p class="bajada">Mientras cuidan, enfrentan su propio envejecimiento. Ellas lo hacen <b>con menos apoyo</b> y concentran <b>dependencia funcional severa</b>: el 35% de las cuidadoras con dependencia funcional la presenta en ese nivel.</p>
+    <p class="leytit">Personas mayores cuidadoras</p>
+    <ul class="leyenda">
+      <li><span class="sw" style="background:#E8590C"></span><span class="n">69%</span>Mujeres</li>
+      <li><span class="sw" style="background:#0A3D91"></span><span class="n">31%</span>Hombres</li>
+    </ul>
+  </div>
+  <div>
+    <div class="waffle" role="img" aria-label="De cada 100 personas mayores cuidadoras, 69 son mujeres y 31 son hombres"><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#E8590C"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg><svg class="p" viewBox="0 0 20 32" aria-hidden="true"><use href="#persona" fill="#0A3D91"/></svg></div>
+    <p class="pie">Cada figura representa al 1% de las personas mayores cuidadoras</p>
+  </div>
 </div>
+
+<style>
+.hallazgos{margin:0 0 2rem}
+.hallazgos .htit{font-size:1.5rem;font-weight:700;color:#263238;margin:0 0 .6rem;line-height:1.2}
+.hallazgos ol{list-style:none;margin:0;padding:0;border-top:2px solid #0A3D91}
+.hallazgos li{margin:0;border-bottom:1px solid #E1E7EC}
+.hallazgos li a{display:grid;grid-template-columns:11rem minmax(0,1fr) 1rem;gap:.9rem;align-items:baseline;padding:.55rem .15rem;text-decoration:none}
+.hallazgos li a:hover{background:#F5F8FC}
+.hallazgos li:first-child a{background:#FFF6EF;box-shadow:inset 3px 0 0 #E8590C}
+.hallazgos li:first-child .n{padding-left:.6rem}
+@media (max-width:600px){.hallazgos li:first-child a{padding-left:.8rem} .hallazgos li:first-child .n{padding-left:0}}
+.hallazgos .n{font-size:1.2rem;font-weight:800;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
+.hallazgos .fr{font-size:.92rem;line-height:1.45}
+.hallazgos .fl{font-weight:700}
+@media (max-width:600px){.hallazgos li a{grid-template-columns:minmax(0,1fr) 1rem;gap:.1rem .5rem;padding:.55rem .1rem}
+  .hallazgos .n{grid-column:1} .hallazgos .fr{grid-column:1} .hallazgos .fl{grid-column:2;grid-row:1/3;align-self:center}}
+</style>
+<section class="hallazgos" aria-label="Hallazgos clave">
+<p class="htit">Hallazgos clave</p>
+<ol><li><a href="#modelo-final"><span class="n" style="color:#0A3D91">−0,52</span><span class="fr">es el efecto de la <b>buena cognición</b> (orientación y memoria): el principal factor protector frente a la dependencia funcional.</span><span class="fl">→</span></a></li><li><a href="#modelo-final"><span class="n" style="color:#C2410C">0,36</span><span class="fr">es el efecto de las <b>enfermedades físico-sensoriales</b>: el principal factor de riesgo de dependencia funcional.</span><span class="fl">→</span></a></li><li><a href="#niveles"><span class="n" style="color:#C2410C">35%</span><span class="fr">de las <b>mujeres cuidadoras</b> con dependencia funcional presenta dependencia severa; en los hombres predomina la moderada.</span><span class="fl">→</span></a></li><li><a href="#modelo-final"><span class="n" style="color:#0A3D91">Forma indirecta</span><span class="fr">es como protegen las <b>redes de apoyo</b> frente a la dependencia funcional: mejoran la cognición (0,19), que a su vez reduce esta dependencia.</span><span class="fl">→</span></a></li><li><a href="#modelo-final"><span class="n" style="color:#0A3D91">49%</span><span class="fr">de la variación de la dependencia funcional la explica el <b>modelo de ecuaciones estructurales</b> (CFI 0,91 · RMSEA 0,02).</span><span class="fl">→</span></a></li></ol>
+</section>
+```
 
 ## Contexto
 
@@ -78,7 +158,7 @@ Se aplicaron los factores de expansión de cada encuesta para asegurar la repres
 
 El **69%** de las personas mayores cuidadoras son mujeres. El cuidado que realizan es distinto: el **73% de los hombres** cuida a su cónyuge, mientras que el cuidado de las mujeres se reparte entre cónyuges (36%), padres o suegros (23%) e hijos (20%). Ellas, además, cuidan con **menos apoyo**: en un índice de 9 a 18 puntos, el apoyo que reciben promedia 10,5, frente a 16,2 en los hombres.
 
-### 2. La dependencia severa recae en las mujeres
+### 2. La dependencia severa recae en las mujeres {#niveles}
 
 <div class="grafico-interactivo">
 <iframe class="niv" src="graficos/niveles_dependencia.html" loading="lazy" title="Niveles de dependencia funcional de las personas mayores cuidadoras, según sexo"></iframe>
@@ -119,7 +199,7 @@ El modelo final se alcanzó después de probar y descartar dos especificaciones:
 <div class="paso final"><b>Modelo final</b><span>Cognición como mediadora. Buen ajuste: CFI 0,91 · TLI 0,90 · RMSEA 0,02</span></div>
 </div>
 
-### 4. El modelo final
+### 4. El modelo final {#modelo-final}
 
 ::: {.column-page}
 <div class="grafico-interactivo">
@@ -168,9 +248,6 @@ La dependencia funcional de las personas mayores cuidadoras **no es solo una con
 ## Herramientas
 
 - **R 4.2:** `lavaan` para el análisis factorial confirmatorio y el modelo de ecuaciones estructurales; `corrplot` y `ggplot2` para el análisis descriptivo.
-- **SPSS 21:** procesamiento de datos y análisis descriptivo.
-- **visNetwork y Plotly para R:** visualizaciones interactivas para la web.
-- **Quarto:** publicación de esta página.
 - **SPSS 21:** procesamiento de datos y análisis descriptivo.
 - **visNetwork y Plotly para R:** visualizaciones interactivas para la web.
 - **Quarto:** publicación de esta página.
