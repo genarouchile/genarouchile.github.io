@@ -8,7 +8,8 @@ listing:
     - portafolio/soledad-machine-learning/index.qmd
     - dependencia-funcional/index.qmd
     - portafolio/participacion-social/index.qmd
-    - eleam-distribucion/index.qmd
+    - portafolio/dependencia-funcional-casen-2024/index.qmd
+    - portafolio/eleam-distribucion/index.qmd
   type: grid
   grid-columns: 4
   sort: false
