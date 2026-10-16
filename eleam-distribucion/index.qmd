@@ -1,0 +1,6 @@
+
+---
+title: "ELEAM formales en Chile (Distribución Geográfica)"
+subtitle: "Distribución territorial de establecimientos de larga estadía para personas mayores"
+page-layout: full
+---
