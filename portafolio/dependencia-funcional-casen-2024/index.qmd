@@ -2,5 +2,6 @@
 ---
 title: "Dependencia Funcional en Personas Mayores"
 subtitle: "Versión CASEN 2024"
+image: portada-casen-2024.png
 page-layout: full
 ---
