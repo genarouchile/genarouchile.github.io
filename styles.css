@@ -32947,7 +32947,18 @@ body:has(.home-layout) #quarto-document-content {
 }
  
 
+/* ===== PORTAFOLIO — TÍTULOS MÁS PEQUEÑOS ===== */
 
+.quarto-grid-item .card-title {
+  font-size: 1.35rem !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 768px) {
+  .quarto-grid-item .card-title {
+    font-size: 1.2rem !important;
+  }
+}
 
 
 
