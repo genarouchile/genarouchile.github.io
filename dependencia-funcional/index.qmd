@@ -1,5 +1,5 @@
 ---
-title: "La realidad de la Dependencia Funcional en Personas Mayores en Chile"
+title: "La realidad de la Dependencia Funcional en Personas Mayores en Chile (Versión ENDIDE 2022)"
 subtitle: "Un análisis estadístico de la dependencia funcional en personas de 60 años y más con datos de la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022"
 description: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿A quiénes afecta más según su edad, género, ingresos, educación y territorio, y cuántas no cuentan con alguien que las cuide?"
 image: portada.png
