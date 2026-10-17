@@ -79,7 +79,7 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
     </a>
     <a class="project-tile" href="portafolio/soledad-machine-learning/">
       <img src="images/proyectos/random_forest_soledad.png" alt="Modelo Random Forest de soledad no deseada">
-      <span class="tile-title">Machine learning: soledad no deseada</span>
+      <span class="tile-title">Machine Learning: Soledad no deseada en personas mayores</span>
       <span class="tile-sub">Árbol de decisión y Random Forest</span>
     </a>
   </div>
