@@ -32842,7 +32842,110 @@ body:has(.home-layout) #quarto-document-content {
 
 
 
-
+/* =========================================================
+   PORTADA — PROYECTOS DESTACADOS (tarjetas con imagen)
+   ========================================================= */
+ 
+#quarto-content .home-projects {
+  margin-top: 1.5rem;
+  padding-top: 0;
+  border-top: none;
+}
+ 
+#quarto-content .home-projects .home-projects-title {
+  color: #1F2A33;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 1.2rem 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+ 
+#quarto-content .project-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+ 
+#quarto-content .project-tile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E2E8EC;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #FFFFFF;
+  color: #1F2A33;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+#quarto-content .project-tile:hover,
+#quarto-content .project-tile:focus-visible {
+  transform: translateY(-3px);
+  border-color: #B8C4CC;
+  box-shadow: 0 6px 16px rgba(23, 63, 95, 0.08);
+}
+ 
+#quarto-content .project-tile img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #EEF1F3;
+  border-radius: 0;
+  max-width: none;
+}
+ 
+#quarto-content .project-tile .tile-title {
+  display: block;
+  padding: 0.85rem 0.9rem 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #1F2A33;
+  text-align: left;
+}
+ 
+#quarto-content .project-tile .tile-sub {
+  display: block;
+  padding: 0 0.9rem 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #6B7780;
+  text-align: left;
+}
+ 
+/* Tablet: dos columnas */
+@media (max-width: 900px) {
+  #quarto-content .project-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+ 
+/* Celular: una tarjeta por fila */
+@media (max-width: 600px) {
+  #quarto-content .home-projects .home-projects-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+ 
+  #quarto-content .project-tiles {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+ 
+  #quarto-content .project-tile .tile-title {
+    font-size: 1rem;
+  }
+}
+ 
 
 
 
