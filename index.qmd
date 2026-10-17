@@ -1,105 +1,75 @@
 
 ---
-title: ""
+title: "Inicio"
+page-layout: full
 ---
 
-<div class="home-layout">
+# Bienvenido a mi sitio web
 
-<div class="home-sidebar">
+Este espacio reúne mis investigaciones, proyectos y trabajos de análisis de datos, con énfasis en las ciencias sociales, las políticas públicas y el análisis cuantitativo.
 
-![](genaro.jpg){.profile-photo}
-
-# Genaro Marileo
-
-**Sociólogo de la Universidad de Chile**
-
-Investigación social aplicada · análisis de datos · políticas públicas · análisis territorial
-
-<div class="profile-links">
-
-[Correo electrónico](mailto:genarouchile@gmail.com)
-
-[CV](cv.html)
-
-[LinkedIn](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/)
-
-[GitHub](https://github.com/genarouchile)
-
-</div>
-
-</div>
-
-<div class="home-main">
-
-<p class="research-line">
-Investigación social aplicada · análisis cuantitativo · políticas públicas · análisis territorial
-</p>
-
-<p class="academic-line">
-Sociólogo · Magíster en Sociología · Doctor en Sociología
-</p>
-
-<div class="home-section">
-
-<div class="home-image">
-
-![](images/home/about-me.png)
-
-</div>
-
-<div class="home-content">
-
-## Sobre mí
-
-Soy sociólogo de la [Universidad de Chile](https://facso.uchile.cl), Magíster en Sociología de la [Pontificia Universidad Católica](https://sociologia.uc.cl/) y Doctor en Sociología en la [Universidad Alberto Hurtado](https://csociales.uahurtado.cl/departamentos/departamento-de-sociologia/). Mi trabajo se orienta al análisis y diseño de políticas públicas, el análisis estadístico y el estudio de problemas públicos mediante herramientas cuantitativas y territoriales.
-
-Mi experiencia combina investigación social, construcción de indicadores, análisis estadístico, evaluación de políticas públicas y análisis espacial. He desarrollado proyectos utilizando datos sociales, administrativos y territoriales, con especial interés en vulnerabilidad social, cuidados, personas mayores y desigualdad territorial.
-
-Actualmente desarrollo investigación aplicada vinculada al análisis territorial y a la generación de evidencia para apoyar la toma de decisiones en políticas públicas.
-
-</div>
-
-</div>
+Aquí encontrarás aplicaciones de métodos estadísticos, análisis territorial, aprendizaje automático y modelos multivariados para estudiar fenómenos sociales.
 
 ## Proyectos destacados
 
 <div class="featured-projects">
 
-<div class="featured-project">
+<a class="featured-project" href="dependencia-funcional/">
 
-### Índice de Priorización Territorial para CVT
+<img src="images/proyectos/dependencia_funcional.png"
+     alt="Estadística descriptiva avanzada sobre dependencia funcional en personas mayores">
 
-Construcción de un índice compuesto para identificar y priorizar comunas para la construcción de Condominios de Viviendas Tuteladas.
+<div class="project-content">
 
-[Ver proyecto →](portafolio/proyecto-1/)
+<h3>La realidad de la dependencia funcional en personas mayores en Chile</h3>
 
-</div>
-
-<div class="featured-project">
-
-### Dependencia funcional en Chile
-
-Análisis de la dependencia funcional y su distribución territorial mediante indicadores sociales y datos comunales.
-
-[Ver proyecto →](dependencia-funcional/)
-
-</div>
-
-<div class="featured-project">
-
-### Soledad y aprendizaje automático
-
-Análisis de la soledad mediante técnicas de aprendizaje automático y herramientas de análisis de datos.
-
-[Ver proyecto →](portafolio/soledad-machine-learning/)
-
-</div>
-
-</div>
-
-<p class="all-projects-link">
-<a href="portafolio.html">Ver todos los proyectos →</a>
+<p>
+Análisis descriptivo y territorial de la dependencia funcional en personas mayores,
+mediante indicadores, distribuciones estadísticas y visualizaciones de datos.
 </p>
+
+<span class="project-link">Ver proyecto →</span>
+
+</div>
+</a>
+
+<a class="featured-project" href="portafolio/soledad-machine-learning/">
+
+<img src="images/proyectos/random_forest_soledad.png"
+     alt="Visualización de un modelo de aprendizaje automático Random Forest">
+
+<div class="project-content">
+
+<h3>Soledad no deseada en personas mayores: Machine Learning</h3>
+
+<p>
+Aplicación de técnicas de aprendizaje automático para explorar patrones y factores
+asociados a la soledad no deseada, incluyendo modelos Random Forest.
+</p>
+
+<span class="project-link">Ver proyecto →</span>
+
+</div>
+</a>
+
+<a class="featured-project" href="https://genarouchile.github.io/portafolio/proyecto-1/">
+
+<img src="images/proyectos/ecuaciones_estructurales.png"
+     alt="Diagrama de ecuaciones estructurales sobre dependencia funcional y cuidados">
+
+<div class="project-content">
+
+<h3>Ecuaciones estructurales: dependencia funcional en personas mayores cuidadoras en Chile</h3>
+
+<p>
+Estudio de las relaciones entre variables mediante modelos de ecuaciones estructurales
+aplicados a la dependencia funcional y las experiencias de cuidado.
+</p>
+
+<span class="project-link">Ver proyecto →</span>
+
+</div>
+</a>
 
 </div>
 
