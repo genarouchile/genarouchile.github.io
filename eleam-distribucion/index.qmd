@@ -1,6 +1,7 @@
 
 ---
-title: "ELEAM formales en Chile (Distribución Geográfica)"
+title: "ELEAM formales en Chile 2026"
 subtitle: "Distribución territorial de establecimientos de larga estadía para personas mayores"
+image: portada-eleam.png
 page-layout: full
 ---
