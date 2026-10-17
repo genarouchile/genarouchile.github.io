@@ -1691,3 +1691,77 @@ body:has(.home-layout) #quarto-document-content {
   line-height: 1.4;
   color: #263238;
 }
+
+
+
+
+/* Proyectos destacados: diseño adaptable */
+
+.featured-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.featured-project {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid #dce4ef;
+  border-radius: 10px;
+  background: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.featured-project h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-top: 0;
+}
+
+.featured-project p {
+  line-height: 1.6;
+}
+
+.featured-project a,
+.all-projects-link a {
+  color: #0759c7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.featured-project a:hover,
+.all-projects-link a:hover {
+  text-decoration: underline;
+}
+
+.all-projects-link {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .featured-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .featured-projects {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .featured-project {
+    padding: 1rem;
+  }
+
+  .featured-project h3 {
+    font-size: 1.1rem;
+  }
+
+  .all-projects-link {
+    margin: 1.25rem 0;
+  }
+}
