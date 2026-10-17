@@ -1765,3 +1765,160 @@ body:has(.home-layout) #quarto-document-content {
     margin: 1.25rem 0;
   }
 }
+
+
+
+
+/* ==========================================
+   PORTADA Y PROYECTOS DESTACADOS
+   ========================================== */
+
+.featured-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  margin: 1.6rem 0 2.5rem;
+  align-items: stretch;
+}
+
+/* Tarjeta completa clicable */
+
+.featured-project {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+
+  color: inherit;
+  text-decoration: none !important;
+
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 14px;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+/* Efecto al pasar el cursor */
+
+.featured-project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+  border-color: var(--bs-primary);
+}
+
+/* Accesibilidad mediante teclado */
+
+.featured-project:focus-visible {
+  outline: 3px solid var(--bs-primary);
+  outline-offset: 4px;
+}
+
+/* Imágenes */
+
+.featured-project img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0;
+  border: 0;
+}
+
+/* Contenido de las tarjetas */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.2rem;
+}
+
+.project-content h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--bs-body-color);
+}
+
+.project-content p {
+  margin: 0 0 1rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--bs-secondary-color);
+}
+
+/* Enlace visual al final de cada tarjeta */
+
+.project-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 0.3rem;
+
+  font-weight: 650;
+  color: var(--bs-link-color);
+  text-decoration: none;
+}
+
+.featured-project:hover .project-link {
+  text-decoration: underline;
+}
+
+/* Evitar que la tarjeta herede subrayados */
+
+.featured-project:hover h3 {
+  color: var(--bs-primary);
+}
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 950px) {
+  .featured-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+}
+
+/* ==========================================
+   TELÉFONOS
+   ========================================== */
+
+@media (max-width: 600px) {
+  .featured-projects {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .featured-project img {
+    height: 240px;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.05rem;
+  }
+}
+
+/* ==========================================
+   RESPETAR PREFERENCIAS DE MOVIMIENTO
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-project {
+    transition: none;
+  }
+
+  .featured-project:hover {
+    transform: none;
+  }
+}
