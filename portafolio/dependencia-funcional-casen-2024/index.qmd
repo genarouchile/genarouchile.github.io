@@ -1,7 +1,6 @@
-
 ---
-title: "Dependencia Funcional en Personas Mayores"
-subtitle: "Versión CASEN 2024"
+title: "Dependencia Funcional en Personas Mayores (versión CASEN 2024)"
+subtitle: "Análisis de la dependencia funcional en la población de 60 años y más con datos del Censo 2024"
 image: portada-casen-2024.png
 page-layout: full
 ---
