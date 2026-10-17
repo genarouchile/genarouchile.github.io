@@ -32978,3 +32978,133 @@ body:has(.home-layout) #quarto-document-content {
 
 
 
+<style>
+.hallazgos {
+  margin: 2rem 0 3rem;
+  width: 100%;
+  overflow: visible;
+}
+
+.hallazgos h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: #173F5F;
+  border-bottom: 1px solid #0A3D91;
+  padding-bottom: 0.55rem;
+  margin-bottom: 0;
+}
+
+.hallazgos .hallazgo {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr) 24px;
+  align-items: center;
+  column-gap: 12px;
+  padding: 0.9rem 0.2rem;
+  border-bottom: 1px solid #DCE4E8;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: visible;
+}
+
+.hallazgos .hallazgo.destacado {
+  background: #FFF7F1;
+  border-left: 3px solid #F04B16;
+  padding-left: 0.7rem;
+}
+
+.hallazgos .dato {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  line-height: 1.15;
+  color: #0A3D91;
+  white-space: normal;
+}
+
+.hallazgos .destacado .dato {
+  color: #E64312;
+}
+
+.hallazgos .descripcion {
+  font-family: inherit;
+  font-size: 0.91rem;
+  line-height: 1.5;
+  color: #263238;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+  overflow: visible;
+  min-width: 0;
+}
+
+.hallazgos .flecha {
+  color: #0A3D91;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 650px) {
+  .hallazgos .hallazgo {
+    grid-template-columns: minmax(0, 1fr) 22px;
+    gap: 6px 10px;
+  }
+
+  .hallazgos .dato {
+    grid-column: 1;
+    font-size: 1.45rem;
+  }
+
+  .hallazgos .descripcion {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hallazgos .flecha {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+</style>
+
+<div class="hallazgos">
+
+<h2>Hallazgos clave</h2>
+
+<div class="hallazgo destacado">
+  <div class="dato">A los 70 años</div>
+  <div class="descripcion">Las personas mayores <strong>más pobres y sin educación</strong> ya tienen una probabilidad de dependencia funcional similar a la de las personas mayores <strong>con más dinero</strong> a los 85 años.</div>
+  <div class="flecha">→</div>
+</div>
+
+<div class="hallazgo">
+  <div class="dato">62.800</div>
+  <div class="descripcion">Personas mayores con dependencia funcional <strong>no tienen a nadie que las cuide</strong>.</div>
+  <div class="flecha">→</div>
+</div>
+
+<div class="hallazgo">
+  <div class="dato">57,6%</div>
+  <div class="descripcion">De las mujeres de <strong>85 años y más</strong> presenta dependencia funcional, frente al 43,5% de los hombres de la misma edad.</div>
+  <div class="flecha">→</div>
+</div>
+
+<div class="hallazgo">
+  <div class="dato">6 veces</div>
+  <div class="descripcion">Mayor prevalencia de dependencia funcional entre personas mayores sin educación formal (38,1%) que entre quienes tienen educación superior (6,0%).</div>
+  <div class="flecha">→</div>
+</div>
+
+<div class="hallazgo">
+  <div class="dato">16 puntos</div>
+  <div class="descripcion">Porcentuales menos en la tasa de ocupación laboral entre quienes cuidan a personas mayores con dependencia (54,4%), frente a quienes no realizan estos cuidados (70,5%).</div>
+  <div class="flecha">→</div>
+</div>
+
+<div class="hallazgo">
+  <div class="dato">14,1%</div>
+  <div class="descripcion">De las personas de 60 años y más presenta dependencia funcional en Chile, con diferencias en su prevalencia entre regiones.</div>
+  <div class="flecha">→</div>
+</div>
+
+</div>
+
