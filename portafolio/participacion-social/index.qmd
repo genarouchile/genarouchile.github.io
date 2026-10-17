@@ -1,5 +1,5 @@
 ---
-title: "Índice de Participación Social de Personas Mayores en Chile"
+title: "Participación Social de Personas Mayores en Chile"
 description: "Construcción de un índice compuesto para medir la participación social de las personas mayores en Chile."
 image: portada.png
 ---
