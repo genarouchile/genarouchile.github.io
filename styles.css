@@ -32961,7 +32961,19 @@ body:has(.home-layout) #quarto-document-content {
 }
 
 
+/* ===== PORTADA — "SOBRE MÍ" JUSTIFICADO ===== */
 
+#quarto-content .home-content p {
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+/* En celular, alineado a la izquierda para evitar espacios grandes entre palabras */
+@media (max-width: 600px) {
+  #quarto-content .home-content p {
+    text-align: left !important;
+  }
+}
 
 
 
