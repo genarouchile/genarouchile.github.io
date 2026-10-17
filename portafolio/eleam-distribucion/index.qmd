@@ -1,5 +1,5 @@
 ---
-title: "ELEAM formales en Chile"
+title: "ELEAM (Establecimientos de Larga Estadía) para personas mayores en Chile"
 subtitle: "Distribución Geográfica"
 image: portada-eleam.png
 page-layout: full
