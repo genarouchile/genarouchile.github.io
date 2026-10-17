@@ -30,7 +30,7 @@ website:
         text: Publicaciones
 
       - href: cursos.qmd
-        text: Cursos
+        text: Docencia
 
       - href: cv.qmd
         text: CV
