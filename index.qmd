@@ -63,26 +63,28 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
 </div>
 
 
+```{=html}
 <div class="home-projects">
-
-<h2>Proyectos destacados</h2>
-
-<div class="project-tiles">
-
-<a class="project-tile" href="dependencia-funcional/">
-<img src="images/proyectos/dependencia_funcional.png" alt="Dependencia funcional en personas mayores">
-<span>Dependencia funcional en personas mayores en Chile</span>
-</a>
-
-<a class="project-tile" href="portafolio/proyecto-1/">
-<img src="images/proyectos/ecuaciones_estructurales.png" alt="Modelo de ecuaciones estructurales">
-<span>Ecuaciones estructurales: personas mayores cuidadoras</span>
-</a>
-
-<a class="project-tile" href="portafolio/soledad-machine-learning/">
-<img src="images/proyectos/random_forest_soledad.png" alt="Modelo Random Forest de soledad">
-<span>Machine learning: soledad no deseada</span>
-</a>
+  <h2 class="home-projects-title">Proyectos destacados</h2>
+  <div class="project-tiles">
+    <a class="project-tile" href="dependencia-funcional/">
+      <img src="images/proyectos/dependencia_funcional.png" alt="Dependencia funcional en personas mayores en Chile">
+      <span class="tile-title">Dependencia funcional en personas mayores en Chile</span>
+      <span class="tile-sub">Análisis estadístico · ENDIDE 2022</span>
+    </a>
+    <a class="project-tile" href="portafolio/proyecto-1/">
+      <img src="images/proyectos/ecuaciones_estructurales.png" alt="Modelo de ecuaciones estructurales">
+      <span class="tile-title">Ecuaciones estructurales: personas mayores cuidadoras</span>
+      <span class="tile-sub">SEM · ENDIDE y Calidad de Vida en la Vejez</span>
+    </a>
+    <a class="project-tile" href="portafolio/soledad-machine-learning/">
+      <img src="images/proyectos/random_forest_soledad.png" alt="Modelo Random Forest de soledad no deseada">
+      <span class="tile-title">Machine learning: soledad no deseada</span>
+      <span class="tile-sub">Árbol de decisión y Random Forest</span>
+    </a>
+  </div>
+</div>
+```
 
 </div>
 
