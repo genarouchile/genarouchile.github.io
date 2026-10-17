@@ -1,3 +1,4 @@
+
 ---
 title: ""
 ---
@@ -28,7 +29,6 @@ Investigación social aplicada · análisis de datos · políticas públicas · 
 
 </div>
 
-
 <div class="home-main">
 
 <p class="research-line">
@@ -38,7 +38,6 @@ Investigación social aplicada · análisis cuantitativo · políticas públicas
 <p class="academic-line">
 Sociólogo · Magíster en Sociología · Doctor en Sociología
 </p>
-
 
 <div class="home-section">
 
@@ -62,30 +61,45 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
 
 </div>
 
+## Proyectos destacados
 
-<div class="home-section">
+<div class="featured-projects">
 
-<div class="home-image">
+<div class="featured-project">
 
-![](images/home/research-interests.png)
+### Índice de Priorización Territorial para CVT
 
-</div>
+Construcción de un índice compuesto para identificar y priorizar comunas para la construcción de Condominios de Viviendas Tuteladas.
 
-<div class="home-content">
-
-## Líneas de investigación
-
-- Investigación social aplicada
-- Análisis cuantitativo y estadístico
-- Análisis territorial y espacial
-- Indicadores sociales
-- Políticas públicas
-- Vulnerabilidad social
-- Cuidados y personas mayores
+[Ver proyecto →](portafolio/proyecto-1/)
 
 </div>
 
+<div class="featured-project">
+
+### Dependencia funcional en Chile
+
+Análisis de la dependencia funcional y su distribución territorial mediante indicadores sociales y datos comunales.
+
+[Ver proyecto →](dependencia-funcional/)
+
 </div>
+
+<div class="featured-project">
+
+### Soledad y aprendizaje automático
+
+Análisis de la soledad mediante técnicas de aprendizaje automático y herramientas de análisis de datos.
+
+[Ver proyecto →](portafolio/soledad-machine-learning/)
+
+</div>
+
+</div>
+
+<p class="all-projects-link">
+<a href="portafolio.html">Ver todos los proyectos →</a>
+</p>
 
 </div>
 
