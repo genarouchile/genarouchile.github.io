@@ -10,6 +10,31 @@ toc-depth: 2
 
 ::: {.project-card}
 
+### Mapa de Personas Mayores en Chile (Censo 2024)
+
+<div class="project-tags">
+<span>Envejecimiento</span>
+<span>Censo 2024</span>
+<span>Análisis territorial</span>
+<span>Cartografía</span>
+</div>
+
+Atlas del envejecimiento en Chile a escala de manzana. Muestra dónde viven las personas de 60 años y más en cada región, con mapas interactivos por región, comuna y manzana.
+
+La primera región publicada es **Tarapacá**; las demás regiones se irán incorporando progresivamente.
+
+[Ver el proyecto →](proyectos/mapa-personas-mayores-censo-2024/index.qmd)
+
+<div class="project-methods">
+
+**Métodos:** R · sf · DuckDB (GeoParquet) · Plotly · cartografía censal de manzanas
+
+</div>
+
+:::
+
+::: {.project-card}
+
 ### Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas
 
 <div class="project-tags">
