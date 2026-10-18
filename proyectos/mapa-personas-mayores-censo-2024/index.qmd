@@ -1,11 +1,11 @@
-
 ---
 title: "Mapa de Personas Mayores en Chile (Censo 2024)"
 subtitle: "Dónde viven las personas de 60 años y más, región por región y manzana por manzana"
 description: "Un atlas del envejecimiento en Chile construido con la cartografía censal de manzanas del Censo de Población y Vivienda 2024."
+image: portada.png
 lang: es
 resources:
-  - "graficos/**"
+  - "tarapaca/*.html"
 ---
 
 ```{=html}
@@ -44,7 +44,7 @@ Chile envejece rápidamente, y conocer dónde viven las personas mayores es clav
   <div><b>19,3%</b><span>de la población registrada en la cartografía de manzanas</span></div>
   <div><b>22,8%</b><span>en <b style="display:inline;font-family:inherit;font-size:inherit;font-weight:700">Valparaíso</b>, la región con mayor proporción de personas mayores</span></div>
 </div>
-<iframe class="mpm-chile" src="graficos/mapa_chile_personas_mayores.html" loading="lazy" title="Mapa de Chile: porcentaje de personas de 60 años y más por región y comuna"></iframe>
+<iframe class="mpm-chile" src="tarapaca/mapa_chile_personas_mayores.html" loading="lazy" title="Mapa de Chile: porcentaje de personas de 60 años y más por región y comuna"></iframe>
 ```
 
 ::: {.mpm-nota}
