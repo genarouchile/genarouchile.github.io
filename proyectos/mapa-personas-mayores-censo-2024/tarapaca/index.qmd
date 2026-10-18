@@ -1,0 +1,110 @@
+---
+title: "Personas Mayores en la Región de Tarapacá (Censo 2024)"
+subtitle: "Dónde viven las personas de 60 años y más, comuna por comuna y manzana por manzana"
+lang: es
+lightbox: true
+resources:
+  - "mapas/**"
+  - "comunas/**"
+---
+
+```{=html}
+<style>
+.mpm-volver{font-size:.9rem;margin:0 0 1.2rem}
+.mpm-cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:.5rem 0 2rem}
+.mpm-cifras div{background:#FFF6F2;border-radius:8px;padding:1rem 1.1rem}
+.mpm-cifras div:first-child{background:#F2433A;color:#fff}
+.mpm-cifras b{display:block;font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:2rem;line-height:1.1}
+.mpm-cifras span{font-size:.88rem;line-height:1.35;display:block;margin-top:.25rem}
+.mpm-nota{font-size:.8rem;color:#5B6B73;margin:.35rem 0 2rem;line-height:1.4}
+.mpm-iframe{width:100%;height:620px;border:0;border-radius:8px;display:block}
+.mpm-leer{background:#FFF6F2;border-left:4px solid #F2433A;padding:.9rem 1.1rem;margin:.5rem 0 1.5rem;font-size:.92rem;line-height:1.5}
+.mpm-leer .tit{display:block;font-weight:700;color:#C9184A;margin-bottom:.3rem}
+.mpm-leer ol{margin:0;padding-left:1.2rem}
+@media (max-width:700px){.mpm-cifras{grid-template-columns:1fr}.mpm-iframe{height:520px}}
+</style>
+<p class="mpm-volver"><a href="../index.html">← Volver al mapa de Chile</a></p>
+<div class="mpm-cifras">
+  <div><b>19,9%</b><span>de la población de <b style="display:inline;font-family:inherit;font-size:inherit;font-weight:700">Pica</b> tiene 60 años y más: la comuna más envejecida de la región</span></div>
+  <div><b>9,1%</b><span>en <b style="display:inline;font-family:inherit;font-size:inherit;font-weight:700;color:#263238">Alto Hospicio</b>, la comuna con menor proporción de personas mayores</span></div>
+  <div><b>4 de 6</b><span>comunas con datos superan el 15% de personas de 60 años y más</span></div>
+</div>
+```
+
+## 1. Las comunas: Pica e Iquique, las más envejecidas
+
+![](mapas/mapa6_comunas_pct60.png){fig-alt="Mapa de las comunas de Tarapacá según el porcentaje de personas de 60 años y más"}
+
+::: {.mpm-nota}
+Porcentaje de personas de 60 años y más sobre el total de personas de cada comuna. Colchane no tiene datos de población en la cartografía de manzanas. Haz clic en el mapa para ampliarlo. Fuente: elaboración propia con datos del Censo de Población y Vivienda 2024 (INE).
+:::
+
+La proporción de personas mayores varía mucho entre las comunas de Tarapacá. **Pica** es la comuna más envejecida (**19,9%**), seguida por **Iquique** (**17,4%**) y **Camiña** (**16,3%**). En el otro extremo, **Alto Hospicio** tiene apenas un **9,1%** de personas de 60 años y más: menos de la mitad que Pica. En toda la región, el **14,0%** de la población registrada tiene 60 años y más (**48.617 personas**), la proporción más baja del país y bajo el total nacional (19,3%).
+
+## 2. Las manzanas: la región completa y sus ciudades
+
+![](mapas/mapa5_region_comunas.png){fig-alt="Mapa de la región de Tarapacá por manzana, con una ampliación de Iquique y Alto Hospicio"}
+
+::: {.mpm-nota}
+Porcentaje de personas de 60 años y más por manzana. A la izquierda, la región completa con los límites comunales; a la derecha, la ampliación de Iquique y Alto Hospicio (zona marcada con línea punteada). Manzanas con menos de 10 personas en gris. Fuente: elaboración propia con datos del Censo de Población y Vivienda 2024 (INE).
+:::
+
+A escala regional, casi toda la superficie corresponde a desierto y altiplano con muy poca población, y las manzanas urbanas resultan casi invisibles. Por eso el mapa incluye una ampliación de **Iquique y Alto Hospicio**, donde vive la mayor parte de la población de la región.
+
+## 3. Explora el mapa interactivo
+
+```{=html}
+<div class="mpm-leer">
+<span class="tit">Cómo usar este mapa</span>
+<ol>
+<li>Usa la rueda del mouse (o dos dedos en el celular) para acercarte o alejarte, y arrastra para moverte por la región.</li>
+<li>Pasa el mouse sobre una manzana (o tócala en el celular) para ver su número de personas, de personas de 60 años y más y su porcentaje.</li>
+<li>Los colores son los mismos de los mapas anteriores: mientras más intenso, mayor proporción de personas mayores.</li>
+</ol>
+</div>
+<iframe class="mpm-iframe" src="mapas/mapa4_tarapaca_interactivo.html" loading="lazy" title="Mapa interactivo de personas mayores por manzana en Tarapacá"></iframe>
+```
+
+::: {.mpm-nota}
+Fuente: elaboración propia con datos del Censo de Población y Vivienda 2024 (INE). Mapa base: © OpenStreetMap, © CARTO.
+:::
+
+## 4. La ciudad en detalle: proporción frente a cantidad
+
+::: {layout-ncol=2}
+![Porcentaje de personas de 60 años y más](mapas/mapa1_iquique_alto_hospicio_pct60.png){group="ciudad"}
+
+![Número de personas de 60 años y más](mapas/mapa2_iquique_alto_hospicio_n60.png){group="ciudad"}
+:::
+
+::: {.mpm-nota}
+Manzanas de Iquique y Alto Hospicio. Haz clic en cada mapa para ampliarlo. Fuente: elaboración propia con datos del Censo de Población y Vivienda 2024 (INE).
+:::
+
+Los dos mapas responden preguntas distintas. El de **porcentaje** muestra **dónde pesan más** las personas mayores dentro de la población de cada manzana; el de **número** muestra **dónde viven más** personas mayores. Una manzana pequeña puede tener un porcentaje alto con pocas personas, y una manzana densa puede concentrar muchas personas mayores con un porcentaje moderado. Para planificar servicios —centros de día, atención domiciliaria, transporte— conviene mirar ambos.
+
+## 5. Cada comuna
+
+Haz clic en una comuna para ver su mapa ampliado.
+
+::: {layout-ncol=3}
+![Iquique](comunas/iquique.png){group="comunas"}
+
+![Alto Hospicio](comunas/alto-hospicio.png){group="comunas"}
+
+![Pozo Almonte](comunas/pozo-almonte.png){group="comunas"}
+
+![Pica](comunas/pica.png){group="comunas"}
+
+![Huara](comunas/huara.png){group="comunas"}
+
+![Camiña](comunas/camina.png){group="comunas"}
+:::
+
+::: {.mpm-nota}
+Cada comuna tiene su propio encuadre, centrado en sus zonas pobladas. Colchane no se incluye porque no tiene datos de población en la cartografía de manzanas. Fuente: elaboración propia con datos del Censo de Población y Vivienda 2024 (INE).
+:::
+
+## Alcances
+
+Los porcentajes de manzanas con pocas personas son inestables, por lo que se muestran en gris cuando la manzana tiene menos de 10 personas. Algunas manzanas o comunas pueden no tener datos publicados en la cartografía censal, probablemente por resguardo de la confidencialidad. Los mapas describen la distribución de la población mayor y no sus causas.
