@@ -65,7 +65,7 @@ Las regiones se numeran de norte a sur. Las que aún no están disponibles se ir
   <div><span class="n">4</span>Región de Atacama<span class="cap">Capital: Copiapó</span><span class="pc">17,8% de personas de 60+</span><span>Próximamente</span></div>
   <div><span class="n">5</span>Región de Coquimbo<span class="cap">Capital: La Serena</span><span class="pc">19,2% de personas de 60+</span><span>Próximamente</span></div>
   <div><span class="n">6</span>Región de Valparaíso<span class="cap">Capital: Valparaíso</span><span class="pc">22,8% de personas de 60+</span><span>Próximamente</span></div>
-  <div><span class="n">7</span>Región Metropolitana de Santiago<span class="cap">Capital: Santiago</span><span class="pc">18,8% de personas de 60+</span><span>Próximamente</span></div>
+  <a href="metropolitana/index.html" style="background:#9B5DE5;color:#FFFFFF!important"><span class="n">7</span>Región Metropolitana de Santiago<span class="cap">Capital: Santiago</span><span class="pc">18,8% de personas de 60+</span><span>Ver mapas →</span></a>
   <div><span class="n">8</span>Región del Libertador General Bernardo O'Higgins<span class="cap">Capital: Rancagua</span><span class="pc">20,5% de personas de 60+</span><span>Próximamente</span></div>
   <div><span class="n">9</span>Región del Maule<span class="cap">Capital: Talca</span><span class="pc">20,1% de personas de 60+</span><span>Próximamente</span></div>
   <div><span class="n">10</span>Región de Ñuble<span class="cap">Capital: Chillán</span><span class="pc">21,5% de personas de 60+</span><span>Próximamente</span></div>
