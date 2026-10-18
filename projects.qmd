@@ -82,7 +82,6 @@ Incluye mapas y gráficos interactivos de autocorrelación espacial, modelos de 
 :::
 
 
-:::
 
 
 ::: {.project-card}
