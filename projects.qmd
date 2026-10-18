@@ -21,7 +21,7 @@ toc-depth: 2
 
 Atlas del envejecimiento en Chile a escala de manzana. Muestra dónde viven las personas de 60 años y más en cada región, con mapas interactivos por región, comuna y manzana.
 
-La primera región publicada es **Tarapacá**; las demás regiones se irán incorporando progresivamente.
+Ya están publicadas **Tarapacá** y la **Región Metropolitana**; las demás regiones se irán incorporando progresivamente.
 
 [Ver el proyecto →](proyectos/mapa-personas-mayores-censo-2024/index.qmd)
 
