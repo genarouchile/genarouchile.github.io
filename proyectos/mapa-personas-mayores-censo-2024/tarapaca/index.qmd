@@ -3,7 +3,7 @@ title: "Personas Mayores en la Región de Tarapacá (Censo 2024)"
 subtitle: "Dónde viven las personas de 60 años y más, comuna por comuna y manzana por manzana"
 lang: es
 resources:
-  - "graficos/**"
+  - "*.html"
 ---
 
 ```{=html}
@@ -35,7 +35,7 @@ resources:
 ## 1. Las comunas
 
 ```{=html}
-<iframe class="mpm-graf comunas" src="graficos/tarapaca_comunas.html" loading="lazy" title="Personas mayores por comuna en Tarapacá"></iframe>
+<iframe class="mpm-graf comunas" src="tarapaca_comunas.html" loading="lazy" title="Personas mayores por comuna en Tarapacá"></iframe>
 ```
 
 
@@ -54,7 +54,7 @@ En números, la historia es otra. **Iquique concentra 33.317 personas mayores**,
 <li>Con «Colorear por» cambias entre el <b>porcentaje</b> (qué tan envejecida está cada manzana) y el <b>número</b> de personas mayores (dónde viven más).</li>
 </ol>
 </div>
-<iframe class="mpm-graf manzanas" src="graficos/tarapaca_manzanas.html" loading="lazy" title="Personas mayores por manzana en Tarapacá"></iframe>
+<iframe class="mpm-graf manzanas" src="tarapaca_manzanas.html" loading="lazy" title="Personas mayores por manzana en Tarapacá"></iframe>
 ```
 
 
