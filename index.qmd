@@ -1,91 +1,98 @@
 ---
-title: ""
+title: "Mapa de Personas Mayores en Chile (Censo 2024)"
+subtitle: "Dónde viven las personas de 60 años y más, región por región y manzana por manzana"
+description: "Un atlas del envejecimiento en Chile construido con la cartografía censal de manzanas del Censo de Población y Vivienda 2024."
+lang: es
+resources:
+  - "graficos/**"
 ---
 
-<div class="home-layout">
-
-<div class="home-sidebar">
-
-![](genaro.jpg){.profile-photo}
-
-# Genaro Marileo
-
-**Sociólogo de la Universidad de Chile**
-
-Investigación social aplicada · análisis de datos · políticas públicas · análisis territorial
-
-<div class="profile-links">
-
-[Correo electrónico](mailto:genarouchile@gmail.com)
-
-[CV](cv.html)
-
-[LinkedIn](https://www.linkedin.com/in/genaro-c-marileo-mill%C3%A1n-257b7a55/)
-
-[GitHub](https://github.com/genarouchile)
-
-</div>
-
-</div>
-
-
-<div class="home-main">
-
-<p class="research-line">
-Investigación social aplicada · análisis cuantitativo · políticas públicas · análisis territorial
-</p>
-
-<p class="academic-line">
-Sociólogo · Magíster en Sociología · Doctor en Sociología
-</p>
-
-
-<div class="home-section">
-
-<div class="home-image">
-
-![](images/home/about-me.png)
-
-</div>
-
-<div class="home-content">
-
-## Sobre mí
-
-Soy sociólogo de la [Universidad de Chile](https://facso.uchile.cl), Magíster en Sociología de la [Pontificia Universidad Católica](https://sociologia.uc.cl/) y Doctor en Sociología en la [Universidad Alberto Hurtado](https://csociales.uahurtado.cl/departamentos/departamento-de-sociologia/). Mi trabajo se orienta al análisis y diseño de políticas públicas, el análisis estadístico y el estudio de problemas públicos mediante herramientas cuantitativas y territoriales.
-
-Mi experiencia combina investigación social, construcción de indicadores, análisis estadístico, evaluación de políticas públicas y análisis espacial. He desarrollado proyectos utilizando datos sociales, administrativos y territoriales, con especial interés en vulnerabilidad social, cuidados, personas mayores y desigualdad territorial.
-
-Actualmente desarrollo investigación aplicada vinculada al análisis territorial y a la generación de evidencia para apoyar la toma de decisiones en políticas públicas.
-
-</div>
-
-</div>
-
-
 ```{=html}
-<div class="home-projects">
-  <h2 class="home-projects-title">Proyectos destacados</h2>
-  <div class="project-tiles">
-    <a class="project-tile" href="dependencia-funcional/">
-      <img src="images/proyectos/dependencia_funcional.png" alt="Dependencia funcional en personas mayores en Chile">
-      <span class="tile-title">Dependencia funcional en personas mayores en Chile</span>
-      <span class="tile-sub">Análisis estadístico · ENDIDE 2022</span>
-    </a>
-    <a class="project-tile" href="portafolio/proyecto-1/">
-      <img src="images/proyectos/ecuaciones_estructurales.png" alt="Modelo de ecuaciones estructurales">
-      <span class="tile-title">Ecuaciones estructurales: personas mayores cuidadoras</span>
-      <span class="tile-sub">SEM · ENDIDE y Calidad de Vida en la Vejez</span>
-    </a>
-    <a class="project-tile" href="portafolio/soledad-machine-learning/">
-      <img src="images/proyectos/random_forest_soledad.png" alt="Modelo Random Forest de soledad no deseada">
-      <span class="tile-title">Machine Learning: Soledad no deseada en personas mayores</span>
-      <span class="tile-sub">Árbol de decisión y Random Forest</span>
-    </a>
-  </div>
+<style>
+.mpm-cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:.5rem 0 1.8rem}
+.mpm-cifras div{background:#FFF6F2;border-radius:8px;padding:1rem 1.1rem}
+.mpm-cifras div:first-child{background:#F2433A;color:#fff}
+.mpm-cifras b{display:block;font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:2rem;line-height:1.1}
+.mpm-cifras span{font-size:.88rem;line-height:1.35;display:block;margin-top:.25rem}
+.mpm-chile{width:100%;height:930px;border:0;display:block}
+@media (max-width:640px){.mpm-cifras{grid-template-columns:1fr}.mpm-chile{height:1550px}}
+.mpm-nota{font-size:.8rem;color:#5B6B73;margin:.35rem 0 2rem;line-height:1.4}
+.mpm-intro{background:#FFF6F2;border-left:4px solid #F2433A;border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin:1rem 0 2rem;font-size:1rem;line-height:1.6}
+.mpm-regiones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem;margin:1rem 0 2rem}
+.mpm-regiones a,.mpm-regiones div{display:block;border-radius:8px;padding:.85rem .9rem;min-height:7.2rem;text-decoration:none!important;font-size:.92rem;line-height:1.3}
+.mpm-regiones a{color:#1F2A33!important;font-weight:700;transition:transform .15s ease,box-shadow .15s ease}
+.mpm-regiones a:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.12)}
+.mpm-regiones a span,.mpm-regiones div span{display:block;font-size:.76rem;font-weight:500;margin-top:.3rem}
+.mpm-regiones div{background:#F3F5F6;color:#8FA0AB;border:1px dashed #D5DDE1}
+.mpm-regiones .n{display:flex;align-items:center;justify-content:center;width:1.6rem;height:1.6rem;border-radius:50%;background:rgba(0,0,0,.07);font-size:.8rem;font-weight:700;margin-bottom:.4rem}
+.mpm-regiones a .n{background:rgba(255,255,255,.25)}
+.mpm-regiones .cap{font-weight:400;opacity:.85}
+.mpm-regiones .pc{font-weight:700;font-size:.8rem!important;margin-top:.45rem!important}
+@media (max-width:700px){.mpm-regiones{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<div class="mpm-intro">
+Chile envejece rápidamente, y conocer dónde viven las personas mayores es clave para planificar servicios de salud, cuidados y transporte. Este proyecto muestra <b>dónde viven las personas de 60 años y más</b> a una escala muy fina —la <b>manzana</b>—, con datos del Censo de Población y Vivienda 2024. Cada región tiene su propia página con mapas interactivos de comunas y de manzanas.
 </div>
 ```
 
-</div>
+## Chile
 
+```{=html}
+<div class="mpm-cifras">
+  <div><b>3.131.693</b><span>personas de 60 años y más en las manzanas censales del país</span></div>
+  <div><b>19,3%</b><span>de la población registrada en la cartografía de manzanas</span></div>
+  <div><b>22,8%</b><span>en <b style="display:inline;font-family:inherit;font-size:inherit;font-weight:700">Valparaíso</b>, la región con mayor proporción de personas mayores</span></div>
 </div>
+<iframe class="mpm-chile" src="graficos/mapa_chile_personas_mayores.html" loading="lazy" title="Mapa de Chile: porcentaje de personas de 60 años y más por región y comuna"></iframe>
+```
+
+::: {.mpm-nota}
+Usa los botones para cambiar entre regiones y comunas. Fuente: elaboración propia con datos del Censo de Población y Vivienda 2024 (INE).
+:::
+
+La proporción de personas mayores es más alta en **Valparaíso (22,8%)** y **Ñuble (21,5%)**, seguidas por Magallanes, Los Ríos, O'Higgins, Biobío y Maule, todas sobre el 20%. Las regiones con menor proporción son **Tarapacá (14,0%)** y **Antofagasta (14,6%)**, en el norte minero. En números absolutos, en cambio, la **Región Metropolitana** concentra a 1.328.633 personas mayores: más de 4 de cada 10 del país.
+
+## Regiones
+
+Las regiones se numeran de norte a sur. Las que aún no están disponibles se irán publicando progresivamente.
+
+```{=html}
+<div class="mpm-regiones">
+  <div><span class="n">1</span>Región de Arica y Parinacota<span class="cap">Capital: Arica</span><span class="pc">18,5% de personas de 60+</span><span>Próximamente</span></div>
+  <a href="tarapaca/index.html" style="background:#F2433A;color:#FFFFFF!important"><span class="n">2</span>Región de Tarapacá<span class="cap">Capital: Iquique</span><span class="pc">14,0% de personas de 60+</span><span>Ver mapas →</span></a>
+  <div><span class="n">3</span>Región de Antofagasta<span class="cap">Capital: Antofagasta</span><span class="pc">14,6% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">4</span>Región de Atacama<span class="cap">Capital: Copiapó</span><span class="pc">17,8% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">5</span>Región de Coquimbo<span class="cap">Capital: La Serena</span><span class="pc">19,2% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">6</span>Región de Valparaíso<span class="cap">Capital: Valparaíso</span><span class="pc">22,8% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">7</span>Región Metropolitana de Santiago<span class="cap">Capital: Santiago</span><span class="pc">18,8% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">8</span>Región del Libertador General Bernardo O'Higgins<span class="cap">Capital: Rancagua</span><span class="pc">20,5% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">9</span>Región del Maule<span class="cap">Capital: Talca</span><span class="pc">20,1% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">10</span>Región de Ñuble<span class="cap">Capital: Chillán</span><span class="pc">21,5% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">11</span>Región del Biobío<span class="cap">Capital: Concepción</span><span class="pc">20,3% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">12</span>Región de La Araucanía<span class="cap">Capital: Temuco</span><span class="pc">19,6% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">13</span>Región de Los Ríos<span class="cap">Capital: Valdivia</span><span class="pc">20,7% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">14</span>Región de Los Lagos<span class="cap">Capital: Puerto Montt</span><span class="pc">17,5% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">15</span>Región de Aysén del General Carlos Ibáñez del Campo<span class="cap">Capital: Coyhaique</span><span class="pc">17,4% de personas de 60+</span><span>Próximamente</span></div>
+  <div><span class="n">16</span>Región de Magallanes y de la Antártica Chilena<span class="cap">Capital: Punta Arenas</span><span class="pc">20,7% de personas de 60+</span><span>Próximamente</span></div>
+</div>
+```
+
+## Datos
+
+- **Fuente:** Censo de Población y Vivienda 2024 (INE), cartografía censal de manzanas en formato GeoParquet, que incluye el número de personas residentes y de personas de 60 años y más en cada manzana o entidad rural.
+- **Indicador principal:** porcentaje de personas de 60 años y más sobre el total de personas de la manzana.
+- **Cobertura:** la cartografía de manzanas registra 16.185.953 personas con datos publicados, menos que el total de población censada, probablemente porque algunas manzanas y entidades rurales no tienen datos publicados, por resguardo de la confidencialidad. Por eso las cifras de este proyecto pueden diferir de las oficiales: según el INE, en el país residen 3.665.028 personas de 60 años y más, el 19,8% de la población.
+- **Indicador complementario:** número de personas de 60 años y más por manzana, para identificar dónde se concentra la población mayor.
+
+## Método
+
+- **Porcentaje y no solo conteo:** las manzanas tienen tamaños y poblaciones muy distintas; el porcentaje permite comparar manzanas entre sí, y el conteo muestra dónde viven más personas mayores.
+- **Manzanas con pocas personas:** cuando una manzana tiene menos de 10 personas, el porcentaje es muy inestable (una persona puede representar el 50%) y se muestra en gris como «sin dato».
+- **Escala común:** todas las regiones usan los mismos cortes de color, para que un mismo porcentaje se vea igual en cualquier región y los mapas puedan compararse.
+- **Ampliaciones urbanas:** a escala regional las manzanas urbanas son casi invisibles, por eso los mapas de manzanas parten en las principales ciudades de cada región y permiten acercarse y recorrer el territorio.
+
+## Herramientas
+
+- **R:** `sf` y `duckdb` para leer la cartografía censal en GeoParquet, calcular los indicadores y exportar las manzanas.
+- **Plotly:** mapas interactivos de Chile, de comunas y de manzanas.
+- **Quarto:** publicación de esta página.
