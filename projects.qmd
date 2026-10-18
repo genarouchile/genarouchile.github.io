@@ -58,24 +58,29 @@ El índice integra dimensiones relacionadas con la población beneficiaria, cond
 
 ::: {.project-card}
 
-### Análisis espacial de la ausencia de cuidados
+### Geografía de la ausencia de cuidados en la Región Metropolitana (Análisis y Econometría Espacial)
 
 <div class="project-tags">
 <span>Cuidados</span>
-<span>Dependencia</span>
-<span>Vulnerabilidad social</span>
+<span>Personas mayores</span>
+<span>CASEN 2024</span>
 <span>Econometría espacial</span>
 </div>
 
-Investigación orientada a analizar la distribución territorial de la ausencia de cuidados y su relación con condiciones de vulnerabilidad social y características de los hogares.
+¿La ausencia de cuidados se distribuye al azar entre las 52 comunas de la Región Metropolitana? Este análisis muestra que no: hay un agrupamiento de comunas con tasas altas en el sur poniente y uno de tasas bajas en el sector oriente, asociados a la pobreza multidimensional y a un efecto de vecindad entre comunas.
 
-El estudio incorpora indicadores de dependencia espacial y modelos de econometría espacial para analizar los patrones territoriales observados.
+Incluye mapas y gráficos interactivos de autocorrelación espacial, modelos de regresión y su diagnóstico.
+
+[Ver el proyecto →](proyectos/ausencia-cuidados-rm/index.qmd)
 
 <div class="project-methods">
 
-**Métodos:** R · sf · spdep · Moran Global · LISA · econometría espacial
+**Métodos:** R · survey · sf · spdep · Moran global · LISA · Getis-Ord Gi* · OLS · modelo de rezago espacial (SAR) · Plotly
 
 </div>
+
+:::
+
 
 :::
 
