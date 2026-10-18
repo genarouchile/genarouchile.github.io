@@ -10,6 +10,7 @@ listing:
     - portafolio/dependencia-funcional-casen-2024/index.qmd
     - portafolio/eleam-distribucion/index.qmd
     - proyectos/mapa-personas-mayores-censo-2024/index.qmd
+    - proyectos/ausencia-cuidados-rm/index.qmd
   type: grid
   grid-columns: 4
   sort: false
