@@ -1,1 +1,72 @@
 
+---
+title: "Personas Mayores en la Región Metropolitana (Censo 2024)"
+subtitle: "Dónde viven las personas de 60 años y más, comuna por comuna y manzana por manzana"
+lang: es
+resources:
+  - "*.html"
+---
+
+```{=html}
+<style>
+.mpm-volver{font-size:.9rem;margin:0 0 1.2rem}
+.mpm-cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:.5rem 0 2rem}
+.mpm-cifras div{background:#F5F0FD;border-radius:8px;padding:1rem 1.1rem}
+.mpm-cifras div:first-child{background:#9B5DE5;color:#fff}
+.mpm-cifras b{display:block;font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:2rem;line-height:1.1}
+.mpm-cifras span{font-size:.88rem;line-height:1.35;display:block;margin-top:.25rem}
+.mpm-cifras em{font-style:normal;font-weight:700}
+.mpm-graf{width:100%;border:0;display:block}
+.mpm-graf.comunas{height:760px}
+.mpm-graf.manzanas{height:900px}
+.mpm-leer{background:#F5F0FD;border-left:4px solid #9B5DE5;padding:.9rem 1.1rem;margin:.5rem 0 1.5rem;font-size:.92rem;line-height:1.5}
+.mpm-leer .tit{display:block;font-weight:700;color:#6A35B0;margin-bottom:.3rem}
+.mpm-leer ol{margin:0;padding-left:1.2rem}
+@media (max-width:640px){.mpm-cifras{grid-template-columns:1fr}.mpm-graf.comunas{height:1250px}.mpm-graf.manzanas{height:1040px}}
+</style>
+<p class="mpm-volver"><a href="../index.html">← Volver al mapa de Chile</a></p>
+<div class="mpm-cifras">
+  <div><b>1.328.633</b><span>personas de 60 años y más en la Región Metropolitana: el <em>18,8%</em> de su población y el <em>42%</em> de todas las personas mayores del país</span></div>
+  <div><b>26,0%</b><span>en <em>Pedro Aguirre Cerda</em>, la comuna con mayor proporción de personas mayores</span></div>
+  <div><b>106.025</b><span>personas mayores en <em>Maipú</em>, la comuna con más personas mayores, seguida por Puente Alto (102.788)</span></div>
+</div>
+```
+
+## 1. Las comunas
+
+```{=html}
+<iframe class="mpm-graf comunas" src="metropolitana_comunas.html" loading="lazy" title="Personas mayores por comuna en la Región Metropolitana"></iframe>
+```
+
+La Región Metropolitana tiene comunas muy envejecidas y otras muy jóvenes. **Pedro Aguirre Cerda (26,0%)**, **Vitacura (24,6%)** y **La Reina (24,0%)** tienen la mayor proporción de personas de 60 años y más, seguidas por Las Condes, La Granja y Lo Espejo. Las comunas con menor proporción están en la periferia norte —**Lampa (9,5%)** y **Colina (10,9%)**—, y **Santiago** centro también tiene una de las más bajas (**12,0%**).
+
+En números, el mapa cambia: **Maipú (106.025)** y **Puente Alto (102.788)** son las comunas con más personas mayores. Entre ambas suman el 16% de las personas mayores de la región, aunque su proporción (21,4% y 18,3%) está cerca del promedio regional.
+
+## 2. Las manzanas
+
+```{=html}
+<div class="mpm-leer">
+<span class="tit">Cómo usar este mapa</span>
+<ol>
+<li>Elige una comuna en el menú, o haz clic en una comuna del mapa de arriba: el mapa de manzanas se actualiza solo.</li>
+<li>Acércate con la rueda del mouse (o con dos dedos en el celular) y pasa el mouse sobre una manzana para ver cuántas personas viven ahí y cuántas tienen 60 años y más.</li>
+<li>Con «Colorear por» cambias entre el <b>porcentaje</b> (qué tan envejecida está cada manzana) y el <b>número</b> de personas mayores (dónde viven más).</li>
+</ol>
+</div>
+<iframe id="mpm-manzanas" class="mpm-graf manzanas" src="metropolitana_manzanas.html" loading="lazy" title="Personas mayores por manzana en la Región Metropolitana"></iframe>
+<script>
+window.addEventListener('message', function (e) {
+  if (!e.data || e.data.tipo !== 'comuna') return;
+  var f = document.getElementById('mpm-manzanas');
+  if (!f || !f.contentWindow) return;
+  f.contentWindow.postMessage(e.data, '*');
+  f.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+```
+
+A escala de manzana, la región muestra mucha variación dentro de cada comuna. En **4 de cada 10 manzanas** con 10 personas o más, las personas mayores representan el 24% o más de quienes viven ahí, y **4.942 manzanas** tienen 50 personas mayores o más. Al elegir una comuna, el mapa indica qué proporción de sus manzanas supera el 24% y cuántas concentran 50 personas mayores o más.
+
+## Alcances
+
+El porcentaje de las manzanas con pocas personas es inestable, por lo que solo se calcula cuando la manzana tiene 10 personas o más. Las cifras corresponden a la cartografía censal de manzanas y pueden diferir levemente de las cifras oficiales del Censo. Los mapas describen dónde viven las personas mayores y no las causas de esa distribución.
