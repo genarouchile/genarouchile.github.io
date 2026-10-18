@@ -82,6 +82,18 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
       <span class="tile-title">Machine Learning: Soledad no deseada en personas mayores</span>
       <span class="tile-sub">Árbol de decisión y Random Forest</span>
     </a>
+
+    <a class="project-tile" href="proyectos/ausencia-cuidados-rm/">
+      <img src="images/proyectos/econometria_espacial_cuidados.png" alt="Mapa de clusters de ausencia de cuidados en la Región Metropolitana">
+      <span class="tile-title">Econometría Espacial: Ausencia de los Cuidados en RM</span>
+      <span class="tile-sub">Moran · LISA · Getis-Ord Gi* · SAR · CASEN 2024</span>
+    </a>
+    <a class="project-tile" href="proyectos/mapa-personas-mayores-censo-2024/">
+      <img src="images/proyectos/mapa_personas_mayores.png" alt="Mapa de personas mayores en Chile por región">
+      <span class="tile-title">Mapa de Personas Mayores en Chile (Censo 2024)</span>
+      <span class="tile-sub">Mapas interactivos · regiones, comunas y manzanas</span>
+    </a>
+
   </div>
 </div>
 ```
