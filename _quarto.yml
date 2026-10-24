@@ -20,9 +20,6 @@ website:
       - href: research.qmd
         text: Investigación
 
-      - href: projects.qmd
-        text: Proyectos
-
       - href: portafolio.qmd
         text: Portafolio
 
