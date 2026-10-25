@@ -1,1 +1,21 @@
+---
+title: "Participación social de las personas mayores en Chile: evolución 2017, 2022 y 2024, según CASEN"
+subtitle: "¿Cuántas personas mayores participan en organizaciones, en cuáles, quiénes y dónde, y cómo ha cambiado su participación entre 2017 y 2024?"
+description: "Participación de las personas de 60 años y más en organizaciones sociales según las encuestas CASEN 2017, 2022 y 2024: evolución, edad, sexo, zona, regiones, tipo de organización y quiénes no participan."
+image: portada.png
+lang: es
+resources:
+  - "ficha_participacion.html"
+---
+
+```{=html}
+<iframe id="ficha-participacion" src="ficha_participacion.html" title="Participación social de las personas mayores en Chile: resultados interactivos" scrolling="no" style="width:100%;border:0;display:block;height:9500px;overflow:hidden"></iframe>
+<script>
+window.addEventListener('message', function (e) {
+  if (e.data && e.data.fichaParticipacion) {
+    document.getElementById('ficha-participacion').style.height = (e.data.fichaParticipacion + 8) + 'px';
+  }
+});
+</script>
+```
 
