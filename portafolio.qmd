@@ -3,6 +3,7 @@ title: "Portafolio"
 page-layout: full
 listing:
   contents:
+    - portafolio/redes-apoyo-personas-mayores/index.qmd
     - portafolio/proyecto-1/index.qmd
     - portafolio/soledad-machine-learning/index.qmd
     - dependencia-funcional/index.qmd
