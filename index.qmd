@@ -70,12 +70,12 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
     <a class="project-tile" href="portafolio/redes-apoyo-personas-mayores/">
       <img src="images/proyectos/redes_apoyo_personas_mayores.png" alt="Redes de apoyo de las personas mayores en Chile, CASEN 2024">
       <span class="tile-title">Redes de apoyo de las personas mayores en Chile</span>
-      <span class="tile-sub">IRT · clases latentes · CASEN 2024</span>
+      <span class="tile-sub">Modelo IRT · Modelo clases latentes · CASEN 2024</span>
     </a>
     <a class="project-tile" href="proyectos/ausencia-cuidados-rm/">
       <img src="images/proyectos/econometria_espacial_cuidados.png" alt="Mapa de clusters de ausencia de cuidados en la Región Metropolitana">
       <span class="tile-title">Econometría Espacial: Ausencia de los Cuidados en RM</span>
-      <span class="tile-sub">Moran · LISA · Getis-Ord Gi* · SAR · CASEN 2024</span>
+      <span class="tile-sub">Moran · LISA · Getis-Ord Gi* · Moodelo SAR · CASEN 2024</span>
     </a>
     <a class="project-tile" href="portafolio/soledad-machine-learning/">
       <img src="images/proyectos/random_forest_soledad.png" alt="Modelo Random Forest de soledad no deseada">
@@ -85,7 +85,7 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
     <a class="project-tile" href="portafolio/proyecto-1/">
       <img src="images/proyectos/ecuaciones_estructurales.png" alt="Modelo de ecuaciones estructurales">
       <span class="tile-title">Ecuaciones estructurales: personas mayores cuidadoras</span>
-      <span class="tile-sub">SEM · ENDIDE y Calidad de Vida en la Vejez</span>
+      <span class="tile-sub">Modelo SEM mediación · Calidad de Vida en la Vejez</span>
     </a>
     <a class="project-tile" href="dependencia-funcional/">
       <img src="images/proyectos/dependencia_funcional.png" alt="Dependencia funcional en personas mayores en Chile">
