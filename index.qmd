@@ -75,7 +75,7 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
     <a class="project-tile" href="proyectos/ausencia-cuidados-rm/">
       <img src="images/proyectos/econometria_espacial_cuidados.png" alt="Mapa de clusters de ausencia de cuidados en la Región Metropolitana">
       <span class="tile-title">Econometría Espacial: Ausencia de los Cuidados en RM</span>
-      <span class="tile-sub">Moran · LISA · Getis-Ord Gi* · Moodelo SAR · CASEN 2024</span>
+      <span class="tile-sub">Moran · LISA · Getis-Ord Gi* · Modelo SAR · CASEN 2024</span>
     </a>
     <a class="project-tile" href="portafolio/soledad-machine-learning/">
       <img src="images/proyectos/random_forest_soledad.png" alt="Modelo Random Forest de soledad no deseada">
