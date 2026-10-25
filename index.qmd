@@ -94,6 +94,12 @@ Actualmente desarrollo investigación aplicada vinculada al análisis territoria
       <span class="tile-sub">Mapas interactivos · regiones, comunas y manzanas</span>
     </a>
 
+<a class="project-tile" href="portafolio/redes-apoyo-personas-mayores/">
+      <img src="images/proyectos/redes_apoyo_personas_mayores.png" alt="Redes de apoyo de las personas mayores en Chile, CASEN 2024">
+      <span class="tile-title">Redes de apoyo de las personas mayores en Chile</span>
+      <span class="tile-sub">IRT · clases latentes · CASEN 2024</span>
+    </a>
+
   </div>
 </div>
 ```
