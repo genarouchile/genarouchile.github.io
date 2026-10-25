@@ -3,11 +3,11 @@ title: "Portafolio"
 page-layout: full
 listing:
   contents:
-    - portafolio/redes-apoyo-personas-mayores/index.qmd
     - portafolio/proyecto-1/index.qmd
     - portafolio/soledad-machine-learning/index.qmd
     - dependencia-funcional/index.qmd
     - portafolio/participacion-social/index.qmd
+    - portafolio/redes-apoyo-personas-mayores/index.qmd
     - portafolio/dependencia-funcional-casen-2024/index.qmd
     - portafolio/eleam-distribucion/index.qmd
     - proyectos/mapa-personas-mayores-censo-2024/index.qmd
