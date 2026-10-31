@@ -1,6 +1,6 @@
 ---
 title: "Redes de apoyo de las personas mayores en Chile, según CASEN 2024"
-subtitle: "¿Qué tipo de red de apoyo tienen los hogares donde viven las personas mayores en Chile, qué ayudas les faltan y quiénes están más desprotegidos?"
+subtitle: "¿Con qué redes de apoyo cuentan los hogares donde viven personas mayores, qué necesidades no están cubiertas y cuáles se encuentran más desprotegidos?"
 description: "Redes de apoyo de las personas de 60 años y más según la Encuesta CASEN 2024: hogares sin ninguna red, tipos de ayuda que faltan, mapa regional, factores asociados, perfiles de red y consecuencias de la falta de apoyo."
 image: portada.png
 lang: es
