@@ -1,7 +1,7 @@
 ---
-title: "Geografía de la ausencia de cuidados en la Región Metropolitana (Análisis y Econometría Espacial)"
+title: "Geografía de la ausencia de cuidados en Personas Mayores de la Región Metropolitana (Econometría Espacial)"
 subtitle: "¿De qué manera la ausencia de cuidados varía en el espacio y qué factores explican su distribución geográfica?"
-description: "Análisis espacial exploratorio y econometría espacial de la ausencia de cuidados en las 52 comunas de la Región Metropolitana, con datos de la Encuesta CASEN 2024."
+description: "Econometría espacial de la ausencia de cuidados en las 52 comunas de la Región Metropolitana, con datos de la Encuesta CASEN 2024."
 image: portada.png
 lang: es
 resources:
@@ -40,13 +40,15 @@ resources:
 .ac-act{border:1px solid #9FE1CB;border-radius:8px;padding:.8rem 1rem;font-size:.88rem;line-height:1.5;margin:1rem 0}
 @media (max-width:640px){.ac-cifras{grid-template-columns:repeat(2,minmax(0,1fr))}
  .ac-graf.tasa{height:2420px}.ac-graf.auto{height:2140px}.ac-graf.modelo{height:1620px}.ac-graf.diag{height:2280px}}
+.ac-intro,#quarto-document-content p:not(.ac-nota),#quarto-document-content li{text-align:justify !important;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+#quarto-document-content section#bibliografía li{text-align:left !important;hyphens:manual}
 </style>
 <div class="ac-intro">
-En Chile, el cuidado de las personas mayores sigue dependiendo en gran medida de los recursos económicos, familiares y comunitarios de cada hogar, e incluso de cada barrio. Este proyecto pregunta si la <b>ausencia de cuidados</b> se distribuye al azar entre las 52 comunas de la Región Metropolitana o si forma <b>patrones territoriales</b>, y qué factores los explican. Para responderlo combina análisis espacial exploratorio (Moran global, LISA y Getis-Ord Gi*) con modelos de regresión OLS y de rezago espacial, a partir de la Encuesta CASEN 2024.
+En Chile, el cuidado de las personas mayores sigue dependiendo en gran medida de los recursos económicos, familiares y comunitarios de cada hogar, e incluso de cada barrio. Este proyecto pregunta si la <b>ausencia de cuidados</b> se distribuye al azar entre las 52 comunas de la Región Metropolitana o si forma <b>patrones territoriales</b>, y qué factores los explican. Para responder este se combinó un análisis espacial exploratorio (Moran global, LISA y Getis-Ord Gi*) con modelos de regresión OLS y de rezago espacial, a partir de la Encuesta CASEN 2024.
 </div>
 <div class="ac-cifras">
   <div><b>15,5%</b><span>de las personas mayores vive, en promedio comunal, en un hogar carente de apoyo en cuidados</span></div>
-  <div><b>24 veces</b><span>más alta es la tasa en <em>Talagante</em> (31,2%) que en <em>Las Condes</em> (1,3%)</span></div>
+  <div><b>24 veces</b><span>más alta es la tasa de ausencia de cuidados en personas mayores en <em>Talagante</em> (31,2%) que en <em>Las Condes</em> (1,3%)</span></div>
   <div><b>I = 0,33</b><span>índice de Moran global: autocorrelación espacial positiva (p &lt; 0,001)</span></div>
   <div><b>46%</b><span>de la variación entre comunas se explica con pobreza y hogares unipersonales</span></div>
 </div>
@@ -54,40 +56,40 @@ En Chile, el cuidado de las personas mayores sigue dependiendo en gran medida de
 
 ## Contexto y pregunta
 
-En los últimos años se habla de una *crisis de los cuidados*: la demanda de cuidados crece y se vuelve más compleja, mientras la oferta de personas cuidadoras disminuye, y el cuidado sigue recayendo sobre todo en las familias y en las mujeres (Arriagada, 2021). El Estado de Chile ha avanzado en un Sistema Nacional de Apoyos y Cuidados, concebido como un nuevo pilar de la protección social (MDSF, 2025). Pero la posibilidad de recibir cuidados sigue condicionada por la capacidad económica, familiar y comunitaria de cada hogar y de cada barrio (Link, 2021). En la Región Metropolitana, además, las comunas difieren mucho en ingresos, servicios y redes de apoyo (ONU Mujeres, 2024).
+En los últimos años se ha acuñado el concepto de la «crisis de los cuidados»: la demanda de cuidados crece y se vuelve más compleja, mientras que la oferta de personas cuidadoras disminuye, y el cuidado sigue recayendo sobre todo en las familias y en las mujeres (Arriagada, 2021). Hoy en día, el Estado de Chile ha avanzado en un Sistema Nacional de Apoyos y Cuidados, el cual, se proyecta como un nuevo pilar de la protección social (MDSF, 2025). Sin embargo, la posibilidad de recibir cuidados sigue condicionada por la capacidad económica, familiar y las redes de cada hogar (Link, 2021). En particular, en la Región Metropolitana, las comunas difieren mucho en ingresos, servicios y redes de apoyo (ONU Mujeres, 2024).
 
-Si estas condiciones se agrupan en el territorio, la ausencia de cuidados también debería hacerlo. La primera ley de la geografía lo resume: todo está relacionado con todo, pero las cosas cercanas están más relacionadas que las lejanas (Tobler, 1970, citado en Anselin et al., 2013). Este proyecto pone a prueba esa idea.
+Si estas condiciones se ordenan de un «determinado modo» en el territorio, la ausencia de cuidados también debería hacerlo. En este sentido, la primera ley de la geografía lo resume: todo está relacionado con todo, pero las cosas cercanas están más relacionadas que las lejanas (Tobler, 1970, citado en Anselin et al., 2013). Este proyecto pone a prueba esta convicción del campo de la geografía.
 
 ```{=html}
 <div class="ac-caja"><span class="t">Pregunta de investigación</span>¿De qué manera la ausencia de cuidados varía en el espacio y qué factores explican su distribución geográfica?
 <span class="t" style="margin-top:.7rem">Hipótesis</span>Existe autocorrelación espacial positiva y significativa en la ausencia de cuidados entre las comunas de la Región Metropolitana, condicionada por la pobreza, los hogares unipersonales, el género y la edad.</div>
 ```
 
-## 1. ¿Dónde falta el cuidado?
+## 1. ¿Dónde está ausente el cuidado?
 
 ```{=html}
 <iframe class="ac-graf tasa" src="cuidados_tasa.html" loading="lazy" title="Tasa de ausencia de cuidados por comuna en la Región Metropolitana"></iframe>
 ```
 
-La tasa de ausencia de cuidados varía enormemente entre comunas. **Talagante (31,2%)**, **Cerro Navia (29,8%)** y **El Bosque (27,9%)** encabezan la lista, seguidas por Colina, Alhué y San Ramón. En el otro extremo están **Las Condes (1,3%)**, **Providencia (3,5%)** y **La Reina (5,1%)**, todas del sector oriente.
+La tasa de ausencia de cuidados varía enormemente entre comunas. Por ejemplo, **Talagante**, con un 31,2%, **Cerro Navia**, con un 29,8%, y **El Bosque**, con un 27,9%, encabezan la lista, seguidas por Colina, Alhué y San Ramón. En el otro extremo están **Las Condes**, con un 1,3%, **Providencia**, con un 3,5%, y **La Reina**, con un 5,1%, todas del sector oriente.
 
-El mapa ya sugiere un orden territorial: las tasas altas aparecen en el **sur poniente** (Melipilla, El Monte, Isla de Maipo, Talagante, Alhué y San Pedro) y en algunas comunas del sur y del poniente del Gran Santiago, mientras que las bajas se concentran en el **oriente**. El ranking también muestra la incertidumbre de la encuesta: en 14 comunas la estimación es imprecisa (coeficiente de variación mayor a 30%), y muchos intervalos de confianza se superponen. Por eso conviene leer el ranking por grupos y no comuna por comuna.
+El mapa ya sugiere un orden territorial: las tasas altas aparecen en el **sur poniente** (Melipilla, El Monte, Isla de Maipo, Talagante, Alhué y San Pedro) y en algunas comunas del sur y del poniente del Gran Santiago, mientras que las bajas se concentran en el sector **oriente**. El ranking también muestra la incertidumbre de la encuesta: en 14 comunas la estimación es imprecisa (coeficiente de variación mayor a 30%), y muchos intervalos de confianza se superponen. Por eso conviene leer el ranking por grupos y no comuna por comuna.
 
-## 2. ¿Es un patrón al azar? ¿Dónde se agrupa?
+## 2. ¿Los cuidados se distribuyen al azar o tienen un ordenamiento particular? (Matriz de Pesos Espaciales)
 
-Para saber si las comunas vecinas se parecen más de lo que se esperaría por azar, primero hay que definir quién es vecino de quién. Aquí se usó una **matriz de pesos espaciales de contigüidad tipo torre** (*rook*): dos comunas son vecinas si comparten un tramo de frontera, no solo un vértice. Es el criterio adecuado para un fenómeno que se organiza por áreas contiguas —el acceso a servicios de salud, al transporte y a redes de apoyo familiar—. La matriz se estandarizó por filas, de modo que el «valor de las vecinas» es el promedio de sus tasas. Cada comuna tiene entre 2 y 10 vecinas.
+Para saber si las comunas vecinas se parecen más de lo que se esperaría por azar, primero hay que definir quién es vecino de quién. Aquí se usó una **matriz de pesos espaciales de contigüidad tipo Rook (Torre)**: dos comunas son vecinas si comparten un tramo de frontera, no solo un vértice. Este es un supuesto teórico respecto a cómo este fenómeno se organiza espacialmente (el acceso a servicios de salud, al transporte y a redes de apoyo familiar). La matriz se estandarizó por filas, de modo que el «valor de las vecinas» es el promedio de sus tasas. Cada comuna tiene entre 2 y 10 vecinas.
 
 ```{=html}
 <iframe class="ac-graf auto" src="cuidados_autocorrelacion.html" loading="lazy" title="Diagrama de Moran y mapa de clusters de la ausencia de cuidados"></iframe>
 ```
 
-### Autocorrelación global
+### Autocorrelación global (Índice de Moran)
 
 ```{=html}
 <div class="ac-scroll"><table class="ac-tabla ac-mini"><thead><tr><th>Moran I</th><th>Valor esperado</th><th>Varianza</th><th>Z</th><th>p-valor (normal)</th><th>p-valor (999 permutaciones)</th></tr></thead><tbody><tr><td class="sig"><b>0,334</b></td><td>−0,020</td><td>0,00694</td><td>4,25</td><td>&lt; 0,001</td><td>0,001</td></tr></tbody></table></div>
 ```
 
-El **índice de Moran global es 0,334**, muy por encima de su valor esperado bajo aleatoriedad (−0,020), con un puntaje Z de 4,25. La prueba de permutaciones lo confirma sin depender del supuesto de normalidad: al repartir al azar las 52 tasas entre las comunas 999 veces, **ninguna permutación alcanzó el valor observado** (el máximo fue 0,29). Se rechaza la hipótesis nula de aleatoriedad espacial: las comunas con tasas altas tienden a estar cerca de otras con tasas altas, y las de tasas bajas, de otras con tasas bajas.
+El **índice de Moran global es 0,334**, muy por encima de su valor esperado por azar (−0,020), con un puntaje Z de 4,25. La prueba de permutaciones lo confirma sin depender del supuesto de normalidad: al repartir al azar las 52 tasas entre las comunas 999 veces, **ninguna permutación alcanzó el valor observado** (el máximo fue 0,29). En ese sentido, se rechaza la hipótesis nula de aleatoriedad espacial: las comunas con tasas altas de ausencia de cuidados tienden a estar cerca de otras con tasas altas, y las de tasas bajas, de otras con tasas bajas de ausencia de cuidados.
 
 El diagrama de dispersión de Moran lo muestra punto por punto. La mayoría de las comunas cae en los cuadrantes **Alto-Alto** (arriba a la derecha) y **Bajo-Bajo** (abajo a la izquierda), y la pendiente positiva de la recta es justamente el índice de Moran.
 
@@ -95,13 +97,13 @@ El diagrama de dispersión de Moran lo muestra punto por punto. La mayoría de l
 
 El índice global dice *que* hay agrupamiento; los indicadores locales dicen *dónde* (Anselin, 1995):
 
-- **Cluster Alto-Alto en el sur poniente:** Melipilla, El Monte e Isla de Maipo tienen tasas altas y están rodeadas de comunas con tasas altas.
-- **Cluster Bajo-Bajo en el oriente:** Las Condes, La Reina, Peñalolén, Vitacura, Providencia y Ñuñoa, las comunas de mayores ingresos de la región. Se suma **San José de Maipo**, un caso particular: es una comuna rural y de baja densidad, por lo que su pertenencia al cluster puede responder más a su vecindad con el oriente que a sus propias condiciones socioeconómicas.
-- **Getis-Ord Gi\*** (Getis y Ord, 1992; Ord y Getis, 1995) llega a la misma geografía y la amplía: un *hot spot* de 99% en Isla de Maipo y de 95% en Melipilla, El Monte, Alhué y San Pedro; un *cold spot* de 99% en Las Condes, La Reina, Ñuñoa, Peñalolén y Providencia, y de 95% en Vitacura, San Joaquín y San José de Maipo.
+- **Cluster Alto-Alto en el sur poniente:** Melipilla, El Monte e Isla de Maipo tienen tasas altas de ausencia de cuidados y están rodeadas de comunas con tasas altas.
+- **Cluster Bajo-Bajo en el oriente:** Las Condes, La Reina, Peñalolén, Vitacura, Providencia y Ñuñoa, las comunas de menor tasa de ausencia de cuidados y mayores ingresos de la región. Se suma **San José de Maipo**, un caso particular: es una comuna rural y de baja densidad, por lo que su pertenencia al cluster puede responder más a su vecindad con el oriente que a sus propias condiciones socioeconómicas.
+- **Getis-Ord Gi\*** (Getis y Ord, 1992; Ord y Getis, 1995): un *hot spot* de 99% en Isla de Maipo y de 95% en Melipilla, El Monte, Alhué y San Pedro; un *cold spot* de 99% en Las Condes, La Reina, Ñuñoa, Peñalolén y Providencia, y de 95% en Vitacura, San Joaquín y San José de Maipo.
 
 Una advertencia: al hacer 52 pruebas a la vez, algunas comunas pueden salir significativas por azar. Con la **corrección FDR** de Benjamini y Hochberg (1995) se mantiene el núcleo Bajo-Bajo del oriente (La Reina, Providencia, Las Condes y Ñuñoa), mientras que el cluster Alto-Alto del sur poniente queda en el límite (Isla de Maipo, q = 0,058). El agrupamiento de tasas bajas en el oriente es, por lo tanto, el hallazgo local más robusto.
 
-## 3. ¿Qué lo explica?
+## 3. ¿Qué explica este ordenamiento en la ausencia de cuidados?
 
 Para explicar la tasa comunal se estimaron dos modelos de regresión lineal (OLS). El **modelo 1** incluye la pobreza multidimensional, la proporción de personas mayores que viven solas (hogar unipersonal), la de personas de 80 años y más y la de mujeres. El **modelo 2** conserva solo las dos primeras, porque edad y género no resultaron significativos.
 
@@ -111,9 +113,9 @@ Para explicar la tasa comunal se estimaron dos modelos de regresión lineal (OLS
 <p class="ac-nota">Coeficiente, error estándar entre paréntesis y p-valor. Las celdas destacadas son significativas al 5%. Las variables son proporciones de las personas de 60 años y más de cada comuna.</p>
 ```
 
-La **pobreza multidimensional** es el factor más fuerte y estable: en el modelo 2, cada 10 puntos más de pobreza entre las personas mayores se asocian con **3,9 puntos más** de ausencia de cuidados (p < 0,001). El mapa bivariado lo muestra en el territorio: buena parte de las comunas con alta ausencia de cuidados son también las más pobres (en azul oscuro: Cerro Navia, El Bosque, La Pintana, Pedro Aguirre Cerda, San Ramón, Colina, San Bernardo, Curacaví y San Pedro). La correlación simple entre ambas variables es 0,64.
+La **pobreza multidimensional** es la variable más importante y estable: en el modelo 2, por cada 10 puntos más de pobreza entre las personas mayores se asocian con **3,9 puntos más** de ausencia de cuidados (p < 0,001). El mapa bivariado lo muestra en el territorio: buena parte de las comunas con alta ausencia de cuidados son también las más pobres (en azul oscuro: Cerro Navia, El Bosque, La Pintana, Pedro Aguirre Cerda, San Ramón, Colina, San Bernardo, Curacaví y San Pedro). La correlación simple entre ambas variables es 0,64.
 
-La proporción de **hogares unipersonales** tiene una asociación **negativa** y significativa en el modelo 2 (−0,47; p = 0,040): a igual nivel de pobreza, las comunas donde más personas mayores viven solas registran *menos* ausencia de cuidados. El resultado es contraintuitivo y debe leerse con cautela. Una posible explicación es que vivir solo en la vejez es más frecuente donde hay más recursos y servicios —Providencia, Las Condes, Santiago, Ñuñoa—, y que el indicador mide carencias del hogar, no de la persona. La edad (80 años y más) y el género no tienen una relación significativa. Los dos modelos explican cerca del **46%** de la variación entre comunas.
+La proporción de **hogares unipersonales** tiene una asociación **negativa** y significativa en el modelo 2 (−0,47; p = 0,040): a igual nivel de pobreza, las comunas donde más personas mayores viven solas registran *menos* ausencia de cuidados. En ese sentido, este resultado es contraintuitivo y debe leerse con cautela. Una posible explicación es que vivir solo en la vejez puede estar asociados a una condición de posibilidad: haber acumulado un mayor grado de recursos y de acceso a servicios en el tiempo (Providencia, Las Condes, Santiago, Ñuñoa) y que el indicador mide carencias del hogar, no de la persona. La edad (80 años y más) y el género no tienen una relación significativa. Los dos modelos explican cerca del **46%** de la variación entre comunas.
 
 El mapa de **residuos** muestra dónde falla el modelo. **Talagante** tiene 13,7 puntos más de ausencia de cuidados de lo que predice su pobreza, seguida por Alhué, Paine, Melipilla y Colina; en cambio, **Lo Espejo**, Pirque y La Granja tienen menos de lo esperado. Que varios residuos altos se ubiquen en el sur poniente es una primera pista de que queda estructura espacial sin explicar.
 
@@ -125,7 +127,7 @@ El mapa de **residuos** muestra dónde falla el modelo. **Talagante** tiene 13,7
 
 El modelo 2 cumple razonablemente los supuestos del OLS. La relación entre residuos y valores ajustados no muestra patrones; la dispersión de los residuos aumenta levemente con los valores ajustados, pero la prueba de Breusch-Pagan no detecta heterocedasticidad (p = 0,17). Los residuos siguen una distribución normal (Shapiro-Wilk, p = 0,65) y no hay colinealidad (VIF = 1,12). **Providencia** es el caso con más *leverage* (0,37), por combinar la menor pobreza con la mayor proporción de personas mayores que viven solas, pero el modelo la predice bien y no supera las curvas de Cook. **Talagante** es la comuna peor explicada, con un residuo estandarizado de 2,8.
 
-## 4. ¿Hace falta un modelo espacial?
+## 4. Pertinencia de un modelo espacial
 
 Si el OLS dejara fuera la estructura espacial, sus residuos estarían autocorrelacionados. La prueba de Moran para residuos de regresión (`lm.morantest`) indica que sí: **I = 0,126; p = 0,028**. Para decidir qué tipo de modelo espacial corresponde, se aplicaron los tests de multiplicadores de Lagrange (Anselin et al., 1996):
 
@@ -143,19 +145,19 @@ Si el OLS dejara fuera la estructura espacial, sus residuos estarían autocorrel
 <div class="ac-scroll"><table class="ac-tabla ac-lm"><thead><tr><th>Test (matriz tipo torre)</th><th>Estadístico</th><th>p-valor</th><th>Pregunta que responde</th></tr></thead><tbody><tr><th>LM-error</th><td>2,06</td><td>0,151</td><td>¿Hay dependencia espacial en los errores? (modelo SEM)</td></tr><tr><th>LM-lag</th><td class="sig">4,05</td><td class="sig">0,044</td><td>¿La tasa depende de la tasa de las comunas vecinas? (modelo SAR)</td></tr><tr><th>LM-error robusto</th><td>0,14</td><td>0,711</td><td>LM-error, controlando por un posible rezago</td></tr><tr><th>LM-lag robusto</th><td>2,12</td><td>0,145</td><td>LM-lag, controlando por un posible error espacial</td></tr><tr><th>SARMA</th><td>4,18</td><td>0,124</td><td>¿Hay dependencia espacial de algún tipo?</td></tr></tbody></table></div>
 ```
 
-Solo el **LM-lag** es significativo (p = 0,044), lo que según la regla de decisión de Anselin apunta a un **modelo de rezago espacial (SAR)**: la tasa de una comuna se relaciona con la tasa de sus vecinas, más allá de su propia pobreza. Los tests robustos no son significativos, así que la evidencia es moderada.
+Solo el **LM-lag** es significativo (p = 0,044), lo que según la regla de decisión de Anselin apunta a un **modelo de rezago espacial (SAR)**: la tasa de una comuna se relaciona con la tasa de sus vecinas, más allá de compartir condiciones materiales similares. Los tests robustos no son significativos, así que la evidencia es moderada.
 
-El SAR estimado por máxima verosimilitud tiene un **ρ = 0,28** (p = 0,059), mejora levemente el ajuste (AIC de −160,6 frente a −159,3 del OLS; razón de verosimilitud = 3,31, p = 0,069) y elimina la autocorrelación de los residuos (I = −0,035; p = 0,58). Los coeficientes casi no cambian. Su ventaja es que permite separar el **efecto directo** de la pobreza en la propia comuna (0,35) del **efecto indirecto** o derrame hacia las vecinas (0,13), para un efecto total de 0,47 (LeSage y Pace, 2009).
+El modelo SAR estimado por máxima verosimilitud tiene un **ρ = 0,28** (p = 0,059), mejora levemente el ajuste (AIC de −160,6 frente a −159,3 del OLS; razón de verosimilitud = 3,31, p = 0,069) y elimina la autocorrelación de los residuos (I = −0,035; p = 0,58). Los coeficientes casi no cambian. Su ventaja es que permite separar el **efecto directo** de la pobreza en la propia comuna (0,35) del **efecto indirecto** o «spillover» hacia las vecinas (0,13), para un efecto total de 0,47 (LeSage y Pace, 2009).
 
 En síntesis, hay dependencia espacial débil a moderada: el OLS es defendible y sus conclusiones se mantienen, pero el SAR captura mejor el patrón territorial.
 
 ## Conclusiones
 
-1. **La ausencia de cuidados no se distribuye al azar en la Región Metropolitana.** El índice de Moran global, la prueba de permutaciones, el LISA y el Getis-Ord Gi* coinciden en una geografía clara: un agrupamiento de tasas altas en el **sur poniente** (Melipilla, El Monte, Isla de Maipo y sus vecinas) y uno de tasas bajas en el **sector oriente** (Las Condes, La Reina, Peñalolén, Vitacura, Providencia y Ñuñoa). El agrupamiento del oriente es el más robusto.
+1. **La ausencia de cuidados no se distribuye al azar en la Región Metropolitana.** El índice de Moran global, la prueba de permutaciones, el LISA y el Getis-Ord Gi* coinciden al mostrar una forma geográfica similar: un agrupamiento de tasas altas en el **sur poniente** (Melipilla, El Monte, Isla de Maipo y sus vecinas) y uno de tasas bajas en el **sector oriente** (Las Condes, La Reina, Peñalolén, Vitacura, Providencia y Ñuñoa). El agrupamiento del oriente sugiere ser el más consistente.
 2. **La hipótesis se confirma parcialmente.** La autocorrelación espacial positiva es significativa, y la pobreza multidimensional y los hogares unipersonales se asocian significativamente con la tasa: la primera la aumenta y los segundos, contra lo esperado, la reducen. La edad y el género no son significativos.
-3. **El territorio importa más allá de la pobreza.** Los residuos del OLS siguen autocorrelacionados y el test LM-lag sugiere un efecto de vecindad, que el modelo SAR estima en ρ = 0,28. Parte de la ausencia de cuidados de una comuna se asocia con la de sus vecinas.
+3. **El territorio es tan importante como la pobreza.** Los residuos del OLS siguen autocorrelacionados y el test LM-lag sugiere un efecto de vecindad, que el modelo SAR estima en ρ = 0,28. Parte de la ausencia de cuidados de una comuna se asocia con la de sus vecinas.
 
-Desde la perspectiva de la política pública, estos resultados muestran que la dimensión territorial debe considerarse en la implementación del Sistema Nacional de Apoyos y Cuidados. Identificar un cluster de comunas con alta ausencia de cuidados en el sur poniente invita a **territorializar la oferta**, que hoy se concibe todavía como homogénea, e incluso «monolítica», a pesar de que las necesidades de cuidado están diferenciadas en el territorio. El efecto de derrame del SAR sugiere, además, que las intervenciones podrían planificarse por grupos de comunas vecinas y no solo comuna por comuna.
+Desde la perspectiva de la política pública, estos resultados muestran que la dimensión territorial es un aspecto importante que va mucho más allá de «colorear mapas». En particular, identificar un cluster de comunas con alta ausencia de cuidados en el sur poniente invita a **territorializar la oferta**, que hoy se concibe todavía como «fragmentada» o «dispersa» de acuerdo a las necesidades de cada comuna, a pesar de que las necesidades de cuidado conforman conglomerados en un territorio. El efecto de «spillover» del modelo SAR sugiere, además, que las intervenciones podrían planificarse por grupos de comunas vecinas y no solo comuna por comuna.
 
 ## Datos y variables
 
@@ -186,7 +188,7 @@ Desde la perspectiva de la política pública, estos resultados muestran que la 
 - **Precisión de CASEN a nivel comunal.** En algunas comunas la muestra es pequeña (entre 117 y 200 personas mayores en San Pedro, Curacaví, María Pinto, Alhué y San José de Maipo), y 14 comunas tienen coeficientes de variación sobre 30%. Las diferencias entre comunas cercanas en el ranking pueden no ser significativas.
 - **El indicador es del hogar.** La tasa mide a las personas mayores que viven en hogares con algún integrante dependiente sin el apoyo necesario; ese integrante no siempre es la persona mayor.
 - **Inferencia ecológica.** Las relaciones se observan entre comunas y no necesariamente se cumplen para las personas.
-- **Asociación, no causalidad.** Los modelos describen asociaciones; no permiten afirmar que la pobreza o la vecindad *causen* la ausencia de cuidados.
+
 
 ## Herramientas
 
@@ -208,3 +210,4 @@ Desde la perspectiva de la política pública, estos resultados muestran que la 
 - ONU Mujeres (2024). *La territorialidad de los cuidados. Principales resultados regionales de los diálogos ciudadanos hacia la construcción del Sistema Nacional de Apoyos y Cuidados*. ONU Mujeres Chile.
 - Ord, J. K. y Getis, A. (1995). Local spatial autocorrelation statistics: distributional issues and an application. *Geographical Analysis*, 27(4), 286–306.
 - Yamagata, Y. y Seya, H. (Eds.) (2020). *Spatial Analysis Using Big Data: Methods and Urban Applications*. Academic Press.
+
