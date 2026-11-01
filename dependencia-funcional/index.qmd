@@ -1,5 +1,5 @@
 ---
-title: "La realidad de la Dependencia Funcional en Personas Mayores en Chile (Versión ENDIDE 2022)"
+title: "La realidad de la Dependencia Funcional en Personas Mayores en Chile (ENDIDE 2022)"
 subtitle: "Un análisis estadístico de la dependencia funcional en personas de 60 años y más con datos de la Encuesta Nacional de Discapacidad y Dependencia (ENDIDE) 2022"
 description: "¿Cuántas personas mayores necesitan ayuda para realizar sus actividades cotidianas? ¿A quiénes afecta más según su edad, género, ingresos, educación y territorio, y cuántas no cuentan con alguien que las cuide?"
 image: portada.png
@@ -54,7 +54,7 @@ resources:
 #quarto-content main.content #title-block-header .subtitle, #quarto-content main.content #title-block-header .description { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
 /* Hallazgos: texto justificado en pantallas anchas; en celular, a la izquierda para evitar espacios grandes */
 #quarto-content main.content .hallazgos .fr { text-align: justify !important; hyphens: auto; -webkit-hyphens: auto; }
-@media (max-width: 600px) { #quarto-content main.content .hallazgos .fr { text-align: left !important; } }
+#quarto-content main.content .referencias p { text-align: left !important; hyphens: manual; padding-left: 2em; text-indent: -2em; overflow-wrap: anywhere; }
 #quarto-content main.content .hallazgos li a, #quarto-content main.content .hallazgos li a:hover { color: #263238 !important; text-decoration: none !important; }
 #quarto-content main.content .hallazgos .fl { color: #0A3D91 !important; }
 </style>
@@ -89,7 +89,7 @@ resources:
   <div>
     <p class="eyebrow">ENDIDE 2022 · Personas de 60 años y más</p>
     <p class="titular">1&nbsp;de&nbsp;cada&nbsp;5 personas mayores en Chile vive <span class="nw">con <em>dependencia funcional</em></span></p>
-    <p class="bajada">El <b>22,2%</b> de las personas de 60 años y más —<b>798.282 personas</b>— tiene dificultades para realizar actividades de la vida diaria y <b>necesita la ayuda de otra persona</b> para llevarlas a cabo.</p>
+    <p class="bajada">El <b>22,2%</b> de las personas de 60 años y más (<b>798.282 personas</b>) tiene dificultades para realizar actividades de la vida diaria y <b>necesita la ayuda de otra persona</b> para llevarlas a cabo.</p>
     <p class="leytit">Nivel de dependencia funcional</p>
     <ul class="leyenda">
       <li><span class="sw" style="background:#0A3D91"></span><span class="n">8,0%</span>Severa<span class="k">288.346 personas</span></li>
@@ -120,19 +120,21 @@ resources:
 </style>
 <section class="hallazgos" aria-label="Hallazgos clave">
 <p class="htit">Hallazgos clave</p>
-<ol><li><a href="#modelo"><span class="n" style="color:#C2410C">A los 60 años</span><span class="fr">las personas mayores <b>más pobres y sin educación</b> ya tienen la misma probabilidad de dependencia funcional que las personas mayores <b>con más dinero</b> a los 85 años.</span><span class="fl">→</span></a></li><li><a href="#cuidado"><span class="n" style="color:#C2410C">32%</span><span class="fr">de las personas mayores con dependencia funcional <b>no cuenta con una persona cuidadora</b> (254.701 personas).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">6 de cada 10</span><span class="fr">personas de <b>85 años y más</b> viven con dependencia funcional (13% entre los 60 y 64 años).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">1,6 veces</span><span class="fr">más dependencia funcional en <b>mujeres</b> (26%) que en hombres (17%).</span><span class="fl">→</span></a></li><li><a href="#territorio"><span class="n" style="color:#0A3D91">Casi el triple</span><span class="fr">de personas mayores con dependencia funcional, en proporción, hay en <b>La Araucanía</b> (31%) que en Magallanes (11%).</span><span class="fl">→</span></a></li></ol>
+<ol><li><a href="#modelo"><span class="n" style="color:#C2410C">A los 60 años</span><span class="fr">las personas mayores <b>más pobres (quintil I) y sin educación</b> ya tienen la misma probabilidad de dependencia funcional que las personas mayores <b>con más dinero (quintil V)</b> a los 85 años.</span><span class="fl">→</span></a></li><li><a href="#cuidado"><span class="n" style="color:#C2410C">32%</span><span class="fr">de las personas mayores con dependencia funcional <b>no cuenta con una persona cuidadora</b> (254.701 personas).</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">6 de cada 10</span><span class="fr">personas de <b>85 años y más</b> viven con dependencia funcional, frente a un 13% entre los 60 y 64 años.</span><span class="fl">→</span></a></li><li><a href="#edad"><span class="n" style="color:#0A3D91">1,6 veces</span><span class="fr">más dependencia funcional en <b>mujeres</b>, con un 26%, que en hombres, con un 17%.</span><span class="fl">→</span></a></li><li><a href="#territorio"><span class="n" style="color:#0A3D91">Casi el triple</span><span class="fr">de personas mayores con dependencia funcional, en proporción, hay en <b>La Araucanía</b>, con un 31%, que en Magallanes, con un 11%.</span><span class="fl">→</span></a></li></ol>
 </section>
 ```
 
 ## Contexto
 
-Chile envejece rápidamente, y con ello crece el número de personas que necesitan ayuda de otras para realizar las actividades de la vida diaria. Conocer cuántas son, quiénes son y cómo se distribuye la dependencia funcional es la base para diseñar un sistema de cuidados.
+Chile atraviesa un acelerado proceso de envejecimiento demográfico, que plantea crecientes desafíos para la organización de los cuidados. En este escenario, conocer la magnitud de la dependencia funcional, las características de quienes la experimentan y su distribución territorial constituye un insumo fundamental para identificar necesidades de apoyo y orientar el diseño de políticas públicas y de un sistema de cuidados que responda a las distintas realidades de las personas mayores.
 
-::: {.definicion}
-**Dependencia funcional:** situación en la que se presentan dos elementos de manera conjunta: (i) una **limitación** (más o menos severa) de una persona para realizar actividades, por motivos de salud, en interacción con los factores del contexto ambiental, y (ii) una **necesidad de ayuda** por parte de otra(s) persona(s).
-:::
+### Dependencia funcional
 
-Esta definición guía todo el análisis: no basta con tener una limitación; la dependencia funcional existe cuando esa limitación va acompañada de la necesidad de ayuda de otra persona.
+La dependencia funcional se entiende como una situación en la que las personas requieren asistencia o apoyo de terceros para realizar actividades de la vida cotidiana, debido a limitaciones físicas, cognitivas o psíquicas (Consejo de Europa, 1998). Estas actividades comprenden acciones básicas de autocuidado, como bañarse, vestirse y alimentarse, así como actividades instrumentales necesarias para desenvolverse de manera independiente en el hogar y la comunidad (Katz et al., 1963; Lawton y Brody, 1969).
+
+Respecto de lo anterior, la dependencia funcional debe distinguirse de la discapacidad. Mientras esta última comprende una construcción simbólica que combina las limitaciones en la actividad y las restricciones en la participación que surgen de la interacción entre las condiciones de salud y los factores contextuales, la dependencia se refiere específicamente a la necesidad de asistencia para realizar actividades cotidianas (OMS, 2001). En consecuencia, una persona con discapacidad puede mantener su independencia funcional mediante adaptaciones, tecnologías de apoyo o condiciones ambientales favorables; del mismo modo, una persona puede requerir asistencia sin contar con un reconocimiento formal de discapacidad.
+
+Aunque la dependencia funcional aumenta con la edad, no constituye una consecuencia inevitable del envejecimiento. Su expresión involucra las capacidades individuales, las condiciones sociales y ambientales y la disponibilidad de apoyos. Por ello, su estudio permite comprender tanto las necesidades de cuidado como las desigualdades en el acceso a estos apoyos.
 
 Preguntas que guían el análisis:
 
@@ -150,7 +152,7 @@ Preguntas que guían el análisis:
 ## Método
 
 - Estimaciones con **diseño muestral complejo** (estratos, conglomerados y factor de expansión), con intervalos de confianza al 95% y coeficiente de variación.
-- **Validación:** la prevalencia estimada reproduce la cifra oficial de ENDIDE 2022 para personas de 60 años y más (22,2%).
+- **Validación:** la prevalencia estimada reproduce la cifra oficial de ENDIDE 2022 para personas de 60 años y más, que es de 22,2%.
 - **Criterio de calidad:** estimaciones con menos de 60 casos o coeficiente de variación mayor a 30% se señalan como poco fiables.
 - Análisis de asociación con pruebas para muestras complejas y **regresión logística** con diseño muestral para estimar brechas ajustadas por edad.
 
@@ -165,12 +167,12 @@ Preguntas que guían el análisis:
 :::
 
 ::: {.grafico-nota}
-Porcentaje de personas de 60 años y más con dependencia funcional. Las bandas muestran el intervalo de confianza al 95%; los puntos huecos, estimaciones con menos de 60 casos. Usa los botones para ver solo la dependencia funcional severa. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+Porcentaje de personas de 60 años y más con dependencia funcional. Las bandas muestran el intervalo de confianza al 95%; los puntos huecos, estimaciones con menos de 60 casos. Usa los botones para ver la dependencia funcional leve, moderada o severa. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
 :::
 
-La dependencia funcional no crece de manera pareja: hasta los 74 años aumenta lentamente (de 13% a 18%), pero **desde los 75 se acelera**, y sobre los 85 años **6 de cada 10 personas** viven con dependencia funcional. Lo que más cambia es la severidad: la dependencia funcional severa pasa de 3% entre los 60 y 64 años a **38% en las personas de 85 y más**.
+La dependencia funcional no aumenta del mismo modo: hasta los 74 años aumenta lentamente, del 13% al 18%, pero **desde los 75 se acelera**, y sobre los 85 años **6 de cada 10 personas** viven con dependencia funcional. Lo que más cambia es la severidad: la dependencia funcional severa pasa de 3% entre los 60 y 64 años a **38% en las personas de 85 y más**.
 
-Las mujeres mayores presentan más dependencia funcional que los hombres (**26,4% frente a 16,9%**), y su prevalencia es mayor en todos los tramos de edad. La brecha no se explica solo porque las mujeres vivan más: se observa también al comparar a mujeres y hombres de la misma edad. En la dependencia funcional severa, la diferencia se concentra después de los 85 años (41% frente a 31%).
+Las mujeres mayores presentan más dependencia funcional que los hombres, con **26,4% frente a 16,9%**, y su prevalencia es mayor en todos los tramos de edad. La brecha no se explica solo porque las mujeres vivan más: se observa también al comparar a mujeres y hombres de la misma edad. En la dependencia funcional severa, la diferencia se concentra después de los 85 años, con un 41% frente a un 31%.
 
 ### 2. La desigualdad de ingresos marca la dependencia funcional, hasta los 80 años {#ingresos}
 
@@ -182,9 +184,9 @@ Las mujeres mayores presentan más dependencia funcional que los hombres (**26,4
 Porcentaje de personas con dependencia funcional según quintil de ingreso autónomo per cápita del hogar. Las líneas sobre cada barra muestran el intervalo de confianza al 95%. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
 :::
 
-La dependencia funcional sigue un **gradiente social**: entre las personas mayores del 20% de hogares más pobres alcanza el **27%**, y en el 20% más rico, el **14%**. Las personas mayores del quintil más pobre tienen el **doble de dependencia funcional** que las del más rico (índice relativo de desigualdad ≈ 2,0).
+La dependencia funcional presenta un marcado **gradiente social** según el nivel de ingresos. Afecta al **27%** de las personas mayores pertenecientes al quintil de menores ingresos, frente al **14%** de aquellas del quintil más rico, lo que representa una prevalencia casi dos veces mayor en el grupo más vulnerable.
 
-La brecha no se explica por diferencias de edad entre quintiles: se observa dentro de cada tramo. Entre los 60 y 69 años, la dependencia funcional es casi **tres veces mayor** en el quintil más pobre (19%) que en el más rico (7%), y entre los 70 y 79 años, de 26% frente a 16%. Sobre los 80 años, en cambio, la diferencia desaparece: la dependencia funcional afecta a cerca de la mitad de las personas en todos los quintiles. Es un patrón conocido en los estudios de envejecimiento: en las edades más avanzadas, el deterioro asociado a la edad tiende a igualar las condiciones de salud entre grupos sociales.
+Esta desigualdad también se observa al comparar personas de edades similares. Entre los 60 y 69 años, la dependencia funcional alcanza al 19% de las personas del quintil más pobre, frente al 7% del más rico. Entre los 70 y 79 años, la diferencia se mantiene, con prevalencias del 26% y 16%, respectivamente. Sin embargo, a partir de los 80 años, la dependencia funcional afecta a cerca de la mitad de las personas mayores de todos los quintiles, reduciéndose el efecto de las diferencias socioeconómicas.
 
 ### 3. El nivel educacional condiciona la dependencia funcional, incluso después de los 80 años {#educacion}
 
@@ -196,7 +198,7 @@ La brecha no se explica por diferencias de edad entre quintiles: se observa dent
 Porcentaje de personas con dependencia funcional según el nivel educacional alcanzado. Las líneas sobre cada barra muestran el intervalo de confianza al 95%; el grupo sin educación formal tiene pocos casos en cada tramo de edad, por lo que sus intervalos son más amplios. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
 :::
 
-El nivel educacional marca una brecha aún mayor que el ingreso. Entre las personas mayores que **nunca asistieron a la escuela**, la mitad (**52%**) vive con dependencia funcional: casi **cuatro veces más** que entre quienes alcanzaron la **educación superior** (**14%**). En la dependencia funcional severa la diferencia es todavía mayor: 27% frente a 3%.
+El nivel educacional marca una brecha aún mayor que el ingreso. Entre las personas mayores que **nunca asistieron a la escuela**, la mitad, un **52%**, vive con dependencia funcional: casi **cuatro veces más** que entre quienes alcanzaron la **educación superior**, con un **14%**. En la dependencia funcional severa la diferencia es todavía mayor: 27% frente a 3%.
 
 A diferencia del ingreso, **la brecha educacional se mantiene en todas las edades**, incluso sobre los 80 años, donde la dependencia funcional llega al 63% entre quienes no tienen educación formal y al 34% entre quienes tienen educación superior. La educación, adquirida en la juventud, aparece así como un **condicionante de largo plazo**: se asocia a menor dependencia funcional durante toda la vejez, posiblemente a través de las trayectorias de trabajo, salud y acceso a recursos que acompañan a cada nivel educacional. Al tratarse de un estudio transversal, estas relaciones son asociaciones y no permiten establecer causalidad.
 
@@ -213,7 +215,7 @@ A diferencia del ingreso, **la brecha educacional se mantiene en todas las edade
 <li><b>A la izquierda</b> están las personas mayores con dependencia funcional, separadas según su nivel: leve, moderada y severa.</li>
 <li><b>A la derecha</b> se ve qué ocurre con ellas: si tienen o no una persona que las cuide y, cuando la tienen, si su cuidador principal es una mujer o un hombre.</li>
 <li>Cada <b>franja</b> representa un grupo de personas: mientras más gruesa, más personas. Las franjas <span style="color:#E8590C"><b>naranjas</b></span> muestran a quienes no tienen persona cuidadora.</li>
-<li><b>Ejemplo:</b> de las 199 mil personas mayores con dependencia funcional leve, <b>117 mil (59%) no tienen persona cuidadora</b>. En la dependencia funcional moderada son 102 mil de 311 mil (33%), y en la severa, 35 mil de 288 mil (12%).</li>
+<li><b>Ejemplo:</b> de las 199 mil personas mayores con dependencia funcional leve, <b>117 mil, el 59%, no tienen persona cuidadora</b>. En la dependencia funcional moderada son 102 mil de 311 mil, el 33%, y en la severa, 35 mil de 288 mil, el 12%.</li>
 <li><b>En resumen:</b> a mayor dependencia funcional, más personas reciben cuidado, pero incluso en la severa 1 de cada 8 no lo tiene. Y cuando hay cuidado, en 3 de cada 4 casos lo entrega una mujer.</li>
 </ol>
 </div>
@@ -247,9 +249,9 @@ El cuidado, además, tiene rostro de mujer y de vejez: **3 de cada 4** personas 
 Necesita ayuda: declara necesitar ayuda de otra persona "muchas veces" o "siempre" para realizar la actividad. A quienes no declararon dificultad en una actividad no se les preguntó por la ayuda y se cuentan como sin necesidad de ayuda. La columna Total es el promedio de los tres niveles ponderado por su población. Este análisis describe el contenido de la dependencia funcional y no sus causas, ya que estas actividades forman parte de su medición. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
 :::
 
-La necesidad de ayuda sigue un orden claro. Las primeras actividades en requerir apoyo son las que ocurren **fuera de la casa**: hacer compras o ir al médico (**70%**), caminar o subir peldaños (**62%**) y salir a la calle (**61%**). Ya en la dependencia funcional moderada, dos de cada tres personas necesitan ayuda para salir a la calle.
+La necesidad de ayuda sigue un orden. Las primeras actividades en requerir apoyo son las que ocurren **fuera de la casa**: hacer compras o ir al médico, que alcanza el **70%**; caminar o subir peldaños, el **62%**; y salir a la calle, el **61%**. Ya en la dependencia funcional moderada, dos de cada tres personas necesitan ayuda para salir a la calle.
 
-Las actividades de **cuidado personal** —asearse, vestirse, usar el baño, acostarse o alimentarse— casi no requieren ayuda en los niveles leve y moderado (menos del 8%), pero en la dependencia funcional severa la necesitan entre el **32% y el 67%**. Este patrón coincide con lo descrito en la literatura gerontológica: la pérdida de autonomía suele comenzar por las actividades instrumentales y de movilidad, y alcanza el cuidado personal en las etapas más severas.
+Las actividades de **cuidado personal** (asearse, vestirse, usar el baño, acostarse o alimentarse) presentan bajos requerimientos de ayuda en los niveles leve y moderado de dependencia funcional, inferiores al 8%. Sin embargo, en la dependencia severa, entre el **32% y el 67%** de las personas mayores requiere asistencia para realizarlas. Este patrón es consistente con la evidencia longitudinal de Edjolo et al. (2016), quienes identifican una secuencia jerárquica de pérdida funcional: las limitaciones aparecen inicialmente en las actividades instrumentales y, posteriormente, se extienden a las actividades básicas de autocuidado, alcanzando las mayores restricciones en las etapas más avanzadas de dependencia.
 
 ### 6. La dependencia funcional también varía según el territorio {#territorio}
 
@@ -261,7 +263,7 @@ Las actividades de **cuidado personal** —asearse, vestirse, usar el baño, aco
 <span class="tit">Cómo leer este gráfico</span>
 <ol>
 <li>Cada <b>punto</b> es una región, ordenadas de norte (arriba) a sur (abajo). El número indica el porcentaje de personas mayores de esa región que vive con dependencia funcional.</li>
-<li>La <b>línea punteada vertical</b> es el <b>promedio nacional</b>: en Chile, el <b>22,2%</b> de las personas de 60 años y más —unas 798 mil personas— vive con dependencia funcional. La <b>franja gris</b> que la rodea es su margen de error (entre 21,2% y 23,2%).</li>
+<li>La <b>línea punteada vertical</b> es el <b>promedio nacional</b>: en Chile, el <b>22,2%</b> de las personas de 60 años y más (unas 798 mil personas) vive con dependencia funcional. La <b>franja gris</b> que la rodea es su margen de error, que va de 21,2% a 23,2%.</li>
 <li>La <b>línea horizontal</b> de cada región es su margen de error (intervalo de confianza al 95%): el valor real de la región se encuentra, con alta probabilidad, dentro de ese rango. Las regiones con menos personas encuestadas tienen líneas más largas.</li>
 <li>Una región está <b style="color:#A61E4D">sobre</b> o <b style="color:#0A3D91">bajo</b> el promedio nacional solo cuando su línea <b>no toca</b> la franja gris. Si la toca (en <b style="color:#8FA0AB">gris</b>), la diferencia con el promedio no es concluyente.</li>
 <li><b>Ejemplo:</b> en La Araucanía, el 31% de las personas mayores vive con dependencia funcional, casi 9 puntos más que el promedio nacional; en Magallanes, el 11%, la mitad del promedio.</li>
@@ -272,11 +274,11 @@ Las actividades de **cuidado personal** —asearse, vestirse, usar el baño, aco
 Porcentaje de personas de 60 años y más con dependencia funcional en cada región. El criterio de comparación con el promedio nacional (intervalos que no se traslapan) es conservador: diferencias pequeñas pueden no aparecer como significativas. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
 :::
 
-La dependencia funcional en las personas mayores va desde el **11%** en Magallanes hasta el **31%** en La Araucanía. Las regiones del **centro-sur** —Ñuble, Biobío, La Araucanía, Los Ríos y Los Lagos— presentan los valores más altos, y La Araucanía y Los Ríos superan claramente el promedio nacional. En el otro extremo, Magallanes y Antofagasta tienen la menor dependencia funcional del país.
+La dependencia funcional en las personas mayores va desde el **11%** en Magallanes hasta el **31%** en La Araucanía. Las regiones del **centro-sur** (Ñuble, Biobío, La Araucanía, Los Ríos y Los Lagos) presentan los valores más altos, y La Araucanía y Los Ríos superan claramente el promedio nacional. En el otro extremo, Magallanes y Antofagasta tienen la menor dependencia funcional del país.
 
-La diferencia no se explica simplemente por la ruralidad: la dependencia funcional es prácticamente igual en zonas **urbanas (22,1%)** y **rurales (23,1%)**. Las brechas territoriales parecen responder más bien a la composición social de cada región —edad, ingresos y nivel educacional de su población mayor—, algo que el modelo multivariado permitirá examinar.
+La diferencia no se explica simplemente por la ruralidad: la dependencia funcional es prácticamente igual en zonas **urbanas, con 22,1%**, y **rurales, con 23,1%**. Las brechas territoriales parecen responder más bien a la composición social de cada región (edad, ingresos y nivel educacional de su población mayor), algo que el modelo multivariado permitirá examinar.
 
-### 7. Todo a la vez: ¿qué factores se asocian con la dependencia funcional? {#modelo}
+### 7. Análisis multivariado: ¿qué factores se asocian con la dependencia funcional? {#modelo}
 
 Los gráficos anteriores muestran cada factor por separado. Pero la edad, los ingresos y la educación están relacionados entre sí: las personas mayores de más edad suelen tener menos años de estudio, y quienes tienen menos educación suelen vivir en hogares más pobres. Para distinguir el peso de cada uno se estimó un **modelo de regresión logística con diseño muestral complejo**, que considera simultáneamente la edad, el sexo, el quintil de ingreso, el nivel educacional y la zona (urbana o rural).
 
@@ -289,13 +291,13 @@ Los gráficos anteriores muestran cada factor por separado. Pero la edad, los in
 <ol>
 <li>Cada <b>línea</b> es un perfil de persona mayor. El modelo estima qué <b>probabilidad</b> tiene ese perfil de vivir con dependencia funcional en cada rango de edad.</li>
 <li>La línea <b style="color:#A61E4D">granate</b> es una mujer de un hogar del quintil más pobre y sin educación formal; la <b style="color:#0A3D91">azul</b>, un hombre del quintil más acaudalado con educación superior; la <b style="color:#8FA0AB">gris punteada</b>, un perfil intermedio.</li>
-<li>La <b>línea horizontal punteada</b> parte del primer punto granate (60 a 64 años, 34%) y llega hasta el último punto azul (85 años y más, 36%): ambos perfiles tienen <b>la misma probabilidad, aunque los separan 20 años de edad</b>. No muestra lo que le ocurrirá a una misma persona con los años, sino una comparación entre personas distintas en un mismo momento.</li>
+<li>La <b>línea horizontal punteada</b> parte del primer punto granate (60 a 64 años), que marca un 34%, y llega hasta el último punto azul (85 años y más), que marca un 36%: ambos perfiles tienen <b>la misma probabilidad, aunque los separan 20 años de edad</b>. No muestra lo que le ocurrirá a una misma persona con los años, sino una comparación entre personas distintas en un mismo momento.</li>
 <li>Son probabilidades <b>estimadas por el modelo</b> para perfiles tipo en zona urbana, no porcentajes observados directamente en la encuesta.</li>
 </ol>
 </div>
 
 ::: {.grafico-nota}
-Probabilidades predichas a partir de una regresión logística binaria (con dependencia funcional = 1) estimada con SPSS 25, Muestras complejas (estrato, conglomerado y factor de expansión), en la subpoblación de 60 años y más (n = 9.167). R² de Nagelkerke = 0,18. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
+Probabilidades predichas a partir de una regresión logística binaria (con dependencia funcional = 1) estimada con R, con muestras complejas (estrato, conglomerado y factor de expansión), en la subpoblación de 60 años y más (n = 9.167). R² de Nagelkerke = 0,18. Fuente: elaboración propia con datos de ENDIDE 2022 (SENADIS – MDSF).
 :::
 
 Al considerar todos los factores a la vez, **la edad, el sexo, el ingreso y la educación mantienen una asociación significativa** con la dependencia funcional (p < 0,001 en todos los casos). La zona, en cambio, no muestra diferencias una vez que se consideran los demás factores, lo que es coherente con lo observado en la sección anterior.
@@ -323,24 +325,24 @@ OR mayor que 1: mayores chances de dependencia funcional que la categoría de re
 - **Ingreso:** las personas mayores de los cuatro primeros quintiles presentan mayores chances que las del quintil más rico; la brecha es mayor en los quintiles I y II (**1,7 veces**).
 - **Educación:** no haber tenido educación formal casi **triplica** las chances respecto de la educación superior. Entre educación media y superior no hay diferencias significativas.
 
-El resultado más elocuente aparece en el gráfico: **una mujer de 60 a 64 años, del hogar más pobre y sin educación formal, tiene la misma probabilidad de vivir con dependencia funcional (34%) que un hombre de 85 años y más, del quintil más acaudalado y con educación superior (36%)**. Es decir, la diferencia en sus condiciones sociales pesa tanto como una diferencia de 20 años de edad.
+En ese sentido, el resultado más importante aparece en el gráfico: **una mujer de 60 a 64 años, del hogar más pobre y sin educación formal, tiene la misma probabilidad de vivir con dependencia funcional, un 34%, que un hombre de 85 años y más, del quintil más acaudalado y con educación superior, quien alcanza un 36%**. Es decir, la diferencia en sus condiciones sociales pesa tanto como una diferencia de 20 años de edad.
 
-Esta comparación debe leerse con cautela. Como ENDIDE observa a las personas en un solo momento, no permite afirmar que la desigualdad *adelante* la dependencia funcional en la trayectoria de cada persona: se comparan personas distintas, de generaciones distintas, y no a las mismas personas a lo largo del tiempo. Además, las personas de 85 años y más son quienes sobrevivieron hasta esa edad, lo que puede subestimar las diferencias en los tramos de más edad. Para hablar de un "adelanto" en sentido estricto se requerirían datos longitudinales, que sigan a las mismas personas durante su envejecimiento.
+Ahora bien, esta comparación debe leerse con cautela. Como ENDIDE observa a las personas en un solo momento, no permite afirmar que las variables de "desigualdad" aceleren por "necesidad" la dependencia funcional en la trayectoria de cada persona mayor: se comparan personas distintas, de generaciones distintas, y no a las mismas personas a lo largo del tiempo. Además, las personas de 85 años y más son quienes sobrevivieron hasta esa edad, lo que puede subestimar las diferencias en los tramos de más edad. Para hablar de una "aceleración" en sentido estricto se requerirían datos longitudinales, que sigan a las mismas personas durante su envejecimiento.
 
-Estos resultados describen **asociaciones**, no relaciones causales: ENDIDE es una encuesta transversal, por lo que no permite establecer el orden temporal entre las condiciones sociales y la dependencia funcional, y el modelo explica una parte acotada de la variación (R² de Nagelkerke = 0,18). Aun así, muestran que la dependencia funcional en la vejez no depende solo de la edad, sino también de las desigualdades acumuladas a lo largo de la vida.
+Cabe mencionar algo obvio pero necesario: estos resultados describen **asociaciones**, no relaciones causales. ENDIDE es una encuesta transversal, por lo que no permite establecer el orden temporal entre las condiciones sociales y la dependencia funcional, y el modelo explica una parte acotada de la variación (R² de Nagelkerke = 0,18). Aun así, muestran que la dependencia funcional en la vejez no depende solo de la edad, sino también de las desigualdades acumuladas a lo largo de la vida.
 
 
 ## Conclusiones
 
-**La dependencia funcional es una realidad extendida en la vejez.** El 22,2% de las personas de 60 años y más —798.282 personas— vive con dependencia funcional, y el 8,0% presenta dependencia funcional severa. No se trata de un fenómeno marginal, sino de una condición que alcanza a una de cada cinco personas mayores en Chile.
+**La dependencia funcional es una realidad extendida en la vejez.** El 22,2% de las personas de 60 años y más (798.282 personas) vive con dependencia funcional, y el 8,0% presenta dependencia funcional severa. No se trata de un fenómeno marginal, sino de una condición que alcanza a una de cada cinco personas mayores en Chile.
 
-**La edad marca el ritmo, pero no explica todo.** La dependencia funcional aumenta con la edad y se acelera desde los 75 años, hasta alcanzar a seis de cada diez personas de 85 años y más. Las mujeres mayores presentan más dependencia funcional que los hombres en todos los tramos de edad.
+**La edad marca un ritmo, pero no explica todo.** La dependencia funcional aumenta con la edad y se acelera desde los 75 años, hasta alcanzar a seis de cada diez personas de 85 años y más. Las mujeres mayores presentan más dependencia funcional que los hombres en todos los tramos de edad.
 
-**La desigualdad social acompaña a la dependencia funcional.** Aun considerando la edad, el sexo y la zona, el ingreso y el nivel educacional mantienen una asociación significativa con la dependencia funcional. La distancia entre los perfiles sociales extremos es equivalente a unos 20 años de edad: a los 60 años, las personas mayores más pobres y sin educación formal tienen la misma probabilidad estimada que las más acaudaladas y con educación superior a los 85.
+**La desigualdad social es un proceso que va de la mano con el incremento de la dependencia funcional.** Aun considerando la edad, el sexo y la zona, el ingreso y el nivel educacional mantienen una asociación significativa con la dependencia funcional. La distancia entre los perfiles sociales extremos es equivalente a unos 20 años de edad: a los 60 años, las personas mayores más pobres y sin educación formal tienen la misma probabilidad estimada que las más acaudaladas y con educación superior a los 85.
 
-**El cuidado no alcanza a todas las personas que lo necesitan.** Un 32% de las personas mayores con dependencia funcional no cuenta con una persona cuidadora, y cuando hay cuidado, este recae mayoritariamente en mujeres —muchas de ellas también personas mayores—. La brecha es más amplia en la dependencia funcional leve y moderada, donde la necesidad de apoyo es menos visible.
+**El cuidado no alcanza a todas las personas que lo necesitan.** Un 32% de las personas mayores con dependencia funcional no cuenta con una persona cuidadora, y cuando hay cuidado, este recae mayoritariamente en mujeres (muchas de ellas también personas mayores). La brecha es más amplia en la dependencia funcional leve y moderada, donde la necesidad de apoyo es menos visible.
 
-**El territorio también importa.** La dependencia funcional va del 11% en Magallanes al 31% en La Araucanía, con valores más altos en el centro-sur del país, mientras que no se observan diferencias entre zonas urbanas y rurales.
+**El territorio también es importante.** La dependencia funcional va del 11% en Magallanes al 31% en La Araucanía, con valores más altos en el centro-sur del país, mientras que no se observan diferencias entre zonas urbanas y rurales.
 
 En conjunto, estos resultados sugieren que las políticas de cuidado deberían considerar no solo la edad de las personas mayores, sino también las desigualdades sociales y territoriales que acompañan a la dependencia funcional, y el peso que hoy recae sobre las cuidadoras.
 
@@ -348,8 +350,24 @@ En conjunto, estos resultados sugieren que las políticas de cuidado deberían c
 **Alcances del análisis:** ENDIDE 2022 es una encuesta transversal, por lo que los resultados describen asociaciones y no relaciones causales. La dependencia funcional se mide a partir de lo que informan las propias personas encuestadas, y las comparaciones entre regiones con pocos casos deben leerse con cautela.
 :::
 
+## Bibliografía
+
+::: {.referencias}
+Council of Europe. (1998). Recommendation No. R (98) 9 of the Committee of Ministers to member states on dependence. Council of Europe. Documento original.
+
+Katz, S., Ford, A. B., Moskowitz, R. W., Jackson, B. A., & Jaffe, M. W. (1963). Studies of illness in the aged: The Index of ADL: A standardized measure of biological and psychosocial function. JAMA, 185(12), 914–919. <https://doi.org/10.1001/jama.1963.03060120024016>
+
+Lawton, M. P., & Brody, E. M. (1969). Assessment of older people: Self-maintaining and instrumental activities of daily living. The Gerontologist, 9(3), 179–186. <https://doi.org/10.1093/geront/9.3_Part_1.179>
+
+World Health Organization. (2001). International classification of functioning, disability and health: ICF. World Health Organization. Documento y descripción oficial.
+
+Edjolo, A., Proust-Lima, C., Delva, F., Dartigues, J.-F., & Pérès, K. (2016). Natural history of dependency in the elderly: A 24-year population-based study using a longitudinal item response theory model. American Journal of Epidemiology, 183(4), 277–285. <https://doi.org/10.1093/aje/kwv223>
+
+Spector, W. D., Katz, S., Murphy, J. B., & Fulton, J. P. (1987). The hierarchical relationship between activities of daily living and instrumental activities of daily living. Journal of Chronic Diseases, 40(6), 481–489. <https://doi.org/10.1016/0021-9681(87)90004-X>
+:::
+
 ## Herramientas
 
-- **SPSS 25 · Muestras complejas:** estimaciones con diseño muestral (CSTABULATE, CSDESCRIPTIVES), intervalos de confianza y regresión logística binaria (CSLOGISTIC).
+- **R · Muestras complejas:** estimaciones con diseño muestral, intervalos de confianza y regresión logística binaria.
 - **Plotly para R:** visualizaciones interactivas para la web.
 - **Quarto:** publicación de esta página.
