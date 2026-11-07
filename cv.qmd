@@ -8,9 +8,9 @@ toc-depth: 2
 
 ## Perfil profesional
 
-Sociólogo de la Universidad de Chile, Magíster en Sociología por la Pontificia Universidad Católica de Chile y Doctor en Sociología por la Universidad Alberto Hurtado.
+Sociólogo de la Universidad de Chile, Magíster y Doctor (c) en Sociología por la Pontificia Universidad Católica de Chile y Doctor en Sociología por la Universidad Alberto Hurtado.
 
-Mi especialidad profesional y docente son los **métodos cuantitativos avanzados**. Mis áreas de experiencia e investigación incluyen educación, innovación curricular, evaluación de calidad docente, métodos estadísticos aplicados, transparencia y evaluación de políticas públicas.
+Mi especialidad profesional y docente son los **métodos cuantitativos avanzados**. Mis áreas de experiencia e investigación incluyen educación, innovación curricular, evaluación de calidad docente, métodos estadísticos aplicados, transparencia y evaluación de políticas públicas. Actualmente, mi trabajo se orienta también al análisis y diseño de políticas públicas, la evaluación de impacto, la construcción de indicadores y el análisis de problemas sociales y territoriales, con especial interés en vulnerabilidad social, vivienda, cuidados, personas mayores y desigualdad territorial.
 
 Actualmente me desempeño como **Profesional de Estudios en la Subdivisión de Estudios y Transferencias Técnicas de SENAMA**.
 
@@ -21,8 +21,11 @@ Actualmente me desempeño como **Profesional de Estudios en la Subdivisión de E
 **Doctor en Sociología**  
 Universidad Jesuita Alberto Hurtado · 2023
 
-**Magíster en Sociología**  
+**Doctor (c) en Sociología**  
 Pontificia Universidad Católica de Chile · 2017
+
+**Magíster en Sociología**  
+Pontificia Universidad Católica de Chile · 2015
 
 **Diplomado en Evaluación de Impacto de Políticas Públicas**  
 Pontificia Universidad Católica de Chile · 2022
@@ -152,7 +155,10 @@ Revista Central de Sociología N.º 2, Editorial Universidad Central, Santiago, 
 ## Distinciones
 
 **Beca CONICYT**  
-Beca para estudios de Doctorado · 2016
+Beca para estudios de Magíster · 2015
+
+**Beca CONICYT**  
+Beca para estudios de Doctorado · 2017
 
 **Beca COES**  
 Beca para estudios de Doctorado · 2020
