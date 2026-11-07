@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning: Soledad No Deseada en Personas Mayores"
-subtitle: "Un análisis con modelos de machine learning (árbol de decisión y Random Forest) para identificar los factores asociados a la soledad no deseada, con datos de la Encuesta Nacional de Calidad de Vida en la Vejez 2022"
+subtitle: "Análisis mediante técnicas de machine learning (árboles de decisión y Random Forest) para identificar los factores asociados a la soledad no deseada en personas mayores, utilizando la escala UCLA Loneliness Scale y la escala de redes sociales de Lubben (LSNS-6), a partir de los datos de la Encuesta Nacional de Calidad de Vida en la Vejez 2022."
 description: "¿Cuántas personas mayores se sienten solas? ¿Qué factores familiares, sociales, de salud y económicos se asocian a la soledad no deseada, y qué perfiles concentran el mayor riesgo?"
 lang: es
 image: portada.png
@@ -42,6 +42,13 @@ resources:
 @media (max-width: 600px) { #quarto-content main.content .hallazgos .fr { text-align: left !important; } }
 #quarto-content main.content .hallazgos li a, #quarto-content main.content .hallazgos li a:hover { color: #263238 !important; text-decoration: none !important; }
 #quarto-content main.content .hallazgos .fl { color: #0A3D91 !important; }
+/* Cuadro "Cómo leer este gráfico" */
+.como-leer { background: #F3F6F8; border-left: 4px solid #0A3D91; border-radius: 0 6px 6px 0; padding: 0.9rem 1.1rem; margin: 0.4rem 0 1.5rem 0; font-size: 0.92rem; line-height: 1.5; }
+.como-leer .tit { display: block; font-weight: 700; color: #173F5F; margin-bottom: 0.35rem; }
+.como-leer ol { margin: 0; padding-left: 1.2rem; }
+.como-leer li { margin-bottom: 0.3rem; }
+/* Bibliografía: alineada a la izquierda con sangría francesa */
+#quarto-content main.content .referencias p { text-align: left !important; hyphens: manual; padding-left: 2em; text-indent: -2em; overflow-wrap: anywhere; }
 </style>
 ```
 
@@ -74,8 +81,8 @@ resources:
 <div class="intro-a">
   <div>
     <p class="eyebrow">Calidad de Vida en la Vejez 2022 · 1.789 personas mayores</p>
-    <p class="titular">1&nbsp;de&nbsp;cada&nbsp;2 personas mayores en Chile siente <span class="nw"><em>soledad no deseada</em></span></p>
-    <p class="bajada">El <b>51%</b> de las personas mayores declara algún grado de soledad no deseada, y un <b>12%</b> la vive con alta intensidad. La forma más extendida es <b>sentir que le falta compañía</b>.</p>
+    <p class="titular">1&nbsp;de&nbsp;cada&nbsp;2 personas mayores en Chile experimenta <span class="nw"><em>soledad no deseada</em></span></p>
+    <p class="bajada">El <b>51%</b> de las personas mayores declara algún grado de soledad no deseada, y un <b>12%</b> la vive con un alto grado de intensidad. En ese sentido, la forma más recurrente de esta soledad tiene relación con <b>sentir que le falta compañía familiar</b>.</p>
     <p class="leytit">Soledad no deseada (escala UCLA)</p>
     <ul class="leyenda">
       <li><span class="sw" style="background:#C2410C"></span><span class="n">12%</span>Alta intensidad</li>
@@ -107,15 +114,15 @@ resources:
 </style>
 <section class="hallazgos" aria-label="Hallazgos clave">
 <p class="htit">Hallazgos clave</p>
-<ol><li><a href="#arbol"><span class="n" style="color:#C2410C">8 de cada 10</span><span class="fr">personas mayores con <b>comunicación familiar insatisfactoria</b> sienten soledad: es el factor más decisivo del árbol de decisión.</span><span class="fl">→</span></a></li><li><a href="#efecto"><span class="n" style="color:#0A3D91">−18 puntos</span><span class="fr">baja la soledad predicha cuando la satisfacción con el <b>tiempo compartido en familia</b> es constante (de 62% a 44%).</span><span class="fl">→</span></a></li><li><a href="#ucla"><span class="n" style="color:#C2410C">44%</span><span class="fr">de las personas mayores siente a veces o a menudo que <b>le falta compañía</b>, la forma más extendida de soledad.</span><span class="fl">→</span></a></li><li><a href="#aislamiento"><span class="n" style="color:#0A3D91">19%</span><span class="fr">de las personas mayores se siente sola aun estando acompañada: <b>soledad y aislamiento no son equivalentes</b>. Asimismo, tener compañía o una red de apoyo no es igual a participar de una comunicación.</span><span class="fl">→</span></a></li><li><a href="#desempeno"><span class="n" style="color:#0A3D91">67,6%</span><span class="fr">de acierto del <b>árbol de decisión</b> al clasificar casos nuevos (AUC 0,71), con perfiles de riesgo interpretables.</span><span class="fl">→</span></a></li></ol>
+<ol><li><a href="#arbol"><span class="n" style="color:#C2410C">8 de cada 10</span><span class="fr">personas mayores que tienen una <b>comunicación familiar insatisfactoria</b> sienten soledad: es el factor más decisivo en el fenómeno de la soledad.</span><span class="fl">→</span></a></li><li><a href="#efecto"><span class="n" style="color:#0A3D91">−18 puntos</span><span class="fr">baja la soledad predicha, de 62% a 44%, cuando la satisfacción con el <b>tiempo compartido en familia</b> es constante.</span><span class="fl">→</span></a></li><li><a href="#ucla"><span class="n" style="color:#C2410C">44%</span><span class="fr">de las personas mayores siente a veces o a menudo que <b>le falta compañía</b>, la forma más extendida de soledad.</span><span class="fl">→</span></a></li><li><a href="#aislamiento"><span class="n" style="color:#0A3D91">19%</span><span class="fr">de las personas mayores se siente sola aun estando acompañada: lo que indica que <b>la soledad y aislamiento no son equivalentes</b>. Asimismo, tener compañía o una red de apoyo no es igual a participar de una comunicación.</span><span class="fl">→</span></a></li><li><a href="#desempeno"><span class="n" style="color:#0A3D91">67,6%</span><span class="fr">de acierto del <b>árbol de decisión</b> al clasificar casos nuevos (AUC 0,71), con perfiles de riesgo interpretables.</span><span class="fl">→</span></a></li></ol>
 </section>
 ```
 
 ## Contexto
 
-Chile envejece rápidamente, y con ello crece un problema poco visible: la **soledad no deseada**. Se trata de una experiencia subjetiva, la percepción de que las propias relaciones son insuficientes en cantidad o en calidad. No es lo mismo que el **aislamiento social**, que es la falta objetiva de contactos: una persona puede vivir sola sin sentirse sola, o sentirse sola rodeada de gente.
+Chile atraviesa un proceso acelerado de envejecimiento demográfico, que plantea nuevos desafíos para el bienestar y la integración social de las personas mayores. En este contexto, la **soledad no deseada** constituye un fenómeno de especial relevancia, aunque no siempre visible ni suficientemente reconocido. Desde una perspectiva psicosocial, se entiende como una experiencia subjetiva y displacentera que surge cuando existe una discrepancia entre las relaciones sociales que una persona mantiene y aquellas que desearía o necesita, ya sea en términos de cantidad, calidad o significado de los vínculos (Perlman & Peplau, 1981; Ong et al., 2016; National Academies of Sciences, Engineering, and Medicine [NASEM], 2020). Este fenómeno debe distinguirse del **aislamiento social**, que refiere a una condición objetiva caracterizada por la escasez de contactos, interacciones o vínculos sociales. Por consiguiente, vivir solo no implica necesariamente experimentar soledad, del mismo modo que disponer de una amplia red de relaciones no garantiza sentirse acompañado o socialmente conectado (Ong et al., 2016; NASEM, 2020).
 
-La soledad en la vejez se asocia a depresión, enfermedades cardiovasculares, deterioro cognitivo y mayor mortalidad. Por eso es un tema relevante para el **Servicio Nacional del Adulto Mayor (SENAMA)**, cuyo propósito es promover un envejecimiento digno, activo y saludable.
+La evidencia científica ha asociado la soledad en las personas mayores con diversas consecuencias negativas para la salud, entre ellas una mayor prevalencia de síntomas depresivos, enfermedades cardiovasculares, deterioro cognitivo y riesgo de mortalidad (Hawkley & Cacioppo, 2010; Holt-Lunstad et al., 2015; Valtorta et al., 2016).
 
 El estudio buscó responder dos preguntas:
 
@@ -144,7 +151,7 @@ El análisis combinó estadística clásica y aprendizaje automático en tres et
 
 ## Resultados
 
-### 1. La soledad se vive sobre todo como falta de compañía {#ucla}
+### 1. La soledad en la vejez se experimenta bajo la forma de falta de compañía {#ucla}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g1_items_ucla.html" height="340" loading="lazy" title="Frecuencia de cada ítem de la escala UCLA de soledad"></iframe>
@@ -154,9 +161,9 @@ El análisis combinó estadística clásica y aprendizaje automático en tres et
 Porcentaje de personas mayores según la frecuencia con que experimentan cada ítem de la escala UCLA. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-Más de la mitad de las personas mayores (**51%**) declara algún grado de soledad, y un 12% la vive con alta intensidad. De las tres dimensiones de la escala, la más extendida es **sentir que le falta compañía**: un **44%** lo experimenta a veces o a menudo, y un 14,4% lo siente a menudo. Sentirse excluido/a (30,7%) o aislado/a (28,5%) es menos frecuente.
+Más de la mitad de las personas mayores, el **51%**, declara algún grado de soledad, y un 12% la vive con alta intensidad. De las tres dimensiones de la escala, la más extendida es **sentir que le falta compañía**: un **44%** lo experimenta a veces o a menudo, y un 14,4% lo siente a menudo. En cambio, los criterios de sentirse excluido/a, con 30,7%, o aislado/a, con 28,5%, son menos frecuentes.
 
-Esto sugiere que la soledad en la vejez se expresa menos como rechazo o exclusión y más como **ausencia de compañía significativa**, un dato relevante para diseñar intervenciones centradas en el acompañamiento y la calidad de los vínculos. Las mujeres presentan una prevalencia mayor que los hombres (53,5% frente a 46%).
+Esto sugiere que la soledad en la vejez se expresa más como una **"ausencia" de compañía significativa** y menos como rechazo o exclusión, lo cual indica un dato relevante para diseñar intervenciones centradas en el acompañamiento y la calidad de los vínculos. Por su parte, las mujeres presentan una prevalencia mayor que los hombres, con 53,5% frente a 46%.
 
 ### 2. Cuando el vínculo familiar falla, la soledad se duplica
 
@@ -164,15 +171,26 @@ Esto sugiere que la soledad en la vejez se expresa menos como rechazo o exclusi�
 <iframe src="graficos/g2_vinculo_familiar.html" height="460" loading="lazy" title="Prevalencia de soledad según satisfacción con el vínculo familiar"></iframe>
 </div>
 
+<div class="como-leer">
+<span class="tit">Cómo leer este gráfico</span>
+<ol>
+<li>Cada <b>fila</b> es un aspecto de la relación con la familia: tiempo compartido, afecto, apoyo para realizar nuevas actividades, comunicación y poder acudir a la familia por ayuda. Van ordenadas de la brecha mayor a la menor.</li>
+<li>El <b style="color:#0A3D91">punto azul</b> muestra el porcentaje de personas mayores con soledad entre quienes están satisfechas <b>casi siempre o siempre</b> con ese aspecto; el <b style="color:#C2410C">punto naranja</b>, entre quienes lo están <b>casi nunca o nunca</b>.</li>
+<li>La <b>línea entre ambos puntos</b> es la brecha, y el número bajo ella indica cuántos puntos porcentuales los separan.</li>
+<li><b>Ejemplo:</b> en el tiempo compartido con la familia, la soledad llega a 40,4% entre quienes están satisfechas casi siempre o siempre y a 82,5% entre quienes casi nunca lo están: una brecha de 42,1 puntos.</li>
+<li><b>En resumen:</b> en los cinco aspectos el punto naranja queda muy a la derecha del azul, es decir, cuando el vínculo familiar falla, la soledad prácticamente se duplica.</li>
+</ol>
+</div>
+
 ::: {.grafico-nota}
 Porcentaje de personas mayores con soledad no deseada según su satisfacción con cada dimensión del vínculo familiar. Las cinco asociaciones son estadísticamente significativas y de intensidad media (V de Cramér entre 0,29 y 0,34). Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-Las cinco dimensiones del vínculo familiar muestran el mismo patrón. Cuando la persona mayor está satisfecha casi siempre o siempre con su familia, la soledad ronda el **40%**. Cuando casi nunca lo está, sube a entre **75% y 82,5%**: prácticamente se duplica.
+Las cinco variables del vínculo familiar muestran el mismo patrón. Cuando la persona mayor está satisfecha casi siempre o siempre con su familia, la soledad ronda el **40%**. Cuando casi nunca lo está, sube a entre **75% y 82,5%**: prácticamente se duplica.
 
-La brecha más amplia aparece en el **tiempo compartido con la familia** (+42,1 puntos), seguida del apoyo para realizar nuevas actividades y del afecto. No basta con tener familia: lo que protege es **la calidad del vínculo**, es decir, sentirse escuchado, acompañado y apoyado.
+La brecha más amplia aparece en el **tiempo compartido con la familia** (+42,1 puntos), seguida del apoyo para realizar nuevas actividades y del afecto. En ese sentido, no basta con tener familia: lo que protege es **la calidad del vínculo**, es decir, **sentirse escuchado, acompañado y apoyado**.
 
-### 3. Soledad y aislamiento social no son lo mismo {#aislamiento}
+### 3. Soledad y aislamiento social son fenómenos diferentes {#aislamiento}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g3_soledad_aislamiento.html" height="460" loading="lazy" title="Soledad no deseada y aislamiento social en personas mayores"></iframe>
@@ -182,13 +200,13 @@ La brecha más amplia aparece en el **tiempo compartido con la familia** (+42,1 
 Distribución de las personas mayores según riesgo de aislamiento social (escala de Lubben, punto de corte 12) y soledad no deseada (escala UCLA). El ancho de cada columna indica el porcentaje con y sin aislamiento; el área de cada bloque, el porcentaje del total en esa situación. Naranja: con soledad; azul: sin soledad. Tono oscuro: con aislamiento; tono claro: sin aislamiento. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-Según la escala de Lubben, más de la mitad de las personas mayores (**55%**) no cuenta con una red de apoyo suficiente y está en riesgo de aislamiento social. Soledad y aislamiento se asocian: entre quienes están aislados, un **58%** siente soledad, frente a un 42% entre quienes tienen una red de apoyo.
+Según la escala de Lubben, más de la mitad de las personas mayores, el **55%**, no cuenta con una red de apoyo suficiente y está en riesgo de aislamiento social. Soledad y aislamiento son analíticamente diferentes pero empíricamente asociados: entre quienes están aislados, un **58%** siente soledad, frente a un 42% entre quienes tienen una red de apoyo.
 
-Pero **no son lo mismo**. Un **32%** vive la doble vulnerabilidad de sentirse solo y estar aislado; sin embargo, un **23%** está aislado y no se siente solo, y un **19%** se siente solo aun teniendo una red de apoyo. Contar contactos no basta para detectar la soledad: la experiencia subjetiva de los vínculos importa tanto como su número.
+Asimismo, un **32%** de las personas mayores vive la doble vulnerabilidad de sentirse solo y estar aislado, sin embargo, un **23%** está aislado y no se siente solo, y un **19%** se siente solo aun teniendo una red de apoyo. Contar contactos no basta para identificar soledad: la experiencia subjetiva de los vínculos importa tanto como el número de contactos.
 
 ## Modelos de machine learning
 
-Para pasar de describir asociaciones a **identificar perfiles de riesgo**, se entrenaron dos modelos de clasificación supervisada. El flujo de trabajo siguió las buenas prácticas de aprendizaje automático: separar datos para evaluar, controlar la complejidad y validar con un segundo método.
+Con el propósito de identificar **perfiles de riesgo**, se entrenaron dos modelos de clasificación supervisada. Para ello, se siguieron las etapas convencionales del aprendizaje automático: separar datos para evaluar, controlar la complejidad y validar con un segundo método.
 
 <div class="pipeline">
 <div class="paso"><b>Datos</b><span>1.789 personas mayores y 26 variables predictoras</span></div>
@@ -206,12 +224,12 @@ Para pasar de describir asociaciones a **identificar perfiles de riesgo**, se en
 </div>
 
 ::: {.grafico-nota}
-Árbol de decisión podado (CART). La barra de cada nodo muestra la mezcla de su grupo: naranja, con soledad; azul, sin soledad. Los recuadros grises son pasos intermedios; los recuadros con borde de color son los perfiles finales: naranja si su prevalencia de soledad supera el promedio (51%) y azul si está bajo él. Muestra de entrenamiento, n = 1.252. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
+Árbol de decisión podado (CART). La barra de cada nodo muestra la mezcla de su grupo: naranja, con soledad; azul, sin soledad. Los recuadros grises son pasos intermedios; los recuadros con borde de color son los perfiles finales: naranja si su prevalencia de soledad supera el promedio de 51% y azul si está bajo él. Muestra de entrenamiento, n = 1.252. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-El árbol de decisión aprende de los datos qué preguntas separan mejor a quienes sienten soledad de quienes no, sin que se le indique de antemano la forma de esas relaciones. **La primera pregunta, y la más decisiva, es por la comunicación familiar**: cuando es insatisfactoria, **8 de cada 10** personas mayores presentan soledad (78%), y es el grupo de riesgo más numeroso (29% de la muestra).
+En particular, el árbol de decisión aprende de los datos respecto a qué preguntas separan mejor a quienes sienten soledad de quienes no, sin que se le indique de antemano la forma de esas relaciones. **La primera pregunta, y la más decisiva, es la comunicación familiar**: cuando es insatisfactoria, **8 de cada 10** personas mayores presentan soledad, un 78%, y es el grupo de riesgo más numeroso, con un 29% de la muestra.
 
-Aun con buena comunicación, **poco tiempo compartido** con la familia eleva la soledad a 68%. Con un buen vínculo familiar, la salud pasa a ser determinante: **buena salud define el perfil más protegido** (29%), mientras que ante una mala salud **tener pareja amortigua el riesgo** (38% frente a 55% sin pareja). Entre quienes no tienen pareja, la escolaridad básica vuelve a elevar la soledad a 63%. La soledad no surge de una simple suma de desventajas, sino de **combinaciones específicas de vulnerabilidad y protección**.
+Aun con buena comunicación, el **poco tiempo compartido** con la familia eleva la soledad a 68%. Con un buen vínculo familiar, la salud pasa a ser determinante: **una buena salud define el perfil más protegido**, con un 29%, mientras que ante una mala salud **tener pareja amortigua el riesgo**, con un 38% frente a un 55% sin pareja. Entre quienes no tienen pareja, la escolaridad básica vuelve a elevar la soledad a 63%. Así entonces, la soledad no surge de una simple suma de desventajas, sino de **combinaciones específicas de vulnerabilidad y protección**.
 
 ### 5. Cómo se evitó el sobreajuste: poda por validación cruzada
 
@@ -223,9 +241,9 @@ Aun con buena comunicación, **poco tiempo compartido** con la familia eleva la 
 Error relativo del árbol según su número de divisiones (1 = error de un modelo sin predictores). Error en entrenamiento y error estimado por validación cruzada, con su banda de ± 1 error estándar. Tabla de complejidad del árbol (parámetro CP). Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-Un árbol más grande siempre se ajusta mejor a los datos con que se entrena: el **error en entrenamiento** baja sin parar. Pero eso no significa que prediga mejor casos nuevos. La **validación cruzada** estima el error en datos no vistos, y muestra que este llega a su mínimo con **5 divisiones** y luego vuelve a subir: más allá de ese punto, el árbol empieza a memorizar ruido. Por eso se podó en 5 divisiones, un modelo simple, interpretable y con mejor capacidad de generalizar.
+Un árbol más grande siempre se ajusta mejor a los datos con que se entrena: el **error en entrenamiento** baja sin parar. Pero eso no significa que prediga mejor casos nuevos. La **validación cruzada** estima el error en datos no vistos, y muestra que este llega a su mínimo con **5 divisiones** y luego vuelve a subir: más allá de ese punto, el árbol empieza a memorizar ruido. Por eso se podó en 5 divisiones, un modelo simple, interpretable y con mejor capacidad de generalización.
 
-### 6. Qué tan bien clasifican los modelos {#desempeno}
+### 6. Qué tan bien clasifican los modelos de Machine Learning {#desempeno}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g7_matrices_confusion.html" height="660" loading="lazy" title="Matrices de confusión del árbol de decisión y del Random Forest"></iframe>
@@ -235,7 +253,7 @@ Un árbol más grande siempre se ajusta mejor a los datos con que se entrena: el
 Matrices de confusión en la muestra de prueba. Cada celda muestra el porcentaje dentro del grupo real: en la fila de personas con soledad, la proporción detectada (sensibilidad); en la de personas sin soledad, la proporción correctamente descartada (especificidad). Azul: aciertos del modelo; naranja: errores. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-Ambos modelos se evaluaron con **datos que no vieron durante el entrenamiento**. El árbol podado clasifica correctamente al **67,6%** y es más preciso cuando alerta un caso (73% de sus alertas son correctas), mientras que el Random Forest **detecta más casos reales de soledad** (64% frente a 59%), a costa de más falsas alarmas.
+Ambos modelos se evaluaron con **datos que no vieron durante el entrenamiento**. El árbol podado clasifica correctamente al **67,6%** y es más preciso cuando alerta un caso, ya que el 73% de sus alertas son correctas, mientras que el Random Forest **detecta más casos reales de soledad**, con un 64% frente a un 59%, a costa de más falsas alarmas.
 
 | Modelo | Exactitud | Precisión | Sensibilidad | Especificidad | AUC |
 |---|---|---|---|---|---|
@@ -244,9 +262,9 @@ Ambos modelos se evaluaron con **datos que no vieron durante el entrenamiento**.
 
 : Desempeño en la muestra de prueba
 
-Con un AUC cercano a 0,70, la capacidad discriminante es aceptable. El valor de los modelos no está en diagnosticar casos individuales, sino en **ordenar los factores de riesgo y describir perfiles interpretables** que orienten la focalización.
+Con un AUC cercano a 0,70, la capacidad discriminante es aceptable. El valor de los modelos no está en diagnosticar casos individuales, sino en **ordenar los factores de riesgo y describir perfiles interpretables** que orienten una decisión de políticas públicas.
 
-### 7. Qué variables pesan más según el Random Forest
+### 7. Qué variables son más importantes según el Random Forest
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g5_importancia_rf.html" height="600" loading="lazy" title="Random Forest: importancia de las variables para predecir la soledad"></iframe>
@@ -256,9 +274,9 @@ Con un AUC cercano a 0,70, la capacidad discriminante es aceptable. El valor de 
 Importancia de cada variable en el Random Forest optimizado, medida como Mean Decrease Accuracy (cuánto empeora la predicción si la variable deja de aportar información) y expresada en relación con la más importante (= 100). Se muestran las 12 variables más importantes de 26. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-El **Random Forest** entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable que un árbol individual. Su ranking de importancia confirma el hallazgo central: **las tres variables más predictivas son familiares** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, con un peso cercano a la mitad.
+El **Random Forest** entrena muchos árboles sobre muestras aleatorias de los datos y combina sus predicciones, lo que lo hace más estable que un árbol individual. Su ranking de importancia confirma el hallazgo central: **las tres variables más predictivas de la soledad están asociadas a la familia** (comunicación, poder acudir a la familia y tiempo compartido) y superan con amplitud al resto. El modelo incorpora además factores que el árbol no captó, como **vivir solo** y la **suficiencia de ingresos**, con un peso cercano a la mitad.
 
-### 8. Reducción de soledad: el vínculo familiar debe ser constante {#efecto}
+### 8. Reducción de soledad: el vínculo familiar debe ser permanente {#efecto}
 
 <div class="grafico-interactivo">
 <iframe src="graficos/g8_direccion_efecto.html" height="460" loading="lazy" title="Reducción de soledad cuando la satisfacción con la familia es constante"></iframe>
@@ -268,19 +286,42 @@ El **Random Forest** entrena muchos árboles sobre muestras aleatorias de los da
 Reducción de la probabilidad de soledad predicha por el Random Forest (dependencia parcial) al pasar de una satisfacción no constante con la familia ("a veces" o "casi nunca") a una satisfacción constante ("casi siempre o siempre"), manteniendo constantes las demás variables. Fuente: elaboración propia con datos de la Encuesta de Calidad de Vida en la Vejez 2022 (UC – Caja Los Andes).
 :::
 
-La importancia dice cuánto pesa una variable, pero no hacia dónde empuja. La **dependencia parcial** responde esa pregunta: estima cómo cambia la probabilidad de soledad cuando cambia una variable y todo lo demás se mantiene igual. Cuando la satisfacción con el **tiempo compartido** en familia es constante, la soledad predicha **baja 17,9 puntos** (de 62% a 44%). Le siguen el apoyo para nuevas actividades (−11,6) y la comunicación familiar (−10,7).
+La importancia dice cuánto pesa una variable, pero no hacia dónde se orienta. La **dependencia parcial** responde esa pregunta: estima cómo cambia la probabilidad de soledad cuando cambia una variable y todo lo demás se mantiene igual. Cuando la satisfacción con el **tiempo compartido** en familia es constante, la soledad predicha **baja 17,9 puntos**, de 62% a 44%. Le siguen el apoyo para nuevas actividades (−11,6) y la comunicación familiar (−10,7).
 
 El modelo revela además un patrón de **umbral**: estar satisfecho solo "a veces" predice casi la misma soledad que "casi nunca". La reducción aparece únicamente cuando la satisfacción es **sostenida**. Para la política pública, esto significa que no basta con un contacto familiar ocasional: lo protector es un **vínculo constante en el tiempo**.
 
 ## Conclusiones
 
+**La soledad no deseada es un fenómeno extendido y se vive, sobre todo, como falta de compañía.** El 51% de las personas mayores declara algún grado de soledad y un 12% la vive con alta intensidad. La dimensión más frecuente es sentir que falta compañía, que un 44% experimenta a veces o a menudo, mientras que sentirse excluido/a o aislado/a es menos frecuente. Las mujeres presentan una prevalencia mayor que los hombres, con 53,5% frente a 46%.
+
+**El vínculo familiar es el factor más decisivo.** En los cinco aspectos de la relación con la familia, la soledad ronda el 40% cuando hay satisfacción casi siempre o siempre, y sube a entre 75% y 82,5% cuando casi nunca la hay. El árbol de decisión y el Random Forest coinciden: la comunicación familiar, poder acudir a la familia y el tiempo compartido son las variables más predictivas, y superan con amplitud al resto. Lo que protege no es solo tener familia, sino la calidad del vínculo: sentirse escuchado, acompañado y apoyado.
+
+**Soledad y aislamiento social son fenómenos diferentes.** Se asocian, pues entre quienes están aislados un 58% siente soledad, frente a un 42% entre quienes tienen una red de apoyo. Pero un 23% está aislado y no se siente solo, y un 19% se siente solo aun teniendo una red de apoyo. Contar contactos no basta para identificar la soledad: importa la experiencia subjetiva de los vínculos.
+
+**El riesgo surge de combinaciones de vulnerabilidad y protección, y requiere un vínculo sostenido.** El árbol de decisión muestra que, cuando la comunicación familiar es satisfactoria, la salud, tener pareja y la escolaridad definen perfiles de mayor o menor riesgo. Además, la dependencia parcial indica que la soledad predicha baja 17,9 puntos, de 62% a 44%, cuando la satisfacción con el tiempo compartido en familia es constante, y que estar satisfecho solo "a veces" predice casi la misma soledad que "casi nunca". Por eso importa un vínculo permanente y no un contacto ocasional.
+
 **Implicancias para política pública:** poner el foco en la calidad del vínculo familiar y no solo en la cantidad de contactos; focalizar en personas mayores con comunicación familiar deficiente, y no usar "vivir solo" como único criterio de riesgo.
 
-**Limitaciones:** diseño transversal (las asociaciones no implican causalidad), dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
+**Limitaciones:** diseño transversal, dicotomización de la escala UCLA por falta de un punto de corte consensuado y poder predictivo moderado de los modelos.
 
 ## Herramientas
 
 - **R 4.2:** procesamiento de datos, pruebas estadísticas, árbol de decisión y Random Forest.
-- **SPSS 21:** análisis descriptivo y bivariado.
 - **Plotly para R:** visualizaciones interactivas para la web.
 - **Quarto:** publicación de esta página.
+
+## Bibliografía
+
+::: {.referencias}
+Hawkley, L. C., & Cacioppo, J. T. (2010). Loneliness matters: A theoretical and empirical review of consequences and mechanisms. Annals of Behavioral Medicine, 40, 218–227. <https://doi.org/10.1007/s12160-010-9210-8>
+
+Holt-Lunstad, J., Smith, T. B., Baker, M., Harris, T., & Stephenson, D. (2015). Loneliness and social isolation as risk factors for mortality: A meta-analytic review. Perspectives on Psychological Science, 10(2), 227–237. <https://doi.org/10.1177/1745691614568352>
+
+Ong, A. D., Uchino, B. N., & Wethington, E. (2016). Loneliness and health in older adults: A mini-review and synthesis. Gerontology, 62(4), 443–449. <https://doi.org/10.1159/000441651>
+
+Valtorta, N. K., Kanaan, M., Gilbody, S., Ronzi, S., & Hanratty, B. (2016). Loneliness and social isolation as risk factors for coronary heart disease and stroke: Systematic review and meta-analysis of longitudinal observational studies. Heart, 102(13), 1009–1016. <https://doi.org/10.1136/heartjnl-2015-308790>
+
+Zhou, X., Yang, F., & Gao, Y. (2023). A meta-analysis of the association between loneliness and all-cause mortality in older adults. Psychiatry Research, 328, 115430. <https://doi.org/10.1016/j.psychres.2023.115430>
+
+Boss, L., Kang, D. H., & Branson, S. (2015). Loneliness and cognitive function in the older adult: A systematic review. International Psychogeriatrics, 27(4), 541–553.
+:::
