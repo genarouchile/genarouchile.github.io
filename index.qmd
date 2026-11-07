@@ -2,6 +2,15 @@
 title: ""
 ---
 
+<style>
+/* Celular: el ícono de "Sobre mí" va arriba (sin superponerse) y el texto usa todo el ancho */
+@media (max-width: 700px) {
+  .home-main .home-section { display: block !important; grid-template-columns: 1fr !important; }
+  .home-main .home-image { width: 72px !important; margin: 0 auto 1rem auto !important; }
+  .home-main .home-image img { width: 72px !important; height: 72px !important; max-width: 72px !important; }
+}
+</style>
+
 <div class="home-layout">
 
 <div class="home-sidebar">
@@ -12,7 +21,7 @@ title: ""
 
 **Sociólogo de la Universidad de Chile**
 
-Investigación social aplicada · análisis de datos · políticas públicas · análisis territorial
+Investigación social aplicada · análisis de datos · políticas públicas
 
 <div class="profile-links">
 
@@ -31,12 +40,8 @@ Investigación social aplicada · análisis de datos · políticas públicas · 
 
 <div class="home-main">
 
-<p class="research-line">
-Investigación social aplicada · análisis cuantitativo · políticas públicas · análisis territorial
-</p>
-
 <p class="academic-line">
-Sociólogo · Magíster en Sociología · Doctor en Sociología
+Investigación aplicada · políticas públicas · personas mayores · cuidados · análisis cuantitativo y territorial
 </p>
 
 
@@ -52,11 +57,11 @@ Sociólogo · Magíster en Sociología · Doctor en Sociología
 
 ## Sobre mí
 
-Soy sociólogo de la [Universidad de Chile](https://facso.uchile.cl), Magíster en Sociología de la [Pontificia Universidad Católica](https://sociologia.uc.cl/) y Doctor en Sociología en la [Universidad Alberto Hurtado](https://csociales.uahurtado.cl/departamentos/departamento-de-sociologia/). Mi trabajo se orienta al análisis y diseño de políticas públicas, el análisis estadístico y el estudio de problemas públicos mediante herramientas cuantitativas y territoriales.
+Soy sociólogo de la [Universidad de Chile](https://uchile.cl/), Magíster en Sociología de la [Pontificia Universidad Católica](https://sociologia.uc.cl/) y Doctor en Sociología en la [Universidad Alberto Hurtado](https://www.uahurtado.cl/la-universidad/). Mi trabajo se orienta al análisis y diseño de políticas públicas, el análisis estadístico y el estudio de problemas públicos mediante herramientas cuantitativas y territoriales.
 
-Mi experiencia combina investigación social, construcción de indicadores, análisis estadístico, evaluación de políticas públicas y análisis espacial. He desarrollado proyectos utilizando datos sociales, administrativos y territoriales, con especial interés en vulnerabilidad social, cuidados, personas mayores y desigualdad territorial.
+Mi experiencia combina investigación social, construcción de indicadores, análisis estadístico y evaluación de impacto de políticas públicas. He desarrollado proyectos utilizando datos sociales, administrativos y territoriales, con especial interés en vulnerabilidad social, vivienda social, cuidados, personas mayores y desigualdad territorial.
 
-Actualmente desarrollo investigación aplicada vinculada al análisis territorial y a la generación de evidencia para apoyar la toma de decisiones en políticas públicas.
+Mi enfoque de trabajo integra el rigor metodológico con una perspectiva aplicada de la investigación social. Me interesa desarrollar herramientas analíticas y producir evidencia empírica que permitan comprender fenómenos complejos, identificar brechas y contribuir a una mejor toma de decisiones en el ámbito de las políticas públicas.
 
 </div>
 
