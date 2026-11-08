@@ -8,71 +8,63 @@ toc-depth: 2
 
 ## Líneas de investigación
 
-Mi trabajo se centra en el estudio de las desigualdades sociales, los procesos territoriales y las políticas públicas, con especial interés en la dimensión espacial de los fenómenos sociales.
+Mi trabajo actual se centra en el estudio de las personas mayores, sus condiciones de vida, dependencia funcional, redes de apoyo y necesidades de cuidado, así como en su relación con la focalización de políticas públicas. Desde una perspectiva sociológica y cuantitativa, me interesa analizar las diferencias sociales y territoriales que caracterizan estas condiciones y su relación con la intervención pública.
 
-Actualmente, mi investigación combina métodos cuantitativos, análisis espacial e indicadores sociales para comprender cómo se distribuyen territorialmente la vulnerabilidad social y las necesidades de cuidado.
+Mi investigación combina métodos cuantitativos avanzados y construcción de indicadores sociales para estudiar las condiciones de vida de las personas mayores, la distribución de sus necesidades de cuidado y las diferencias territoriales que presentan.
 
 ---
 
 ## Investigación actual
 
-### Cuidados, dependencia y vulnerabilidad territorial
+### Cuidados y dependencia funcional en personas mayores
 
-Mi investigación actual analiza la distribución territorial de la ausencia de cuidados y su relación con la vulnerabilidad social y las características de los hogares.
+Mi investigación actual aborda las características y distribución de la dependencia funcional en las personas mayores en Chile, la ausencia de cuidados y su relación con la vulnerabilidad social y las características de los hogares.
 
-El estudio combina información de encuestas, registros administrativos e indicadores territoriales para identificar patrones espaciales y analizar su relación con condiciones socioeconómicas y demográficas.
-
-El análisis incorpora **estadística espacial y econometría espacial**, permitiendo estudiar la dependencia geográfica y la concentración territorial de los fenómenos sociales.
+El estudio combina información de encuestas, registros administrativos e indicadores territoriales para identificar patrones espaciales y analizar su asociación con condiciones socioeconómicas y demográficas.
 
 ---
 
 ## Métodos y datos
 
-Mi trabajo metodológico incluye:
+Mi trabajo metodológico comprende distintas estrategias de investigación, análisis estadístico y evaluación de programas sociales:
 
-- Investigación social cuantitativa
-- Estadística espacial
-- Econometría espacial
-- Sistemas de Información Geográfica (SIG)
-- Construcción de indicadores sociales y territoriales
-- Índices multidimensionales
-- Modelamiento estadístico
-- Visualización de datos
-- R y análisis reproducible
+- Investigación social cuantitativa.
+- Modelamiento estadístico avanzado: Machine Learning y ecuaciones estructurales.
+- Diseños experimentales y cuasiexperimentales para la evaluación de impacto.
+- Teoría de cambio para programas sociales.
+- Econometría espacial.
+- Sistemas de Información Geográfica (SIG).
+- Construcción de indicadores sociales y territoriales.
+- Desarrollo de índices multidimensionales.
+- Visualización de datos.
+- Programación en R y análisis reproducible.
 
-Trabajo con información proveniente de encuestas, censos, registros administrativos y datos geoespaciales para la construcción de indicadores y el análisis de desigualdades territoriales.
+Trabajo con información proveniente de encuestas, censos, registros administrativos y datos geoespaciales para el análisis estadístico, la construcción de indicadores y el estudio de fenómenos sociales y territoriales.
 
 ---
 
 ## Temas de investigación
 
-**Desigualdades sociales**  
-Vulnerabilidad social, pobreza, desigualdad y diferenciación territorial.
+**Cuidados y dependencia**
 
-**Cuidados y dependencia**  
-Necesidades de cuidado, dependencia funcional, redes de apoyo y acceso a cuidados.
+Necesidades de cuidado en personas mayores, dependencia funcional, redes de apoyo y acceso a cuidados.
 
-**Análisis territorial**  
-Distribución espacial, dependencia espacial, patrones territoriales y desigualdades geográficas.
+**Políticas públicas**
 
-**Políticas públicas**  
-Indicadores, priorización territorial y diseño de políticas públicas basadas en evidencia.
+Diseño, focalización, priorización territorial y evaluación de programas y políticas públicas basadas en evidencia.
 
-**Envejecimiento y política social**  
-Dimensiones sociales y territoriales asociadas al envejecimiento, la dependencia y los cuidados.
+**Envejecimiento y política social**
 
----
+Condiciones de vida, protección social y dimensiones sociales asociadas al envejecimiento y la dependencia.
 
-## Investigaciones seleccionadas
+**Desigualdades sociales**
 
-### Índice de Priorización Territorial para la Construcción de Condominios de Viviendas Tuteladas
+Vulnerabilidad social, pobreza, desigualdad y diferenciación socioeconómica.
 
-Desarrollo de un índice territorial multidimensional orientado a identificar y priorizar comunas de acuerdo con condiciones demográficas, sociales, territoriales, institucionales y ambientales relevantes para la construcción de Condominios de Viviendas Tuteladas (CVT).
+**Análisis territorial**
 
-### Análisis espacial de la ausencia de cuidados
+Distribución espacial de fenómenos sociales, dependencia espacial, patrones territoriales y desigualdades geográficas.
 
-Análisis de la distribución espacial de las necesidades de cuidado no satisfechas y su relación con la vulnerabilidad social y las características de los hogares.
+**Vivienda social**
 
-### Indicadores sociales y territoriales
-
-Diseño y construcción de indicadores compuestos para el análisis territorial, integrando información socioeconómica, demográfica, institucional y ambiental.
+Sistemas de parentesco, allegamiento, comités de vivienda y movilización colectiva por el acceso a la vivienda.
