@@ -2,7 +2,29 @@
 title: ""
 ---
 
+<div class="site-banner">
+  <img src="banner-anime.jpg" alt="Banner ilustrado de anime con el monte Fuji al atardecer">
+</div>
+
 <style>
+.site-banner {
+  width: 100%;
+  margin: 0 auto 1.75rem auto;
+}
+.site-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+}
+@media (max-width: 700px) {
+  .site-banner { margin-bottom: 1.25rem; }
+  .site-banner img { max-height: 180px; border-radius: 12px; }
+}
+
 /* Celular: el ícono de "Sobre mí" va arriba (sin superponerse) y el texto usa todo el ancho */
 @media (max-width: 700px) {
   .home-main .home-section { display: block !important; grid-template-columns: 1fr !important; }
