@@ -7,7 +7,8 @@ website:
   description: "Sociólogo de la Universidad de Chile. Investigación social, análisis de datos, políticas públicas y análisis territorial."
   site-url: "https://genaromarileo.cl"
   favicon: favicon.png
-
+  google-analytics: "G-XXXXXXXXXX"
+  
   navbar:
     background: white
     foreground: "#222222"
